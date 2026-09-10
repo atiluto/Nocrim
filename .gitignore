@@ -1,0 +1,11 @@
+.tools/
+releases/
+game/cache/
+game/saves/
+*.rpyc
+*.pyc
+__pycache__/
+log.txt
+traceback.txt
+errors.txt
+tests/results/
