@@ -7,7 +7,7 @@ release = ROOT/'releases/Nocrim-Godot-0.2.0-win'
 assert (release/'Nocrim.exe').is_file() and (release/'Nocrim.pck').is_file()
 for folder in ['assets/characters/expressions','assets/audio/bgm','assets/audio/sfx']:
     (release/folder).mkdir(parents=True,exist_ok=True)
-docs = ['GODOT_PLAY_GUIDE.md','GODOT_AUDIO.md','GODOT_REFERENCE_APPLIED.md','GODOT_VALIDATION.md','GODOT_ASSETS.md','GODOT-LICENSE.txt','FONT-LICENSE.txt','DEJAVU-LICENSE.txt','RENPY-LICENSE.txt']
+docs = ['GODOT_PLAY_GUIDE.md','GODOT_AUDIO.md','GODOT_REFERENCE_APPLIED.md','GODOT_VALIDATION.md','GODOT_ASSETS.md','GODOT-LICENSE.txt','FONT-LICENSE.txt','DEJAVU-LICENSE.txt']
 for name in docs:
     if (ROOT/'docs'/name).is_file(): shutil.copy2(ROOT/'docs'/name,release/name)
 (release/'실행안내.txt').write_text('녹림전생 · Godot 0.2.0\n\n압축을 모두 푼 뒤 Nocrim.exe를 실행하세요.\nNocrim.pck는 실행 파일과 같은 폴더에 있어야 합니다.\n\n자세한 조작법: GODOT_PLAY_GUIDE.md\n음원 파일명과 프롬프트: GODOT_AUDIO.md\n구현·검증 범위: GODOT_VALIDATION.md\n\nRen’Py판 저장 파일과 호환되지 않습니다.\n',encoding='utf-8-sig')

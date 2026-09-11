@@ -2,17 +2,17 @@
 
 ## 생성 그림
 
-두 그림은 내장 imagegen 도구로 이 프로젝트를 위해 새로 생성했습니다. 기존 작품의 그림을 가져오지 않았으며, CLI/API fallback은 사용하지 않았습니다. 원본을 변경하지 않고 프로젝트에 복사했습니다. 네 인물 초상은 Ren’Py의 화면 표시 단계에서만 각 인물 영역을 잘라 보여 줍니다.
+두 그림은 내장 imagegen 도구로 이 프로젝트를 위해 새로 생성했습니다. 기존 작품의 그림을 가져오지 않았으며, CLI/API fallback은 사용하지 않았습니다. 원본을 변경하지 않고 프로젝트에 복사했습니다. 네 인물 초상은 Godot의 화면 표시 단계에서만 각 인물 영역을 잘라 보여 줍니다.
 
 | 파일 | 크기 | 용도 |
 |---|---|---|
-| [mountains.png](../game/images/mountains.png) | 1672 × 941 | 제목·지도·이벤트 공통 배경 |
-| [cast.png](../game/images/cast.png) | 1774 × 887 | 왼쪽부터 담연화·서하린·윤서령·백소하 |
+| [mountains.png](../godot/assets/backgrounds/mountains.png) | 1672 × 941 | 제목·지도·이벤트 공통 배경 |
+| [cast.png](../godot/assets/characters/cast.png) | 1774 × 887 | 왼쪽부터 담연화·서하린·윤서령·백소하 |
 
 작업 폴더 원본 위치:
 
-- `C:\Users\HyunPC\.codex\.chatgpt-projects\Nocrim\game\images\mountains.png`
-- `C:\Users\HyunPC\.codex\.chatgpt-projects\Nocrim\game\images\cast.png`
+- `C:\Users\HyunPC\.codex\.chatgpt-projects\Nocrim\godot\assets\backgrounds\mountains.png`
+- `C:\Users\HyunPC\.codex\.chatgpt-projects\Nocrim\godot\assets\characters\cast.png`
 
 ## 실제 사용한 생성 프롬프트
 
@@ -31,6 +31,6 @@ Use case: stylized-concept. Create a clean character portrait atlas for an origi
 ## 글꼴과 엔진
 
 - SourceHanSansLite.ttf: Ren’Py SDK에 포함된 Source Han Sans 축약 글꼴. 한글·한자 표시. SIL Open Font License 1.1. `FONT-LICENSE.txt`를 함께 포함합니다.
-- DejaVuSans.ttf: Ren’Py 런타임에 포함된 글꼴. 영문·숫자·화살표·기호의 누락을 보완합니다. Ren’Py 배포 라이선스에 해당 고지문이 포함됩니다.
-- Ren’Py 엔진 고지는 `RENPY-LICENSE.txt` 및 배포본의 `renpy/LICENSE.txt`를 참고하세요.
+- DejaVuSans.ttf: Ren’Py 런타임에 포함된 글꼴. 영문·숫자·화살표·기호의 누락을 보완합니다. `DEJAVU-LICENSE.txt`에 해당 고지문이 포함됩니다.
+- 현재 사용하는 Godot 엔진 고지는 `GODOT-LICENSE.txt`를 참고하세요. 위 두 글꼴은 이전 과정에서 독립적으로 복사했으며 원래 출처와 개별 라이선스를 유지합니다.
 

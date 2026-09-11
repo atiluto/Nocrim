@@ -1,12 +1,11 @@
 from pathlib import Path
-import sys
+import json
 root = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(root / "game" / "python-packages"))
-import nocrim
+world = json.loads((root / 'godot/data/world.json').read_text(encoding='utf-8'))
 
 intro = '''# 분기 조건표 — 스포일러 포함
 
-이 문서는 현재 0.1.0의 실제 사건 데이터에서 생성했습니다. 25개 사건과 51개 선택지가 있으며, 점령 순서의 모든 순열을 각각 다른 시나리오로 집계하지 않습니다. 대체 첫 만남은 한 회차에서 동시에 발생하지 않습니다.
+이 문서는 Godot 0.2.0의 실제 사건 데이터에서 생성했습니다. 25개 사건과 51개 선택지가 있으며, 점령 순서의 모든 순열을 각각 다른 시나리오로 집계하지 않습니다. 대체 첫 만남은 한 회차에서 동시에 발생하지 않습니다.
 
 ## 점령과 주변 세력
 
@@ -61,7 +60,7 @@ intro = '''# 분기 조건표 — 스포일러 포함
 
 '''
 lines = [intro]
-for key, ev in nocrim.EVENTS.items():
+for key, ev in world['events'].items():
     lines += ['### ' + ev['title'], '', '**' + ev['chapter'] + '** / `' + key + '`', '']
     for i, option in enumerate(ev['choices'], 1):
         lines += [str(i) + '. **' + option['text'] + '** — ' + option['hint']]

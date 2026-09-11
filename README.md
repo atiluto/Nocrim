@@ -6,7 +6,9 @@
 
 ## 바로 실행
 
-`releases/Nocrim-Godot-0.2.0-win.zip`을 모두 풀고 **Nocrim.exe**를 실행하세요. **Nocrim.pck**를 같은 폴더에 둬야 합니다. 개발 도구나 API 키는 필요하지 않습니다.
+이 폴더의 **[play.bat](play.bat)을 더블클릭**하세요. 수정된 자료를 잠시 준비한 뒤 게임 창이 열립니다. 포함된 Godot로 현재 소스를 직접 실행하므로 압축 해제·내보내기·Python·API 키가 필요하지 않습니다. BAT와 `godot`, `.tools` 폴더를 함께 두세요.
+
+플레이 저장은 `.local/play-saves`, 실행 기록은 `.local/play.log`에 남습니다. 개발 검사는 별도 저장 폴더를 사용합니다.
 
 처음부터는 현대 일상 도입부터, 빠른 시작은 첫 기연부터 시작합니다. 첫 공략은 달개울채가 수월합니다. 전투 손실 뒤에는 모병과 군량을 확인하세요. 각 행동은 자동 저장됩니다.
 
@@ -28,6 +30,4 @@
 - [검증 결과와 한계](docs/GODOT_VALIDATION.md)
 - [Godot에서 수정하기](docs/GODOT_DEVELOPMENT.md)
 
-소스 프로젝트는 `godot/project.godot`입니다. Godot 4.7.2 표준판으로 열 수 있습니다. 공유용 소스는 `releases/Nocrim-Godot-0.2.0-source.zip`입니다.
-
-이전 Ren’Py판의 코드·그림·배포본은 보존했습니다. [이전 버전 안내](docs/RENPY_README.md). 두 엔진의 저장 파일은 호환되지 않습니다.
+소스 프로젝트는 `godot/project.godot`입니다. Godot 4.7.2 표준판으로 열 수 있습니다. 이야기와 선택지는 `godot/data/world.json`에서 수정합니다.

@@ -16,10 +16,10 @@
 
 원본 작업 폴더에서는 `python tools/bootstrap_godot.py`가 공식 바이너리와 Windows 템플릿을 `.tools/godot`에 내려받아 공식 체크섬과 대조한다. `python tools/godot_task.py --headless --editor --import --quit`로 가져오기, `python tools/godot_task.py --headless --script res://tests/test_campaign.gd`로 규칙 검사, `python tools/godot_task.py --audio-driver Dummy -- --ui-test`로 화면 검사를 실행한다. 테스트 저장은 `tests/godot-saves`에 분리된다.
 
-공유용 소스 ZIP은 로컬 SDK 경로를 비웠다. Godot 편집기에서 같은 버전의 Export Templates를 설치하고 Windows Desktop 내보내기를 사용한다. 원본 작업 폴더는 로컬 템플릿 경로가 지정되어 있어 `python tools/godot_task.py --headless --export-release 'Windows Desktop'`로 내보낼 수 있다. 결과는 `releases/Nocrim-Godot-0.2.0-win`에 나온다.
+일반 플레이는 루트의 `play.bat`을 더블클릭한다. 포함된 Godot가 리소스를 가져온 뒤 현재 프로젝트를 직접 실행한다. Python과 내보내기 과정은 필요 없다. BAT 파일만 다른 곳으로 옮기지 않는다.
 
-리소스 팩과 실행 파일만으로 동작하는지 확인할 때는 `python tools/godot_task.py release --audio-driver Dummy -- --ui-test`를 사용한다. 이 경로는 소스 프로젝트를 실행 경로로 지정하지 않는다. 결과 확인 후 `python tools/package_godot.py`로 배포본·소스 ZIP을 만든다.
+BAT 플레이 저장은 `.local/play-saves`, 가져오기 기록은 `.local/import.log`, 실행 기록은 `.local/play.log`다. 자동 검사 저장인 `tests/godot-saves`와 분리된다. 짧은 시작 검사는 `play.bat --headless --quit-after 5`로 실행할 수 있다.
 
-기존 Ren’Py 자료는 `game`과 이전 `docs`에 남겨 두었다. `tools/export_godot_content.py`는 최초 이전에 사용한 도구다. Godot 데이터를 수정한 뒤 이 도구를 무심코 다시 실행하면 이전 Ren’Py 원문으로 덮어쓰므로, 현재 게임의 이야기 수정은 `godot/data/world.json`에서 한다.
+이야기는 `godot/data/world.json`에서 수정한다. `python tools/make_branch_reference.py`로 현재 사건 데이터에 맞춘 선택지 목록을 `docs/BRANCHES.md`에 갱신한다. 이전 엔진의 소스와 이전 도구는 제거했으며, 그림과 글꼴은 `godot/assets`에 독립적으로 들어 있다.
 
 저장 파일의 버전은 2다. 앞으로 저장 필드를 바꾸면 `persistence.gd`에 명시적인 이전 코드를 추가하거나 버전을 올려야 한다. 저장 데이터는 객체 복원 없이 읽으며, 난수와 딕셔너리 순서를 보존하기 위해 Godot Variant 직렬화를 사용한다.

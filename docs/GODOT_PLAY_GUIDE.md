@@ -4,9 +4,9 @@
 
 ## 실행
 
-Windows 배포 압축을 모두 푼 뒤 `Nocrim.exe`를 실행한다. 같은 폴더의 `Nocrim.pck`가 함께 있어야 한다. 개발 도구, Python, Ren’Py, 계정이나 API 키는 플레이에 필요하지 않다. 외부 서비스로 게임 상태를 전송하지 않는다.
+작업 폴더의 `play.bat`을 더블클릭한다. 자료를 준비한 뒤 Godot 게임 창이 열린다. 포함된 엔진을 사용하므로 별도 설치, 압축 해제, Python, 계정이나 API 키가 필요하지 않다. BAT와 `godot`, `.tools` 폴더를 함께 둔다.
 
-이전 Ren’Py판은 보존되어 있다. Godot판은 전투와 저장 형식이 달라 새 회차로 시작하며, Ren’Py 저장 파일을 읽지 않는다.
+실행에 실패하면 창에 표시된 안내와 `.local/import.log`, `.local/play.log`를 확인한다.
 
 ## 시작과 조작
 
@@ -67,16 +67,16 @@ Windows 배포 압축을 모두 푼 뒤 `Nocrim.exe`를 실행한다. 같은 폴
 
 성공한 행동과 대화 진행 시 자동 저장한다. 난수, 뽑을 덱·버린 덱·손패, 정찰 결과, 약 소모, 전리품 대기 상태를 함께 기록한다. 단순히 이어하기를 반복해 같은 선택의 결과를 바꾸지 못한다. 수동으로 과거 저장 파일을 편집하는 행위까지 막는 보안 장치는 아니다.
 
-저장 위치: `%APPDATA%/NocrimGodot/`. `campaign.save`가 진행 상태, `collection.json`이 결말 수첩이다. 각각 직전 저장의 `.bak`을 보관한다. 개발 검사는 별도 `tests/godot-saves`를 쓴다.
+BAT 실행 저장 위치: 작업 폴더의 `.local/play-saves/`. 기존 편집기·EXE 플레이 저장은 자동으로 옮기지 않으며, 이어가려면 기존 저장 파일을 이 폴더에 복사한다. `campaign.save`가 진행 상태, `collection.json`이 결말 수첩이다. 각각 직전 저장의 `.bak`을 보관한다. 개발 검사는 별도 `tests/godot-saves`를 쓴다.
 
 새 회차는 산채·재화·부상·동료·관계·약속을 초기화한다. 결말 수첩만 유지된다.
 
 ## 에셋 교체
 
-실행 파일 옆 `assets/characters`에 기본 파일명을 넣으면 내장 그림보다 우선 사용한다. `assets/characters/you_idle.png`, `yeon_idle.png`, `seo_idle.png`, `yun_idle.png`, `so_idle.png`, `enemy_idle.png`가 기본 전투 그림이다. 이미지는 시작할 때 읽으므로 교체 후 게임을 다시 실행한다.
+작업 폴더의 `godot/assets/characters`에서 그림을 교체한다. `you_idle.png`, `yeon_idle.png`, `seo_idle.png`, `yun_idle.png`, `so_idle.png`, `enemy_idle.png`가 기본 전투 그림이다. 이미지는 시작할 때 읽으므로 교체 후 게임을 다시 실행한다.
 
 초상화는 `{id}_portrait.png`, 포즈는 `{id}_idle2.png`, `{id}_attack.png`, `{id}_hit.png`, `{id}_strong_attack.png`다. 포즈가 없으면 대기 그림을 쓰면서 이동·참격·피격 반응을 재생한다. 길만복·범무진·하도겸·류무겸의 동료용 후면 그림은 현재 이름이 적힌 임시 실루엣이다. 적장은 공통 그림을 사용한다.
 
-표정은 `assets/characters/expressions/{id}_{expression}.png`에 넣는다. `neutral`, `smile`, `surprised`, `serious`, `angry`, `sad`, `embarrassed`, `shy`, `wry_smile`, `hurt`를 사용할 수 있다. 현재 대화의 기본 요청 표정은 `serious`이며, 없으면 초상화로 대체한다. `_alpha` 접미사는 쓰지 않는다. 게임 실행 중 흰 배경을 자동으로 지우지 않는다.
+표정은 `godot/assets/characters/expressions/{id}_{expression}.png`에 넣는다. `neutral`, `smile`, `surprised`, `serious`, `angry`, `sad`, `embarrassed`, `shy`, `wry_smile`, `hurt`를 사용할 수 있다. 현재 대화의 기본 요청 표정은 `serious`이며, 없으면 초상화로 대체한다. `_alpha` 접미사는 쓰지 않는다. 게임 실행 중 흰 배경을 자동으로 지우지 않는다.
 
 음원은 `GODOT_AUDIO.md`의 파일명을 따른다. 제공된 음원이 없으면 무음으로 진행한다.

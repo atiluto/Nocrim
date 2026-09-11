@@ -1,8 +1,6 @@
 .tools/
 releases/
-game/cache/
-game/saves/
-*.rpyc
+.local/
 *.pyc
 __pycache__/
 log.txt
