@@ -23,6 +23,7 @@
 
 ## 안내 문서
 
+- **[설정·캐릭터·분기 통합설정집 — Chat 편집용](녹림전생_통합설정집.md)**: 이 한 파일을 Chat에 첨부해 수정한 뒤 최신 수정본과 함께 “게임에 반영해줘”라고 요청하세요. 현재 구현과 확장 초안, 변경 기록을 구분합니다. 문서 편집만으로 자동 적용되지는 않습니다.
 - [플레이 방법](docs/GODOT_PLAY_GUIDE.md)
 - [첨부 제작 지침 적용 내용](docs/GODOT_REFERENCE_APPLIED.md)
 - [Suno·ElevenLabs 음원 경로와 프롬프트](docs/GODOT_AUDIO.md)
