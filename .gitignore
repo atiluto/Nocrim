@@ -9,3 +9,7 @@ log.txt
 traceback.txt
 errors.txt
 tests/results/
+godot/.godot/
+tests/godot-runtime/
+tests/godot-saves/
+tests/godot-*.log

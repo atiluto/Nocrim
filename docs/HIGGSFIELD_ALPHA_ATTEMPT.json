@@ -1,0 +1,38 @@
+[
+  {
+    "id": "you",
+    "job_id": "47b74eaa-aa1e-44b2-b738-26addbfce7b7",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170322_47b74eaa-aa1e-44b2-b738-26addbfce7b7.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  },
+  {
+    "id": "yeon",
+    "job_id": "1442f132-2484-4db6-b4a8-f4909c90ea55",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170323_1442f132-2484-4db6-b4a8-f4909c90ea55.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  },
+  {
+    "id": "seo",
+    "job_id": "aa6401cc-c577-49fa-9160-7e6eace14218",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170322_aa6401cc-c577-49fa-9160-7e6eace14218.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  },
+  {
+    "id": "yun",
+    "job_id": "7efa572f-6c90-4541-9e2f-5e170df9cc74",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170322_7efa572f-6c90-4541-9e2f-5e170df9cc74.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  },
+  {
+    "id": "so",
+    "job_id": "ca76418f-e3b3-4f1d-9440-49f91f10573f",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170323_ca76418f-e3b3-4f1d-9440-49f91f10573f.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  },
+  {
+    "id": "enemy",
+    "job_id": "293b6002-8fff-4a55-b232-2c54b032e2b7",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260910_170323_293b6002-8fff-4a55-b232-2c54b032e2b7.png",
+    "prompt": "Remove the entire checkered backdrop from this character. Preserve this exact original character pose, face, costume, colors and all weapons without any redesign. Export a genuinely transparent background with RGBA alpha channel. Do not draw a checkerboard pattern or a white background. Keep original full-body framing and aspect ratio."
+  }
+]
