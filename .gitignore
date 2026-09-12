@@ -12,3 +12,4 @@ tests/godot-runtime/
 tests/godot-saves/
 tests/godot-*.log
 *.import
+Magenta_Cut/MagentaCutoutTool.exe

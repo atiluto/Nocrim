@@ -1,0 +1,5443 @@
+{
+  "registered_on": "2026-09-12",
+  "status": "목록 등록만 완료; 시나리오 재생 연결 미변경",
+  "description_basis": "사용자 첨부 문서. 청취·길이·음량·루프 품질 미검증.",
+  "files": [
+    {
+      "path": "godot/assets/audio/ambience/amb_ability_arena.wav",
+      "stem": "amb_ability_arena",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_black_tower.wav",
+      "stem": "amb_black_tower",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_bureau.ogg",
+      "stem": "amb_bureau",
+      "category": "환경음",
+      "bytes": 249202,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-4. `amb_bureau.wav`",
+          "document_filename": "amb_bureau.wav",
+          "metadata": {
+            "느낌": "심야의 관공서·보안 사무실. 형광등과 서버, 공조기의 무기질적인 정적",
+            "활용": "관리기관, 기록실, 연구실, 야간 사무실",
+            "주의": "키보드나 엘리베이터처럼 자주 반복되면 눈에 띄는 소리를 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_bureau.wav",
+      "stem": "amb_bureau",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-4. `amb_bureau.wav`",
+          "document_filename": "amb_bureau.wav",
+          "metadata": {
+            "느낌": "심야의 관공서·보안 사무실. 형광등과 서버, 공조기의 무기질적인 정적",
+            "활용": "관리기관, 기록실, 연구실, 야간 사무실",
+            "주의": "키보드나 엘리베이터처럼 자주 반복되면 눈에 띄는 소리를 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_city.ogg",
+      "stem": "amb_city",
+      "category": "환경음",
+      "bytes": 381608,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-2. `amb_city.wav`",
+          "document_filename": "amb_city.wav",
+          "metadata": {
+            "느낌": "서울 도심의 지속적인 생활 소음. 활기차지만 혼잡하거나 공격적이지 않음",
+            "활용": "인도, 도심 이동, 건물 앞, 낮의 외부 장면",
+            "주의": "경적·사이렌처럼 반복할 때 티 나는 소리가 없는 결과 선택"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_city.wav",
+      "stem": "amb_city",
+      "category": "환경음",
+      "bytes": 2857038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-2. `amb_city.wav`",
+          "document_filename": "amb_city.wav",
+          "metadata": {
+            "느낌": "서울 도심의 지속적인 생활 소음. 활기차지만 혼잡하거나 공격적이지 않음",
+            "활용": "인도, 도심 이동, 건물 앞, 낮의 외부 장면",
+            "주의": "경적·사이렌처럼 반복할 때 티 나는 소리가 없는 결과 선택"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_construction.ogg",
+      "stem": "amb_construction",
+      "category": "환경음",
+      "bytes": 379280,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-7. `amb_construction.wav`",
+          "document_filename": "amb_construction.wav",
+          "metadata": {
+            "느낌": "작은 상업 공간을 고치는 생산적인 공사음. 시끄러운 철거가 아니라 대화 가능한 실내 작업",
+            "활용": "인테리어 공사, 작업실, 가구 설치, 수리 몽타주",
+            "주의": "드릴이 계속 이어지는 결과는 대사를 덮으므로 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_construction.wav",
+      "stem": "amb_construction",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-7. `amb_construction.wav`",
+          "document_filename": "amb_construction.wav",
+          "metadata": {
+            "느낌": "작은 상업 공간을 고치는 생산적인 공사음. 시끄러운 철거가 아니라 대화 가능한 실내 작업",
+            "활용": "인테리어 공사, 작업실, 가구 설치, 수리 몽타주",
+            "주의": "드릴이 계속 이어지는 결과는 대사를 덮으므로 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_dungeon.ogg",
+      "stem": "amb_dungeon",
+      "category": "환경음",
+      "bytes": 385137,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-6. `amb_dungeon.wav`",
+          "document_filename": "amb_dungeon.wav",
+          "metadata": {
+            "느낌": "차갑고 비어 있는 암석 던전. 아직 적이 보이지 않지만 무엇인가 있을 듯한 절제된 위험",
+            "활용": "동굴, 던전, 게이트 내부, 지하 탐색",
+            "주의": "마물 울음과 전투음은 별도 SFX로 두고 환경음에는 넣지 않음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_dungeon.wav",
+      "stem": "amb_dungeon",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-6. `amb_dungeon.wav`",
+          "document_filename": "amb_dungeon.wav",
+          "metadata": {
+            "느낌": "차갑고 비어 있는 암석 던전. 아직 적이 보이지 않지만 무엇인가 있을 듯한 절제된 위험",
+            "활용": "동굴, 던전, 게이트 내부, 지하 탐색",
+            "주의": "마물 울음과 전투음은 별도 SFX로 두고 환경음에는 넣지 않음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_inn_room.ogg",
+      "stem": "amb_inn_room",
+      "category": "환경음",
+      "bytes": 247863,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-1. `amb_inn_room.wav`",
+          "document_filename": "amb_inn_room.wav",
+          "metadata": {
+            "느낌": "작은 나무 찻집의 따뜻하고 조용한 실내. 주전자와 환기음이 아주 낮게 깔림",
+            "활용": "객잔·찻집·카페의 평상시 실내",
+            "주의": "가까운 발걸음이나 문종이 들어가면 별도 SFX와 충돌함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_inn_room.wav",
+      "stem": "amb_inn_room",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-1. `amb_inn_room.wav`",
+          "document_filename": "amb_inn_room.wav",
+          "metadata": {
+            "느낌": "작은 나무 찻집의 따뜻하고 조용한 실내. 주전자와 환기음이 아주 낮게 깔림",
+            "활용": "객잔·찻집·카페의 평상시 실내",
+            "주의": "가까운 발걸음이나 문종이 들어가면 별도 SFX와 충돌함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_laak_room.wav",
+      "stem": "amb_laak_room",
+      "category": "환경음",
+      "bytes": 2319438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_motel_room.ogg",
+      "stem": "amb_motel_room",
+      "category": "환경음",
+      "bytes": 247266,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-5. `amb_motel_room.wav`",
+          "document_filename": "amb_motel_room.wav",
+          "metadata": {
+            "느낌": "오래된 소형 모텔방의 피곤하고 사적인 밤. 안전하지만 낡은 생활감이 있음",
+            "활용": "임시 거처, 여관, 값싼 방, 밤샘 연구",
+            "주의": "공포 장면이 아니라면 배관음과 냉장고 소리가 지나치게 음산한 결과는 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_motel_room.wav",
+      "stem": "amb_motel_room",
+      "category": "환경음",
+      "bytes": 2857038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-5. `amb_motel_room.wav`",
+          "document_filename": "amb_motel_room.wav",
+          "metadata": {
+            "느낌": "오래된 소형 모텔방의 피곤하고 사적인 밤. 안전하지만 낡은 생활감이 있음",
+            "활용": "임시 거처, 여관, 값싼 방, 밤샘 연구",
+            "주의": "공포 장면이 아니라면 배관음과 냉장고 소리가 지나치게 음산한 결과는 피함"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_murim_hall.ogg",
+      "stem": "amb_murim_hall",
+      "category": "환경음",
+      "bytes": 385536,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-3. `amb_murim_hall.wav`",
+          "document_filename": "amb_murim_hall.wav",
+          "metadata": {
+            "느낌": "넓고 차가운 지하 석실. 고요하지만 완전히 죽어 있지는 않은 오래된 공간",
+            "활용": "지하전각, 고대 유적, 의식실, 봉인된 회랑",
+            "주의": "공포 비명이나 마법 발동음이 없는 순수 공간음으로 선택"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_murim_hall.wav",
+      "stem": "amb_murim_hall",
+      "category": "환경음",
+      "bytes": 2857038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "2-3. `amb_murim_hall.wav`",
+          "document_filename": "amb_murim_hall.wav",
+          "metadata": {
+            "느낌": "넓고 차가운 지하 석실. 고요하지만 완전히 죽어 있지는 않은 오래된 공간",
+            "활용": "지하전각, 고대 유적, 의식실, 봉인된 회랑",
+            "주의": "공포 비명이나 마법 발동음이 없는 순수 공간음으로 선택"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_otherworld_forest.wav",
+      "stem": "amb_otherworld_forest",
+      "category": "환경음",
+      "bytes": 2319438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_reverse_lab.wav",
+      "stem": "amb_reverse_lab",
+      "category": "환경음",
+      "bytes": 2319438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_s_gate.wav",
+      "stem": "amb_s_gate",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/amb_warped_gate.wav",
+      "stem": "amb_warped_gate",
+      "category": "환경음",
+      "bytes": 2880078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/ambience/bgm_movie_night.mp3",
+      "stem": "bgm_movie_night",
+      "category": "BGM",
+      "bytes": 4417820,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/beneath_the_wet_soil.mp3",
+      "stem": "beneath_the_wet_soil",
+      "category": "BGM",
+      "bytes": 4197298,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`beneath_the_wet_soil.mp3`",
+          "document_filename": "beneath_the_wet_soil.mp3",
+          "metadata": {
+            "제목": "Beneath the Wet Soil",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "60~90초, 자연스러운 반복",
+            "느낌": "젖은 흙 아래에 갇힌 압박감, 불규칙한 심장, 기억과 빙의의 불길함. 공포 영화처럼 과장하지 않고 낮고 답답하다.",
+            "사용 장면": "생매장 직후 각성, 낙뢰와 빙의, 기억 유입, 흑도패에게 당한 뒤의 무력감, 위기 회상"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/beneath_the_wet_soil_2.mp3",
+      "stem": "beneath_the_wet_soil_2",
+      "category": "BGM",
+      "bytes": 4470550,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ability_match.mp3",
+      "stem": "bgm_ability_match",
+      "category": "BGM",
+      "bytes": 2153971,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_arena_crisis.mp3",
+      "stem": "bgm_arena_crisis",
+      "category": "BGM",
+      "bytes": 2753771,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_black_tower.mp3",
+      "stem": "bgm_black_tower",
+      "category": "BGM",
+      "bytes": 8017459,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_broker_deal.mp3",
+      "stem": "bgm_broker_deal",
+      "category": "BGM",
+      "bytes": 4956240,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-17. `bgm_broker_deal.mp3`",
+          "document_filename": "bgm_broker_deal.mp3",
+          "metadata": {
+            "역할": "회색지대 중개인·거래 테마",
+            "느낌": "서로를 재는 공손한 대화, 고급스러운 긴장, 차갑지만 악하지 않은 분위기",
+            "활용": "비공식 거래, 계약, 신분 마련, 희귀품 감정"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_bureau_investigation.mp3",
+      "stem": "bgm_bureau_investigation",
+      "category": "BGM",
+      "bytes": 6606658,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-5. `bgm_bureau_investigation.mp3` 또는 `bgm_bureau_investigation.ogg`",
+          "document_filename": "bgm_bureau_investigation.mp3",
+          "metadata": {
+            "역할": "기관 조사·잠입의 기본 테마",
+            "느낌": "형광등 아래의 건조한 긴장, 조용한 두뇌전, 약간의 행정적 유머",
+            "활용": "관리기관, 기록실, 비공식 검사, 신분 조사, 야간 잠입",
+            "핵심 악기": "뮤트 피아노, 아날로그 신스 펄스, 틱 타악, 유리질 말렛"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-5. `bgm_bureau_investigation.mp3` 또는 `bgm_bureau_investigation.ogg`",
+          "document_filename": "bgm_bureau_investigation.ogg",
+          "metadata": {
+            "역할": "기관 조사·잠입의 기본 테마",
+            "느낌": "형광등 아래의 건조한 긴장, 조용한 두뇌전, 약간의 행정적 유머",
+            "활용": "관리기관, 기록실, 비공식 검사, 신분 조사, 야간 잠입",
+            "핵심 악기": "뮤트 피아노, 아날로그 신스 펄스, 틱 타악, 유리질 말렛"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_black_tower.mp3",
+      "stem": "bgm_ch3_black_tower",
+      "category": "BGM",
+      "bytes": 5875092,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_fantasy_movie.mp3",
+      "stem": "bgm_ch3_fantasy_movie",
+      "category": "BGM",
+      "bytes": 3410807,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_gamer_comedy.mp3",
+      "stem": "bgm_ch3_gamer_comedy",
+      "category": "BGM",
+      "bytes": 11839502,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_inn_day.mp3",
+      "stem": "bgm_ch3_inn_day",
+      "category": "BGM",
+      "bytes": 4046983,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_laak_battle.mp3",
+      "stem": "bgm_ch3_laak_battle",
+      "category": "BGM",
+      "bytes": 5396177,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_modern_wonder.mp3",
+      "stem": "bgm_ch3_modern_wonder",
+      "category": "BGM",
+      "bytes": 5038976,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_otherworld_forest.mp3",
+      "stem": "bgm_ch3_otherworld_forest",
+      "category": "BGM",
+      "bytes": 7751468,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_reverse_lab.mp3",
+      "stem": "bgm_ch3_reverse_lab",
+      "category": "BGM",
+      "bytes": 6932557,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_soi_reveal.mp3",
+      "stem": "bgm_ch3_soi_reveal",
+      "category": "BGM",
+      "bytes": 4615884,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_ch3_three_worlds.mp3",
+      "stem": "bgm_ch3_three_worlds",
+      "category": "BGM",
+      "bytes": 6051775,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_childhood_departure.mp3",
+      "stem": "bgm_childhood_departure",
+      "category": "BGM",
+      "bytes": 4538465,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-11. `bgm_childhood_departure.mp3`",
+          "document_filename": "bgm_childhood_departure.mp3",
+          "metadata": {
+            "역할": "어린 시절의 출발과 불안 테마",
+            "느낌": "평범한 낮 풍경에 자존심과 열등감, 작은 불길함이 서서히 스며듦",
+            "활용": "어린 시절 회상, 이동, 사고 직전, 가족과의 이별"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_clue_afterglow.mp3",
+      "stem": "bgm_clue_afterglow",
+      "category": "BGM",
+      "bytes": 5947186,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-23. `bgm_clue_afterglow.mp3`",
+          "document_filename": "bgm_clue_afterglow.mp3",
+          "metadata": {
+            "역할": "전투 후 단서 발견 테마",
+            "느낌": "위기는 끝났지만 흔적은 남아 있는 상태. 희망, 불안, 지적 흥분이 동시에 존재",
+            "활용": "사고 현장 조사, 차원흔 발견, 과거 기록 검색, 귀환 가능성 확인"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_core_heist.mp3",
+      "stem": "bgm_core_heist",
+      "category": "BGM",
+      "bytes": 6518235,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_gate_ambush.mp3",
+      "stem": "bgm_gate_ambush",
+      "category": "BGM",
+      "bytes": 5123947,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_gate_expedition.mp3",
+      "stem": "bgm_gate_expedition",
+      "category": "BGM",
+      "bytes": 4331297,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-21. `bgm_gate_expedition.mp3`",
+          "document_filename": "bgm_gate_expedition.mp3",
+          "metadata": {
+            "역할": "전문적인 던전 탐색 테마",
+            "느낌": "대형 액션보다 절제된 긴장, 거리와 진형을 확인하며 전진하는 숙련된 팀",
+            "활용": "게이트 진입, 폐허 탐색, 부산물 회수, 전투 전 경계"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_gate_history.mp3",
+      "stem": "bgm_gate_history",
+      "category": "BGM",
+      "bytes": 3990800,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-10. `bgm_gate_history.mp3`",
+          "document_filename": "bgm_gate_history.mp3",
+          "metadata": {
+            "역할": "과거 게이트 사태를 설명하는 기록·몽타주 테마",
+            "느낌": "재난 기록물처럼 진중하며, 혼란에서 대응 체계가 잡혀 가는 흐름",
+            "활용": "역사 설명, 군 대응, 각성자 등장, 뉴스·기록 컷씬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_gate_mutation.mp3",
+      "stem": "bgm_gate_mutation",
+      "category": "BGM",
+      "bytes": 7503547,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-22. `bgm_gate_mutation.mp3`",
+          "document_filename": "bgm_gate_mutation.mp3",
+          "metadata": {
+            "역할": "변칙 게이트·상위 개체 전투 테마",
+            "느낌": "안정되던 공간이 갑자기 붉게 중첩되는 고강도 위기, 전문팀조차 밀리는 압박",
+            "활용": "공간 변이, 난입, 상위 마물 전투, 은밀한 구출"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_gate_patrol.mp3",
+      "stem": "bgm_gate_patrol",
+      "category": "BGM",
+      "bytes": 6276054,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_haeun_theme.mp3",
+      "stem": "bgm_haeun_theme",
+      "category": "BGM",
+      "bytes": 6073568,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_hidden_hero.mp3",
+      "stem": "bgm_hidden_hero",
+      "category": "BGM",
+      "bytes": 4241027,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_inn_afterhours.mp3",
+      "stem": "bgm_inn_afterhours",
+      "category": "BGM",
+      "bytes": 6719100,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-9. `bgm_inn_afterhours.mp3`",
+          "document_filename": "bgm_inn_afterhours.mp3",
+          "metadata": {
+            "역할": "영업 종료 후의 밤 테마",
+            "느낌": "가게에 혼자 남은 편안함과 희미한 그리움. 슬픔보다 긴 하루 뒤의 안정",
+            "활용": "마감, 야간 연구, 간식·요리, 조용한 회상"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_inn_busy.mp3",
+      "stem": "bgm_inn_busy",
+      "category": "BGM",
+      "bytes": 2540916,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-8. `bgm_inn_busy.mp3`",
+          "document_filename": "bgm_inn_busy.mp3",
+          "metadata": {
+            "역할": "손님이 몰리는 영업 테마",
+            "느낌": "분주하지만 통제되는 활기, 손님 응대의 빠른 템포, 짧은 코미디 타이밍",
+            "활용": "주문 러시, 여러 손님의 반응, 영업 몽타주"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_inn_morning.mp3",
+      "stem": "bgm_inn_morning",
+      "category": "BGM",
+      "bytes": 5918169,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-7. `bgm_inn_morning.mp3`",
+          "document_filename": "bgm_inn_morning.mp3",
+          "metadata": {
+            "역할": "밝은 개점·출근 테마",
+            "느낌": "햇빛이 드는 아침, 아직 바쁘기 전의 산뜻함, 능숙하게 하루를 여는 기분",
+            "활용": "기상, 출근, 개점 준비, 첫 손님 전"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_inn_rebuild.mp3",
+      "stem": "bgm_inn_rebuild",
+      "category": "BGM",
+      "bytes": 4910600,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-18. `bgm_inn_rebuild.mp3`",
+          "document_filename": "bgm_inn_rebuild.mp3",
+          "metadata": {
+            "역할": "가게 공사·창업 진행 테마",
+            "느낌": "하나씩 자기 공간이 완성되는 희망, 손으로 만드는 성취감, 약한 자부심",
+            "활용": "공사, 가구 선택, 메뉴 시험, 간판·가게 이름 결정"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_inn_warm.ogg",
+      "stem": "bgm_inn_warm",
+      "category": "BGM",
+      "bytes": 487384,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-1. `bgm_inn_warm.mp3` 또는 `bgm_inn_warm.ogg`",
+          "document_filename": "bgm_inn_warm.mp3",
+          "metadata": {
+            "역할": "전통풍 찻집의 기본 일상 테마",
+            "느낌": "따뜻한 나무 실내, 잔잔한 오후, 소소한 유머. 졸리지는 않지만 대사를 방해하지 않는 편안함",
+            "활용": "가게 영업, 차 준비, 손님과의 일상 대화, 연구, 영업 종료 전 휴식",
+            "핵심 악기": "가야금 계열 현, 대금·피리 계열 목관, 펠트 피아노, 부드러운 타악기"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-1. `bgm_inn_warm.mp3` 또는 `bgm_inn_warm.ogg`",
+          "document_filename": "bgm_inn_warm.ogg",
+          "metadata": {
+            "역할": "전통풍 찻집의 기본 일상 테마",
+            "느낌": "따뜻한 나무 실내, 잔잔한 오후, 소소한 유머. 졸리지는 않지만 대사를 방해하지 않는 편안함",
+            "활용": "가게 영업, 차 준비, 손님과의 일상 대화, 연구, 영업 종료 전 휴식",
+            "핵심 악기": "가야금 계열 현, 대금·피리 계열 목관, 펠트 피아노, 부드러운 타악기"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_laak_comedy.mp3",
+      "stem": "bgm_laak_comedy",
+      "category": "BGM",
+      "bytes": 3597626,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_meat_party.mp3",
+      "stem": "bgm_meat_party",
+      "category": "BGM",
+      "bytes": 3692274,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_memory_wound.mp3",
+      "stem": "bgm_memory_wound",
+      "category": "BGM",
+      "bytes": 5075300,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_modern_comedy.mp3",
+      "stem": "bgm_modern_comedy",
+      "category": "BGM",
+      "bytes": 5779665,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-15. `bgm_modern_comedy.mp3`",
+          "document_filename": "bgm_modern_comedy.mp3",
+          "metadata": {
+            "역할": "현대 적응 코미디 전용 테마",
+            "느낌": "유능한 강자가 사소한 현대 기계 앞에서 고생하는 건조하고 따뜻한 웃음",
+            "활용": "미용실, 스마트폰, 전자레인지, 에스컬레이터, 오락실"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_modern_discovery.mp3",
+      "stem": "bgm_modern_discovery",
+      "category": "BGM",
+      "bytes": 5531965,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-4. `bgm_modern_discovery.mp3` 또는 `bgm_modern_discovery.ogg`",
+          "document_filename": "bgm_modern_discovery.mp3",
+          "metadata": {
+            "역할": "현대 문물을 처음 접하는 장면의 기본 테마",
+            "느낌": "호기심, 산뜻한 도시감, 약한 코미디. 어린아이 같은 귀여움보다 유능한 어른의 낯선 적응",
+            "활용": "도시 탐색, 스마트폰·편의점·게임·음식 체험, 새로운 일상 발견",
+            "핵심 악기": "펠트 피아노, 마림바 계열 플럭, 가야금 포인트, 림클릭, 가벼운 신스"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-4. `bgm_modern_discovery.mp3` 또는 `bgm_modern_discovery.ogg`",
+          "document_filename": "bgm_modern_discovery.ogg",
+          "metadata": {
+            "역할": "현대 문물을 처음 접하는 장면의 기본 테마",
+            "느낌": "호기심, 산뜻한 도시감, 약한 코미디. 어린아이 같은 귀여움보다 유능한 어른의 낯선 적응",
+            "활용": "도시 탐색, 스마트폰·편의점·게임·음식 체험, 새로운 일상 발견",
+            "핵심 악기": "펠트 피아노, 마림바 계열 플럭, 가야금 포인트, 림클릭, 가벼운 신스"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_murim_ascension.mp3",
+      "stem": "bgm_murim_ascension",
+      "category": "BGM",
+      "bytes": 4784879,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-13. `bgm_murim_ascension.mp3`",
+          "document_filename": "bgm_murim_ascension.mp3",
+          "metadata": {
+            "역할": "무림에서의 성장·제패 몽타주 테마",
+            "느낌": "검고 강한 전진감, 승리의 도취를 절제한 위엄, 위험한 자신감",
+            "활용": "세력 재건, 장기 수련, 결전 몽타주, 강자로 자리 잡는 과정"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_murim_ritual.mp3",
+      "stem": "bgm_murim_ritual",
+      "category": "BGM",
+      "bytes": 8272202,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-2. `bgm_murim_ritual.mp3` 또는 `bgm_murim_ritual.ogg`",
+          "document_filename": "bgm_murim_ritual.mp3",
+          "metadata": {
+            "역할": "무협 세계의 의식·진법 기본 테마",
+            "느낌": "차갑고 넓은 석실, 오래된 의식의 무게. 사악한 공포보다 정교하고 엄숙한 준비 과정",
+            "활용": "지하전각, 봉인고, 의식 준비, 고대 장치 조사, 조용한 결심",
+            "핵심 악기": "거문고 계열 저현, 숨소리 섞인 피리, 낮은 북, 청동 종, 저음 현악"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-2. `bgm_murim_ritual.mp3` 또는 `bgm_murim_ritual.ogg`",
+          "document_filename": "bgm_murim_ritual.ogg",
+          "metadata": {
+            "역할": "무협 세계의 의식·진법 기본 테마",
+            "느낌": "차갑고 넓은 석실, 오래된 의식의 무게. 사악한 공포보다 정교하고 엄숙한 준비 과정",
+            "활용": "지하전각, 봉인고, 의식 준비, 고대 장치 조사, 조용한 결심",
+            "핵심 악기": "거문고 계열 저현, 숨소리 섞인 피리, 낮은 북, 청동 종, 저음 현악"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_murim_survival.mp3",
+      "stem": "bgm_murim_survival",
+      "category": "BGM",
+      "bytes": 5264951,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-12. `bgm_murim_survival.mp3`",
+          "document_filename": "bgm_murim_survival.mp3",
+          "metadata": {
+            "역할": "낯선 무협 세계의 생존 테마",
+            "느낌": "거친 숲, 추격의 공포, 경계심이 결의로 바뀌는 과정",
+            "활용": "이계 도착, 도주, 추적, 초기 생존, 힘의 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_old_rival.mp3",
+      "stem": "bgm_old_rival",
+      "category": "BGM",
+      "bytes": 4432837,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_otherworld_hunt.mp3",
+      "stem": "bgm_otherworld_hunt",
+      "category": "BGM",
+      "bytes": 6976514,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_portal_crisis.mp3",
+      "stem": "bgm_portal_crisis",
+      "category": "BGM",
+      "bytes": 5176764,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-3. `bgm_portal_crisis.mp3` 또는 `bgm_portal_crisis.ogg`",
+          "document_filename": "bgm_portal_crisis.mp3",
+          "metadata": {
+            "역할": "차원 이상·게이트 위기의 기본 테마",
+            "느낌": "공간이 비틀리고 안정성이 무너지는 압박감. 긴급하지만 예고편처럼 과장되지 않음",
+            "활용": "차원문 가동, 게이트 사고, 공간 균열, 이동 실패, 위기 직전",
+            "핵심 악기": "저음 신스, 첼로 펄스, 역재생 현, 금속 타악, 불협화 종"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-3. `bgm_portal_crisis.mp3` 또는 `bgm_portal_crisis.ogg`",
+          "document_filename": "bgm_portal_crisis.ogg",
+          "metadata": {
+            "역할": "차원 이상·게이트 위기의 기본 테마",
+            "느낌": "공간이 비틀리고 안정성이 무너지는 압박감. 긴급하지만 예고편처럼 과장되지 않음",
+            "활용": "차원문 가동, 게이트 사고, 공간 균열, 이동 실패, 위기 직전",
+            "핵심 악기": "저음 신스, 첼로 펄스, 역재생 현, 금속 타악, 불협화 종"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_research_night.mp3",
+      "stem": "bgm_research_night",
+      "category": "BGM",
+      "bytes": 5383072,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-16. `bgm_research_night.mp3`",
+          "document_filename": "bgm_research_night.mp3",
+          "metadata": {
+            "역할": "심야 연구·검색 테마",
+            "느낌": "값싼 방 안에서 이어지는 조용한 집중, 작은 실패와 희망의 반복",
+            "활용": "자료 검색, 진법 재현, 분석, 잠 못 드는 연구"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_return_ritual.mp3",
+      "stem": "bgm_return_ritual",
+      "category": "BGM",
+      "bytes": 7539877,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-14. `bgm_return_ritual.mp3`",
+          "document_filename": "bgm_return_ritual.mp3",
+          "metadata": {
+            "역할": "반복된 귀환 실험과 의식 테마",
+            "느낌": "지친 연구자의 익숙한 손놀림, 정밀한 기하학, 이번에는 성공할지도 모른다는 기대",
+            "활용": "진법 배치, 재료 점검, 반복 실험, 의식 개시"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_reverse_gate_lab.mp3",
+      "stem": "bgm_reverse_gate_lab",
+      "category": "BGM",
+      "bytes": 5097764,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_s_gate_march.mp3",
+      "stem": "bgm_s_gate_march",
+      "category": "BGM",
+      "bytes": 4149167,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_secret_shared.mp3",
+      "stem": "bgm_secret_shared",
+      "category": "BGM",
+      "bytes": 3800312,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_seoyun.mp3",
+      "stem": "bgm_seoyun",
+      "category": "BGM",
+      "bytes": 4517282,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-6. `bgm_seoyun.mp3` 또는 `bgm_seoyun.ogg`",
+          "document_filename": "bgm_seoyun.mp3",
+          "metadata": {
+            "역할": "편안한 성인 로맨스의 기본 테마",
+            "느낌": "차를 사이에 둔 조용한 호감, 따뜻함, 낯가림이 조금씩 풀리는 분위기",
+            "활용": "첫 만남, 회복, 단골이 되는 과정, 평범한 대화 속의 호감",
+            "핵심 악기": "펠트 피아노, 부드러운 피리, 가야금 플럭, 실내악 현, 브러시"
+          }
+        },
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-6. `bgm_seoyun.mp3` 또는 `bgm_seoyun.ogg`",
+          "document_filename": "bgm_seoyun.ogg",
+          "metadata": {
+            "역할": "편안한 성인 로맨스의 기본 테마",
+            "느낌": "차를 사이에 둔 조용한 호감, 따뜻함, 낯가림이 조금씩 풀리는 분위기",
+            "활용": "첫 만남, 회복, 단골이 되는 과정, 평범한 대화 속의 호감",
+            "핵심 악기": "펠트 피아노, 부드러운 피리, 가야금 플럭, 실내악 현, 브러시"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_seoyun_comfort.mp3",
+      "stem": "bgm_seoyun_comfort",
+      "category": "BGM",
+      "bytes": 4812322,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-20. `bgm_seoyun_comfort.mp3`",
+          "document_filename": "bgm_seoyun_comfort.mp3",
+          "metadata": {
+            "역할": "단골이 된 뒤의 편안한 관계 테마",
+            "느낌": "말을 하지 않아도 어색하지 않은 사이, 직접 말하지 않는 걱정, 잔잔한 정서적 무게",
+            "활용": "재방문, 조용한 대화, 출근 전 차, 사고 후 안부"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_seoyun_first.mp3",
+      "stem": "bgm_seoyun_first",
+      "category": "BGM",
+      "bytes": 5039363,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "1-19. `bgm_seoyun_first.mp3`",
+          "document_filename": "bgm_seoyun_first.mp3",
+          "metadata": {
+            "역할": "히로인 첫 주문·첫인상 테마",
+            "느낌": "피곤한 성인 두 사람의 자연스러운 말장난, 밝은 호기심, 아직 작고 가벼운 호감",
+            "활용": "첫 만남, 첫 주문, 예상 밖 대화, 첫 관심"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_sion_fragile.mp3",
+      "stem": "bgm_sion_fragile",
+      "category": "BGM",
+      "bytes": 4373346,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_spear_duel.mp3",
+      "stem": "bgm_spear_duel",
+      "category": "BGM",
+      "bytes": 7270822,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_student_success.mp3",
+      "stem": "bgm_student_success",
+      "category": "BGM",
+      "bytes": 8075378,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/bgm_training_flow.mp3",
+      "stem": "bgm_training_flow",
+      "category": "BGM",
+      "bytes": 4321654,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/first_step_into_the_jianghu.mp3",
+      "stem": "first_step_into_the_jianghu",
+      "category": "BGM",
+      "bytes": 6711281,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/first_step_into_the_jianghu_2.mp3",
+      "stem": "first_step_into_the_jianghu_2",
+      "category": "BGM",
+      "bytes": 4494376,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/bgm/night_market_whispers.mp3",
+      "stem": "night_market_whispers",
+      "category": "BGM",
+      "bytes": 6329760,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`night_market_whispers.mp3`",
+          "document_filename": "night_market_whispers.mp3",
+          "metadata": {
+            "제목": "Night Market Whispers",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "90~120초, 자연스러운 반복",
+            "느낌": "따뜻한 무림 야시장, 조용한 일상, 등불 아래 포장마차. 편안하고 약간 능청스럽지만 경박하지 않다.",
+            "사용 장면": "현재 시점의 야행포차 영업, 포장마차 완성 공개, 첫 손님, 현재 복귀, 엔딩 직전의 일상 장면"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/night_market_whispers_2.mp3",
+      "stem": "night_market_whispers_2",
+      "category": "BGM",
+      "bytes": 4352502,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`night_market_whispers_2.mp3`",
+          "document_filename": "night_market_whispers_2.mp3",
+          "metadata": {
+            "제목": "Night Market Whispers2",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "90~110초, 자연스러운 반복",
+            "느낌": "같은 야시장 세계관이지만 조금 더 경쾌하다. 손으로 수레를 고치고 가게를 준비하는 생활형 성장 몽타주에 어울린다.",
+            "사용 장면": "관도와 성내 이동, 대장간, 수레 수리, 장보기, 조리 연습, 첫 영업 준비"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/rain_on_the_wandering_cart.mp3",
+      "stem": "rain_on_the_wandering_cart",
+      "category": "BGM",
+      "bytes": 5124619,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`rain_on_the_wandering_cart.mp3`",
+          "document_filename": "rain_on_the_wandering_cart.mp3",
+          "metadata": {
+            "제목": "Rain on the Wandering Cart",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "80~110초, 자연스러운 반복",
+            "느낌": "비와 피로가 섞인 쓸쓸한 이동곡. 슬프기만 하기보다 혼자 버티며 하루를 넘기는 정서가 있다.",
+            "사용 장면": "현대의 비 오는 포장마차, 산길 이동, 객잔 회복, 부상 뒤 감정 정리, 수레를 끌고 가는 밤길과 강변"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/bgm/rain_on_the_wandering_cart_2.mp3",
+      "stem": "rain_on_the_wandering_cart_2",
+      "category": "BGM",
+      "bytes": 5944657,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_gate_day_loop_01.mp3",
+      "stem": "amb_city_gate_day_loop_01",
+      "category": "환경음",
+      "bytes": 372717,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 성문",
+          "document_filename": "amb_city_gate_day_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_gate_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "검문과 통행이 이어지는 성문. 군중·수레·말이 섞이지만 대사를 덮지 않는 중간 밀도다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_gate_day_loop_02.mp3",
+      "stem": "amb_city_gate_day_loop_02",
+      "category": "환경음",
+      "bytes": 372717,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 성문",
+          "document_filename": "amb_city_gate_day_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_gate_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "검문과 통행이 이어지는 성문. 군중·수레·말이 섞이지만 대사를 덮지 않는 중간 밀도다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_gate_day_loop_03.mp3",
+      "stem": "amb_city_gate_day_loop_03",
+      "category": "환경음",
+      "bytes": 372717,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 성문",
+          "document_filename": "amb_city_gate_day_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_gate_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "검문과 통행이 이어지는 성문. 군중·수레·말이 섞이지만 대사를 덮지 않는 중간 밀도다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_gate_day_loop_04.mp3",
+      "stem": "amb_city_gate_day_loop_04",
+      "category": "환경음",
+      "bytes": 372717,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 성문",
+          "document_filename": "amb_city_gate_day_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_gate_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "검문과 통행이 이어지는 성문. 군중·수레·말이 섞이지만 대사를 덮지 않는 중간 밀도다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_main_street_day_loop_01.mp3",
+      "stem": "amb_city_main_street_day_loop_01",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 대로와 시장",
+          "document_filename": "amb_city_main_street_day_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_main_street_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "구강부의 활기찬 대로와 낮 시장. 장보기·수레 작업·첫 영업에 넓게 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_main_street_day_loop_02.mp3",
+      "stem": "amb_city_main_street_day_loop_02",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 대로와 시장",
+          "document_filename": "amb_city_main_street_day_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_main_street_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "구강부의 활기찬 대로와 낮 시장. 장보기·수레 작업·첫 영업에 넓게 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_main_street_day_loop_03.mp3",
+      "stem": "amb_city_main_street_day_loop_03",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 대로와 시장",
+          "document_filename": "amb_city_main_street_day_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_main_street_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "구강부의 활기찬 대로와 낮 시장. 장보기·수레 작업·첫 영업에 넓게 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_city_main_street_day_loop_04.mp3",
+      "stem": "amb_city_main_street_day_loop_04",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "구강부 대로와 시장",
+          "document_filename": "amb_city_main_street_day_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_city_main_street_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "구강부의 활기찬 대로와 낮 시장. 장보기·수레 작업·첫 영업에 넓게 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_foothill_village_day_loop_01.mp3",
+      "stem": "amb_foothill_village_day_loop_01",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "산자락 마을의 낮",
+          "document_filename": "amb_foothill_village_day_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_foothill_village_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "작고 가난한 산촌의 생활음. 도시보다 한산하며, 말소리는 알아들을 수 없어야 한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_foothill_village_day_loop_02.mp3",
+      "stem": "amb_foothill_village_day_loop_02",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "산자락 마을의 낮",
+          "document_filename": "amb_foothill_village_day_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_foothill_village_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "작고 가난한 산촌의 생활음. 도시보다 한산하며, 말소리는 알아들을 수 없어야 한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_foothill_village_day_loop_03.mp3",
+      "stem": "amb_foothill_village_day_loop_03",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "산자락 마을의 낮",
+          "document_filename": "amb_foothill_village_day_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_foothill_village_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "작고 가난한 산촌의 생활음. 도시보다 한산하며, 말소리는 알아들을 수 없어야 한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_foothill_village_day_loop_04.mp3",
+      "stem": "amb_foothill_village_day_loop_04",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "산자락 마을의 낮",
+          "document_filename": "amb_foothill_village_day_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_foothill_village_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "작고 가난한 산촌의 생활음. 도시보다 한산하며, 말소리는 알아들을 수 없어야 한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_inn_hall_loop_02.mp3",
+      "stem": "amb_inn_hall_loop_02",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔 홀",
+          "document_filename": "amb_inn_hall_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_hall_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "목조 객잔 1층의 잔잔한 식사와 대화. 조리 연습 장면에도 낮은 볼륨으로 사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_inn_hall_loop_03.mp3",
+      "stem": "amb_inn_hall_loop_03",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔 홀",
+          "document_filename": "amb_inn_hall_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_hall_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "목조 객잔 1층의 잔잔한 식사와 대화. 조리 연습 장면에도 낮은 볼륨으로 사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_inn_hall_loop_04.mp3",
+      "stem": "amb_inn_hall_loop_04",
+      "category": "환경음",
+      "bytes": 361197,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔 홀",
+          "document_filename": "amb_inn_hall_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_hall_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "목조 객잔 1층의 잔잔한 식사와 대화. 조리 연습 장면에도 낮은 볼륨으로 사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_mountain_morning_loop_01.mp3",
+      "stem": "amb_mountain_morning_loop_01",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비가 그친 산의 아침",
+          "document_filename": "amb_mountain_morning_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_mountain_morning_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "비가 그친 뒤 젖은 산길. 맑지만 주인공의 부상 때문에 완전히 평화롭지는 않다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_mountain_morning_loop_02.mp3",
+      "stem": "amb_mountain_morning_loop_02",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비가 그친 산의 아침",
+          "document_filename": "amb_mountain_morning_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_mountain_morning_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "비가 그친 뒤 젖은 산길. 맑지만 주인공의 부상 때문에 완전히 평화롭지는 않다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_mountain_morning_loop_03.mp3",
+      "stem": "amb_mountain_morning_loop_03",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비가 그친 산의 아침",
+          "document_filename": "amb_mountain_morning_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_mountain_morning_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "비가 그친 뒤 젖은 산길. 맑지만 주인공의 부상 때문에 완전히 평화롭지는 않다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_mountain_morning_loop_04.mp3",
+      "stem": "amb_mountain_morning_loop_04",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비가 그친 산의 아침",
+          "document_filename": "amb_mountain_morning_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_mountain_morning_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "비가 그친 뒤 젖은 산길. 맑지만 주인공의 부상 때문에 완전히 평화롭지는 않다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_official_road_day_loop_01.mp3",
+      "stem": "amb_official_road_day_loop_01",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "관도의 낮",
+          "document_filename": "amb_official_road_day_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_official_road_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "상인과 여행자가 드문드문 지나는 넓은 관도. 이동감은 있지만 붐비는 시장처럼 들리지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_official_road_day_loop_02.mp3",
+      "stem": "amb_official_road_day_loop_02",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "관도의 낮",
+          "document_filename": "amb_official_road_day_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_official_road_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "상인과 여행자가 드문드문 지나는 넓은 관도. 이동감은 있지만 붐비는 시장처럼 들리지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_official_road_day_loop_03.mp3",
+      "stem": "amb_official_road_day_loop_03",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "관도의 낮",
+          "document_filename": "amb_official_road_day_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_official_road_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "상인과 여행자가 드문드문 지나는 넓은 관도. 이동감은 있지만 붐비는 시장처럼 들리지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_official_road_day_loop_04.mp3",
+      "stem": "amb_official_road_day_loop_04",
+      "category": "환경음",
+      "bytes": 483309,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "관도의 낮",
+          "document_filename": "amb_official_road_day_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_official_road_day_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "상인과 여행자가 드문드문 지나는 넓은 관도. 이동감은 있지만 붐비는 시장처럼 들리지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_pocha_tableware_loop_01.mp3",
+      "stem": "amb_pocha_tableware_loop_01",
+      "category": "환경음",
+      "bytes": 358317,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "무림 포장마차 식기 생활음",
+          "document_filename": "amb_pocha_tableware_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_pocha_tableware_loop_01.mp3`",
+            "기록 상태": "원문 확인",
+            "Duration": "15초",
+            "Looping": "On",
+            "Prompt Influence": "약 30%",
+            "느낌": "손님 바로 옆에서 들리는 그릇·젓가락·국자·행주 소리. 시장 환경음 위에 14~16% 정도로 아주 낮게 겹친다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_pocha_tableware_loop_02.mp3",
+      "stem": "amb_pocha_tableware_loop_02",
+      "category": "환경음",
+      "bytes": 358317,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "무림 포장마차 식기 생활음",
+          "document_filename": "amb_pocha_tableware_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_pocha_tableware_loop_01.mp3`",
+            "기록 상태": "원문 확인",
+            "Duration": "15초",
+            "Looping": "On",
+            "Prompt Influence": "약 30%",
+            "느낌": "손님 바로 옆에서 들리는 그릇·젓가락·국자·행주 소리. 시장 환경음 위에 14~16% 정도로 아주 낮게 겹친다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_pocha_tableware_loop_03.mp3",
+      "stem": "amb_pocha_tableware_loop_03",
+      "category": "환경음",
+      "bytes": 358317,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "무림 포장마차 식기 생활음",
+          "document_filename": "amb_pocha_tableware_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_pocha_tableware_loop_01.mp3`",
+            "기록 상태": "원문 확인",
+            "Duration": "15초",
+            "Looping": "On",
+            "Prompt Influence": "약 30%",
+            "느낌": "손님 바로 옆에서 들리는 그릇·젓가락·국자·행주 소리. 시장 환경음 위에 14~16% 정도로 아주 낮게 겹친다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_pocha_tableware_loop_04.mp3",
+      "stem": "amb_pocha_tableware_loop_04",
+      "category": "환경음",
+      "bytes": 358317,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "무림 포장마차 식기 생활음",
+          "document_filename": "amb_pocha_tableware_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_pocha_tableware_loop_01.mp3`",
+            "기록 상태": "원문 확인",
+            "Duration": "15초",
+            "Looping": "On",
+            "Prompt Influence": "약 30%",
+            "느낌": "손님 바로 옆에서 들리는 그릇·젓가락·국자·행주 소리. 시장 환경음 위에 14~16% 정도로 아주 낮게 겹친다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/amb_rain_mountain_loop_01.mp3",
+      "stem": "amb_rain_mountain_loop_01",
+      "category": "환경음",
+      "bytes": 478701,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비 내리는 산과 무덤",
+          "document_filename": "amb_rain_mountain_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_rain_mountain_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "깊은 산의 차갑고 거센 비. 무덤 밖의 폭우와 폐사당 주변에 사용하며, 번개는 별도 효과음으로 분리한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/arena_barrier_crack_01.wav",
+      "stem": "arena_barrier_crack_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/arena_barrier_crack_02.wav",
+      "stem": "arena_barrier_crack_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/arena_barrier_crack_03.wav",
+      "stem": "arena_barrier_crack_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/arena_barrier_crack_04.wav",
+      "stem": "arena_barrier_crack_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/bbq_sizzle_01.wav",
+      "stem": "bbq_sizzle_01",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/bbq_sizzle_02.wav",
+      "stem": "bbq_sizzle_02",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/bbq_sizzle_03.wav",
+      "stem": "bbq_sizzle_03",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/bbq_sizzle_04.wav",
+      "stem": "bbq_sizzle_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/brake_squeal.ogg",
+      "stem": "brake_squeal",
+      "category": "SFX",
+      "bytes": 16824,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-3. `brake_squeal.wav`",
+          "document_filename": "brake_squeal.wav",
+          "metadata": {
+            "길이": "1.3초",
+            "느낌": "마른 아스팔트에서 중형 승용차가 충돌 직전 급정거하는 현실적인 마찰음",
+            "활용": "교통사고 직전, 추격, 위험 회피"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/brake_squeal.wav",
+      "stem": "brake_squeal",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-3. `brake_squeal.wav`",
+          "document_filename": "brake_squeal.wav",
+          "metadata": {
+            "길이": "1.3초",
+            "느낌": "마른 아스팔트에서 중형 승용차가 충돌 직전 급정거하는 현실적인 마찰음",
+            "활용": "교통사고 직전, 추격, 위험 회피"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/car_horn.ogg",
+      "stem": "car_horn",
+      "category": "SFX",
+      "bytes": 7859,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-2. `car_horn.wav`",
+          "document_filename": "car_horn.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "가까운 승용차가 놀라서 한 번 세게 누르는 날카로운 경적",
+            "활용": "도로 돌발 상황, 차량 접근, 보행자 위험"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/car_horn.wav",
+      "stem": "car_horn",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-2. `car_horn.wav`",
+          "document_filename": "car_horn.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "가까운 승용차가 놀라서 한 번 세게 누르는 날카로운 경적",
+            "활용": "도로 돌발 상황, 차량 접근, 보행자 위험"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/core_root_extract_01.wav",
+      "stem": "core_root_extract_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/core_root_extract_02.wav",
+      "stem": "core_root_extract_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/core_root_extract_03.wav",
+      "stem": "core_root_extract_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/core_root_extract_04.wav",
+      "stem": "core_root_extract_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/crystal_break.ogg",
+      "stem": "crystal_break",
+      "category": "SFX",
+      "bytes": 15005,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-10. `crystal_break.wav`",
+          "document_filename": "crystal_break.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "주먹만 한 에너지 결정에 금이 가고 밝은 파편과 작은 마력이 터지는 압축된 파손음",
+            "활용": "마석·영석 파괴, 코어 손상, 마법 장치 고장"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/crystal_break.wav",
+      "stem": "crystal_break",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-10. `crystal_break.wav`",
+          "document_filename": "crystal_break.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "주먹만 한 에너지 결정에 금이 가고 밝은 파편과 작은 마력이 터지는 압축된 파손음",
+            "활용": "마석·영석 파괴, 코어 손상, 마법 장치 고장"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_01.ogg",
+      "stem": "cup_set_01",
+      "category": "SFX",
+      "bytes": 9528,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_01.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_01.wav",
+      "stem": "cup_set_01",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_01.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_02.ogg",
+      "stem": "cup_set_02",
+      "category": "SFX",
+      "bytes": 9546,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_02.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_02.wav",
+      "stem": "cup_set_02",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_02.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_03.ogg",
+      "stem": "cup_set_03",
+      "category": "SFX",
+      "bytes": 9605,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_03.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_03.wav",
+      "stem": "cup_set_03",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_03.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_04.ogg",
+      "stem": "cup_set_04",
+      "category": "SFX",
+      "bytes": 9531,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_04.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/cup_set_04.wav",
+      "stem": "cup_set_04",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-3. `cup_set_01.wav`, `cup_set_02.wav`, `cup_set_03.wav`, `cup_set_04.wav`",
+          "document_filename": "cup_set_04.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "도자기 찻잔을 나무 카운터에 조심스럽게 놓는 맑고 작은 접촉음",
+            "활용": "차 서빙, 대화의 쉼표, 중요한 말을 하기 전 잔을 내려놓는 순간",
+            "변형 차이": "놓는 힘, 잔의 음높이, 나무 울림"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/dark_flame_01.wav",
+      "stem": "dark_flame_01",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/dark_flame_02.wav",
+      "stem": "dark_flame_02",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/dark_flame_03.wav",
+      "stem": "dark_flame_03",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/dark_flame_04.wav",
+      "stem": "dark_flame_04",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_01.ogg",
+      "stem": "device_beep_01",
+      "category": "SFX",
+      "bytes": 8328,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_01.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_01.wav",
+      "stem": "device_beep_01",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_01.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_02.ogg",
+      "stem": "device_beep_02",
+      "category": "SFX",
+      "bytes": 9188,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_02.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_02.wav",
+      "stem": "device_beep_02",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_02.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_03.ogg",
+      "stem": "device_beep_03",
+      "category": "SFX",
+      "bytes": 9106,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_03.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_03.wav",
+      "stem": "device_beep_03",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_03.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_04.ogg",
+      "stem": "device_beep_04",
+      "category": "SFX",
+      "bytes": 8676,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_04.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/device_beep_04.wav",
+      "stem": "device_beep_04",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-4. `device_beep_01.wav`, `device_beep_02.wav`, `device_beep_03.wav`, `device_beep_04.wav`",
+          "document_filename": "device_beep_04.wav",
+          "metadata": {
+            "길이": "0.6초",
+            "느낌": "카드 단말기나 전자 도어록의 짧고 실용적인 승인음",
+            "활용": "결제, 출입 승인, 교통 게이트, 소형 단말기 성공",
+            "변형 차이": "음높이와 1~2회 비프의 리듬"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_01.ogg",
+      "stem": "door_chime_01",
+      "category": "SFX",
+      "bytes": 14265,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_01.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_01.wav",
+      "stem": "door_chime_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_01.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_02.ogg",
+      "stem": "door_chime_02",
+      "category": "SFX",
+      "bytes": 14773,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_02.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_02.wav",
+      "stem": "door_chime_02",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_02.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_03.ogg",
+      "stem": "door_chime_03",
+      "category": "SFX",
+      "bytes": 15335,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_03.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_03.wav",
+      "stem": "door_chime_03",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_03.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_04.ogg",
+      "stem": "door_chime_04",
+      "category": "SFX",
+      "bytes": 15632,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_04.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_chime_04.wav",
+      "stem": "door_chime_04",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-1. `door_chime_01.wav`, `door_chime_02.wav`, `door_chime_03.wav`, `door_chime_04.wav`",
+          "document_filename": "door_chime_04.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "작고 따뜻한 황동 문종. 마법 효과가 아니라 실제 나무문이 움직이며 울리는 환영의 소리",
+            "활용": "찻집·여관·소형 상점의 입장",
+            "변형 차이": "음높이, 흔들린 세기, 잔향"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_open.ogg",
+      "stem": "door_open",
+      "category": "SFX",
+      "bytes": 14625,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-8. `door_open.wav`",
+          "document_filename": "door_open.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "오래된 모텔방의 전자 잠금이 풀리고 문이 안쪽으로 열리는 작은 기계음",
+            "활용": "모텔·낡은 숙소·전자 잠금문 입장"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/door_open.wav",
+      "stem": "door_open",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-8. `door_open.wav`",
+          "document_filename": "door_open.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "오래된 모텔방의 전자 잠금이 풀리고 문이 안쪽으로 열리는 작은 기계음",
+            "활용": "모텔·낡은 숙소·전자 잠금문 입장"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_01.ogg",
+      "stem": "footsteps_01",
+      "category": "SFX",
+      "bytes": 12601,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_01.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_01.wav",
+      "stem": "footsteps_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_01.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_02.ogg",
+      "stem": "footsteps_02",
+      "category": "SFX",
+      "bytes": 13192,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_02.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_02.wav",
+      "stem": "footsteps_02",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_02.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_03.ogg",
+      "stem": "footsteps_03",
+      "category": "SFX",
+      "bytes": 12883,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_03.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_03.wav",
+      "stem": "footsteps_03",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_03.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_04.ogg",
+      "stem": "footsteps_04",
+      "category": "SFX",
+      "bytes": 13185,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_04.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/footsteps_04.wav",
+      "stem": "footsteps_04",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-5. `footsteps_01.wav`, `footsteps_02.wav`, `footsteps_03.wav`, `footsteps_04.wav`",
+          "document_filename": "footsteps_04.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "단단한 구두를 신은 성인의 절제된 두 걸음. 무게감은 있지만 달리지는 않음",
+            "활용": "실내 접근, 복도 이동, 석실·콘크리트·어두운 나무 바닥",
+            "변형 차이": "신발 질감, 바닥 경도, 보폭 간격"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/gate_alarm.ogg",
+      "stem": "gate_alarm",
+      "category": "SFX",
+      "bytes": 17986,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-1. `gate_alarm.wav`",
+          "document_filename": "gate_alarm.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "공공기관에서 사용하는 통제된 차원 게이트 경보. 급하지만 귀를 찢는 사이렌은 아님",
+            "활용": "게이트 경보, 시설 비상 알림, 위험 등급 상승"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/gate_alarm.wav",
+      "stem": "gate_alarm",
+      "category": "SFX",
+      "bytes": 337998,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-1. `gate_alarm.wav`",
+          "document_filename": "gate_alarm.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "공공기관에서 사용하는 통제된 차원 게이트 경보. 급하지만 귀를 찢는 사이렌은 아님",
+            "활용": "게이트 경보, 시설 비상 알림, 위험 등급 상승"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/glass_crash.ogg",
+      "stem": "glass_crash",
+      "category": "SFX",
+      "bytes": 19838,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-4. `glass_crash.wav`",
+          "document_filename": "glass_crash.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "큰 마물이 카페 전면 안전유리를 뚫고 들어오며 유리와 프레임이 쏟아지는 묵직한 파손음",
+            "활용": "상점 습격, 대형 창문 파괴, 괴물 난입"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/glass_crash.wav",
+      "stem": "glass_crash",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-4. `glass_crash.wav`",
+          "document_filename": "glass_crash.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "큰 마물이 카페 전면 안전유리를 뚫고 들어오며 유리와 프레임이 쏟아지는 묵직한 파손음",
+            "활용": "상점 습격, 대형 창문 파괴, 괴물 난입"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_01.ogg",
+      "stem": "impact_01",
+      "category": "SFX",
+      "bytes": 12578,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_01.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_01.wav",
+      "stem": "impact_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_01.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_02.ogg",
+      "stem": "impact_02",
+      "category": "SFX",
+      "bytes": 13051,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_02.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_02.wav",
+      "stem": "impact_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_02.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_03.ogg",
+      "stem": "impact_03",
+      "category": "SFX",
+      "bytes": 13425,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_03.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_03.wav",
+      "stem": "impact_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_03.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_04.ogg",
+      "stem": "impact_04",
+      "category": "SFX",
+      "bytes": 14021,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_04.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/impact_04.wav",
+      "stem": "impact_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-8. `impact_01.wav`, `impact_02.wav`, `impact_03.wav`, `impact_04.wav`",
+          "document_filename": "impact_04.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "초인의 손바닥이나 주먹이 큰 마물 몸체에 박히는 짧고 무거운 타격",
+            "활용": "무공 타격, 괴력 펀치, 갑각·뼈가 있는 적 공격",
+            "변형 차이": "몸통 공명, 짧은 균열 질감"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_01.ogg",
+      "stem": "magic_pulse_01",
+      "category": "SFX",
+      "bytes": 17604,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_01.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_01.wav",
+      "stem": "magic_pulse_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_01.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_02.ogg",
+      "stem": "magic_pulse_02",
+      "category": "SFX",
+      "bytes": 18452,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_02.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_02.wav",
+      "stem": "magic_pulse_02",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_02.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_03.ogg",
+      "stem": "magic_pulse_03",
+      "category": "SFX",
+      "bytes": 19676,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_03.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_03.wav",
+      "stem": "magic_pulse_03",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_03.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_04.ogg",
+      "stem": "magic_pulse_04",
+      "category": "SFX",
+      "bytes": 20526,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_04.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/magic_pulse_04.wav",
+      "stem": "magic_pulse_04",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-6. `magic_pulse_01.wav`, `magic_pulse_02.wav`, `magic_pulse_03.wav`, `magic_pulse_04.wav`",
+          "document_filename": "magic_pulse_04.wav",
+          "metadata": {
+            "길이": "1.4초",
+            "느낌": "낮은 공기 팽창 뒤 맑은 결정음이 붙는 절제된 내공·기 발동",
+            "활용": "내공 운용, 법기 점화, 치유·감지 능력, 작은 술식",
+            "변형 차이": "펄스 음높이, 반짝임, 에너지 꼬리"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_01.ogg",
+      "stem": "metal_01",
+      "category": "SFX",
+      "bytes": 14268,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_01.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_01.wav",
+      "stem": "metal_01",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_01.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_02.ogg",
+      "stem": "metal_02",
+      "category": "SFX",
+      "bytes": 15136,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_02.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_02.wav",
+      "stem": "metal_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_02.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_03.ogg",
+      "stem": "metal_03",
+      "category": "SFX",
+      "bytes": 15545,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_03.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_03.wav",
+      "stem": "metal_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_03.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_04.ogg",
+      "stem": "metal_04",
+      "category": "SFX",
+      "bytes": 15897,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_04.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/metal_04.wav",
+      "stem": "metal_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-10. `metal_01.wav`, `metal_02.wav`, `metal_03.wav`, `metal_04.wav`",
+          "document_filename": "metal_04.wav",
+          "metadata": {
+            "길이": "1.2초",
+            "느낌": "검집, 청동 거울, 열쇠, 금속 장식품을 조심스럽게 놓는 절제된 금속음",
+            "활용": "검·열쇠·법기·귀금속 전달과 배치",
+            "변형 차이": "물체 크기와 금속 음높이"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/microwave_ding.ogg",
+      "stem": "microwave_ding",
+      "category": "SFX",
+      "bytes": 9624,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-6. `microwave_ding.wav`",
+          "document_filename": "microwave_ding.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "편의점 전자레인지의 실용적이고 친숙한 완료 알림",
+            "활용": "편의점 음식, 조리 완료, 현대 생활 적응"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/microwave_ding.wav",
+      "stem": "microwave_ding",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-6. `microwave_ding.wav`",
+          "document_filename": "microwave_ding.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "편의점 전자레인지의 실용적이고 친숙한 완료 알림",
+            "활용": "편의점 음식, 조리 완료, 현대 생활 적응"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/monster_growl.ogg",
+      "stem": "monster_growl",
+      "category": "SFX",
+      "bytes": 15813,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-9. `monster_growl.wav`",
+          "document_filename": "monster_growl.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "소만 한 늑대형 마물이 공격 직전 짧게 으르렁거리며 몸을 내미는 위협음",
+            "활용": "마물 출현, 공격 전조, 전투 개시"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/monster_growl.wav",
+      "stem": "monster_growl",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-9. `monster_growl.wav`",
+          "document_filename": "monster_growl.wav",
+          "metadata": {
+            "길이": "1.5초",
+            "느낌": "소만 한 늑대형 마물이 공격 직전 짧게 으르렁거리며 몸을 내미는 위협음",
+            "활용": "마물 출현, 공격 전조, 전투 개시"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_01.ogg",
+      "stem": "paper_01",
+      "category": "SFX",
+      "bytes": 12233,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_01.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_01.wav",
+      "stem": "paper_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_01.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_02.ogg",
+      "stem": "paper_02",
+      "category": "SFX",
+      "bytes": 14215,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_02.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_02.wav",
+      "stem": "paper_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_02.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_03.ogg",
+      "stem": "paper_03",
+      "category": "SFX",
+      "bytes": 15290,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_03.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_03.wav",
+      "stem": "paper_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_03.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_04.ogg",
+      "stem": "paper_04",
+      "category": "SFX",
+      "bytes": 16917,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_04.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/paper_04.wav",
+      "stem": "paper_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-9. `paper_01.wav`, `paper_02.wav`, `paper_03.wav`, `paper_04.wav`",
+          "document_filename": "paper_04.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "계약서·영수증·현금 뭉치를 집어 들거나 책상 위로 미는 가까운 종이음",
+            "활용": "계약, 정산, 서류 조사, 현금 전달",
+            "변형 차이": "종이 두께, 바스락거림, 책상 접촉"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_collapse_01.wav",
+      "stem": "portal_collapse_01",
+      "category": "SFX",
+      "bytes": 357198,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_collapse_02.wav",
+      "stem": "portal_collapse_02",
+      "category": "SFX",
+      "bytes": 357198,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_collapse_03.wav",
+      "stem": "portal_collapse_03",
+      "category": "SFX",
+      "bytes": 357198,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_collapse_04.wav",
+      "stem": "portal_collapse_04",
+      "category": "SFX",
+      "bytes": 357198,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_01.ogg",
+      "stem": "portal_crackle_01",
+      "category": "SFX",
+      "bytes": 23890,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_01.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_01.wav",
+      "stem": "portal_crackle_01",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_01.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_02.ogg",
+      "stem": "portal_crackle_02",
+      "category": "SFX",
+      "bytes": 26302,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_02.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_02.wav",
+      "stem": "portal_crackle_02",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_02.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_03.ogg",
+      "stem": "portal_crackle_03",
+      "category": "SFX",
+      "bytes": 27362,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_03.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_03.wav",
+      "stem": "portal_crackle_03",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_03.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_04.ogg",
+      "stem": "portal_crackle_04",
+      "category": "SFX",
+      "bytes": 28490,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_04.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_crackle_04.wav",
+      "stem": "portal_crackle_04",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-7. `portal_crackle_01.wav`, `portal_crackle_02.wav`, `portal_crackle_03.wav`, `portal_crackle_04.wav`",
+          "document_filename": "portal_crackle_04.wav",
+          "metadata": {
+            "길이": "2.2초",
+            "느낌": "작은 차원 균열이 가늘게 찢어지고 흔들리는 불안정한 공간음",
+            "활용": "게이트 전조, 균열 확대, 공간 왜곡, 잔류 차원흔",
+            "변형 차이": "균열 패턴, 음높이, 좌우 이동"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_whoosh.ogg",
+      "stem": "portal_whoosh",
+      "category": "SFX",
+      "bytes": 25507,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-11. `portal_whoosh.wav`",
+          "document_filename": "portal_whoosh.wav",
+          "metadata": {
+            "길이": "2.5초",
+            "느낌": "사람의 몸이 공간에 빨려 들어갔다가 반대편으로 튕겨 나오는 넓고 어지러운 차원이동음",
+            "활용": "차원이동, 강제 전이, 게이트 통과, 공간 방출"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/portal_whoosh.wav",
+      "stem": "portal_whoosh",
+      "category": "SFX",
+      "bytes": 491598,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-11. `portal_whoosh.wav`",
+          "document_filename": "portal_whoosh.wav",
+          "metadata": {
+            "길이": "2.5초",
+            "느낌": "사람의 몸이 공간에 빨려 들어갔다가 반대편으로 튕겨 나오는 넓고 어지러운 차원이동음",
+            "활용": "차원이동, 강제 전이, 게이트 통과, 공간 방출"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/qi_meridian_open_01.wav",
+      "stem": "qi_meridian_open_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/qi_meridian_open_02.wav",
+      "stem": "qi_meridian_open_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/qi_meridian_open_03.wav",
+      "stem": "qi_meridian_open_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/qi_meridian_open_04.wav",
+      "stem": "qi_meridian_open_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/reverse_gate_charge_01.wav",
+      "stem": "reverse_gate_charge_01",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/reverse_gate_charge_02.wav",
+      "stem": "reverse_gate_charge_02",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/reverse_gate_charge_03.wav",
+      "stem": "reverse_gate_charge_03",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/reverse_gate_charge_04.wav",
+      "stem": "reverse_gate_charge_04",
+      "category": "SFX",
+      "bytes": 591438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_01.ogg",
+      "stem": "scan_01",
+      "category": "SFX",
+      "bytes": 12961,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_01.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_01.wav",
+      "stem": "scan_01",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_01.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_02.ogg",
+      "stem": "scan_02",
+      "category": "SFX",
+      "bytes": 13135,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_02.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_02.wav",
+      "stem": "scan_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_02.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_03.ogg",
+      "stem": "scan_03",
+      "category": "SFX",
+      "bytes": 13152,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_03.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_03.wav",
+      "stem": "scan_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_03.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_04.ogg",
+      "stem": "scan_04",
+      "category": "SFX",
+      "bytes": 13392,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_04.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scan_04.wav",
+      "stem": "scan_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-11. `scan_01.wav`, `scan_02.wav`, `scan_03.wav`, `scan_04.wav`",
+          "document_filename": "scan_04.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "약간 낡은 현대 판타지 측정기가 대상을 훑고 중립적인 결과를 내는 소리",
+            "활용": "각성 검사, 물품 감정, 휴대용 스캐너, 보안 검색",
+            "변형 차이": "스캔 음높이, 훑는 속도, 결과음"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scissors.ogg",
+      "stem": "scissors",
+      "category": "SFX",
+      "bytes": 11434,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-7. `scissors.wav`",
+          "document_filename": "scissors.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "미용사가 긴 머리를 빠르고 정확하게 세 번 자르는 전문적인 가위음",
+            "활용": "미용실, 머리 손질, 천·실의 정밀 절단 장면"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/scissors.wav",
+      "stem": "scissors",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-7. `scissors.wav`",
+          "document_filename": "scissors.wav",
+          "metadata": {
+            "길이": "0.8초",
+            "느낌": "미용사가 긴 머리를 빠르고 정확하게 세 번 자르는 전문적인 가위음",
+            "활용": "미용실, 머리 손질, 천·실의 정밀 절단 장면"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_arcade_boot_01.wav",
+      "stem": "sfx_arcade_boot_01",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_arcade_boot_02.wav",
+      "stem": "sfx_arcade_boot_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_arcade_boot_03.wav",
+      "stem": "sfx_arcade_boot_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_arcade_boot_04.wav",
+      "stem": "sfx_arcade_boot_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_blacksmith_anvil_strike_01.wav",
+      "stem": "sfx_blacksmith_anvil_strike_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_blacksmith_anvil_strike_01.wav`",
+          "document_filename": "sfx_blacksmith_anvil_strike_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "대장간에서 작은 철제 부품을 모루에 두세 번 두드리는 공용 제작음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_blood_channel_01.wav",
+      "stem": "sfx_blood_channel_01",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_blood_channel_02.wav",
+      "stem": "sfx_blood_channel_02",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_blood_channel_03.wav",
+      "stem": "sfx_blood_channel_03",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_blood_channel_04.wav",
+      "stem": "sfx_blood_channel_04",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_body_fall_mud_01.wav",
+      "stem": "sfx_body_fall_mud_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_body_fall_mud_01.wav`",
+          "document_filename": "sfx_body_fall_mud_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "탈출 직후 힘이 풀려 진흙탕에 쓰러지는 둔하고 젖은 충격."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_body_punch_ribs_01.wav",
+      "stem": "sfx_body_punch_ribs_01",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_body_punch_ribs_01.wav`",
+          "document_filename": "sfx_body_punch_ribs_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "흑도패가 이미 다친 갈비뼈를 가격하는 둔한 타격. 과장된 액션 펀치가 아니다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ceramic_bowl_counter_01.wav",
+      "stem": "sfx_ceramic_bowl_counter_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_ceramic_bowl_counter_01.wav`",
+          "document_filename": "sfx_ceramic_bowl_counter_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "빈 도자기 그릇을 나무 조리대에 놓는 맑고 절제된 달그락. 프롤로그의 시작과 현재 복귀를 연결한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ceramic_cup_shatter_01.wav",
+      "stem": "sfx_ceramic_cup_shatter_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_ceramic_cup_shatter_01.wav`",
+          "document_filename": "sfx_ceramic_cup_shatter_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "기억 속 독이 든 작은 술잔이 바닥에서 깨지는 날카롭고 짧은 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_charcoal_fire_extinguish_01.wav",
+      "stem": "sfx_charcoal_fire_extinguish_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_charcoal_fire_extinguish_01.wav`",
+          "document_filename": "sfx_charcoal_fire_extinguish_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "1.5초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "영업을 마치며 작은 화로 위에 금속 덮개를 씌워 불씨를 죽이는 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_charcoal_grill_sizzle_01.wav",
+      "stem": "sfx_charcoal_grill_sizzle_01",
+      "category": "SFX",
+      "bytes": 384078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_charcoal_grill_sizzle_01.wav`",
+          "document_filename": "sfx_charcoal_grill_sizzle_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "닭꼬치를 작은 숯불 화로에 올리는 순간의 먹음직스럽고 짧은 지글거림."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_coin_pouch_small_01.wav",
+      "stem": "sfx_coin_pouch_small_01",
+      "category": "SFX",
+      "bytes": 491598,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_coin_pouch_small_01.wav`",
+          "document_filename": "sfx_coin_pouch_small_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "적은 수의 동전과 은전이 든 작은 천 주머니. 소지금 확인과 돈을 빼앗기는 장면에 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_fall_glass_stab_01.wav",
+      "stem": "sfx_fall_glass_stab_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_fall_glass_stab_01.wav`",
+          "document_filename": "sfx_fall_glass_stab_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "1.5초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "두 사람이 함께 넘어지며 깨진 병목이 옆구리에 박히는 순간. 잔혹함보다 갑작스러운 사고에 가깝다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_fast_food_unwrap_01.wav",
+      "stem": "sfx_fast_food_unwrap_01",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_fast_food_unwrap_02.wav",
+      "stem": "sfx_fast_food_unwrap_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_fast_food_unwrap_03.wav",
+      "stem": "sfx_fast_food_unwrap_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_fast_food_unwrap_04.wav",
+      "stem": "sfx_fast_food_unwrap_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_glass_bottle_smash_01.wav",
+      "stem": "sfx_glass_bottle_smash_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_glass_bottle_smash_01.wav`",
+          "document_filename": "sfx_glass_bottle_smash_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "1.5초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "취객이 녹색 술병을 탁자 모서리에 내리쳐 병 아랫부분을 깨는 날카로운 사고음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_grave_soil_drop_01.wav",
+      "stem": "sfx_grave_soil_drop_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_grave_soil_drop_01.wav`",
+          "document_filename": "sfx_grave_soil_drop_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "생매장 기억에서 젖은 흙이 몸과 얼굴 위로 삽 한 번 분량 떨어지는 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_guard_spear_tap_01.wav",
+      "stem": "sfx_guard_spear_tap_01",
+      "category": "SFX",
+      "bytes": 322638,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_guard_spear_tap_01.wav`",
+          "document_filename": "sfx_guard_spear_tap_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "성문 수비가 통행을 막기 위해 창 자루 끝을 돌바닥에 한 번 치는 경고음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_handsaw_wood_short_01.wav",
+      "stem": "sfx_handsaw_wood_short_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_handsaw_wood_short_01.wav`",
+          "document_filename": "sfx_handsaw_wood_short_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "썩은 수레 판자를 잘라내고 새 판자를 맞추는 짧은 수동 톱질."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herb_grind_01.wav",
+      "stem": "sfx_herb_grind_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herb_grind_02.wav",
+      "stem": "sfx_herb_grind_02",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herb_grind_03.wav",
+      "stem": "sfx_herb_grind_03",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herb_grind_04.wav",
+      "stem": "sfx_herb_grind_04",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herbal_dye_mix_01.wav",
+      "stem": "sfx_herbal_dye_mix_01",
+      "category": "SFX",
+      "bytes": 768078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_herbal_dye_mix_01.wav`",
+          "document_filename": "sfx_herbal_dye_mix_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "폐사당에서 머리와 피부를 바꿀 약초 염료를 작은 그릇에 섞는 조용한 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_herbal_ointment_apply_01.wav",
+      "stem": "sfx_herbal_ointment_apply_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_herbal_ointment_apply_01.wav`",
+          "document_filename": "sfx_herbal_ointment_apply_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "객잔에서 갈비뼈와 멍에 끈적한 약고를 바르고 천으로 감는 치료음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_hidden_cache_unearth_01.wav",
+      "stem": "sfx_hidden_cache_unearth_01",
+      "category": "SFX",
+      "bytes": 921678,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_hidden_cache_unearth_01.wav`",
+          "document_filename": "sfx_hidden_cache_unearth_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "폐사당의 돌여우상 아래에서 숨겨둔 꾸러미를 파내는 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_hidden_dart_hit_01.wav",
+      "stem": "sfx_hidden_dart_hit_01",
+      "category": "SFX",
+      "bytes": 130638,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_hidden_dart_hit_02.wav",
+      "stem": "sfx_hidden_dart_hit_02",
+      "category": "SFX",
+      "bytes": 130638,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_hidden_dart_hit_03.wav",
+      "stem": "sfx_hidden_dart_hit_03",
+      "category": "SFX",
+      "bytes": 130638,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_hidden_dart_hit_04.wav",
+      "stem": "sfx_hidden_dart_hit_04",
+      "category": "SFX",
+      "bytes": 130638,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_injured_mud_steps_01.wav",
+      "stem": "sfx_injured_mud_steps_01",
+      "category": "SFX",
+      "bytes": 1129038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "다친 상태의 진흙길 발걸음",
+          "document_filename": "sfx_injured_mud_steps_01.wav",
+          "metadata": {
+            "파일명": "- `sfx_injured_mud_steps_01.wav`",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "8~12초",
+            "Looping": "On 또는 반복 연결 가능한 결과",
+            "느낌": "갈비뼈를 다친 사람이 젖은 산길을 절뚝이며 걷는 가까운 발소리. 영웅적인 행군음이 아니다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_lightning_strike_close_01.wav",
+      "stem": "sfx_lightning_strike_close_01",
+      "category": "SFX",
+      "bytes": 768078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_lightning_strike_close_01.wav`",
+          "document_filename": "sfx_lightning_strike_close_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "2초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "무덤 바로 옆에 떨어지는 낙뢰. 번개와 빙의의 전환점이지만 영화식 폭발음은 피한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_mechanism_misfire_01.wav",
+      "stem": "sfx_mechanism_misfire_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_mechanism_misfire_01.wav`",
+          "document_filename": "sfx_mechanism_misfire_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "2초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "수제 호신 기관이 제대로 작동하지 않고 용수철과 덮개가 튕겨 나가는 실패음. 세 번의 시제품 실패에 같은 파일을 재사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_memory_surge_01.wav",
+      "stem": "sfx_memory_surge_01",
+      "category": "SFX",
+      "bytes": 1129038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_memory_surge_01.wav`",
+          "document_filename": "sfx_memory_surge_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "3초, Looping Off, Prompt Influence 45%",
+            "느낌·용도": "제갈유현의 기억이 한꺼번에 밀려드는 비현실적인 상승음. 알아들을 수 있는 속삭임은 넣지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_meridian_open_011.wav",
+      "stem": "sfx_meridian_open_011",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_meridian_open_02.wav",
+      "stem": "sfx_meridian_open_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_meridian_open_03.wav",
+      "stem": "sfx_meridian_open_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_meridian_open_04.wav",
+      "stem": "sfx_meridian_open_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_mud_escape_01.wav",
+      "stem": "sfx_mud_escape_01",
+      "category": "SFX",
+      "bytes": 960078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_mud_escape_01.wav`",
+          "document_filename": "sfx_mud_escape_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "2초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "손과 상체가 젖은 무덤 흙을 뚫고 올라오는 무겁고 숨 막히는 탈출음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_pill_drop_01.wav",
+      "stem": "sfx_pill_drop_01",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_pill_drop_02.wav",
+      "stem": "sfx_pill_drop_02",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_pill_drop_03.wav",
+      "stem": "sfx_pill_drop_03",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_pill_drop_04.wav",
+      "stem": "sfx_pill_drop_04",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_poison_sizzle_01.wav",
+      "stem": "sfx_poison_sizzle_01",
+      "category": "SFX",
+      "bytes": 337998,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_poison_sizzle_02.wav",
+      "stem": "sfx_poison_sizzle_02",
+      "category": "SFX",
+      "bytes": 337998,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_poison_sizzle_03.wav",
+      "stem": "sfx_poison_sizzle_03",
+      "category": "SFX",
+      "bytes": 337998,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_poison_sizzle_04.wav",
+      "stem": "sfx_poison_sizzle_04",
+      "category": "SFX",
+      "bytes": 337998,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_qinggong_rooftop_leap_01.wav",
+      "stem": "sfx_qinggong_rooftop_leap_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_qinggong_rooftop_leap_01.wav`",
+          "document_filename": "sfx_qinggong_rooftop_leap_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 50%",
+            "느낌·용도": "젊은 무인이 경공으로 기와지붕을 두 번 가볍게 밟고 지나가는 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_rank_scan_fail_01.wav",
+      "stem": "sfx_rank_scan_fail_01",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_rank_scan_fail_02.wav",
+      "stem": "sfx_rank_scan_fail_02",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_rank_scan_fail_03.wav",
+      "stem": "sfx_rank_scan_fail_03",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_rank_scan_fail_04.wav",
+      "stem": "sfx_rank_scan_fail_04",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ritual_awaken_01.wav",
+      "stem": "sfx_ritual_awaken_01",
+      "category": "SFX",
+      "bytes": 652878,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ritual_awaken_02.wav",
+      "stem": "sfx_ritual_awaken_02",
+      "category": "SFX",
+      "bytes": 652878,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ritual_awaken_03.wav",
+      "stem": "sfx_ritual_awaken_03",
+      "category": "SFX",
+      "bytes": 652878,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ritual_awaken_04.wav",
+      "stem": "sfx_ritual_awaken_04",
+      "category": "SFX",
+      "bytes": 652878,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_road_near_miss_01.wav",
+      "stem": "sfx_road_near_miss_01",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_road_near_miss_02.wav",
+      "stem": "sfx_road_near_miss_02",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_road_near_miss_03.wav",
+      "stem": "sfx_road_near_miss_03",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_road_near_miss_04.wav",
+      "stem": "sfx_road_near_miss_04",
+      "category": "SFX",
+      "bytes": 169038,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_self_acupuncture_01.wav",
+      "stem": "sfx_self_acupuncture_01",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_self_acupuncture_02.wav",
+      "stem": "sfx_self_acupuncture_02",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_self_acupuncture_03.wav",
+      "stem": "sfx_self_acupuncture_03",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_self_acupuncture_04.wav",
+      "stem": "sfx_self_acupuncture_04",
+      "category": "SFX",
+      "bytes": 230478,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_slope_roll_01.wav",
+      "stem": "sfx_slope_roll_01",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_slope_roll_02.wav",
+      "stem": "sfx_slope_roll_02",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_slope_roll_03.wav",
+      "stem": "sfx_slope_roll_03",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_slope_roll_04.wav",
+      "stem": "sfx_slope_roll_04",
+      "category": "SFX",
+      "bytes": 399438,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_title_reveal_chime_01.wav",
+      "stem": "sfx_title_reveal_chime_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_title_reveal_chime_01.wav`",
+          "document_filename": "sfx_title_reveal_chime_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "2초, Looping Off, Prompt Influence 45%",
+            "느낌·용도": "강변 독백 뒤 타이틀 로고가 나타나는 순간의 작고 맑은 전통 종소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_ui_confirm_01.wav",
+      "stem": "sfx_ui_confirm_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_ui_confirm_01.wav`",
+          "document_filename": "sfx_ui_confirm_01.wav",
+          "metadata": {
+            "기록 상태": "원문 확인",
+            "설정": "1초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "메뉴, 선택지, 저장·불러오기, 설정, 확인과 닫기에 공용으로 쓰는 절제된 UI 확인음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_door_bolt_lock_01.wav",
+      "stem": "sfx_wooden_door_bolt_lock_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_wooden_door_bolt_lock_01.wav`",
+          "document_filename": "sfx_wooden_door_bolt_lock_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "객잔 방의 낡은 문을 안에서 잠그는 나무 빗장 소리."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_handcart_roll_01.wav",
+      "stem": "sfx_wooden_handcart_roll_01",
+      "category": "SFX",
+      "bytes": 437838,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "나무 손수레 이동",
+          "document_filename": "sfx_wooden_handcart_roll_01.wav",
+          "metadata": {
+            "파일명": "- `sfx_wooden_handcart_roll_01.wav`",
+            "기록 상태": "원문 확인. 원래는 2.5초 단발로 제작해 간격 재생하도록 정했으며, 이후 이동 채널에서도 반복 사용한다.",
+            "Duration": "2.5초",
+            "Looping": "Off",
+            "Prompt Influence": "45%",
+            "느낌": "가벼운 수제 포장마차 수레가 흙길이나 청석길을 천천히 굴러가는 소리. 낡았지만 부서질 듯 과장되지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_mechanism_smash_01.wav",
+      "stem": "sfx_wooden_mechanism_smash_01",
+      "category": "SFX",
+      "bytes": 553038,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "`sfx_wooden_mechanism_smash_01.wav`",
+          "document_filename": "sfx_wooden_mechanism_smash_01.wav",
+          "metadata": {
+            "기록 상태": "재생성용 복원",
+            "권장 설정": "1.5초, Looping Off, Prompt Influence 55%",
+            "느낌·용도": "제갈가의 목제 기관이 강제로 파손되는 짧고 복잡한 기계음."
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_sword_drop_01.wav",
+      "stem": "sfx_wooden_sword_drop_01",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_sword_drop_02.wav",
+      "stem": "sfx_wooden_sword_drop_02",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_sword_drop_03.wav",
+      "stem": "sfx_wooden_sword_drop_03",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/sfx_wooden_sword_drop_04.wav",
+      "stem": "sfx_wooden_sword_drop_04",
+      "category": "SFX",
+      "bytes": 245838,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/shadow_spear_01.wav",
+      "stem": "shadow_spear_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/shadow_spear_02.wav",
+      "stem": "shadow_spear_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/shadow_spear_03.wav",
+      "stem": "shadow_spear_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/shadow_spear_04.wav",
+      "stem": "shadow_spear_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/spear_break_01.wav",
+      "stem": "spear_break_01",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/spear_break_02.wav",
+      "stem": "spear_break_02",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/spear_break_03.wav",
+      "stem": "spear_break_03",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/spear_break_04.wav",
+      "stem": "spear_break_04",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "설명 미등록",
+      "references": []
+    },
+    {
+      "path": "godot/assets/audio/sfx/success_sting.ogg",
+      "stem": "success_sting",
+      "category": "SFX",
+      "bytes": 8378,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-12. `success_sting.wav`",
+          "document_filename": "success_sting.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "따뜻한 현 한 음에 작은 종이 답하는 짧고 품위 있는 성공 강조음. 영웅적 승리보다 자신감 있는 소소한 완성",
+            "활용": "신분증 획득, 거래 성사, 가게 이름 공개, 작은 목표 완료"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/success_sting.wav",
+      "stem": "success_sting",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-12. `success_sting.wav`",
+          "document_filename": "success_sting.wav",
+          "metadata": {
+            "길이": "1초",
+            "느낌": "따뜻한 현 한 음에 작은 종이 답하는 짧고 품위 있는 성공 강조음. 영웅적 승리보다 자신감 있는 소소한 완성",
+            "활용": "신분증 획득, 거래 성사, 가게 이름 공개, 작은 목표 완료"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_01.ogg",
+      "stem": "tea_pour_01",
+      "category": "SFX",
+      "bytes": 21190,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_01.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_01.wav",
+      "stem": "tea_pour_01",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_01.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_02.ogg",
+      "stem": "tea_pour_02",
+      "category": "SFX",
+      "bytes": 22861,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_02.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_02.wav",
+      "stem": "tea_pour_02",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_02.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_03.ogg",
+      "stem": "tea_pour_03",
+      "category": "SFX",
+      "bytes": 24116,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_03.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_03.wav",
+      "stem": "tea_pour_03",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_03.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_04.ogg",
+      "stem": "tea_pour_04",
+      "category": "SFX",
+      "bytes": 25039,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_04.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/tea_pour_04.wav",
+      "stem": "tea_pour_04",
+      "category": "SFX",
+      "bytes": 284238,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "3-2. `tea_pour_01.wav`, `tea_pour_02.wav`, `tea_pour_03.wav`, `tea_pour_04.wav`",
+          "document_filename": "tea_pour_04.wav",
+          "metadata": {
+            "길이": "1.8초",
+            "느낌": "작은 도자기 다관에서 찻잔으로 따르는 섬세하고 가까운 물소리",
+            "활용": "차·약탕·따뜻한 음료를 따르는 장면",
+            "변형 차이": "물줄기 속도, 작은 꿀렁임, 찻잔 공명"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/water_splash.ogg",
+      "stem": "water_splash",
+      "category": "SFX",
+      "bytes": 14018,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-5. `water_splash.wav`",
+          "document_filename": "water_splash.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "깨끗한 물줄기가 갑자기 위로 솟아 얼굴에 튀는 짧고 현실적인 생활 코미디음",
+            "활용": "비데 사고, 수도 실수, 작은 물벼락 개그"
+          }
+        }
+      ]
+    },
+    {
+      "path": "godot/assets/audio/sfx/water_splash.wav",
+      "stem": "water_splash",
+      "category": "SFX",
+      "bytes": 192078,
+      "description_status": "문서 연결",
+      "references": [
+        {
+          "source": "docs/audio/sources/천마객잔_BGM_SFX_파일별_프롬프트와_분위기.md",
+          "section": "4-5. `water_splash.wav`",
+          "document_filename": "water_splash.wav",
+          "metadata": {
+            "길이": "0.9초",
+            "느낌": "깨끗한 물줄기가 갑자기 위로 솟아 얼굴에 튀는 짧고 현실적인 생활 코미디음",
+            "활용": "비데 사고, 수도 실수, 작은 물벼락 개그"
+          }
+        }
+      ]
+    }
+  ],
+  "documented_but_missing": [
+    {
+      "stem": "amb_inn_hall_loop_01",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔 홀",
+          "document_filename": "amb_inn_hall_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_hall_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "목조 객잔 1층의 잔잔한 식사와 대화. 조리 연습 장면에도 낮은 볼륨으로 사용한다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_inn_room_night_loop_01",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔의 좁은 방",
+          "document_filename": "amb_inn_room_night_loop_01.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_room_night_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "낡은 목조 객잔 방의 밤. 회복 기간과 날짜 전환을 연결하는 조용하고 약간 쓸쓸한 실내음이다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_inn_room_night_loop_02",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔의 좁은 방",
+          "document_filename": "amb_inn_room_night_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_room_night_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "낡은 목조 객잔 방의 밤. 회복 기간과 날짜 전환을 연결하는 조용하고 약간 쓸쓸한 실내음이다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_inn_room_night_loop_03",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔의 좁은 방",
+          "document_filename": "amb_inn_room_night_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_room_night_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "낡은 목조 객잔 방의 밤. 회복 기간과 날짜 전환을 연결하는 조용하고 약간 쓸쓸한 실내음이다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_inn_room_night_loop_04",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "객잔의 좁은 방",
+          "document_filename": "amb_inn_room_night_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_inn_room_night_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "낡은 목조 객잔 방의 밤. 회복 기간과 날짜 전환을 연결하는 조용하고 약간 쓸쓸한 실내음이다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_rain_mountain_loop_02",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비 내리는 산과 무덤",
+          "document_filename": "amb_rain_mountain_loop_02.mp3",
+          "metadata": {
+            "파일명": "- `amb_rain_mountain_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "깊은 산의 차갑고 거센 비. 무덤 밖의 폭우와 폐사당 주변에 사용하며, 번개는 별도 효과음으로 분리한다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_rain_mountain_loop_03",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비 내리는 산과 무덤",
+          "document_filename": "amb_rain_mountain_loop_03.mp3",
+          "metadata": {
+            "파일명": "- `amb_rain_mountain_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "깊은 산의 차갑고 거센 비. 무덤 밖의 폭우와 폐사당 주변에 사용하며, 번개는 별도 효과음으로 분리한다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "amb_rain_mountain_loop_04",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "비 내리는 산과 무덤",
+          "document_filename": "amb_rain_mountain_loop_04.mp3",
+          "metadata": {
+            "파일명": "- `amb_rain_mountain_loop_01.mp3`",
+            "기록 상태": "재생성용 복원",
+            "느낌": "깊은 산의 차갑고 거센 비. 무덤 밖의 폭우와 폐사당 주변에 사용하며, 번개는 별도 효과음으로 분리한다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_injured_mud_steps_02",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "다친 상태의 진흙길 발걸음",
+          "document_filename": "sfx_injured_mud_steps_02.wav",
+          "metadata": {
+            "파일명": "- `sfx_injured_mud_steps_01.wav`",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "8~12초",
+            "Looping": "On 또는 반복 연결 가능한 결과",
+            "느낌": "갈비뼈를 다친 사람이 젖은 산길을 절뚝이며 걷는 가까운 발소리. 영웅적인 행군음이 아니다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_injured_mud_steps_03",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "다친 상태의 진흙길 발걸음",
+          "document_filename": "sfx_injured_mud_steps_03.wav",
+          "metadata": {
+            "파일명": "- `sfx_injured_mud_steps_01.wav`",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "8~12초",
+            "Looping": "On 또는 반복 연결 가능한 결과",
+            "느낌": "갈비뼈를 다친 사람이 젖은 산길을 절뚝이며 걷는 가까운 발소리. 영웅적인 행군음이 아니다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_injured_mud_steps_04",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "다친 상태의 진흙길 발걸음",
+          "document_filename": "sfx_injured_mud_steps_04.wav",
+          "metadata": {
+            "파일명": "- `sfx_injured_mud_steps_01.wav`",
+            "기록 상태": "재생성용 복원",
+            "권장 길이": "8~12초",
+            "Looping": "On 또는 반복 연결 가능한 결과",
+            "느낌": "갈비뼈를 다친 사람이 젖은 산길을 절뚝이며 걷는 가까운 발소리. 영웅적인 행군음이 아니다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_wooden_handcart_roll_02",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "나무 손수레 이동",
+          "document_filename": "sfx_wooden_handcart_roll_02.wav",
+          "metadata": {
+            "파일명": "- `sfx_wooden_handcart_roll_01.wav`",
+            "기록 상태": "원문 확인. 원래는 2.5초 단발로 제작해 간격 재생하도록 정했으며, 이후 이동 채널에서도 반복 사용한다.",
+            "Duration": "2.5초",
+            "Looping": "Off",
+            "Prompt Influence": "45%",
+            "느낌": "가벼운 수제 포장마차 수레가 흙길이나 청석길을 천천히 굴러가는 소리. 낡았지만 부서질 듯 과장되지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_wooden_handcart_roll_03",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "나무 손수레 이동",
+          "document_filename": "sfx_wooden_handcart_roll_03.wav",
+          "metadata": {
+            "파일명": "- `sfx_wooden_handcart_roll_01.wav`",
+            "기록 상태": "원문 확인. 원래는 2.5초 단발로 제작해 간격 재생하도록 정했으며, 이후 이동 채널에서도 반복 사용한다.",
+            "Duration": "2.5초",
+            "Looping": "Off",
+            "Prompt Influence": "45%",
+            "느낌": "가벼운 수제 포장마차 수레가 흙길이나 청석길을 천천히 굴러가는 소리. 낡았지만 부서질 듯 과장되지 않는다."
+          }
+        }
+      ]
+    },
+    {
+      "stem": "sfx_wooden_handcart_roll_04",
+      "references": [
+        {
+          "source": "docs/audio/sources/YAHANG_POCHA_AUDIO_PROMPTS.md",
+          "section": "나무 손수레 이동",
+          "document_filename": "sfx_wooden_handcart_roll_04.wav",
+          "metadata": {
+            "파일명": "- `sfx_wooden_handcart_roll_01.wav`",
+            "기록 상태": "원문 확인. 원래는 2.5초 단발로 제작해 간격 재생하도록 정했으며, 이후 이동 채널에서도 반복 사용한다.",
+            "Duration": "2.5초",
+            "Looping": "Off",
+            "Prompt Influence": "45%",
+            "느낌": "가벼운 수제 포장마차 수레가 흙길이나 청석길을 천천히 굴러가는 소리. 낡았지만 부서질 듯 과장되지 않는다."
+          }
+        }
+      ]
+    }
+  ]
+}
