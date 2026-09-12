@@ -25,28 +25,35 @@ func stream(relative: String) -> AudioStream:
 	return null
 
 func music(id: String) -> void:
-	if current == id: return
-	current = id
+	music_file("bgm/" + id + "_theme.mp3", -12.0)
+
+func music_file(path: String, volume: float = -21.0) -> void:
+	if current == path: return
+	current = path
 	if transition: transition.kill()
 	var old = players[active]
 	active = 1 - active
 	var next = players[active]
-	next.stop(); next.stream = stream("bgm/" + id + "_theme.mp3")
+	next.stop(); next.stream = stream(path) if not path.is_empty() else null
 	if next.stream is AudioStreamMP3: next.stream.loop = true
 	next.volume_db = -50
 	if next.stream and not muted: next.play()
 	transition = create_tween().set_parallel(true)
 	transition.tween_property(old, "volume_db", -50.0, .6)
-	transition.tween_property(next, "volume_db", -12.0, .6)
+	transition.tween_property(next, "volume_db", volume, .6)
 	transition.chain().tween_callback(old.stop)
 
 func sfx(id: String) -> void:
+	effect_file("sfx/" + id + ".wav", -8.0)
+
+func effect_file(path: String, volume: float = -17.0) -> void:
 	if muted: return
-	var audio = stream("sfx/" + id + ".wav")
+	if path.is_empty(): return
+	var audio = stream(path)
 	if not audio: return
 	for p in sfx_players:
 		if not p.playing:
-			p.stream = audio; p.volume_db = -8; p.play(); return
+			p.stream = audio; p.volume_db = volume; p.play(); return
 
 func set_muted(value: bool) -> void:
 	muted = value

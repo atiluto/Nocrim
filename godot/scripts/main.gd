@@ -14,6 +14,8 @@ var heading_font: SystemFont
 var text_speed = 48.0
 var dialogue_size = 23
 const Story = preload("res://scripts/story.gd")
+const Prologue = preload("res://scripts/prologue.gd")
+var prologue_view
 const INK = Color("22211d")
 const PAPER = Color("eee6d5")
 const GOLD = Color("c7ab78")
@@ -100,6 +102,7 @@ func _input(event: InputEvent) -> void:
 			advance_story(); get_viewport().set_input_as_handled()
 
 func clear() -> void:
+	prologue_view = null
 	dialogue = null; modal = null; buttons.clear(); figures.clear()
 	for child in stage.get_children():
 		stage.remove_child(child); child.queue_free()
@@ -528,13 +531,15 @@ func animate_combat(result: Dictionary) -> void:
 	busy = false
 
 func story_screen() -> void:
+	if campaign.s.prologue:
+		story_mode="prologue"
+		prologue_view=Prologue.new(); stage.add_child(prologue_view); prologue_view.setup(self)
+		return
 	var s = campaign.s
 	story_mode = "event"
 	var index = int(s.story_cursor)
 	var chapter = "산중기담"
-	if s.prologue:
-		story_mode="prologue"; story_lines=Story.PROLOGUE; story_title="아직, 산적이 아니었던 밤"; index=int(s.prologue_cursor); story_person="yeon"
-	elif s.vignette:
+	if s.vignette:
 		story_mode="vignette"; index=vignette_cursor
 		if str(s.vignette).begins_with("join:"):
 			story_person=str(s.vignette).trim_prefix("join:")
@@ -583,6 +588,8 @@ func story_screen() -> void:
 	label("Space / 클릭",Rect2(42,673,203,23),13,MUTED)
 
 func advance_story(force: bool = false, skip: bool = false) -> void:
+	if is_instance_valid(prologue_view):
+		prologue_view.advance(force); return
 	if page != "story" or not is_instance_valid(dialogue) or is_instance_valid(modal): return
 	if not force and printed < dialogue.text.length(): printed=dialogue.text.length(); dialogue.visible_characters=-1; return
 	var s = campaign.s

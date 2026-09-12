@@ -33,7 +33,7 @@ func title(a) -> void:
 	a.label("어쩌다 보니 총채주",Rect2(135,524,407,42),25,a.INK)
 	menu_item(a,"new_game","산문을 열다",Rect2(598,356,241,46),func(): a.start_game(false),false,null,true)
 	menu_item(a,"continue","이어가기",Rect2(598,408,241,46),func(): load_menu(a),a.persistence.load_campaign().is_empty(),null,true)
-	menu_item(a,"quick_start","첫 기연부터",Rect2(598,460,241,46),func(): a.start_game(true),false,null,true)
+	menu_item(a,"quick_start","기존 전략 모드",Rect2(598,460,241,46),func(): a.start_game(true),false,null,true)
 	menu_item(a,"title_settings","환경설정",Rect2(598,512,241,46),func(): settings(a),false,null,true)
 	menu_item(a,"collection","강호의 기록",Rect2(598,564,241,46),a.show_collection,false,null,true)
 	menu_item(a,"quit","산문을 닫다",Rect2(598,616,241,46),func(): a.get_tree().quit(),false,null,true)
@@ -73,7 +73,10 @@ func load_menu(a) -> void:
 		return
 	a.label("최근 여정",Rect2(290,228,650,38),26,a.GOLD,p)
 	a.shade(Rect2(288,282,697,1),Color("baaa8160"),p)
-	a.label("%d일 · %s\n점령한 산 %d곳 · 동료 %d명" % [saved.turn,{3:"아침",2:"낮",1:"밤",0:"밤 · 행동 마무리"}.get(int(saved.ap),"아침"),saved.owned.size(),saved.roster.size()],Rect2(291,305,660,126),25,a.PAPER,p)
+	var summary = "%d일 · %s\n점령한 산 %d곳 · 동료 %d명" % [saved.turn,{3:"아침",2:"낮",1:"밤",0:"밤 · 행동 마무리"}.get(int(saved.ap),"아침"),saved.owned.size(),saved.roster.size()]
+	if saved.prologue:
+		summary = "서장 · 강산의 이야기\n" + ("끝까지 읽은 여정" if saved.get("prologue_beat","")=="END" else "읽던 대사에서 계속" if saved.get("prologue_script","")=="universe-v1" else "개편된 서장 첫 장에서 시작")
+	a.label(summary,Rect2(291,305,660,126),25,a.PAPER,p)
 	a.button("load_saved_journey","이 여정을 잇는다",Rect2(290,476,692,55),a.load_game,false,p,true)
 
 func collection(a) -> void:
