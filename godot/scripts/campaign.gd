@@ -4,6 +4,7 @@ var world: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://d
 var s: Dictionary = {}
 var error = ""
 var feedback: Dictionary = {}
+var life = preload("res://scripts/camp_life.gd").new()
 var local_map = preload("res://scripts/chapter_map.gd").new()
 
 func new_game(seed_value: int = 91723) -> Dictionary:
@@ -16,6 +17,7 @@ func new_game(seed_value: int = 91723) -> Dictionary:
 		"talked":[], "communicated":[], "scouted":[], "siege":0, "finished":null,
 		"bonds":[], "expedition":null, "reward":null, "medicine":1, "story_cursor":0,
 		"prologue":false, "prologue_cursor":0, "vignette":null}
+	s.merge(life.defaults())
 	return s
 
 func roll(low: int = 1, high: int = 100) -> int:
@@ -45,7 +47,7 @@ func frontier() -> Array:
 
 func power(squad: Array = []) -> int:
 	if squad.is_empty(): squad = s.roster.slice(0, 3)
-	var value = 12.0 + minf(s.troops, 420) * .23 + s.training * .45 + s.morale * .1
+	var value = 12.0 + s.strategy * .2 + minf(s.troops, 420) * .23 + s.training * .45 + s.morale * .1
 	for p in squad:
 		if not s.wounds.get(p, 0):
 			value += world.people[p].might * .36 + world.people[p].wit * .12
@@ -145,6 +147,7 @@ func perform(action: String, args: Dictionary = {}) -> Dictionary:
 	if not transition(action, args):
 		s = previous
 		return {"ok":false,"text":error}
+	settle_clock()
 	discover()
 	if feedback.get("text", ""): log_line(feedback.text)
 	feedback.ok = true
@@ -171,17 +174,12 @@ func transition(action: String, args: Dictionary) -> bool:
 		return true
 	if action in ["scout","levy","drill","rest","talk","recruit","release","attack","supply","amnesty"] and s.ap <= 0:
 		return reject("오늘의 명령을 모두 썼습니다. 하루를 마감하세요.")
+	if s.arrival and action not in ["arrival_ready","arrival_choice","arrival_done","card","battle_end","medicine","retreat","claim"]: return reject("도착한 곳의 선택을 먼저 마치세요.")
+	if action in ["levy","drill","rest","supply","amnesty"] and not life.at_base(self): return reject("산채 정비는 자기 산에서 할 수 있습니다.")
+	if action in life.ACTIONS: return life.handle(self,action,args)
 	var target = args.get("target", "")
 	var who = args.get("who", "")
 	match action:
-		"travel":
-			var here: String = s.get("map_node", s.location)
-			if target == here: return reject("이미 이 길목에 있습니다.")
-			var route: Array = local_map.path_to(here, target, s.owned)
-			if route.is_empty(): return reject("적 산채를 통과할 수 없습니다. 연결된 아군 길부터 확보하세요.")
-			s.map_node = target
-			if target in s.owned: s.location = target
-			feedback.text = local_map.data.nodes[target].name + "에 도착했다. 산역 안 이동은 명령을 쓰지 않는다."
 		"scout":
 			if target not in frontier(): return reject("인접한 적 산채만 정찰할 수 있습니다.")
 			if target in s.scouted: return reject("이미 이 산의 약점을 확보했습니다.")
@@ -199,6 +197,7 @@ func transition(action: String, args: Dictionary) -> bool:
 				"supply": s.rice += 70; feedback.text = "군량 +70. 은전 -20."
 				"amnesty": s.mercy = mini(100, s.mercy + 8); s.fear = maxi(0, s.fear - 5); feedback.text = "민심 +8, 위세 -5."
 				"rest":
+					s.health = mini(s.health_max,s.health+35)
 					s.morale = mini(100, s.morale + 18)
 					for p in s.wounds: s.wounds[p] = maxi(0, s.wounds[p] - 1)
 					feedback.text = "부대 휴식. 사기 +18, 부상 회복 1일."
@@ -207,6 +206,7 @@ func transition(action: String, args: Dictionary) -> bool:
 			if target not in s.owned or target == origin: return reject("현재 위치를 제외한 점령 산에만 비술을 쓸 수 있습니다.")
 			if s.qi < 1: return reject("비술은 다음 날 회복됩니다.")
 			if action == "communicate" and target in s.communicated: return reject("오늘 이미 연락한 산입니다.")
+			s.ap -= 1
 			s.qi -= 1
 			if action == "teleport":
 				s.map_node = target
@@ -271,18 +271,23 @@ func transition(action: String, args: Dictionary) -> bool:
 		"retreat":
 			if not s.battle and not s.expedition: return reject("출정 중이 아닙니다.")
 			s.troops = maxi(0, s.troops - (12 if s.battle else 5)); s.morale = maxi(0, s.morale - 5)
+			sync_health()
+			if s.battle and s.battle.get("encounter",false): life.finish_encounter(self,false)
 			s.battle = null; s.expedition = null
 			feedback = {"text":"퇴각했다. 부대를 추슬러 다시 나서자.","outcome":"retreat"}
 		"claim":
 			var pick = args.get("pick", "")
 			if not s.reward or pick not in ["gold","medicine","training"]: return reject("받을 전리품을 선택하세요.")
-			conquest(s.reward.target)
+			if s.reward.get("encounter",false): life.finish_encounter(self,true)
+			else: conquest(s.reward.target)
 			if pick == "gold": s.gold += 25
 			elif pick == "medicine": s.medicine += 2
 			else: s.training = mini(80, s.training + 8)
 			s.reward = null
 			feedback.text = "전리품을 보관했다. " + {"gold":"은전 +25", "medicine":"회복약 +2. 전투에서 직접 사용한다.", "training":"비급 주해를 익혔다. 숙련 +8."}[pick]
-		"end_turn": advance_day()
+		"end_turn":
+			s.ap -= 1
+			feedback.text = "잠시 시간을 보내며 숨을 골랐다."
 		"finale":
 			var method = args.get("method", "unify")
 			if not finales().get(method, false): return reject("아직 이 결말의 조건을 갖추지 못했습니다.")
@@ -304,7 +309,7 @@ func advance_day() -> void:
 		s.troops = maxi(0, s.troops - shortage); s.morale = maxi(0, s.morale - 15)
 	s.turn += 1; s.ap = 3; s.qi = s.qi_max; s.talked = []; s.communicated = []
 	for p in s.wounds: s.wounds[p] = maxi(0, s.wounds[p] - (2 if flag("clinic") else 1))
-	feedback.text = "새 아침. 수입 +%d냥. 명령과 비술 회복." % earned
+	feedback.text = "새 아침. 수입 +%d냥. 아침·낮·밤 활동과 비술 회복." % earned
 	var start = (7 if flag("early_iron") else 11) + (4 if flag("truce") else 0)
 	if s.turn < start or (int(s.turn) - start) % 3 != 0: return
 	var possible = []
@@ -339,20 +344,22 @@ func start_battle(exp: Dictionary, path_index: int) -> void:
 	var deck = []
 	for id in exp.squad:
 		var max_hp = 75 + int(world.people[id].might * .6)
-		units.append({"id":id,"hp":max_hp,"max_hp":max_hp,"block":0})
+		var current_hp = maxi(1,int(max_hp * s.health / 100.0)) if id == "you" else max_hp
+		units.append({"id":id,"hp":current_hp,"max_hp":max_hp,"block":0})
 		for kind in ["strike","heavy","support"]: deck.append(card(id, kind))
 	for kind in ["guard","feint","ambush"]: deck.append(card(exp.squad[0], kind))
 	shuffle(deck)
 	var path = exp.paths[path_index]
 	var strength = world.regions[exp.target].strength
 	var hp = int((90 + strength * .8) * (1.16 if path == "duel" else .94))
-	s.battle = {"target":exp.target,"squad":exp.squad,"units":units,"round":1,"enemy_hp":hp,"enemy_max":hp,
+	s.battle = {"encounter":exp.get("encounter",false),"target":exp.target,"squad":exp.squad,"units":units,"round":1,"enemy_hp":hp,"enemy_max":hp,
 		"enemy":strength,"own":power(exp.squad),"energy":3,"deck":deck,"discard":[],"hand":[],
 		"intent":"rush" if int(strength) % 2 else "guard","path":path,"lucky_attempted":false,
 		"vulnerable":0,"enemy_block":0,"log":[]}
-	if path == "supply": s.rice += 10
-	if path == "ambush": units[0].hp -= 14
+	if path == "supply" and not exp.get("encounter",false): s.rice += 10
+	if path == "ambush": units[0].hp = maxi(1,units[0].hp-14)
 	feedback.text = {"supply":"보급로를 찾았다. 군량 +10. 보초를 돌파하자.","ambush":"매복을 만났다. 선두 체력 -14. 적의 포위망을 뚫자.","duel":"정예 호위대와 마주쳤다. 적 체력이 높다."}[path]
+	if exp.get("encounter",false): feedback.text = "산길의 싸움에 끼어들었다. 사람들을 지키자."
 	s.battle.log.append(feedback.text)
 	draw_hand()
 
@@ -433,6 +440,8 @@ func enemy_turn() -> bool:
 		for u in b.units:
 			if u.hp <= 0: s.wounds[u.id] = 2
 		s.troops = maxi(0, s.troops - 28); s.morale = maxi(0, s.morale - 12)
+		sync_health()
+		if b.get("encounter",false): life.finish_encounter(self,false)
 		s.battle = null; feedback.outcome = "lose"; feedback.text += " 패전. 병력 -28, 부상 2일."
 		return true
 	b.discard.append_array(b.hand); b.hand.clear(); b.round += 1; b.energy = 3
@@ -445,7 +454,23 @@ func win_battle() -> void:
 	s.troops = maxi(0, s.troops - 8 - int(b.round * 2))
 	for u in b.units:
 		if u.hp <= 0: s.wounds[u.id] = 2
-	s.reward = {"target":b.target,"rounds":b.round,"path":b.path,"squad":b.squad.duplicate()}
+	sync_health()
+	s.reward = {"encounter":b.get("encounter",false),"target":b.target,"rounds":b.round,"path":b.path,"squad":b.squad.duplicate()}
 	s.battle = null
 	feedback.outcome = "win"
-	feedback.text += " 승리. 전리품을 고르면 점령을 확정한다."
+	feedback.text += " 승리. 전리품을 선택하자."
+
+func phase_name() -> String:
+	return {3:"아침",2:"낮",1:"밤",0:"밤 · 행동 마무리"}.get(int(s.ap),"아침")
+
+func settle_clock() -> void:
+	if s.ap > 0 or s.battle or s.expedition or s.reward or s.finished: return
+	var previous_text: String = feedback.get("text", "")
+	advance_day()
+	feedback.text = previous_text + "\n" + feedback.get("text", "")
+	if s.arrival and s.arrival.node != s.map_node: s.arrival = null
+
+func sync_health() -> void:
+	if not s.battle: return
+	for unit in s.battle.units:
+		if unit.id == "you": s.health = clampi(int(unit.hp * 100.0 / unit.max_hp),1,100)

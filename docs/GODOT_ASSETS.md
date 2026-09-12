@@ -59,3 +59,7 @@
 동작 블록: 준비는 `Shift weight backward and prepare the weapon without turning to face the viewer.` 일반 공격은 `Extend the weapon toward the upper-right in one controlled attack, retain the rear view.` 피격은 `Recoil slightly backward, preserve the camera and costume silhouette.` 강공격은 `Deeper wind-up with a decisive upper-right strike, all weapon tips inside the canvas.`
 
 검수는 선화·동일 인물 여부·시선 방향·잘림·배경 단색 여부를 확인한다. 사용자가 나중에 투명 처리한 파일을 제공하면 그때 흰 머리·흰 옷·무기 가장자리가 손상되지 않았는지 확인한다.
+
+## 거점·산길 배경 (2026-09-12)
+
+Higgsfield GPT Image 2.5 Sunburst로 만든 `backgrounds/base_camp.png`, `backgrounds/road.png` 사용. 원본·생성 기록은 `art-source/camp-life/`. 사물 위치에 맞춘 클릭 영역과 산길 두 번 흔들기를 연결했다. 장면 배경에는 캐릭터용 마젠타 규칙을 적용하지 않는다. 이미지 확인 완료, 게임 실행은 생략.

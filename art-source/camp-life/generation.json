@@ -1,0 +1,88 @@
+{
+  "camp": {
+    "params": {
+      "model": "gpt_image_2_5",
+      "variant": "sunburst",
+      "quality": "high",
+      "resolution": "2k",
+      "background": "opaque",
+      "aspect_ratio": "16:9",
+      "count": 1,
+      "prompt": "Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. A cozy lived-in woodland bandit base clearing in warm daytime light. Composition must contain SIX CLEAR SEPARATE INTERACTIVE PROPS: LEFT MIDGROUND a rustic log cabin and porch around x25% y38%; LOWER LEFT foreground a single practice sword lying on bare ground at x20% y78%; BOTTOM CENTER LEFT a low wooden stump with one large open book on top, x43% y78%, well separated from fire; CENTER RIGHT a small inviting orange campfire with stones and seats x64% y64%; FAR RIGHT shaded clearing at x89% y38% a mysterious pale jade shimmering air current, FAR away from the campfire, no fire in this spot; UPPER CENTER a wooden trail sign stand holding a clearly recognizable UNLETTERED folded parchment map around x52% y32%. Cabin entirely visible, detailed log walls, Korean rustic wooden roof, forest receding toward distant mountains, pine trunks framing edges. Natural spatial separation so each object can be clicked separately. No magenta backdrop; this is a complete environment."
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "This tool provides an auto-updating generation widget for these jobs. Do not call job_display, show_generations, or show_generation_by_ids to display these jobs again, either before or after completion. If you need to await completion, use jobs_wait with timeout_seconds <= 15. Use job_display only if the user explicitly requests a separate re-display."
+        },
+        {
+          "type": "text",
+          "text": "Submitted 1 job. If a widget is visible, it polls automatically — do not call job_status or show_generations as a follow-up poll. In text-only clients, use job_status with sync:true to poll for completion.\n- 1f2a818d-cca2-43a6-b2dc-f8333885b9d6  \"Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. A cozy lived-in woodland bandit base clearing in warm daytime light. Composition must contain SIX CLEAR SEPARATE INTERACTIVE PROPS: LEFT MIDGROUND a rustic log cabin and porch around x25% y38%; LOWER LEFT foreground a single practice sword lying on bare ground at x20% y78%; BOTTOM CENTER LEFT a low wooden stump with one large open book on top, x43% y78%, well separated from fire; CENTER RIGHT a small inviting orange campfire with stones and seats x64% y64%; FAR RIGHT shaded clearing at x89% y38% a mysterious pale jade shimmering air current, FAR away from the campfire, no fire in this spot; UPPER CENTER a wooden trail sign stand holding a clearly recognizable UNLETTERED folded parchment map around x52% y32%. Cabin entirely visible, detailed log walls, Korean rustic wooden roof, forest receding toward distant mountains, pine trunks framing edges. Natural spatial separation so each object can be clicked separately. No magenta backdrop; this is a complete environment.\""
+        }
+      ],
+      "structuredContent": {
+        "results": [
+          {
+            "id": "1f2a818d-cca2-43a6-b2dc-f8333885b9d6",
+            "type": "image",
+            "status": "pending",
+            "model": "gpt_image_2_5",
+            "params": {
+              "prompt": "Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. A cozy lived-in woodland bandit base clearing in warm daytime light. Composition must contain SIX CLEAR SEPARATE INTERACTIVE PROPS: LEFT MIDGROUND a rustic log cabin and porch around x25% y38%; LOWER LEFT foreground a single practice sword lying on bare ground at x20% y78%; BOTTOM CENTER LEFT a low wooden stump with one large open book on top, x43% y78%, well separated from fire; CENTER RIGHT a small inviting orange campfire with stones and seats x64% y64%; FAR RIGHT shaded clearing at x89% y38% a mysterious pale jade shimmering air current, FAR away from the campfire, no fire in this spot; UPPER CENTER a wooden trail sign stand holding a clearly recognizable UNLETTERED folded parchment map around x52% y32%. Cabin entirely visible, detailed log walls, Korean rustic wooden roof, forest receding toward distant mountains, pine trunks framing edges. Natural spatial separation so each object can be clicked separately. No magenta backdrop; this is a complete environment.",
+              "aspect_ratio": "16:9",
+              "variant": "sunburst",
+              "quality": "high",
+              "resolution": "2k",
+              "background": "opaque"
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  },
+  "road": {
+    "params": {
+      "model": "gpt_image_2_5",
+      "variant": "sunburst",
+      "quality": "high",
+      "resolution": "2k",
+      "background": "opaque",
+      "aspect_ratio": "16:9",
+      "count": 1,
+      "prompt": "Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. First-person eye-level view of a winding dirt path through a Korean mountain pine forest, broad walkable path leading from lower center toward distant misty hills, mossy boulders and ferns on both sides, warm dappled daylight, no human figures, no buildings dominating the scene, spacious lower foreground and quiet midground suitable for overlaying narration and encounter choices. 16:9 full scene."
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "This tool provides an auto-updating generation widget for these jobs. Do not call job_display, show_generations, or show_generation_by_ids to display these jobs again, either before or after completion. If you need to await completion, use jobs_wait with timeout_seconds <= 15. Use job_display only if the user explicitly requests a separate re-display."
+        },
+        {
+          "type": "text",
+          "text": "Submitted 1 job. If a widget is visible, it polls automatically — do not call job_status or show_generations as a follow-up poll. In text-only clients, use job_status with sync:true to poll for completion.\n- 068b37b7-afc0-40d3-83a9-595d64554df6  \"Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. First-person eye-level view of a winding dirt path through a Korean mountain pine forest, broad walkable path leading from lower center toward distant misty hills, mossy boulders and ferns on both sides, warm dappled daylight, no human figures, no buildings dominating the scene, spacious lower foreground and quiet midground suitable for overlaying narration and encounter choices. 16:9 full scene.\""
+        }
+      ],
+      "structuredContent": {
+        "results": [
+          {
+            "id": "068b37b7-afc0-40d3-83a9-595d64554df6",
+            "type": "image",
+            "status": "pending",
+            "model": "gpt_image_2_5",
+            "params": {
+              "prompt": "Original Korean wuxia visual novel background, polished hand-drawn anime game environment, clean linework with soft painterly background shading, atmospheric pine forest mountains, no people, no text, no letters, no UI, no borders, landscape 16:9. First-person eye-level view of a winding dirt path through a Korean mountain pine forest, broad walkable path leading from lower center toward distant misty hills, mossy boulders and ferns on both sides, warm dappled daylight, no human figures, no buildings dominating the scene, spacious lower foreground and quiet midground suitable for overlaying narration and encounter choices. 16:9 full scene.",
+              "aspect_ratio": "16:9",
+              "variant": "sunburst",
+              "quality": "high",
+              "resolution": "2k",
+              "background": "opaque"
+            }
+          }
+        ]
+      },
+      "isError": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "books": {
+    "blade": {"name":"산채 기초검결", "limit":5, "description":"발과 허리, 칼끝을 잇는 다섯 수련.", "effects":{"training":4}, "hint":"힘을 싣기 전에 발을 고정하라. 적의 수비에는 허초가 유효하다."},
+    "speech": {"name":"표사 문답첩", "limit":3, "description":"상대의 말을 듣고 자기 요구를 전하는 법.", "effects":{"speech":3}, "hint":"설득은 말을 많이 하는 일이 아니다. 상대가 지키려는 것을 먼저 물어라."},
+    "strategy": {"name":"산길 병법 초해", "limit":4, "description":"지형과 보급을 읽는 네 장의 병법.", "effects":{"strategy":3}, "hint":"정찰로 얻은 정보는 길 공개와 야습 중 어디에 쓸지 정해야 한다."},
+    "gazetteer": {"name":"해동 산천지", "limit":2, "description":"표국·문중·녹림의 사정을 기록한 지리지.", "effects":{"lore":5}, "hint":"표국의 공동 운송 계약은 청학산의 윤가와 대화할 때 보증이 된다."},
+    "iron_note": {"name":"철마산 척후의 쪽지", "limit":1, "description":"한 번 읽으면 내용을 모두 기억할 수 있는 짧은 기록.", "effects":{"intel":1,"lore":2}, "hint":"철마산을 먼저 노린다면 정찰 뒤 첫 합의 야습으로 지휘부를 무너뜨릴 기회가 있다."}
+  },
+  "omens": {
+    "pursuit":{"name":"누군가에게 쫓기는 사람", "text":"숲에서 거친 숨소리가 들린다. 피난민 하나가 추격자를 피해 산문으로 달리고 있다.", "encounter":"fallen"},
+    "clash":{"name":"산길에서 벌어진 싸움", "text":"멀리서 쇠 부딪치는 소리가 전해진다. 산채의 순찰대가 낯선 무리와 맞붙었다.", "encounter":"skirmish"},
+    "intruders":{"name":"불온한 자들의 침입", "text":"익숙하지 않은 발걸음이 창고 뒤로 숨어든다. 주인의 눈을 피해 무언가를 찾고 있다.", "encounter":"skirmish"}
+  }
+}

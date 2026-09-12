@@ -54,6 +54,8 @@ func load_campaign() -> Dictionary:
 	var s = data.state
 	# Saves from before the local-road map retain their campaign and start at garrison.
 	if not s.has("map_node"): s.map_node = s.get("location", "sol")
+	var life_defaults = preload("res://scripts/camp_life.gd").new().defaults()
+	s.merge(life_defaults)
 	var template = preload("res://scripts/campaign.gd").new().new_game()
 	for key in template:
 		if not s.has(key): return {}

@@ -3,6 +3,8 @@ const Campaign = preload("res://scripts/campaign.gd")
 const Assets = preload("res://scripts/assets.gd")
 const Persistence = preload("res://scripts/persistence.gd")
 const Sound = preload("res://scripts/sound.gd")
+const CampViews = preload("res://scripts/camp_views.gd")
+var camp_views = CampViews.new()
 const Story = preload("res://scripts/story.gd")
 const INK = Color("101f1e")
 const PAPER = Color("efe6cc")
@@ -166,7 +168,7 @@ func start_game(quick: bool, seed_value: int = 0) -> void:
 	if seed_value == 0: seed_value = int(Time.get_unix_time_from_system()) ^ Time.get_ticks_msec()
 	campaign.new_game(seed_value); campaign.s.prologue = not quick
 	hand_stamp = ""
-	squad = ["you","yeon"]; page = "map"; selected = "dal"; map_selected = "sol"
+	squad = ["you","yeon"]; page = "base"; selected = "dal"; map_selected = "sol"
 	save_game(false); refresh()
 
 func save_game(notify: bool = true) -> void:
@@ -178,7 +180,8 @@ func load_game() -> void:
 	var loaded = persistence.load_campaign()
 	if loaded.is_empty(): toast("읽을 수 있는 Godot 저장 파일이 없습니다."); return
 	campaign.s = loaded; map_selected = loaded.get("map_node", loaded.location)
-	squad = campaign.s.roster.slice(0,3); page = "map"; busy = false; refresh()
+	campaign.settle_clock()
+	squad = campaign.s.roster.slice(0,3); page = "base" if campaign.life.at_base(campaign) else "map"; busy = false; refresh()
 
 func refresh() -> void:
 	if campaign.s.is_empty(): return
@@ -188,9 +191,13 @@ func refresh() -> void:
 	elif s.expedition: page = "exploration"
 	elif s.battle: page = "battle"
 	elif s.prologue or s.vignette or not s.queue.is_empty(): page = "story"
-	elif page not in ["map","roster","sortie"]: page = "map"
+	elif s.arrival: page = "arrival"
+	elif page not in ["map","roster","sortie","base"]: page = "base" if campaign.life.at_base(campaign) else "map"
+	if page == "base" and not campaign.life.at_base(campaign): page = "map"
 	clear(); background(.27 if page in ["story","title"] else .48)
 	match page:
+		"base": camp_views.draw_base(self)
+		"arrival": camp_views.draw_arrival(self)
 		"map": map_screen()
 		"roster": roster_screen()
 		"sortie": sortie_screen()
@@ -213,17 +220,21 @@ func command(action: String, args: Dictionary = {}) -> void:
 			create_tween().tween_property(f,"position",f.position + Vector2(100,-35),.25)
 		await get_tree().create_timer(.12 if quick_fx else .32).timeout
 		busy = false
+	if action in ["travel","teleport","arrival_done","claim"]:
+		page = "base" if campaign.life.at_base(campaign) else "map"
+		map_selected = campaign.s.map_node
 	if result.get("outcome", "") in ["lose","retreat"]:
-		page = "map"; refresh(); sound.music("defeat"); result_window("철수 보고",result.text); return
+		page = "base" if campaign.life.at_base(campaign) else "map"; refresh(); sound.music("defeat"); result_window("철수 보고",result.text); return
 	refresh()
-	if action == "end_turn": result_window("새벽의 장부",result.text)
-	elif action not in ["choice","card","battle_end","path","claim","finale","attack"]: toast(result.get("text",""))
+	if action == "sense" and page == "base": camp_views.sense_menu(self)
+	elif action == "end_turn": result_window("시간의 흐름",result.text)
+	elif action not in ["choice","card","battle_end","path","claim","finale","attack","travel","arrival_ready","arrival_choice","arrival_done"]: toast(result.get("text",""))
 
 func header(title: String) -> void:
 	shade(Rect2(0,0,1280,74),Color("0a1915ee"))
 	label(title,Rect2(28,17,230,40),25,GOLD)
 	var s = campaign.s
-	label("%02d일   명령 %d/3   비술 %d/%d" % [s.turn,s.ap,s.qi,s.qi_max],Rect2(260,13,410,25),19,PAPER)
+	label("%02d일 · %s   비술 %d/%d   체력 %d" % [s.turn,campaign.phase_name(),s.qi,s.qi_max,s.health],Rect2(260,13,790,25),19,PAPER)
 	label("은전 %d냥   군량 %d   병력 %d   민심 %d   위세 %d" % [s.gold,s.rice,s.troops,s.mercy,s.fear],Rect2(260,41,760,23),16,MUTED)
 	button("save","저장",Rect2(1068,18,78,36),func(): save_game())
 	button("menu","메뉴",Rect2(1156,18,88,36),pause_menu)
@@ -231,9 +242,10 @@ func header(title: String) -> void:
 func footer() -> void:
 	button("map_tab","산하 지도",Rect2(26,670,124,34),func(): page = "map"; refresh(),false,null,page == "map")
 	button("people_tab","인연 · 등용",Rect2(162,670,136,34),func(): page = "roster"; refresh(),false,null,page == "roster")
+	if campaign.life.at_base(campaign) and page != "base": button("base_tab","거점으로",Rect2(860,670,160,34),func(): page = "base"; refresh())
 	button("logs","기록",Rect2(310,670,84,34),show_log)
 	label("매 행동 자동 저장   /   ESC 메뉴",Rect2(429,674,435,25),14,MUTED)
-	button("end_day","하루 마감  →",Rect2(1044,667,200,40),func(): command("end_turn"),false,null,true)
+	button("end_day","시간 보내기  →",Rect2(1044,667,200,40),func(): command("end_turn"),false,null,true)
 
 func map_point(id: String) -> Vector2:
 	var p = campaign.local_map.data.nodes[id].pos
@@ -309,12 +321,12 @@ func map_screen() -> void:
 		var region = campaign.world.regions[map_selected]
 		label("수비 %d  ·  하루 수입 %d냥" % [region.strength,region.income],Rect2(898,311,320,25),16,GOLD)
 	else:
-		label("산역 이동 무료 · 점령지 귀산술 1회",Rect2(898,311,320,25),15,GOLD)
+		label("이동 %d/3칸 · 세 칸마다 한 시간대" % s.walk_steps,Rect2(898,311,320,25),15,GOLD)
 	if node.kind == "exit":
 		button("chapter_02","제2장 · 아직 열리지 않은 길",Rect2(898,354,324,49),func(): pass,true)
 		label("이번 지도는 프롤로그 지역입니다.\n다음 지역은 추후 이 관문에 연결됩니다.",Rect2(898,417,320,75),17,MUTED)
 	else:
-		var can_walk: bool = not route.is_empty() and here != map_selected
+		var can_walk: bool = map_selected in atlas.neighbors(here) and atlas.accessible(map_selected,s.owned)
 		button("travel","길 따라 이동",Rect2(898,350,152,44),func(): command("travel",{"target":map_selected}),not can_walk)
 		if map_selected in s.owned:
 			button("teleport","귀산술 · 비술 1",Rect2(1064,350,158,44),func(): command("teleport",{"target":map_selected}),map_selected == here or s.qi < 1)
@@ -328,14 +340,14 @@ func map_screen() -> void:
 			if targets.is_empty():
 				var note: String = "연결된 아군 길을 확보하면 방문할 수 있습니다."
 				if node.kind == "mountain" and map_selected == "tae": note = "여섯 산을 확보하고 회의를 마치면 전선이 열립니다."
-				elif here == map_selected: note = "도착했습니다. 아래 산채 정비나 인연 메뉴를 이용하세요."
+				elif here == map_selected: note = "도착한 길목입니다. 이어진 바둑알을 선택하세요."
 				elif can_walk: note = "청록색 길을 따라 이동합니다. 적 산채는 통과할 수 없습니다."
 				label(note,Rect2(898,410,320,91),17,MUTED)
-	label("산채 정비  /  각각 명령 1",Rect2(35,550,760,28),16,GOLD)
+	label("이동 %d/3칸  ·  정비는 거점에서 한 시간대" % s.walk_steps,Rect2(35,550,760,28),16,GOLD)
 	var actions = [["levy","모병\n30냥"],["drill","훈련\n15냥"],["supply","군량 구매\n20냥"],["amnesty","구휼\n20냥"],["rest","휴식\n무료"]]
 	for i in actions.size():
 		var action = actions[i][0]
-		button(action,actions[i][1],Rect2(35+i*151,585,140,60),func(): command(action),s.ap < 1)
+		button(action,actions[i][1],Rect2(35+i*151,585,140,60),func(): command(action),s.ap < 1 or not campaign.life.at_base(campaign))
 	button("finales","산역의 향방 · 결말 조건",Rect2(877,561,367,43),show_finales)
 	label("정보 %d · 회복약 %d · 숙련 %d · 사기 %d\n내일 수입 %d냥 / 군량 유지비 %d" % [s.intel,s.medicine,s.training,s.morale,campaign.income(),campaign.upkeep()],Rect2(899,611,329,47),15,MUTED)
 
@@ -364,7 +376,7 @@ func roster_screen() -> void:
 		var a = s.aff[person]
 		label("인연  %d / 100    %s" % [a,"마음이 닿다" if a >= 65 else "신뢰" if a >= 40 else "관심" if a >= 20 else "낯선 사이"],Rect2(691,398,505,30),21,GOLD)
 		bar(a,100,Rect2(691,441,515,7),TEAL)
-		button("talk","함께 시간 보내기 · 명령 1",Rect2(691,481,516,49),func(): vignette_cursor=0; command("talk",{"who":person}),s.ap < 1 or person in s.talked)
+		button("talk","함께 시간 보내기 · 시간대 1",Rect2(691,481,516,49),func(): vignette_cursor=0; command("talk",{"who":person}),s.ap < 1 or person in s.talked)
 	if person not in s.roster:
 		button("recruit","등용 제안 · 30냥부터",Rect2(691,554,290,50),func(): vignette_cursor=0; command("recruit",{"who":person}),s.ap < 1,null,true)
 		if person in s.prisoners: button("release","석방",Rect2(997,554,210,50),func(): command("release",{"who":person}),s.ap < 1)
@@ -374,7 +386,7 @@ func roster_screen() -> void:
 func sortie_screen() -> void:
 	sound.music("departure"); header("출정 편성")
 	label(campaign.world.regions[selected].name + "으로 간다",Rect2(39,93,1160,55),34,GOLD)
-	label("동료 1~3명 선택   /   명령 1 · 군량 25   /   전력은 무력·지략·병력·숙련·사기에 영향을 받습니다.",Rect2(40,153,1190,39),17,MUTED)
+	label("동료 1~3명 선택   /   시간대 1 · 군량 25   /   전력은 무력·지략·병력·숙련·사기에 영향을 받습니다.",Rect2(40,153,1190,39),17,MUTED)
 	var roster = campaign.s.roster
 	for i in roster.size():
 		var id = roster[i]; var p = campaign.world.people[id]
@@ -623,9 +635,9 @@ func finish_story() -> void:
 func reward_screen() -> void:
 	sound.music("reward"); sound.sfx("reward")
 	var reward = campaign.s.reward
-	label("산문이 열렸다",Rect2(119,116,1045,85),61,GOLD)
+	label("싸움이 잦아들었다" if reward.get("encounter",false) else "산문이 열렸다",Rect2(119,116,1045,85),61,GOLD)
 	label(campaign.world.regions[reward.target].name + " 전투 승리",Rect2(123,208,1025,55),32,PAPER)
-	label("전리품 하나를 선택하면 점령이 확정됩니다.\n점령 보상 은전 25냥과 사기 8을 받고, 인접 세력의 사건을 맞이합니다.",Rect2(125,287,1000,84),22,MUTED)
+	label("길가의 싸움이 끝났다. 전리품을 골라 여정을 이어간다." if campaign.s.reward.get("encounter",false) else "전리품 하나를 선택하면 점령이 확정됩니다.\n점령 보상 은전 25냥과 사기 8을 받고, 인접 세력의 사건을 맞이합니다.",Rect2(125,287,1000,84),22,MUTED)
 	var choices = [["gold","은전 주머니","추가 은전 25냥"],["medicine","회복약 두 병","가방에 보관 · 전투에서 직접 사용"],["training","비급 주해","숙련 +8 · 다음 출전에 적용"]]
 	for i in choices.size():
 		var item = choices[i]
@@ -682,7 +694,7 @@ func pause_menu() -> void:
 	button("pause_load","저장한 시점 이어하기",Rect2(286,301,709,51),load_game,false,panel)
 	button("pause_audio","음악 / 효과음 켜기" if sound.muted else "음악 / 효과음 끄기",Rect2(286,367,709,51),func(): sound.set_muted(not sound.muted); pause_menu(),false,panel)
 	button("pause_title","저장하고 산문으로",Rect2(286,433,709,51),func(): save_game(false); show_title(),false,panel)
-	label("회복약은 전투에서 직접 사용합니다. 교류와 정비에는 하루 명령을 씁니다.",Rect2(286,520,708,55),16,MUTED,panel)
+	label("회복약은 전투에서 직접 사용합니다. 교류와 정비에는 한 시간대를 씁니다.",Rect2(286,520,708,55),16,MUTED,panel)
 
 func show_finales() -> void:
 	var panel = overlay("천하의 향방")
