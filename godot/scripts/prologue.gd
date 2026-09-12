@@ -13,7 +13,7 @@ var actor_layer: Control
 var effect_layer: Control
 var hud: Control
 var portrait: TextureRect
-var background_image: TextureRect
+var background_image: Control
 var actor_key = ""
 var background_key = ""
 var position_tween: Tween
@@ -127,6 +127,15 @@ func show_beat(initial: bool = false) -> void:
 func set_background(key: String) -> void:
 	if key==background_key: return
 	background_key=key
+	if key=="black":
+		var old=background_image
+		var black=host.shade(Rect2(0,0,1280,720),Color.BLACK,background_layer)
+		background_image=black
+		black.modulate.a=0
+		var fade=create_tween()
+		fade.tween_property(black,"modulate:a",1.0,.35)
+		if is_instance_valid(old): fade.tween_callback(old.queue_free)
+		return
 	var path: String={"road":"backgrounds/road.png","camp":"backgrounds/base_camp.png"}.get(key,"prologue/"+key+".png")
 	var old=background_image
 	background_image=host.picture(host.assets.texture(path),Rect2(-12,-8,1304,736),background_layer)
@@ -165,12 +174,13 @@ func animate(effect: String) -> void:
 	for child in effect_layer.get_children(): child.queue_free()
 	if effect.is_empty(): return
 	effect_tween=create_tween()
-	if effect in ["flash","blackout","fade"]:
+	if effect in ["flash","blackout","fade","fadein"]:
 		var cover=host.shade(Rect2(0,0,1280,536),Color.WHITE if effect=="flash" else Color.BLACK,effect_layer)
 		if effect=="blackout":
 			cover.color.a=0
 			effect_tween.tween_property(cover,"color:a",1.0,.35)
 		else:
+			if effect=="fadein": cover.color=Color.BLACK
 			effect_tween.tween_property(cover,"color:a",0.0,.55)
 			effect_tween.tween_callback(cover.queue_free)
 	elif effect=="jump":
