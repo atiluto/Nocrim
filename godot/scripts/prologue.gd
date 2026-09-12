@@ -11,7 +11,9 @@ var progress_label: Label
 var background_layer: Control
 var actor_layer: Control
 var effect_layer: Control
+var memory_layer: Control
 var hud: Control
+var transition_layer: Control
 var portrait: TextureRect
 var background_image: Control
 var actor_key = ""
@@ -27,6 +29,12 @@ var ambience_key = ""
 var ambience_tween: Tween
 var ambience_generation = 0
 var next_button: Button
+var memory_overlay: Control
+var memory_active = false
+var memory_tween: Tween
+var chapter_tween: Tween
+var transitioning = false
+var reveal_wait = 0.0
 
 func setup(app) -> void:
 	host = app
@@ -54,9 +62,11 @@ func setup(app) -> void:
 	if not saved_id.is_empty() and saved_id != "END":
 		for i in beats.size():
 			if beats[i].id == saved_id: cursor=i; break
-	for layer_name in ["Background","Actors","Effects","Dialogue"]:
+	for layer_name in ["Background","Actors","Effects","Memory","Dialogue","Transitions"]:
 		var layer = Control.new(); layer.name=layer_name; layer.mouse_filter=Control.MOUSE_FILTER_IGNORE; add_child(layer)
-	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects"); hud=get_node("Dialogue")
+	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects")
+	memory_layer=get_node("Memory"); hud=get_node("Dialogue"); transition_layer=get_node("Transitions")
+	build_memory_overlay()
 	ambience=AudioStreamPlayer.new(); ambience.bus="Effects"; add_child(ambience)
 	host.shade(Rect2(0,536,1280,184),Color(.03,.035,.035,.88),hud)
 	host.shade(Rect2(40,537,1200,1),Color("bfa57b88"),hud)
@@ -75,30 +85,37 @@ func setup(app) -> void:
 	host.button("prologue_save","저장",Rect2(1081,26,77,36),func(): save_cursor(); host.save_game(),false,hud)
 	host.button("prologue_menu","메뉴",Rect2(1171,26,77,36),host.pause_menu,false,hud)
 	host.button("prologue_auto","자동",Rect2(45,679,72,28),func(): auto_mode=not auto_mode; delay=0; host.buttons.prologue_auto.text="자동 끄기" if auto_mode else "자동",false,hud)
-	host.button("prologue_history","회상",Rect2(126,679,72,28),show_history,false,hud)
+	host.button("prologue_history","기록",Rect2(126,679,72,28),show_history,false,hud)
 	host.button("prologue_chapters","목차",Rect2(207,679,62,28),show_chapters,false,hud)
 	host.button("prologue_skip","장 넘김",Rect2(1187,654,85,42),confirm_skip,false,hud)
 	show_beat(true)
 
 func _process(delta: float) -> void:
-	if done or not host or is_instance_valid(host.modal) or not host.focused: return
+	if done or transitioning or not host or is_instance_valid(host.modal) or not host.focused: return
+	if reveal_wait>0:
+		reveal_wait=maxf(0.0,reveal_wait-delta)
+		return
 	chars += delta * host.text_speed
 	text_label.visible_characters=mini(int(chars),text_label.text.length())
 	text_label.add_theme_font_size_override("font_size",host.dialogue_size)
 	if auto_mode and chars>=text_label.text.length():
 		delay+=delta
-		if delay>maxf(1.4,text_label.text.length()*.025): advance()
+		if delay>maxf(2.2,text_label.text.length()*.04): advance()
 	elif Input.is_key_pressed(KEY_CTRL):
 		delay+=delta
 		if delay>.16: advance(true)
 	else: delay=0
 
 func advance(force: bool = false) -> void:
-	if done or is_instance_valid(host.modal): return
+	if done or transitioning or is_instance_valid(host.modal): return
 	if not force and chars<text_label.text.length():
 		chars=text_label.text.length(); text_label.visible_characters=-1; return
-	cursor+=1
-	show_beat()
+	var next_cursor=cursor+1
+	if next_cursor>=beats.size() or beats[next_cursor].chapter!=beats[cursor].chapter:
+		chapter_transition(next_cursor)
+	else:
+		cursor=next_cursor
+		show_beat()
 
 func save_cursor() -> void:
 	host.campaign.s.prologue_pagination=2
@@ -116,13 +133,76 @@ func show_beat(initial: bool = false) -> void:
 	progress_label.text="%d / %d" % [cursor+1,beats.size()]
 	name_label.text="강산 · 독백" if beat.speaker=="독백" else beat.speaker
 	text_label.text=beat.text; text_label.visible_characters=0
+	var background_changed: bool=beat.background!=background_key
 	set_background(beat.background)
 	set_actor(beat.sprite,beat.side,beat.speaker)
+	set_memory(bool(beat.get("memory",false)))
 	host.sound.music_file(beat.music,-21.0)
 	set_ambience(beat.ambience)
+	if background_changed and not transitioning: reveal_wait=.65
 	if not initial and not Input.is_key_pressed(KEY_CTRL):
 		host.sound.effect_file(beat.sfx,-17.0)
 		animate(beat.effect)
+
+func build_memory_overlay() -> void:
+	memory_overlay=Control.new(); memory_overlay.size=Vector2(1280,720); memory_overlay.modulate.a=0
+	memory_overlay.mouse_filter=Control.MOUSE_FILTER_IGNORE; memory_layer.add_child(memory_overlay)
+	host.shade(Rect2(0,0,1280,536),Color("776d5b22"),memory_overlay)
+	for band in range(6):
+		var inset: float=band*13.0
+		var alpha: float=.12-band*.017
+		var fog=Color(0.78,0.76,0.69,alpha)
+		host.shade(Rect2(inset,inset,1280-inset*2,13),fog,memory_overlay)
+		host.shade(Rect2(inset,523-inset,1280-inset*2,13),fog,memory_overlay)
+		host.shade(Rect2(inset,inset,13,536-inset*2),fog,memory_overlay)
+		host.shade(Rect2(1267-inset,inset,13,536-inset*2),fog,memory_overlay)
+	var memory_label=host.label("회상",Rect2(1122,84,98,39),22,Color("e0d5bc"),memory_overlay)
+	memory_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+
+func set_memory(enabled: bool) -> void:
+	if enabled==memory_active: return
+	memory_active=enabled
+	if memory_tween: memory_tween.kill()
+	memory_tween=create_tween()
+	memory_tween.tween_property(memory_overlay,"modulate:a",1.0 if enabled else 0.0,.65)
+
+func chapter_transition(target_cursor: int) -> void:
+	transitioning=true; delay=0; reveal_wait=0
+	if chapter_tween: chapter_tween.kill()
+	for child in transition_layer.get_children(): child.queue_free()
+	var cover=host.shade(Rect2(0,0,1280,720),Color(0,0,0,0),transition_layer)
+	cover.mouse_filter=Control.MOUSE_FILTER_STOP
+	var kicker_text: String="장 마침" if target_cursor>=beats.size() else "다음 장"
+	var kicker=host.label(kicker_text,Rect2(440,244,400,35),19,host.MUTED,transition_layer)
+	var next_title: String="서장 끝" if target_cursor>=beats.size() else beats[target_cursor].title
+	var card=host.label(next_title,Rect2(215,295,850,80),42,host.PAPER,transition_layer)
+	kicker.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; card.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	kicker.modulate.a=0; card.modulate.a=0
+	chapter_tween=create_tween()
+	chapter_tween.tween_property(cover,"color:a",1.0,1.0).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_callback(func():
+		hud.hide(); set_actor("","right",""); set_memory(false)
+		if target_cursor<beats.size():
+			cursor=target_cursor; show_beat(true)
+		else:
+			set_ambience("")
+		host.sound.effect_file("sfx/sfx_title_reveal_chime_01.wav",-23.0))
+	chapter_tween.tween_property(kicker,"modulate:a",1.0,.28)
+	chapter_tween.parallel().tween_property(card,"modulate:a",1.0,.38)
+	chapter_tween.tween_interval(1.25)
+	chapter_tween.tween_property(kicker,"modulate:a",0.0,.25)
+	chapter_tween.parallel().tween_property(card,"modulate:a",0.0,.3)
+	chapter_tween.tween_callback(func():
+		if target_cursor>=beats.size(): finish()
+		else: hud.show())
+	chapter_tween.tween_property(cover,"color:a",0.0,.9).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_callback(func():
+		transitioning=false
+		if target_cursor<beats.size() and not Input.is_key_pressed(KEY_CTRL):
+			var beat: Dictionary=beats[cursor]
+			host.sound.effect_file(beat.sfx,-17.0)
+			animate(beat.effect)
+		for child in transition_layer.get_children(): child.queue_free())
 
 func set_background(key: String) -> void:
 	if key==background_key: return
@@ -142,7 +222,7 @@ func set_background(key: String) -> void:
 	background_image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	background_image.modulate.a=0
 	var fade=create_tween()
-	fade.tween_property(background_image,"modulate:a",1.0,.45)
+	fade.tween_property(background_image,"modulate:a",1.0,.72)
 	if is_instance_valid(old): fade.tween_callback(old.queue_free)
 
 func set_actor(id: String, side: String, speaker: String) -> void:

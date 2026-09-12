@@ -15,15 +15,21 @@ def compile_data():
         title = text.splitlines()[0].removeprefix('# ')
         chapter_id = path.stem.split('_')[0]
         chapters.append({'id':chapter_id,'title':title,'start':len(beats),'file':filename})
+        memory_mode = False
         for match in re.finditer(r'^### ([A-Z0-9-]+)\n(.*?)(?=^### |\Z)', text, re.M|re.S):
             identity, body = match.groups()
             if identity in ids: raise ValueError('Duplicate beat '+identity)
             ids.add(identity)
             meta, line = body.split('\n대사:\n',1)
             fields = dict(re.findall(r'^([^:\n]+): *(.*)$',meta,re.M))
+            memory_value = fields.get('회상','').strip().lower()
+            if memory_value=='on': memory_mode = True
+            elif memory_value=='off': memory_mode = False
+            elif memory_value: raise ValueError('Memory must be on or off: '+identity)
             beat = {'id':identity,'chapter':chapter_id,'title':title,'text':line.strip()}
             for key, source in [('speaker','화자'),('background','배경'),('sprite','인물'),('side','위치'),('music','음악'),('ambience','환경음'),('sfx','효과음'),('effect','연출')]:
                 beat[key] = fields.get(source,'')
+            beat['memory'] = memory_mode
             if not beat['text']: raise ValueError('Empty dialogue '+identity)
             if beat['side'] not in ['left','right']: raise ValueError('Invalid side '+identity)
             if beat['effect'] not in ['','fade','fadein','jump','shake','flash','blackout','walk']: raise ValueError('Invalid effect '+identity)
