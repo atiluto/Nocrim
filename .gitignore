@@ -11,3 +11,4 @@ godot/.godot/
 tests/godot-runtime/
 tests/godot-saves/
 tests/godot-*.log
+*.import

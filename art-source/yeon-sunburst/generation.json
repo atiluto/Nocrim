@@ -1,0 +1,24 @@
+{
+  "job_id": "2c18fc6f-9325-4867-a69c-9beb80fb218b",
+  "date": "2026-09-12",
+  "model": "gpt_image_2_5",
+  "variant": "sunburst",
+  "quality": "high",
+  "resolution": "2k",
+  "background": "opaque",
+  "aspect_ratio": "2:3",
+  "count": 1,
+  "medias": [
+    {
+      "role": "image",
+      "value": "4097282a-c15f-4ce3-9311-6f11bf409396"
+    },
+    {
+      "role": "image",
+      "value": "3768a069-3538-4030-9e72-26a4c3a6ffbf"
+    }
+  ],
+  "prompt": "Create ONE finished full-body rear three-quarter combat idle illustration of Dam Yeonhwa, an original 27-year-old Korean adult woman bandit deputy from Nocrim. Reference image 1 is STYLE ONLY: emulate its crisp elegant thin anime linework, beautiful clean cel shading with restrained smooth gradients, finely grouped hair strands, refined game-character proportions and carefully drawn layered costume ornaments. Do NOT copy its pink/white hair, face identity, costume, weapon or front pose. Reference image 2 defines Yeonhwa's character identity, black high ponytail, forest-green hanbok-inspired martial jeogori, charcoal divided riding skirt/trousers, practical dark boots, leather forearm guards and long single-edged saber; preserve these features and the REAR THREE-QUARTER viewpoint, visible back and back of head and small right-facing side profile. Redraw completely in reference 1's polished 2D anime game illustration style, NOT photorealistic or painterly. Refine the green/charcoal outfit with restrained gold Korean knot details and clear layered fabric shapes. Firm calm battle-ready stance, weight balanced, saber in right hand held low on right side, all weapon tips and both boots entirely visible. One character only, full body with 7 percent empty margin all around, portrait 2:3 canvas. BACKGROUND MUST BE FULLY OPAQUE UNIFORM SOLID MAGENTA #FF00FF edge to edge, including spaces between limbs, hair ribbons and sword. No transparency or alpha cutout, NO CHECKERBOARD, no white squares, no scenery, floor, shadows on backdrop, gradient, magenta rim lighting, glow, particles, captions, borders or watermark. The character should remain naturally colored with clean distinct contour for user's manual background removal. Deliver a production-quality original sprite illustration.",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260911_180710_2c18fc6f-9325-4867-a69c-9beb80fb218b.png",
+  "inspection": "1360x2048 RGB; full body and weapon visible; magenta backdrop has small RGB variations, not exact uniform #FF00FF. No background removal applied."
+}

@@ -1,0 +1,24 @@
+{
+  "job_id": "e4e87057-1785-4eca-a89b-bd4aa6bdee9d",
+  "date": "2026-09-12",
+  "model": "gpt_image_2_5",
+  "variant": "sunburst",
+  "quality": "high",
+  "resolution": "2k",
+  "background": "opaque",
+  "aspect_ratio": "3:4",
+  "count": 1,
+  "medias": [
+    {
+      "role": "image",
+      "value": "2c18fc6f-9325-4867-a69c-9beb80fb218b"
+    },
+    {
+      "role": "image",
+      "value": "4097282a-c15f-4ce3-9311-6f11bf409396"
+    }
+  ],
+  "prompt": "Create ONE polished visual novel dialogue portrait of Dam Yeonhwa, the same original adult 27-year-old Korean woman as image 1. Change the rear view into FRONT THREE-QUARTER VIEW with her face clearly visible, looking toward the viewer, calm confident frank subtle half-smile, warm amber-brown eyes. Preserve her black high ponytail, forest green hanbok-inspired martial jeogori, restrained antique gold embroidery and knot ornaments, charcoal riding skirt, leather forearm guards and dark belt. Clean fine anime linework and crisp cel shading with restrained smooth gradients, beautifully separated hair strands, refined adult proportions, layered cloth and metal detail: match image 2's drawing approach, NOT its character, pink/white hair or costume. Image 1 is identity and outfit reference; image 2 is style only. COMPOSITION CRITICAL: head-to-just-ABOVE-THE-KNEES portrait, not a bust and not full body. Bottom edge cuts through legs just above kneecaps, showing entire head, torso, hips and most of thighs. BOTH LEFT AND RIGHT EDGES must contain uninterrupted empty magenta strips at least 10 percent canvas width. ALL hair tips, ponytail, ribbons, shoulders, elbows, hands, and side garment edges must be comfortably inside the frame, never touching either side border. Keep ponytail compact and falling behind shoulder within these margins. Leave 8 percent clear space above the topmost hair. Arms relaxed close to body with one hand loosely resting near belt, both hands anatomically clear; no extended sword or objects crossing borders. One centered character, portrait 3:4 canvas. Fully opaque uniform solid magenta #FF00FF background everywhere outside character, NO checkerboard, transparency, scenery, floor, cast shadow, background gradient, halos or particles. No magenta color spill on clothes. No text, watermark, border or UI. High quality anime Korean wuxia game portrait suitable for manual background removal later.",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3FPri1MisfWsTG38Qh0dLg83aeK/hf_20260912_012620_e4e87057-1785-4eca-a89b-bd4aa6bdee9d.png",
+  "inspection": "1744x2336 RGB PNG. Above-knee front three-quarter portrait; head, hair, arms and hands visible, side margins intact. Opaque magenta with small color variation. Original unedited; no background removal."
+}
