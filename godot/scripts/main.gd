@@ -8,12 +8,17 @@ var map_views = MapViews.new()
 var map_popup = false
 const CampViews = preload("res://scripts/camp_views.gd")
 var camp_views = CampViews.new()
+const Interface = preload("res://scripts/interface.gd")
+var interface = Interface.new()
+var heading_font: SystemFont
+var text_speed = 48.0
+var dialogue_size = 23
 const Story = preload("res://scripts/story.gd")
-const INK = Color("35271d")
-const PAPER = Color("35271d")
-const GOLD = Color("8a3928")
-const TEAL = Color("45573b")
-const MUTED = Color("67523d")
+const INK = Color("22211d")
+const PAPER = Color("eee6d5")
+const GOLD = Color("c7ab78")
+const TEAL = Color("a0adab")
+const MUTED = Color("bbb5a8")
 var campaign = Campaign.new()
 var assets = Assets.new()
 var persistence = Persistence.new()
@@ -49,9 +54,17 @@ func _ready() -> void:
 	theme_font = load("res://assets/fonts/SourceHanSansLite.ttf")
 	theme_font.fallbacks = [load("res://assets/fonts/DejaVuSans.ttf")]
 	var t = Theme.new(); t.default_font = theme_font; t.default_font_size = 18; theme = t
-	t.set_stylebox("panel","TooltipPanel",paper_style())
-	t.set_color("font_color","TooltipLabel",INK)
+	t.set_stylebox("panel","TooltipPanel",panel_style())
+	t.set_color("font_color","TooltipLabel",PAPER)
+	heading_font = SystemFont.new()
+	heading_font.font_names = PackedStringArray(["Gungsuh","궁서","Batang"])
+	heading_font.fallbacks = [theme_font]
+	var track = StyleBoxFlat.new(); track.bg_color=Color("827a6377"); track.content_margin_top=2; track.content_margin_bottom=2
+	var fill = StyleBoxFlat.new(); fill.bg_color=GOLD; fill.content_margin_top=2; fill.content_margin_bottom=2
+	t.set_stylebox("slider","HSlider",track); t.set_stylebox("grabber_area","HSlider",fill); t.set_stylebox("grabber_area_highlight","HSlider",fill)
+	t.set_icon("grabber","HSlider",assets.texture("ui/slider_knob.svg")); t.set_icon("grabber_highlight","HSlider",assets.texture("ui/slider_knob.svg"))
 	add_child(sound)
+	interface.restore_settings(self)
 	stage = Control.new(); stage.name = "Stage"; stage.size = Vector2(1280,720); add_child(stage)
 	get_window().focus_exited.connect(func(): focused = false; ctrl_clock = 0)
 	get_window().focus_entered.connect(func(): focused = true)
@@ -65,7 +78,7 @@ func _notification(what: int) -> void:
 
 func _process(delta: float) -> void:
 	if is_instance_valid(dialogue) and page == "story":
-		printed += delta * 48
+		printed += delta * text_speed
 		dialogue.visible_characters = mini(int(printed), dialogue.text.length())
 		if focused and Input.is_key_pressed(KEY_CTRL) and not busy:
 			ctrl_clock += delta
@@ -79,7 +92,7 @@ func _input(event: InputEvent) -> void:
 		title_ready = true; clear(); background(); title_menu()
 		get_viewport().set_input_as_handled(); return
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_ESCAPE and page != "title" and not busy:
+		if event.keycode == KEY_ESCAPE and (page != "title" or is_instance_valid(modal)) and not busy:
 			if is_instance_valid(modal): modal.queue_free(); modal = null
 			else: pause_menu()
 			get_viewport().set_input_as_handled()
@@ -93,7 +106,7 @@ func clear() -> void:
 
 func box(rect: Rect2, color: Color = Color("12231fed"), border: Color = Color("65796a"), parent: Node = null) -> Panel:
 	var node = Panel.new(); node.position = rect.position; node.size = rect.size
-	var style = paper_style()
+	var style = panel_style()
 	node.add_theme_stylebox_override("panel", style); node.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	(parent if parent else stage).add_child(node); return node
 
@@ -102,6 +115,7 @@ func label(text: String, rect: Rect2, font_size: int = 18, color: Color = PAPER,
 	node.add_theme_font_size_override("font_size", font_size); node.add_theme_color_override("font_color", color)
 	node.text = text; node.position = rect.position; node.size = rect.size
 	node.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if font_size >= 27: node.add_theme_font_override("font",heading_font)
 	(parent if parent else stage).add_child(node); return node
 
 func button(id: String, text: String, rect: Rect2, callback: Callable, disabled: bool = false, parent: Node = null, accent: bool = false) -> Button:
@@ -109,16 +123,17 @@ func button(id: String, text: String, rect: Rect2, callback: Callable, disabled:
 	node.disabled = disabled; node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	node.add_theme_font_size_override("font_size", 17)
 	for state in ["normal","hover","pressed","disabled","focus"]:
-		var style = paper_style()
-		style.modulate_color = Color("fff4da") if accent else Color.WHITE
-		if state in ["hover","focus"]: style.modulate_color = Color("ffdea0")
-		if state == "pressed": style.modulate_color = Color("d9b77b")
-		if state == "disabled": style.modulate_color = Color("c2b59f")
+		var style = panel_style()
+		style.bg_color = Color("393328d9") if accent else Color("17191670")
+		style.border_width_bottom = 1
+		if state in ["hover","focus"]: style.bg_color = Color("38372fea")
+		if state == "pressed": style.bg_color = Color("615139eb")
+		if state == "disabled": style.bg_color = Color("17191638")
 		node.add_theme_stylebox_override(state, style)
-	node.add_theme_color_override("font_color", INK if accent else PAPER)
-	node.add_theme_color_override("font_hover_color", INK)
-	node.add_theme_color_override("font_pressed_color", INK)
-	node.add_theme_color_override("font_focus_color", INK)
+	node.add_theme_color_override("font_color", PAPER)
+	node.add_theme_color_override("font_hover_color", Color.WHITE)
+	node.add_theme_color_override("font_pressed_color", GOLD)
+	node.add_theme_color_override("font_focus_color", GOLD)
 	node.add_theme_color_override("font_disabled_color", Color("807461"))
 	node.pressed.connect(func():
 		if busy and id != "fx_speed": return
@@ -138,10 +153,9 @@ func shade(rect: Rect2, color: Color, parent: Node = null) -> ColorRect:
 	node.mouse_filter = Control.MOUSE_FILTER_IGNORE; (parent if parent else stage).add_child(node); return node
 
 func background(dark: float = .36) -> TextureRect:
-	var bg = picture(assets.texture("backgrounds/mountains.png"), Rect2(0,0,1280,720))
+	var bg = picture(assets.texture("backgrounds/battle_ink.png" if page == "battle" else "backgrounds/mountains.png"), Rect2(0,0,1280,720))
 	bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	shade(Rect2(0,0,1280,720), Color(.94,.88,.74,.70 + dark*.15))
-	box(Rect2(0,660,1280,60))
+	shade(Rect2(0,0,1280,720), Color(0.03,.04,.04,0.0 if page == "title" else .13 if page in ["story","battle"] else dark))
 	return bg
 
 func show_title() -> void:
@@ -155,18 +169,7 @@ func show_title() -> void:
 	title_tween.tween_callback(func(): title_ready = true; clear(); background(.25); title_menu())
 
 func title_menu() -> void:
-	label("한 번의 기연, 여덟 산의 인연", Rect2(83,135,600,45),23,GOLD)
-	label("녹림전생", Rect2(76,182,800,145),108,PAPER)
-	label("어쩌다 보니 총채주", Rect2(86,324,570,58),32,PAPER)
-	label("밥 한 끼 구하려고 산을 넘었다.\n돌아보니, 천하가 따라왔다.", Rect2(89,410,570,100),22,MUTED)
-	box(Rect2(902,284,296,319),Color("10241bcb"),Color("958866"))
-	label("산문을 열다", Rect2(934,307,230,40),23,GOLD)
-	button("new_game","처음부터",Rect2(927,364,246,48),func(): start_game(false),false,null,true)
-	button("quick_start","빠른 시작 · 첫 기연부터",Rect2(927,422,246,48),func(): start_game(true))
-	button("continue","이어하기",Rect2(927,480,246,48),load_game,persistence.load_campaign().is_empty())
-	button("collection","결말 수첩",Rect2(927,543,116,36),show_collection)
-	button("quit","나가기",Rect2(1055,543,118,36),func(): get_tree().quit())
-	label("GODOT EDITION   /   0.2.0",Rect2(84,675,600,22),14,MUTED)
+	interface.title(self)
 
 func start_game(quick: bool, seed_value: int = 0) -> void:
 	if seed_value == 0: seed_value = int(Time.get_unix_time_from_system()) ^ Time.get_ticks_msec()
@@ -292,13 +295,10 @@ func map_stone(id: String, node: Dictionary, owned: bool, reachable: bool) -> vo
 		style.shadow_color = Color("44371f55"); style.shadow_size = 2
 		stone.add_theme_stylebox_override(state, style)
 	if major:
-		var offset_x: float = -112.0 if p.x > 775 else 18.0
-		var title = label(node.name,Rect2(p+Vector2(offset_x,-12),Vector2(112,30)),17,Color("352d20"))
-		title.add_theme_color_override("font_outline_color",Color("f1e2b8"))
-		title.add_theme_constant_override("outline_size",4)
-		title.add_theme_color_override("font_shadow_color",Color("f1e2b8"))
-		title.add_theme_constant_override("shadow_offset_x",1)
-		title.add_theme_constant_override("shadow_offset_y",1)
+		var offsets: Dictionary = {"sol":Vector2(18,-23),"iron":Vector2(18,-34),"white":Vector2(18,-31),"tae":Vector2(-126,-27),"mist":Vector2(18,-29),"red":Vector2(18,-32),"dal":Vector2(18,15),"crane":Vector2(-109,22),"clan":Vector2(12,-37),"market":Vector2(18,15),"guild":Vector2(18,10),"ferry":Vector2(18,13),"exit_east":Vector2(-147,-13)}
+		var offset: Vector2 = offsets.get(id,Vector2(18,-12))
+		shade(Rect2(p+offset-Vector2(4,0),Vector2(126,29)),Color(0.05,.06,.05,.72))
+		label(node.name,Rect2(p+offset,Vector2(120,29)),17,PAPER)
 	if id == campaign.s.get("map_node",campaign.s.location):
 		map_views.icon(self,"pin",Rect2(p+Vector2(-12,-43),Vector2(24,29)),"현재 위치")
 
@@ -373,8 +373,8 @@ func figure(id: String, pos: Vector2, height: float, state: String = "idle") -> 
 	return holder
 
 func party_figures(ids: Array) -> void:
-	var positions = {1:[Vector2(10,25)],2:[Vector2(-70,27),Vector2(155,-3)],3:[Vector2(-118,42),Vector2(45,2),Vector2(221,65)]}[ids.size()]
-	for i in ids.size(): figure(ids[i],positions[i],780 if ids.size()<3 else 745)
+	var positions = {1:[Vector2(5,110)],2:[Vector2(-35,125),Vector2(192,181)],3:[Vector2(-67,137),Vector2(104,178),Vector2(267,220)]}[ids.size()]
+	for i in ids.size(): figure(ids[i],positions[i],625 if ids.size()==1 else 565 if ids.size()==2 else 505)
 
 func exploration_screen() -> void:
 	sound.music("exploration")
@@ -406,12 +406,12 @@ func battle_screen() -> void:
 	var level = "final_boss" if b.target=="tae" else "midboss" if b.target=="iron" else "battle_low" if b.enemy<65 else "battle_mid" if b.enemy<100 else "battle_high"
 	sound.music(level)
 	party_figures(b.squad)
-	var enemy = figure("enemy",Vector2(824,221),335)
+	var enemy = figure("enemy",Vector2(803,151),390)
 	if b.target == "iron": enemy.modulate = Color("e5c8ad")
 	button("battle_log","LOG",Rect2(25,20,75,35),show_log)
 	label(campaign.world.regions[b.target].name+"   /   제 %d합" % b.round,Rect2(396,22,441,35),22,GOLD)
 	button("fx_speed","빠른 연출 ON" if quick_fx else "빠른 연출 OFF",Rect2(1062,22,184,35),func(): quick_fx=not quick_fx; buttons.fx_speed.text="빠른 연출 ON" if quick_fx else "빠른 연출 OFF")
-	box(Rect2(897,77,347,89),Color("14211cea"),Color("c3ad80"))
+	shade(Rect2(887,76,360,92),Color(0,0,0,.68))
 	label(campaign.world.regions[b.target].faction,Rect2(912,87,320,27),20,PAPER)
 	label("%d / %d   보호 %d" % [b.enemy_hp,b.enemy_max,b.enemy_block],Rect2(912,119,320,20),15,GOLD)
 	bar(b.enemy_hp,b.enemy_max,Rect2(912,150,315,5),Color("c88869"))
@@ -420,24 +420,26 @@ func battle_screen() -> void:
 	for i in b.units.size():
 		var u = b.units[i]
 		var x = 23+i*183
-		box(Rect2(x,584,172,108),Color("11261feb"),Color("7c917c"))
-		label(campaign.world.people[u.id].name,Rect2(x+12,594,150,27),20,PAPER)
+		shade(Rect2(x,606,172,86),Color(0,0,0,.70))
+		label(campaign.world.people[u.id].name,Rect2(x+12,611,150,27),20,PAPER)
 		label("%d / %d   보호 %d" % [u.hp,u.max_hp,u.block],Rect2(x+12,633,153,21),14,TEAL)
 		bar(u.hp,u.max_hp,Rect2(x+12,671,148,6))
 		if u.hp<=0: figures[u.id].modulate = Color(.4,.4,.4,.45)
-	label("기력 %d / 3     뽑을 덱 %d  ·  버린 덱 %d" % [b.energy,b.deck.size(),b.discard.size()],Rect2(618,452,521,29),18,GOLD)
+	shade(Rect2(612,451,533,33),Color(0,0,0,.65))
+	label("기력 %d / 3" % b.energy,Rect2(625,455,480,25),18,GOLD)
 	for i in b.hand.size():
 		var c = b.hand[i]
 		var actor = b.units.filter(func(u): return u.id == c.owner)[0]
 		var disabled = b.energy<c.cost or actor.hp<=0 or (c.kind=="ambush" and campaign.s.intel<1)
 		var card_button = button("card_"+str(i),"",Rect2(614+i*108,489,100,200),func(): command("card",{"index":i}),disabled,null,true)
-		var col = Color("66726b") if disabled else INK
+		interface.card_style(card_button,disabled)
+		var col = Color("807c73") if disabled else INK
 		label(str(c.cost),Rect2(10,6,80,27),24,col,card_button)
 		label(campaign.world.people[c.owner].name,Rect2(10,38,84,20),13,col,card_button)
-		label(c.name,Rect2(10,70,81,54),22,col,card_button)
+		label("\n".join(c.name.split("")),Rect2(35,53,40,119),25,col,card_button)
 		var desc = {"strike":"단일 피해\n기력 1","heavy":"큰 피해\n기력 2","support":"회복 / 보호\n고유 초식","guard":"전원 보호 15","feint":"방어 해제\n취약 2회","ambush":"정보 1 소비\n추가 피해"}[c.kind]
 		if c.kind=="support": desc={"you":"기력 돌려받음\n취약 2회","seo":"아군 회복 18","so":"아군 회복 28"}.get(c.owner,"전원 보호 10")
-		label(desc,Rect2(10,132,81,58),13,col,card_button)
+
 		card_button.tooltip_text = c.name + " / " + desc.replace("\n"," ") + (" / 지금 사용 불가" if disabled else "")
 		card_button.mouse_entered.connect(func(): if not busy: create_tween().tween_property(card_button,"position:y",474.0,.09))
 		card_button.mouse_exited.connect(func(): if not busy: create_tween().tween_property(card_button,"position:y",489.0,.09))
@@ -450,7 +452,9 @@ func battle_screen() -> void:
 	button("battle_end","턴\n종료",Rect2(1163,480,82,88),func(): command("battle_end"),false,null,true)
 	button("medicine","회복약\n%d개" % campaign.s.medicine,Rect2(1163,579,82,52),func(): command("medicine"),campaign.s.medicine<1 or b.energy<1)
 	button("retreat","후퇴",Rect2(1163,641,82,47),func(): command("retreat"))
-	if not b.log.is_empty(): label(b.log[-1],Rect2(29,535,540,36),16,PAPER)
+	if not b.log.is_empty():
+		shade(Rect2(24,560,547,33),Color(0,0,0,.65))
+		label(b.log[-1],Rect2(33,565,526,25),15,PAPER)
 
 func animate_combat(result: Dictionary) -> void:
 	busy = true
@@ -542,9 +546,9 @@ func story_screen() -> void:
 		story_lines=e.lines; story_person=e.person; story_title=e.title; chapter=e.chapter
 	sound.music("story" if story_mode=="prologue" else "companion" if story_mode=="vignette" and str(s.vignette).begins_with("join:") else "story" if story_mode=="vignette" else "awakening" if s.queue[0]=="opening" else "event")
 	var portrait = assets.portrait(story_person,"serious")
-	if portrait: picture(portrait,Rect2(813,70,327,650))
-	label(chapter,Rect2(43,31,900,28),17,GOLD)
-	label(story_title,Rect2(40,76,1070,63),36,PAPER)
+	if portrait: picture(portrait,Rect2(651,88,510,655))
+	shade(Rect2(25,22,786,43),Color(0,0,0,.45))
+	label(chapter+"  ·  "+story_title,Rect2(42,29,752,32),20,PAPER)
 	button("story_save","저장",Rect2(1160,26,86,36),func(): save_game())
 	if index >= story_lines.size():
 		if story_mode=="event":
@@ -552,23 +556,31 @@ func story_screen() -> void:
 			var allowed = campaign.available_choices(s.queue[0])
 			for i in e.choices.size():
 				var c = e.choices[i]
-				button("choice_"+str(i),c.text,Rect2(57,271+i*116,730,66),func(): command("choice",{"event":s.queue[0],"index":i}),not allowed[i],null,true)
-				label(c.hint,Rect2(72,341+i*116,704,28),16,MUTED)
+				var choice_button = button("choice_"+str(i),c.text,Rect2(268,211+i*108,745,57),func(): command("choice",{"event":s.queue[0],"index":i}),not allowed[i],null,true)
+				interface.choice_style(choice_button)
+				label(c.hint,Rect2(281,274+i*108,715,31),16,PAPER)
 		else: finish_story()
 		return
-	box(Rect2(29,479,1220,215),Color("0c1b18f0"),Color("ac9d79"))
+	shade(Rect2(0,535,1280,185),Color(.04,.045,.04,.78))
+	shade(Rect2(26,535,1228,1),Color("bca37966"))
 	var entry = story_lines[index]
-	var speaker = "나" if entry[0]=="you" else "" if entry[0]=="n" else campaign.world.people.get(entry[0],{}).get("name",entry[0])
-	label(speaker,Rect2(57,501,870,33),24,GOLD)
-	dialogue = label(entry[1],Rect2(57,546,1150,103),24,PAPER)
+	var speaker = "" if entry[0]=="n" else campaign.world.people.get(entry[0],{}).get("name",entry[0])
+	var role: String = campaign.world.people.get(entry[0],{}).get("role","")
+	var role_label = label(role,Rect2(42,551,236,27),16,MUTED)
+	role_label.autowrap_mode=TextServer.AUTOWRAP_OFF
+	role_label.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
+	label(speaker,Rect2(41,587,238,48),29,GOLD)
+	dialogue = label(entry[1],Rect2(304,554,845,151),dialogue_size,PAPER)
+	dialogue.add_theme_font_override("font",theme_font)
+	dialogue.add_theme_constant_override("line_spacing",7)
 	printed = 0; dialogue.visible_characters=0
-	var click = Button.new(); click.name="dialogue_advance"; click.position=Vector2(40,539); click.size=Vector2(1198,145)
+	var click = Button.new(); click.name="dialogue_advance"; click.position=Vector2(284,539); click.size=Vector2(873,172)
 	click.flat=true; click.mouse_default_cursor_shape=Control.CURSOR_POINTING_HAND
 	click.add_theme_stylebox_override("normal",StyleBoxEmpty.new()); click.add_theme_stylebox_override("hover",StyleBoxEmpty.new()); click.add_theme_stylebox_override("pressed",StyleBoxEmpty.new()); click.add_theme_stylebox_override("focus",StyleBoxEmpty.new())
 	click.pressed.connect(func(): if not busy: advance_story())
 	stage.add_child(click); buttons.dialogue_advance=click
-	button("story_skip","SKIP",Rect2(1110,492,115,38),func(): advance_story(true,true))
-	label("클릭: 문장 완성 / 다음 대사    Ctrl: 누르는 동안 빠르게    Space: 다음",Rect2(57,663,1010,23),13,MUTED)
+	button("story_skip","넘기기",Rect2(1167,624,91,40),func(): advance_story(true,true))
+	label("Space / 클릭",Rect2(42,673,203,23),13,MUTED)
 
 func advance_story(force: bool = false, skip: bool = false) -> void:
 	if page != "story" or not is_instance_valid(dialogue) or is_instance_valid(modal): return
@@ -621,8 +633,10 @@ func overlay(title: String) -> Control:
 	modal = Control.new(); modal.size=Vector2(1280,720); modal.mouse_filter=Control.MOUSE_FILTER_STOP; stage.add_child(modal)
 	shade(Rect2(0,0,1280,720),Color(0,0,0,.68),modal)
 	box(Rect2(245,123,790,488),Color("10251efc"),GOLD,modal)
+	shade(Rect2(259,134,762,1),GOLD,modal)
+	shade(Rect2(259,599,762,1),GOLD,modal)
 	label(title,Rect2(275,148,650,57),33,GOLD,modal)
-	button("close_modal","닫기",Rect2(892,152,111,40),func(): modal.queue_free(); modal=null,false,modal)
+	button("close_modal","◇ ×",Rect2(931,147,72,44),func(): modal.queue_free(); modal=null,false,modal)
 	return modal
 
 func scroll_text(text: String, rect: Rect2, parent: Node = null) -> void:
@@ -642,12 +656,7 @@ func show_log() -> void:
 	entries.reverse(); scroll_text("\n\n".join(entries),Rect2(283,227,712,346),panel)
 
 func pause_menu() -> void:
-	var panel = overlay("잠시 쉬어가기")
-	button("pause_save","현재 시점 저장",Rect2(286,235,709,51),func(): save_game(),false,panel,true)
-	button("pause_load","저장한 시점 이어하기",Rect2(286,301,709,51),load_game,false,panel)
-	button("pause_audio","음악 / 효과음 켜기" if sound.muted else "음악 / 효과음 끄기",Rect2(286,367,709,51),func(): sound.set_muted(not sound.muted); pause_menu(),false,panel)
-	button("pause_title","저장하고 산문으로",Rect2(286,433,709,51),func(): save_game(false); show_title(),false,panel)
-	label("회복약은 전투에서 직접 사용합니다. 교류와 정비에는 한 시간대를 씁니다.",Rect2(286,520,708,55),16,MUTED,panel)
+	interface.pause(self)
 
 func show_finales() -> void:
 	var panel = overlay("천하의 향방")
@@ -659,12 +668,7 @@ func show_finales() -> void:
 		label(row[2],Rect2(558,240+i*110,434,69),18,MUTED,panel)
 
 func show_collection() -> void:
-	var panel = overlay("결말 수첩")
-	var found = persistence.read_data("collection").get("endings",[])
-	var lines = []
-	for id in campaign.world.endings:
-		lines.append(("기록됨  " if id in found else "미발견  ") + campaign.world.endings[id][0])
-	scroll_text("\n\n".join(lines),Rect2(288,227,700,344),panel)
+	interface.collection(self)
 
 func toast(message: String) -> void:
 	if message.is_empty(): return
@@ -672,11 +676,10 @@ func toast(message: String) -> void:
 	label(message,Rect2(20,10,666,63),18,PAPER,panel)
 	var t = create_tween(); t.tween_interval(2.5); t.tween_property(panel,"modulate:a",0.0,.35); t.tween_callback(panel.queue_free)
 
-func paper_style() -> StyleBoxTexture:
-	var style = StyleBoxTexture.new()
-	style.texture = assets.texture("ui/paper_panel.png")
-	for side in [SIDE_LEFT,SIDE_TOP,SIDE_RIGHT,SIDE_BOTTOM]:
-		style.set_texture_margin(side,16)
-		style.set_content_margin(side,6)
-		style.set_expand_margin(side,2)
+func panel_style() -> StyleBoxFlat:
+	var style = StyleBoxFlat.new()
+	style.bg_color = Color("161916dc")
+	style.border_color = Color("b9a27a70")
+	style.set_border_width_all(0)
+	for side in [SIDE_LEFT,SIDE_TOP,SIDE_RIGHT,SIDE_BOTTOM]: style.set_content_margin(side,6)
 	return style

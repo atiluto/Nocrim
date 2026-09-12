@@ -20,3 +20,5 @@
 - Ren'Py sources and tooling have been removed; do not restore them for new work.
 - Preserve unrelated user files, particularly `웹소설_창작_마스터팩_v2.0`.
 - Do not store API keys or secrets in the story master or source. Document editing alone does not automatically synchronize from another Chat or execute game changes.
+
+- Latest UI direction (2026-09-12): preserve current character files until the user explicitly reauthorizes character changes. Use the 14 references and analysis in `art-source/ui-wuxia/디자인분석_제작기록.md` for charcoal translucent surfaces, sparse brass rules, restrained ink-wash environments, and legible text. Do not revive tiled photographic parchment buttons or cheerful pastel anime environments. Base action labels are hidden until hover or keyboard focus.

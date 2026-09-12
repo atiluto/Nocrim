@@ -7,10 +7,13 @@ var transition: Tween
 var muted = false
 
 func _ready() -> void:
+	for bus_name in ["Music","Effects"]:
+		if AudioServer.get_bus_index(bus_name) < 0:
+			AudioServer.add_bus(); AudioServer.set_bus_name(AudioServer.bus_count-1,bus_name)
 	for i in range(2):
-		var p = AudioStreamPlayer.new(); add_child(p); players.append(p)
+		var p = AudioStreamPlayer.new(); p.bus="Music"; add_child(p); players.append(p)
 	for i in range(8):
-		var p = AudioStreamPlayer.new(); add_child(p); sfx_players.append(p)
+		var p = AudioStreamPlayer.new(); p.bus="Effects"; add_child(p); sfx_players.append(p)
 
 func stream(relative: String) -> AudioStream:
 	var path = "res://assets/audio/" + relative

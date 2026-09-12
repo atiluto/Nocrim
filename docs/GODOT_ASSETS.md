@@ -67,3 +67,7 @@ Higgsfield GPT Image 2.5 Sunburst로 만든 `backgrounds/base_camp.png`, `backgr
 ## 그림 지도·종이 UI (2026-09-12)
 
 내장 image_gen으로 `backgrounds/chapter_01_painted.png`, `ui/paper_panel.png`를 새로 생성했다. 지도는 원화를 전체 화면에 표시하며 노드·길·지명은 코드로 겹친다. 종이 이미지는 크기에 따라 늘어나는 패널 재질이다. `ui/icons/`는 글꼴에 의존하지 않는 SVG 픽토그램. 최종 프롬프트·디자인 참고 출처는 `art-source/map-redesign/제작기록.md`.
+
+## 최신 무협 UI·환경 (2026-09-12)
+
+`chapter_01_ink.png` 지도와 `wuxia_scenes.png` 환경 아틀라스를 사용한다. 좌상 타이틀·대화 / 우상 거점 / 좌하 전투 / 우하 산길. 새 이미지 2장은 내장 image_gen으로 제작하고 원본 그대로 AtlasTexture 영역으로 연결했다. 종이 패널 사진은 활성 UI에서 사용하지 않는다. 붓자국은 `ui/ink_brush.svg`, 제목은 Windows 시스템 궁서 계열 및 번들 fallback, 본문은 기존 한글 글꼴이다. 캐릭터 파일·로드 우선순위·투명 처리 모두 유지. 첨부 14장 분석과 최종 프롬프트는 `art-source/ui-wuxia/디자인분석_제작기록.md`.

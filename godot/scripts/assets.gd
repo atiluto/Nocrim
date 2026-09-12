@@ -6,6 +6,17 @@ func external_path(relative: String) -> String:
 
 func texture(relative: String) -> Texture2D:
 	if cache.has(relative): return cache[relative]
+	var scenes: Dictionary = {"backgrounds/mountains.png":Vector2i(0,0),"backgrounds/base_camp.png":Vector2i(1,0),"backgrounds/battle_ink.png":Vector2i(0,1),"backgrounds/road.png":Vector2i(1,1)}
+	if scenes.has(relative):
+		var sheet = texture("backgrounds/wuxia_scenes.png")
+		if sheet:
+			var tile = AtlasTexture.new(); tile.atlas=sheet
+			var width: int = int(sheet.get_width()/2.0); var height: int = int(sheet.get_height()/2.0)
+			var cell: Vector2i = scenes[relative]
+			var x: int = 0 if cell.x == 0 else sheet.get_width()-width
+			var y: int = 0 if cell.y == 0 else sheet.get_height()-height
+			tile.region=Rect2(x,y,width,height); tile.filter_clip=true
+			cache[relative]=tile; return tile
 	var result: Texture2D = null
 	var outside = external_path(relative)
 	if not OS.has_feature("editor") and FileAccess.file_exists(outside):

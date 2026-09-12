@@ -1,43 +1,55 @@
 extends RefCounted
+var selected_book = "blade"
 
 func hotspot(a, id: String, title: String, rect: Rect2, callback: Callable) -> void:
 	var b = a.button(id,"",rect,callback)
-	b.tooltip_text = title
-	for state in ["normal","hover","pressed","focus"]:
-		var style = StyleBoxFlat.new()
-		style.bg_color = Color(1,1,1,.08 if state != "normal" else 0)
-		style.border_color = Color("e6ca87")
-		style.set_border_width_all(2 if state != "normal" else 0)
-		b.add_theme_stylebox_override(state,style)
-	a.box(Rect2(rect.position+Vector2(0,rect.size.y-28),Vector2(rect.size.x,28)),Color("10231ed9"))
-	a.label(title,Rect2(rect.position+Vector2(5,rect.size.y-28),Vector2(rect.size.x-10,28)),16)
+	for state in ["normal","hover","pressed","focus"]: b.add_theme_stylebox_override(state,StyleBoxEmpty.new())
+	var tag = a.box(Rect2(0,0,100,36),Color.BLACK)
+	var style = StyleBoxFlat.new(); style.bg_color=Color(0,0,0,.84); style.set_corner_radius_all(2)
+	tag.add_theme_stylebox_override("panel",style)
+	var caption = a.label(title,Rect2(7,2,86,30),19,Color("f4ecdc"),tag)
+	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	tag.visible=false
+	b.mouse_entered.connect(func(): tag.position=Vector2(clampf(a.get_local_mouse_position().x+18,8,1170),clampf(a.get_local_mouse_position().y-40,80,625)); tag.visible=true)
+	b.mouse_exited.connect(func(): tag.visible=false)
+	b.focus_entered.connect(func(): tag.position=rect.position+Vector2(rect.size.x/2-50,-38); tag.visible=true)
+	b.focus_exited.connect(func(): tag.visible=false)
 
 func draw_base(a) -> void:
 	var s: Dictionary = a.campaign.s
-	var bg = a.picture(a.assets.texture("backgrounds/base_camp.png"),Rect2(0,74,1280,580))
+	var bg = a.picture(a.assets.texture("backgrounds/base_camp.png"),Rect2(0,0,1280,720))
 	bg.stretch_mode = TextureRect.STRETCH_SCALE
-	if s.ap == 1: a.shade(Rect2(0,74,1280,580),Color(.03,.07,.2,.32))
-	a.sound.music("hub"); a.header(a.campaign.world.regions[s.location].name + " · 거점"); a.footer()
-	hotspot(a,"camp_map","지도 · 이동한다",Rect2(630,215,175,165),func(): a.page="map"; a.map_selected=s.map_node; a.refresh())
-	hotspot(a,"camp_house","집 · 휴식한다",Rect2(90,180,365,190),func(): a.command("camp_rest"))
-	hotspot(a,"camp_sword","검 · 훈련한다",Rect2(135,455,215,99),func(): a.command("camp_train"))
-	hotspot(a,"camp_book","책 · 공부한다",Rect2(441,460,195,130),func(): study_menu(a))
-	hotspot(a,"camp_sense","아지랑이 · 기감을 넓힌다",Rect2(1063,215,210,160),func(): a.command("sense"))
-	hotspot(a,"camp_fire","모닥불 · 이야기한다",Rect2(819,357,190,128),func(): talk_menu(a))
-	a.box(Rect2(25,596,1230,58),Color("10231ee8"))
-	a.label("무공 %d  ·  언술 %d  ·  지략 %d  ·  세계 이해 %d    |    활동 한 번 = 한 시간대 · 지도 열기 무료" % [s.training,s.speech,s.strategy,s.lore],Rect2(43,606,980,37),17)
-	a.button("known_omens","감지한 사건",Rect2(1090,605,148,36),func(): sense_menu(a))
+	if s.ap == 1: a.shade(Rect2(0,0,1280,720),Color(.03,.07,.2,.32))
+	a.sound.music("hub"); a.map_views.hud(a)
+	hotspot(a,"camp_map","이동",Rect2(555,240,250,230),func(): a.page="map"; a.map_selected=s.map_node; a.refresh())
+	hotspot(a,"camp_house","휴식",Rect2(75,145,395,245),func(): a.command("camp_rest"))
+	hotspot(a,"camp_sword","훈련",Rect2(131,491,235,121),func(): a.command("camp_train"))
+	hotspot(a,"camp_book","독서",Rect2(444,469,204,168),func(): study_menu(a))
+	hotspot(a,"camp_sense","기감",Rect2(1050,171,214,206),func(): a.command("sense"))
+	hotspot(a,"camp_fire","대화",Rect2(851,373,249,184),func(): talk_menu(a))
+	a.map_views.icon_button(a,"camp_status","home",Rect2(1016,17,46,46),"산채 상태와 업무",func(): status_menu(a))
+	a.map_views.icon_button(a,"camp_people","eye",Rect2(1072,17,46,46),"인연과 등용",func(): a.page="roster"; a.refresh())
 
 func study_menu(a) -> void:
-	var panel = a.overlay("통나무 위의 책")
+	var panel = a.overlay("독서 · 수련")
 	var s: Dictionary = a.campaign.s
-	a.button("study_hints","읽으며 얻은 단서",Rect2(280,551,718,40),func(): a.result_window("책에서 얻은 단서","\n\n".join(s.hints) if not s.hints.is_empty() else "아직 읽은 책이 없다."),false,panel)
+	if selected_book not in s.books: selected_book = s.books[0]
 	for i in s.books.size():
 		var id: String = s.books[i]
-		var book: Dictionary = a.campaign.life.data.books[id]
-		var count: int = s.book_reads.get(id,0)
-		var done: bool = count >= book.limit
-		a.button("book_"+id,"%s  ·  %d/%d  ·  %s" % [book.name,count,book.limit,"이미 다 본 책이다" if done else "공부한다"],Rect2(278,220+i*65,722,53),func(): a.command("study",{"book":id}),done,panel)
+		var item: Dictionary = a.campaign.life.data.books[id]
+		var b = a.button("book_"+id,item.name,Rect2(278,221+i*53,232,44),func(): selected_book=id; study_menu(a),false,panel,id==selected_book)
+		b.add_theme_font_size_override("font_size",17)
+	var book: Dictionary = a.campaign.life.data.books[selected_book]
+	var count: int = s.book_reads.get(selected_book,0)
+	a.shade(Rect2(535,220,1,330),Color("b9a27a55"),panel)
+	a.label(book.name,Rect2(566,222,421,45),30,a.GOLD,panel)
+	a.label(book.description,Rect2(568,282,408,87),21,a.PAPER,panel)
+	a.label("읽은 횟수  %d / %d" % [count,book.limit],Rect2(568,370,408,39),21,a.PAPER,panel)
+	var stats: Array = []
+	for key in book.effects: stats.append("%s +%d" % [{"training":"무공","speech":"언술","strategy":"지략","lore":"세계 이해","intel":"정보"}.get(key,key),book.effects[key]])
+	a.label(" · ".join(stats),Rect2(568,420,408,35),18,a.GOLD,panel)
+	a.button("study_selected","이미 다 본 책이다" if count >= book.limit else "독서 · 한 시간대",Rect2(566,479,412,49),func(): a.command("study",{"book":selected_book}),count>=book.limit,panel,true)
+	a.button("study_hints","읽으며 얻은 단서",Rect2(281,550,696,37),func(): a.result_window("책에서 얻은 단서","\n\n".join(s.hints) if not s.hints.is_empty() else "아직 읽은 책이 없다."),false,panel)
 
 func talk_menu(a) -> void:
 	var panel = a.overlay("모닥불 곁의 사람들")
@@ -113,3 +125,13 @@ func affairs_menu(a) -> void:
 		a.button("camp_contact_"+target,a.campaign.world.regions[target].name+" 전음",Rect2(653,284+contact_index*39,345,34),func(): a.command("communicate",{"target":target}),target in a.campaign.s.communicated or a.campaign.s.qi<1,panel)
 		contact_index += 1
 	a.label("정비는 한 시간대 · 전음은 한 시간대와 비술 1",Rect2(282,573,710,30),15,a.MUTED,panel)
+
+func status_menu(a) -> void:
+	var p = a.overlay("산채 상태")
+	var s: Dictionary = a.campaign.s
+	a.label(a.campaign.world.regions[s.location].name,Rect2(284,220,681,45),30,a.GOLD,p)
+	a.label("체력 %d / %d     무공 %d     언술 %d     지략 %d\n세계 이해 %d     은전 %d     군량 %d\n병력 %d     사기 %d     민심 %d     위세 %d" % [s.health,s.health_max,s.training,s.speech,s.strategy,s.lore,s.gold,s.rice,s.troops,s.morale,s.mercy,s.fear],Rect2(284,286,700,158),22,a.PAPER,p)
+	a.button("base_affairs","산채 업무",Rect2(281,462,224,48),func(): affairs_menu(a),false,p)
+	a.button("known_omens","감지한 사건",Rect2(521,462,224,48),func(): sense_menu(a),false,p)
+	a.button("base_wait","시간 보내기",Rect2(761,462,224,48),func(): a.command("end_turn"),false,p)
+	a.button("base_log","기록",Rect2(282,524,704,42),a.show_log,false,p)

@@ -6,7 +6,7 @@
     840,
     425
   ],
-  "background": "backgrounds/chapter_01_painted.png",
+  "background": "backgrounds/chapter_01_ink.png",
   "nodes": {
     "sol": {
       "name": "솔바람채",

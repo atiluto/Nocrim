@@ -28,11 +28,19 @@ func draw(a) -> void:
 		var line = Line2D.new()
 		line.points = PackedVector2Array([p,p.lerp(q,.33)+bend,p.lerp(q,.67)-bend,q])
 		var selected: bool = edge[0] in route and edge[1] in route
-		line.width = 3.5 if selected else 1.7
-		line.default_color = Color("9f3929") if selected else Color("8d5134aa")
+		line.width = 3.2 if selected else 1.1
+		line.default_color = Color("a54b32") if selected else Color("4b514e66")
 		line.antialiased = true; a.stage.add_child(line)
 	for id in atlas.data.nodes:
 		a.map_stone(id,atlas.data.nodes[id],id in s.owned,atlas.accessible(id,s.owned))
+	hud(a)
+	if a.campaign.life.at_base(a.campaign):
+		icon_button(a,"map_base","home",Rect2(21,655,48,48),"현재 산의 거점으로",func(): a.map_popup=false; a.page="base"; a.refresh())
+	if a.map_popup: location_menu(a)
+
+func hud(a) -> void:
+	var s: Dictionary = a.campaign.s
+	var atlas = a.campaign.local_map
 	# Calendar numbers are the only permanent status text; meaning is in pictograms/tooltips.
 	a.box(Rect2(20,14,445,60))
 	var calendar: Dictionary = atlas.data.calendar
@@ -40,7 +48,7 @@ func draw(a) -> void:
 	var year: int = int(calendar.start_year)+int((s.turn-1)/days)
 	var day: int = (int(s.turn)-1)%days+1
 	icon(a,"calendar",Rect2(36,29,28,28),"서력 %d년 · %d일" % [year,day])
-	var date = a.label("%04d · %03d" % [year,day],Rect2(71,25,134,36),20,a.INK)
+	var date = a.label("%04d · %03d" % [year,day],Rect2(71,25,134,36),20,a.PAPER)
 	date.mouse_filter = Control.MOUSE_FILTER_PASS; date.tooltip_text = "서력 %d년 · %d일" % [year,day]
 	for i in 3:
 		var active: bool = i == clampi(3-int(s.ap),0,2)
@@ -52,9 +60,6 @@ func draw(a) -> void:
 		step.modulate.a = 1.0 if i >= int(s.walk_steps) else .22
 	icon_button(a,"map_save","save",Rect2(1150,17,46,46),"저장",func(): a.save_game())
 	icon_button(a,"map_menu","menu",Rect2(1207,17,46,46),"메뉴 · ESC",a.pause_menu)
-	if a.campaign.life.at_base(a.campaign):
-		icon_button(a,"map_base","home",Rect2(21,655,48,48),"현재 산의 거점으로",func(): a.map_popup=false; a.page="base"; a.refresh())
-	if a.map_popup: location_menu(a)
 
 func location_menu(a) -> void:
 	var s: Dictionary = a.campaign.s
