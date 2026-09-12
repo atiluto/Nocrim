@@ -8,6 +8,8 @@ OUTPUT = ROOT / 'godot/data/prologue.json'
 
 def compile_data():
     manifest = json.loads((BASE/'manifest.json').read_text(encoding='utf-8'))
+    presentation = json.loads((BASE/'presentation.json').read_text(encoding='utf-8'))
+    scene_cards = presentation.get('scene_cards',{})
     beats, chapters, ids, runtime_ids = [], [], set(), set()
     for filename in manifest['chapters']:
         path = BASE / filename
@@ -27,16 +29,26 @@ def compile_data():
             elif memory_value=='off': memory_mode = False
             elif memory_value: raise ValueError('Memory must be on or off: '+identity)
             beat = {'id':identity,'chapter':chapter_id,'title':title,'text':line.strip()}
-            for key, source in [('speaker','화자'),('background','배경'),('sprite','인물'),('side','위치'),('music','음악'),('ambience','환경음'),('sfx','효과음'),('effect','연출')]:
+            for key, source in [('speaker','화자'),('background','배경'),('sprite','인물'),('side','위치'),('music','음악'),('ambience','환경음'),('sfx','효과음'),('effect','연출'),('transition','장면')]:
                 beat[key] = fields.get(source,'')
+            beat['transition'] = scene_cards.get(identity,beat['transition'])
+            if chapter_id=='P01':
+                beat['background']={'room':'modern_room','road':'modern_forest','rain':'modern_rain'}.get(beat['background'],beat['background'])
+            else:
+                beat['background']={'road':'forest_path','hut':'solbaram_den','village':'village_overcast','stockade':'maegol_stockade','camp':'solbaram_night'}.get(beat['background'],beat['background'])
+            if beat['sprite']=='extra':
+                if chapter_id=='P04': beat['sprite']='npc_villager'
+                elif chapter_id in ['P06','P08'] and beat['speaker']!='추격자': beat['sprite']='npc_captive'
+                elif chapter_id=='P05' or beat['speaker'] in ['조만식','추격자']: beat['sprite']='npc_bandit_brute'
+                else: beat['sprite']='npc_bandit_scout'
             beat['memory'] = memory_mode
             if not beat['text']: raise ValueError('Empty dialogue '+identity)
             if beat['side'] not in ['left','right']: raise ValueError('Invalid side '+identity)
             if beat['effect'] not in ['','fade','fadein','jump','shake','flash','blackout','walk']: raise ValueError('Invalid effect '+identity)
-            if beat['sprite'] not in ['', 'extra', 'mawung']: raise ValueError('Unknown sprite '+identity)
-            if beat['background'] not in ['black','room','rain','village','hut','stockade','road','camp']: raise ValueError('Unknown background '+identity)
+            if beat['sprite'] not in ['', 'mawung', 'npc_bandit_scout', 'npc_bandit_brute', 'npc_villager', 'npc_captive']: raise ValueError('Unknown sprite '+identity)
+            if beat['background'] not in ['black','modern_room','modern_forest','modern_rain','forest_path','solbaram_den','village_overcast','maegol_stockade','solbaram_night']: raise ValueError('Unknown background '+identity)
             if beat['sprite'] and not (ROOT/'godot/assets/prologue'/(beat['sprite']+'.png')).is_file(): raise ValueError('Missing sprite '+identity)
-            if beat['background'] not in ['black','road','camp'] and not (ROOT/'godot/assets/prologue'/(beat['background']+'.png')).is_file(): raise ValueError('Missing background '+identity)
+            if beat['background']!='black' and not (ROOT/'godot/assets/prologue'/(beat['background']+'.png')).is_file(): raise ValueError('Missing background '+identity)
             for key in ['music','ambience','sfx']:
                 if beat[key] and not (ROOT/'godot/assets/audio'/beat[key]).is_file(): raise ValueError('Missing audio '+beat[key])
             # Let authors write naturally. Game data is paginated without rewriting Markdown.

@@ -131,7 +131,9 @@ func show_beat(initial: bool = false) -> void:
 	var beat: Dictionary=beats[cursor]
 	title_label.text=beat.title
 	progress_label.text="%d / %d" % [cursor+1,beats.size()]
-	name_label.text="강산 · 독백" if beat.speaker=="독백" else beat.speaker
+	name_label.text="" if beat.speaker=="독백" else beat.speaker
+	text_label.position.x=47 if beat.speaker=="독백" else 277
+	text_label.size.x=1129 if beat.speaker=="독백" else 899
 	text_label.text=beat.text; text_label.visible_characters=0
 	var background_changed: bool=beat.background!=background_key
 	set_background(beat.background)
@@ -140,9 +142,29 @@ func show_beat(initial: bool = false) -> void:
 	host.sound.music_file(beat.music,-21.0)
 	set_ambience(beat.ambience)
 	if background_changed and not transitioning: reveal_wait=.65
+	if not transitioning and not String(beat.get("transition","")).is_empty():
+		scene_transition_card(String(beat.transition))
 	if not initial and not Input.is_key_pressed(KEY_CTRL):
 		host.sound.effect_file(beat.sfx,-17.0)
 		animate(beat.effect)
+
+func scene_transition_card(caption: String) -> void:
+	transitioning=true; reveal_wait=0
+	if chapter_tween: chapter_tween.kill()
+	for child in transition_layer.get_children(): child.queue_free()
+	var cover=host.shade(Rect2(0,0,1280,720),Color(0,0,0,0),transition_layer)
+	cover.mouse_filter=Control.MOUSE_FILTER_STOP
+	var card=host.label(caption,Rect2(230,314,820,62),30,host.PAPER,transition_layer)
+	card.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; card.modulate.a=0
+	chapter_tween=create_tween()
+	chapter_tween.tween_property(cover,"color:a",.92,.58).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_property(card,"modulate:a",1.0,.28)
+	chapter_tween.tween_interval(1.15)
+	chapter_tween.tween_property(card,"modulate:a",0.0,.25)
+	chapter_tween.tween_property(cover,"color:a",0.0,.72).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_callback(func():
+		transitioning=false
+		for child in transition_layer.get_children(): child.queue_free())
 
 func build_memory_overlay() -> void:
 	memory_overlay=Control.new(); memory_overlay.size=Vector2(1280,720); memory_overlay.modulate.a=0
@@ -175,9 +197,12 @@ func chapter_transition(target_cursor: int) -> void:
 	var kicker_text: String="장 마침" if target_cursor>=beats.size() else "다음 장"
 	var kicker=host.label(kicker_text,Rect2(440,244,400,35),19,host.MUTED,transition_layer)
 	var next_title: String="서장 끝" if target_cursor>=beats.size() else beats[target_cursor].title
-	var card=host.label(next_title,Rect2(215,295,850,80),42,host.PAPER,transition_layer)
+	var card=host.label(next_title,Rect2(215,285,850,72),42,host.PAPER,transition_layer)
+	var scene_caption: String="" if target_cursor>=beats.size() else String(beats[target_cursor].get("transition",""))
+	var scene_label=host.label(scene_caption,Rect2(250,365,780,42),21,host.MUTED,transition_layer)
 	kicker.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; card.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	kicker.modulate.a=0; card.modulate.a=0
+	scene_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	kicker.modulate.a=0; card.modulate.a=0; scene_label.modulate.a=0
 	chapter_tween=create_tween()
 	chapter_tween.tween_property(cover,"color:a",1.0,1.0).set_trans(Tween.TRANS_SINE)
 	chapter_tween.tween_callback(func():
@@ -189,9 +214,11 @@ func chapter_transition(target_cursor: int) -> void:
 		host.sound.effect_file("sfx/sfx_title_reveal_chime_01.wav",-23.0))
 	chapter_tween.tween_property(kicker,"modulate:a",1.0,.28)
 	chapter_tween.parallel().tween_property(card,"modulate:a",1.0,.38)
+	chapter_tween.parallel().tween_property(scene_label,"modulate:a",1.0,.38)
 	chapter_tween.tween_interval(1.25)
 	chapter_tween.tween_property(kicker,"modulate:a",0.0,.25)
 	chapter_tween.parallel().tween_property(card,"modulate:a",0.0,.3)
+	chapter_tween.parallel().tween_property(scene_label,"modulate:a",0.0,.3)
 	chapter_tween.tween_callback(func():
 		if target_cursor>=beats.size(): finish()
 		else: hud.show())
@@ -291,7 +318,8 @@ func show_history() -> void:
 	var scroll=ScrollContainer.new(); scroll.position=Vector2(250,215); scroll.size=Vector2(770,400); panel.add_child(scroll)
 	var body=VBoxContainer.new(); body.size_flags_horizontal=Control.SIZE_EXPAND_FILL; scroll.add_child(body)
 	for i in range(maxi(0,cursor-35),mini(cursor+1,beats.size())):
-		var line=Label.new(); line.text=beats[i].speaker+"  ·  "+beats[i].text
+		var prefix: String="" if beats[i].speaker=="독백" else beats[i].speaker+"  ·  "
+		var line=Label.new(); line.text=prefix+beats[i].text
 		line.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART; line.custom_minimum_size.x=730; line.add_theme_font_size_override("font_size",19); body.add_child(line)
 	host.button("history_close","닫기",Rect2(904,638,103,42),func(): host.modal.queue_free(); host.modal=null,false,panel)
 
