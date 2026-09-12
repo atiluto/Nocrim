@@ -4,12 +4,13 @@ var world: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://d
 var s: Dictionary = {}
 var error = ""
 var feedback: Dictionary = {}
+var local_map = preload("res://scripts/chapter_map.gd").new()
 
 func new_game(seed_value: int = 91723) -> Dictionary:
 	s = {"version":2, "seed":maxi(1, seed_value & 0xffffffff), "turn":1, "ap":3,
 		"gold":100, "rice":120, "troops":100, "training":0, "morale":70, "mercy":25,
 		"fear":10, "intel":0, "qi":3, "qi_max":3, "owned":["sol"], "order":[],
-		"location":"sol", "roster":["you","yeon"], "met":["yeon"], "prisoners":[],
+		"location":"sol", "map_node":"sol", "roster":["you","yeon"], "met":["yeon"], "prisoners":[],
 		"released":[], "wounds":{}, "aff":{"yeon":12,"seo":0,"yun":0,"so":0},
 		"flags":{}, "seen":[], "queue":["opening"], "log":[], "battle":null,
 		"talked":[], "communicated":[], "scouted":[], "siege":0, "finished":null,
@@ -114,6 +115,7 @@ func conquest(target: String) -> void:
 	s.owned.append(target)
 	if not recaptured: s.order.append(target)
 	s.location = target
+	s.map_node = target
 	s.gold += 25
 	s.morale = mini(100, s.morale + 8)
 	var cap = world.regions[target].captive
@@ -172,6 +174,14 @@ func transition(action: String, args: Dictionary) -> bool:
 	var target = args.get("target", "")
 	var who = args.get("who", "")
 	match action:
+		"travel":
+			var here: String = s.get("map_node", s.location)
+			if target == here: return reject("이미 이 길목에 있습니다.")
+			var route: Array = local_map.path_to(here, target, s.owned)
+			if route.is_empty(): return reject("적 산채를 통과할 수 없습니다. 연결된 아군 길부터 확보하세요.")
+			s.map_node = target
+			if target in s.owned: s.location = target
+			feedback.text = local_map.data.nodes[target].name + "에 도착했다. 산역 안 이동은 명령을 쓰지 않는다."
 		"scout":
 			if target not in frontier(): return reject("인접한 적 산채만 정찰할 수 있습니다.")
 			if target in s.scouted: return reject("이미 이 산의 약점을 확보했습니다.")
@@ -193,11 +203,13 @@ func transition(action: String, args: Dictionary) -> bool:
 					for p in s.wounds: s.wounds[p] = maxi(0, s.wounds[p] - 1)
 					feedback.text = "부대 휴식. 사기 +18, 부상 회복 1일."
 		"teleport", "communicate":
-			if target not in s.owned or target == s.location: return reject("현재 위치를 제외한 점령 산에만 비술을 쓸 수 있습니다.")
+			var origin: String = s.get("map_node", s.location) if action == "teleport" else s.location
+			if target not in s.owned or target == origin: return reject("현재 위치를 제외한 점령 산에만 비술을 쓸 수 있습니다.")
 			if s.qi < 1: return reject("비술은 다음 날 회복됩니다.")
 			if action == "communicate" and target in s.communicated: return reject("오늘 이미 연락한 산입니다.")
 			s.qi -= 1
 			if action == "teleport":
+				s.map_node = target
 				s.location = target; feedback.text = "귀산술. " + world.regions[target].name + " 주둔 수비 +30."
 			else:
 				s.communicated.append(target); s.rice += 18; s.morale = mini(100, s.morale + 3)
@@ -311,6 +323,7 @@ func advance_day() -> void:
 		if s.owned.size() > 1:
 			s.owned.erase(target)
 			if s.location == target: s.location = s.owned[0]
+			if not local_map.accessible(s.get("map_node", s.location), s.owned): s.map_node = s.location
 			feedback.text += " " + world.regions[target].name + " 함락. 비술 연결이 끊겼다."
 		else:
 			s.siege += 1; feedback.text += " 마지막 산채 방어선 %d/3 손실." % s.siege

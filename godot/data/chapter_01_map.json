@@ -1,0 +1,894 @@
+{
+  "id": "chapter_01",
+  "name": "솔바람 산역",
+  "chapter": 1,
+  "size": [
+    840,
+    425
+  ],
+  "background": "backgrounds/chapter_01_map.svg",
+  "nodes": {
+    "sol": {
+      "name": "솔바람채",
+      "kind": "mountain",
+      "pos": [
+        105,
+        220
+      ],
+      "guards": [
+        "sol"
+      ],
+      "approaches": [
+        "sol"
+      ],
+      "description": "내가 떨어진 산. 밥은 없고 산적은 열일곱. 어쩌다 보니 여기가 본진이다."
+    },
+    "dal": {
+      "name": "달개울채",
+      "kind": "mountain",
+      "pos": [
+        260,
+        340
+      ],
+      "guards": [
+        "dal"
+      ],
+      "approaches": [
+        "dal"
+      ],
+      "description": "세곡 나루를 끼고 있는 작은 산채. 남쪽 해동표국의 표행로가 지나간다."
+    },
+    "iron": {
+      "name": "철마산",
+      "kind": "mountain",
+      "pos": [
+        230,
+        110
+      ],
+      "guards": [
+        "iron"
+      ],
+      "approaches": [
+        "iron"
+      ],
+      "description": "삼십 년 무패의 철마대주. 그러나 보름마다 산제에 쓸 술이 들어간다는 소문이 있다."
+    },
+    "mist": {
+      "name": "안개재",
+      "kind": "mountain",
+      "pos": [
+        390,
+        245
+      ],
+      "guards": [
+        "mist"
+      ],
+      "approaches": [
+        "mist"
+      ],
+      "description": "독초와 약초가 한 뿌리에서 자란다는 고개. 백소하의 약방이 어느 편에도 속하지 않는다."
+    },
+    "crane": {
+      "name": "청학산",
+      "kind": "mountain",
+      "pos": [
+        635,
+        335
+      ],
+      "guards": [
+        "crane"
+      ],
+      "approaches": [
+        "crane"
+      ],
+      "description": "동쪽 항구를 지키는 윤가의 봉산. 표국과 가문의 묵은 채무가 이 산에 걸려 있다."
+    },
+    "red": {
+      "name": "적송산",
+      "kind": "mountain",
+      "pos": [
+        610,
+        215
+      ],
+      "guards": [
+        "red"
+      ],
+      "approaches": [
+        "red"
+      ],
+      "description": "세금에 쫓겨 산에 오른 사람들. 철마산의 옛 영주와는 피의 원한이 있다."
+    },
+    "white": {
+      "name": "백운령",
+      "kind": "mountain",
+      "pos": [
+        448,
+        78
+      ],
+      "guards": [
+        "white"
+      ],
+      "approaches": [
+        "white"
+      ],
+      "description": "무너진 천문대. 점령한 산끼리만 이어지는 비술의 근원을 누군가 여기서 연구했다."
+    },
+    "tae": {
+      "name": "태백총채",
+      "kind": "mountain",
+      "pos": [
+        720,
+        75
+      ],
+      "guards": [
+        "tae"
+      ],
+      "approaches": [
+        "tae"
+      ],
+      "description": "팔도의 산채에 호령하는 총채주 류무겸의 본거지. 여섯 산이 한 깃발 아래 들면 길이 열린다."
+    },
+    "road_dal_sol_1": {
+      "name": "달개울채 · 솔바람채 길목 1",
+      "kind": "road",
+      "pos": [
+        207,
+        299
+      ],
+      "guards": [
+        "dal",
+        "sol"
+      ],
+      "approaches": [
+        "dal",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_dal_sol_2": {
+      "name": "달개울채 · 솔바람채 길목 2",
+      "kind": "road",
+      "pos": [
+        155,
+        258
+      ],
+      "guards": [
+        "dal",
+        "sol"
+      ],
+      "approaches": [
+        "dal",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_dal_mist_1": {
+      "name": "달개울채 · 안개재 길목 1",
+      "kind": "road",
+      "pos": [
+        304,
+        308
+      ],
+      "guards": [
+        "dal",
+        "mist"
+      ],
+      "approaches": [
+        "dal",
+        "mist"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_dal_mist_2": {
+      "name": "달개울채 · 안개재 길목 2",
+      "kind": "road",
+      "pos": [
+        348,
+        275
+      ],
+      "guards": [
+        "dal",
+        "mist"
+      ],
+      "approaches": [
+        "dal",
+        "mist"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_sol_1": {
+      "name": "철마산 · 솔바람채 길목 1",
+      "kind": "road",
+      "pos": [
+        188,
+        147
+      ],
+      "guards": [
+        "iron",
+        "sol"
+      ],
+      "approaches": [
+        "iron",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_sol_2": {
+      "name": "철마산 · 솔바람채 길목 2",
+      "kind": "road",
+      "pos": [
+        145,
+        185
+      ],
+      "guards": [
+        "iron",
+        "sol"
+      ],
+      "approaches": [
+        "iron",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_red_1": {
+      "name": "철마산 · 적송산 길목 1",
+      "kind": "road",
+      "pos": [
+        359,
+        146
+      ],
+      "guards": [
+        "iron",
+        "red"
+      ],
+      "approaches": [
+        "iron",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_red_2": {
+      "name": "철마산 · 적송산 길목 2",
+      "kind": "road",
+      "pos": [
+        488,
+        181
+      ],
+      "guards": [
+        "iron",
+        "red"
+      ],
+      "approaches": [
+        "iron",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_white_1": {
+      "name": "철마산 · 백운령 길목 1",
+      "kind": "road",
+      "pos": [
+        304,
+        99
+      ],
+      "guards": [
+        "iron",
+        "white"
+      ],
+      "approaches": [
+        "iron",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_iron_white_2": {
+      "name": "철마산 · 백운령 길목 2",
+      "kind": "road",
+      "pos": [
+        378,
+        88
+      ],
+      "guards": [
+        "iron",
+        "white"
+      ],
+      "approaches": [
+        "iron",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_mist_sol_1": {
+      "name": "안개재 · 솔바람채 길목 1",
+      "kind": "road",
+      "pos": [
+        293,
+        236
+      ],
+      "guards": [
+        "mist",
+        "sol"
+      ],
+      "approaches": [
+        "mist",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_mist_sol_2": {
+      "name": "안개재 · 솔바람채 길목 2",
+      "kind": "road",
+      "pos": [
+        196,
+        228
+      ],
+      "guards": [
+        "mist",
+        "sol"
+      ],
+      "approaches": [
+        "mist",
+        "sol"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_mist_red_1": {
+      "name": "안개재 · 적송산 길목 1",
+      "kind": "road",
+      "pos": [
+        465,
+        235
+      ],
+      "guards": [
+        "mist",
+        "red"
+      ],
+      "approaches": [
+        "mist",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_mist_red_2": {
+      "name": "안개재 · 적송산 길목 2",
+      "kind": "road",
+      "pos": [
+        540,
+        225
+      ],
+      "guards": [
+        "mist",
+        "red"
+      ],
+      "approaches": [
+        "mist",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_dal_1": {
+      "name": "청학산 · 달개울채 길목 1",
+      "kind": "road",
+      "pos": [
+        508,
+        337
+      ],
+      "guards": [
+        "crane",
+        "dal"
+      ],
+      "approaches": [
+        "crane",
+        "dal"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_dal_2": {
+      "name": "청학산 · 달개울채 길목 2",
+      "kind": "road",
+      "pos": [
+        380,
+        338
+      ],
+      "guards": [
+        "crane",
+        "dal"
+      ],
+      "approaches": [
+        "crane",
+        "dal"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_red_1": {
+      "name": "청학산 · 적송산 길목 1",
+      "kind": "road",
+      "pos": [
+        626,
+        294
+      ],
+      "guards": [
+        "crane",
+        "red"
+      ],
+      "approaches": [
+        "crane",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_red_2": {
+      "name": "청학산 · 적송산 길목 2",
+      "kind": "road",
+      "pos": [
+        618,
+        253
+      ],
+      "guards": [
+        "crane",
+        "red"
+      ],
+      "approaches": [
+        "crane",
+        "red"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_tae_1": {
+      "name": "청학산 · 태백총채 길목 1",
+      "kind": "road",
+      "pos": [
+        664,
+        247
+      ],
+      "guards": [
+        "crane",
+        "tae"
+      ],
+      "approaches": [
+        "crane",
+        "tae"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_crane_tae_2": {
+      "name": "청학산 · 태백총채 길목 2",
+      "kind": "road",
+      "pos": [
+        693,
+        158
+      ],
+      "guards": [
+        "crane",
+        "tae"
+      ],
+      "approaches": [
+        "crane",
+        "tae"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_red_white_1": {
+      "name": "적송산 · 백운령 길목 1",
+      "kind": "road",
+      "pos": [
+        555,
+        168
+      ],
+      "guards": [
+        "red",
+        "white"
+      ],
+      "approaches": [
+        "red",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_red_white_2": {
+      "name": "적송산 · 백운령 길목 2",
+      "kind": "road",
+      "pos": [
+        500,
+        122
+      ],
+      "guards": [
+        "red",
+        "white"
+      ],
+      "approaches": [
+        "red",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_red_tae_1": {
+      "name": "적송산 · 태백총채 길목 1",
+      "kind": "road",
+      "pos": [
+        647,
+        167
+      ],
+      "guards": [
+        "red",
+        "tae"
+      ],
+      "approaches": [
+        "red",
+        "tae"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_red_tae_2": {
+      "name": "적송산 · 태백총채 길목 2",
+      "kind": "road",
+      "pos": [
+        685,
+        120
+      ],
+      "guards": [
+        "red",
+        "tae"
+      ],
+      "approaches": [
+        "red",
+        "tae"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_tae_white_1": {
+      "name": "태백총채 · 백운령 길목 1",
+      "kind": "road",
+      "pos": [
+        628,
+        76
+      ],
+      "guards": [
+        "tae",
+        "white"
+      ],
+      "approaches": [
+        "tae",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "road_tae_white_2": {
+      "name": "태백총채 · 백운령 길목 2",
+      "kind": "road",
+      "pos": [
+        535,
+        77
+      ],
+      "guards": [
+        "tae",
+        "white"
+      ],
+      "approaches": [
+        "tae",
+        "white"
+      ],
+      "description": "산과 산 사이의 길목. 연결된 아군 길을 따라 이동하거나, 맞닿은 적 산채로 출정을 준비할 수 있다."
+    },
+    "market": {
+      "name": "솔바람 장시",
+      "kind": "city",
+      "pos": [
+        98,
+        352
+      ],
+      "guards": [
+        "sol"
+      ],
+      "approaches": [],
+      "description": "솔바람 산 아래 장터. 도착하면 군량을 구매하거나 모병할 수 있다."
+    },
+    "road_market": {
+      "name": "솔바람 장시 앞길",
+      "kind": "road",
+      "pos": [
+        101,
+        286
+      ],
+      "guards": [
+        "sol"
+      ],
+      "approaches": [],
+      "description": "솔바람 장시으로 이어지는 작은 길."
+    },
+    "guild": {
+      "name": "해동표국",
+      "kind": "guild",
+      "pos": [
+        362,
+        387
+      ],
+      "guards": [
+        "dal"
+      ],
+      "approaches": [],
+      "description": "표물이 모이는 표국 분소. 달개울을 확보하면 길이 열린다."
+    },
+    "road_guild": {
+      "name": "해동표국 앞길",
+      "kind": "road",
+      "pos": [
+        311,
+        363
+      ],
+      "guards": [
+        "dal"
+      ],
+      "approaches": [],
+      "description": "해동표국으로 이어지는 작은 길."
+    },
+    "ferry": {
+      "name": "달개울 나루",
+      "kind": "river",
+      "pos": [
+        474,
+        354
+      ],
+      "guards": [
+        "dal",
+        "mist"
+      ],
+      "approaches": [],
+      "description": "갈대밭을 건너는 나루. 강을 따라 주변 길을 살펴볼 수 있다."
+    },
+    "road_ferry": {
+      "name": "달개울 나루 앞길",
+      "kind": "road",
+      "pos": [
+        430,
+        317
+      ],
+      "guards": [
+        "dal",
+        "mist"
+      ],
+      "approaches": [],
+      "description": "달개울 나루으로 이어지는 작은 길."
+    },
+    "clan": {
+      "name": "청해 윤가",
+      "kind": "clan",
+      "pos": [
+        740,
+        326
+      ],
+      "guards": [
+        "crane"
+      ],
+      "approaches": [],
+      "description": "청학산 아래 윤가의 별원. 청학산을 확보하면 방문할 수 있다."
+    },
+    "road_clan": {
+      "name": "청해 윤가 앞길",
+      "kind": "road",
+      "pos": [
+        687,
+        330
+      ],
+      "guards": [
+        "crane"
+      ],
+      "approaches": [],
+      "description": "청해 윤가으로 이어지는 작은 길."
+    },
+    "exit_east": {
+      "name": "동쪽 관문",
+      "kind": "exit",
+      "pos": [
+        797,
+        190
+      ],
+      "guards": [
+        "tae"
+      ],
+      "approaches": [],
+      "description": "다른 지역으로 향하는 길. 제2장 지도는 아직 준비 중이며 지금은 넘어갈 수 없다."
+    }
+  },
+  "edges": [
+    [
+      "dal",
+      "road_dal_sol_1"
+    ],
+    [
+      "road_dal_sol_1",
+      "road_dal_sol_2"
+    ],
+    [
+      "road_dal_sol_2",
+      "sol"
+    ],
+    [
+      "dal",
+      "road_dal_mist_1"
+    ],
+    [
+      "road_dal_mist_1",
+      "road_dal_mist_2"
+    ],
+    [
+      "road_dal_mist_2",
+      "mist"
+    ],
+    [
+      "iron",
+      "road_iron_sol_1"
+    ],
+    [
+      "road_iron_sol_1",
+      "road_iron_sol_2"
+    ],
+    [
+      "road_iron_sol_2",
+      "sol"
+    ],
+    [
+      "iron",
+      "road_iron_red_1"
+    ],
+    [
+      "road_iron_red_1",
+      "road_iron_red_2"
+    ],
+    [
+      "road_iron_red_2",
+      "red"
+    ],
+    [
+      "iron",
+      "road_iron_white_1"
+    ],
+    [
+      "road_iron_white_1",
+      "road_iron_white_2"
+    ],
+    [
+      "road_iron_white_2",
+      "white"
+    ],
+    [
+      "mist",
+      "road_mist_sol_1"
+    ],
+    [
+      "road_mist_sol_1",
+      "road_mist_sol_2"
+    ],
+    [
+      "road_mist_sol_2",
+      "sol"
+    ],
+    [
+      "mist",
+      "road_mist_red_1"
+    ],
+    [
+      "road_mist_red_1",
+      "road_mist_red_2"
+    ],
+    [
+      "road_mist_red_2",
+      "red"
+    ],
+    [
+      "crane",
+      "road_crane_dal_1"
+    ],
+    [
+      "road_crane_dal_1",
+      "road_crane_dal_2"
+    ],
+    [
+      "road_crane_dal_2",
+      "dal"
+    ],
+    [
+      "crane",
+      "road_crane_red_1"
+    ],
+    [
+      "road_crane_red_1",
+      "road_crane_red_2"
+    ],
+    [
+      "road_crane_red_2",
+      "red"
+    ],
+    [
+      "crane",
+      "road_crane_tae_1"
+    ],
+    [
+      "road_crane_tae_1",
+      "road_crane_tae_2"
+    ],
+    [
+      "road_crane_tae_2",
+      "tae"
+    ],
+    [
+      "red",
+      "road_red_white_1"
+    ],
+    [
+      "road_red_white_1",
+      "road_red_white_2"
+    ],
+    [
+      "road_red_white_2",
+      "white"
+    ],
+    [
+      "red",
+      "road_red_tae_1"
+    ],
+    [
+      "road_red_tae_1",
+      "road_red_tae_2"
+    ],
+    [
+      "road_red_tae_2",
+      "tae"
+    ],
+    [
+      "tae",
+      "road_tae_white_1"
+    ],
+    [
+      "road_tae_white_1",
+      "road_tae_white_2"
+    ],
+    [
+      "road_tae_white_2",
+      "white"
+    ],
+    [
+      "sol",
+      "road_market"
+    ],
+    [
+      "road_market",
+      "market"
+    ],
+    [
+      "dal",
+      "road_guild"
+    ],
+    [
+      "road_guild",
+      "guild"
+    ],
+    [
+      "dal",
+      "road_ferry"
+    ],
+    [
+      "road_ferry",
+      "ferry"
+    ],
+    [
+      "crane",
+      "road_clan"
+    ],
+    [
+      "road_clan",
+      "clan"
+    ],
+    [
+      "tae",
+      "exit_east"
+    ]
+  ],
+  "exits": [
+    {
+      "node": "exit_east",
+      "target_chapter": "chapter_02",
+      "enabled": false
+    }
+  ]
+}

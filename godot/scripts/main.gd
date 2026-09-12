@@ -16,6 +16,7 @@ var sound = Sound.new()
 var stage: Control
 var page = "title"
 var selected = "dal"
+var map_selected = "sol"
 var person = "yeon"
 var squad: Array = ["you","yeon"]
 var buttons: Dictionary = {}
@@ -165,7 +166,7 @@ func start_game(quick: bool, seed_value: int = 0) -> void:
 	if seed_value == 0: seed_value = int(Time.get_unix_time_from_system()) ^ Time.get_ticks_msec()
 	campaign.new_game(seed_value); campaign.s.prologue = not quick
 	hand_stamp = ""
-	squad = ["you","yeon"]; page = "map"; selected = "dal"
+	squad = ["you","yeon"]; page = "map"; selected = "dal"; map_selected = "sol"
 	save_game(false); refresh()
 
 func save_game(notify: bool = true) -> void:
@@ -176,7 +177,8 @@ func save_game(notify: bool = true) -> void:
 func load_game() -> void:
 	var loaded = persistence.load_campaign()
 	if loaded.is_empty(): toast("읽을 수 있는 Godot 저장 파일이 없습니다."); return
-	campaign.s = loaded; squad = campaign.s.roster.slice(0,3); page = "map"; busy = false; refresh()
+	campaign.s = loaded; map_selected = loaded.get("map_node", loaded.location)
+	squad = campaign.s.roster.slice(0,3); page = "map"; busy = false; refresh()
 
 func refresh() -> void:
 	if campaign.s.is_empty(): return
@@ -234,48 +236,109 @@ func footer() -> void:
 	button("end_day","하루 마감  →",Rect2(1044,667,200,40),func(): command("end_turn"),false,null,true)
 
 func map_point(id: String) -> Vector2:
-	var p = campaign.world.regions[id].pos
-	return Vector2(33 + p[0] * .78, 98 + p[1] * .78)
+	var p = campaign.local_map.data.nodes[id].pos
+	return Vector2(24 + p[0], 112 + p[1])
+
+func choose_map_node(id: String) -> void:
+	map_selected = id
+	if campaign.world.regions.has(id): selected = id
+	refresh()
+
+func prepare_map_attack(target: String) -> void:
+	selected = target
+	page = "sortie"
+	squad = campaign.s.roster.filter(func(p): return not campaign.s.wounds.get(p,0)).slice(0,3)
+	refresh()
+
+func map_stone(id: String, node: Dictionary, owned: bool, reachable: bool) -> void:
+	var p = map_point(id)
+	var major: bool = node.kind != "road"
+	var diameter: float = 26.0 if major else 17.0
+	var stone = button("region_"+id if node.kind == "mountain" else "node_"+id,"",Rect2(p-Vector2(16,16),Vector2(32,32)),func(): choose_map_node(id))
+	stone.tooltip_text = node.name
+	# Larger invisible hit area surrounds the Go-stone, so waypoints remain easy to click.
+	for state in ["normal","hover","pressed","focus"]:
+		var style = StyleBoxFlat.new()
+		style.bg_color = Color("eee7d3") if owned or reachable else Color("373c35")
+		if node.kind == "exit": style.bg_color = Color("8e8570")
+		style.border_color = Color("aa5133") if id == map_selected or state in ["hover","focus"] else Color("65563f")
+		style.set_border_width_all(3 if id == map_selected else 1)
+		style.set_corner_radius_all(20)
+		var inset: float = (32.0-diameter)/2.0
+		style.expand_margin_left = -inset; style.expand_margin_right = -inset
+		style.expand_margin_top = -inset; style.expand_margin_bottom = -inset
+		style.shadow_color = Color("44371f55"); style.shadow_size = 2
+		stone.add_theme_stylebox_override(state, style)
+	if major:
+		var offset_x: float = -112.0 if p.x > 775 else 18.0
+		var title = label(node.name,Rect2(p+Vector2(offset_x,-12),Vector2(112,30)),17,Color("352d20"))
+		title.add_theme_color_override("font_shadow_color",Color("f1e2b8"))
+		title.add_theme_constant_override("shadow_offset_x",1)
+		title.add_theme_constant_override("shadow_offset_y",1)
+	if id == campaign.s.get("map_node",campaign.s.location):
+		label("現",Rect2(p+Vector2(-13,-37),Vector2(27,25)),19,Color("a23826")).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 func map_screen() -> void:
-	sound.music("hub"); header("산하 지도"); footer()
+	sound.music("hub"); header("솔바람 산역"); footer()
 	var s = campaign.s
-	label("점령 %d / 8    주둔  %s" % [s.owned.size(),campaign.world.regions[s.location].name],Rect2(33,84,680,30),17,MUTED)
-	for id in campaign.world.regions:
-		for other in campaign.world.regions[id].links:
-			if id > other: continue
-			var line = Line2D.new(); line.points = PackedVector2Array([map_point(id),map_point(other)])
-			line.width = 2.0; line.default_color = Color("baa66faa") if id in s.owned and other in s.owned else Color("baccc44a")
-			stage.add_child(line)
-	for id in campaign.world.regions:
-		var d = campaign.world.regions[id]
-		var p = map_point(id)
-		var mark = "점령" if id in s.owned else ("전선" if id in campaign.frontier() else "미접경")
-		if id == "tae" and not campaign.flag("council"): mark = "여섯 산 필요"
-		var b = button("region_"+id,d.name,Rect2(p.x-61,p.y-23,122,46),func(): selected = id; refresh(),false,null,id in s.owned)
-		if selected == id:
-			b.add_theme_color_override("font_color",INK if id in s.owned else GOLD)
-		label(mark,Rect2(p.x-62,p.y+25,130,25),13,GOLD if id in s.owned else MUTED).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	box(Rect2(876,89,368,415),Color("11221bef"),Color("8b8968"))
-	var region = campaign.world.regions[selected]
-	label(region.faction,Rect2(898,107,317,27),16,TEAL)
-	label(region.name,Rect2(898,142,318,50),37,PAPER)
-	label(region.title,Rect2(899,194,317,38),17,GOLD)
-	label(region.lore,Rect2(899,243,316,107),18,PAPER)
-	label("수비 전력 %d    일일 수입 %d냥" % [region.strength,region.income],Rect2(899,358,318,27),16,MUTED)
-	if selected in s.owned:
-		button("teleport","귀산술 · 비술 1",Rect2(899,410,151,54),func(): command("teleport",{"target":selected}),selected == s.location or s.qi < 1)
-		button("communicate","전음 · 비술 1",Rect2(1062,410,160,54),func(): command("communicate",{"target":selected}),selected == s.location or s.qi < 1 or selected in s.communicated)
+	var atlas = campaign.local_map
+	if not atlas.data.nodes.has(map_selected): map_selected = s.location
+	var here: String = s.get("map_node",s.location)
+	label("제1장   ·   점령 %d / 8   ·   주둔 %s   ·   현재 %s" % [s.owned.size(),campaign.world.regions[s.location].name,atlas.data.nodes[here].name],Rect2(30,79,828,30),15,PAPER)
+	picture(assets.texture(atlas.data.background),Rect2(24,112,840,425))
+	var route: Array = atlas.path_to(here,map_selected,s.owned)
+	for edge in atlas.data.edges:
+		var a = map_point(edge[0]); var b = map_point(edge[1])
+		var line = Line2D.new()
+		var bend: Vector2 = (b-a).orthogonal().normalized()*3.0
+		line.points = PackedVector2Array([a,a.lerp(b,.35)+bend,a.lerp(b,.7)-bend,b])
+		var highlighted: bool = edge[0] in route and edge[1] in route
+		line.width = 3.0 if highlighted else 1.4
+		line.default_color = Color("406f63") if highlighted else Color("9a523bb0")
+		line.antialiased = true; stage.add_child(line)
+	for id in atlas.data.nodes:
+		map_stone(id,atlas.data.nodes[id],id in s.owned,atlas.accessible(id,s.owned))
+	label("흰 돌  아군 길    먹돌  적 거점    現  현재 위치    붉은 테두리  선택",Rect2(43,510,770,25),13,Color("54432c"))
+	box(Rect2(876,89,368,459),Color("11221bf2"),Color("a08b60"))
+	var node: Dictionary = atlas.data.nodes[map_selected]
+	var kind_name: String = {"mountain":"산채", "road":"길목", "city":"장시", "river":"강 · 나루", "guild":"표국", "clan":"가문", "exit":"지역 경계"}.get(node.kind,"길목")
+	label("솔바람 산역  /  " + kind_name,Rect2(898,104,320,28),16,TEAL)
+	label(node.name,Rect2(898,141,320,66),28,PAPER)
+	label(node.description,Rect2(898,214,319,94),17,PAPER)
+	if node.kind == "mountain":
+		var region = campaign.world.regions[map_selected]
+		label("수비 %d  ·  하루 수입 %d냥" % [region.strength,region.income],Rect2(898,311,320,25),16,GOLD)
 	else:
-		button("sortie","출정 편성",Rect2(899,410,151,54),func(): page = "sortie"; squad = s.roster.filter(func(p): return not s.wounds.get(p,0)).slice(0,3); refresh(),selected not in campaign.frontier(),null,true)
-		button("scout","정찰 · 10냥",Rect2(1062,410,160,54),func(): command("scout",{"target":selected}),selected not in campaign.frontier() or selected in s.scouted or s.ap < 1 or s.gold < 10)
+		label("산역 이동 무료 · 점령지 귀산술 1회",Rect2(898,311,320,25),15,GOLD)
+	if node.kind == "exit":
+		button("chapter_02","제2장 · 아직 열리지 않은 길",Rect2(898,354,324,49),func(): pass,true)
+		label("이번 지도는 프롤로그 지역입니다.\n다음 지역은 추후 이 관문에 연결됩니다.",Rect2(898,417,320,75),17,MUTED)
+	else:
+		var can_walk: bool = not route.is_empty() and here != map_selected
+		button("travel","길 따라 이동",Rect2(898,350,152,44),func(): command("travel",{"target":map_selected}),not can_walk)
+		if map_selected in s.owned:
+			button("teleport","귀산술 · 비술 1",Rect2(1064,350,158,44),func(): command("teleport",{"target":map_selected}),map_selected == here or s.qi < 1)
+			button("communicate","전음 · 보급 조율",Rect2(898,408,324,44),func(): command("communicate",{"target":map_selected}),map_selected == s.location or s.qi < 1 or map_selected in s.communicated)
+		else:
+			var targets: Array = atlas.attack_targets(map_selected,campaign.frontier())
+			for i in targets.size():
+				var target: String = targets[i]
+				button("sortie" if i == 0 else "sortie_"+target,campaign.world.regions[target].name+" 공격 개시",Rect2(898,405+i*49,206,42),func(): prepare_map_attack(target),s.ap < 1,null,true)
+				button("scout" if i == 0 else "scout_"+target,"정찰",Rect2(1114,405+i*49,108,42),func(): command("scout",{"target":target}),target in s.scouted or s.ap < 1 or s.gold < 10)
+			if targets.is_empty():
+				var note: String = "연결된 아군 길을 확보하면 방문할 수 있습니다."
+				if node.kind == "mountain" and map_selected == "tae": note = "여섯 산을 확보하고 회의를 마치면 전선이 열립니다."
+				elif here == map_selected: note = "도착했습니다. 아래 산채 정비나 인연 메뉴를 이용하세요."
+				elif can_walk: note = "청록색 길을 따라 이동합니다. 적 산채는 통과할 수 없습니다."
+				label(note,Rect2(898,410,320,91),17,MUTED)
 	label("산채 정비  /  각각 명령 1",Rect2(35,550,760,28),16,GOLD)
 	var actions = [["levy","모병\n30냥"],["drill","훈련\n15냥"],["supply","군량 구매\n20냥"],["amnesty","구휼\n20냥"],["rest","휴식\n무료"]]
 	for i in actions.size():
 		var action = actions[i][0]
 		button(action,actions[i][1],Rect2(35+i*151,585,140,60),func(): command(action),s.ap < 1)
-	button("finales","천하의 향방 · 결말 조건",Rect2(877,524,367,48),show_finales)
-	label("정보 %d   회복약 %d\n숙련 %d   사기 %d\n내일 수입 %d냥 / 군량 유지비 %d" % [s.intel,s.medicine,s.training,s.morale,campaign.income(),campaign.upkeep()],Rect2(899,584,329,73),16,MUTED)
+	button("finales","산역의 향방 · 결말 조건",Rect2(877,561,367,43),show_finales)
+	label("정보 %d · 회복약 %d · 숙련 %d · 사기 %d\n내일 수입 %d냥 / 군량 유지비 %d" % [s.intel,s.medicine,s.training,s.morale,campaign.income(),campaign.upkeep()],Rect2(899,611,329,47),15,MUTED)
+
 
 func roster_screen() -> void:
 	sound.music("hub"); header("인연과 식객"); footer()

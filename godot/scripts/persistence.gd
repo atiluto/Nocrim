@@ -52,6 +52,8 @@ func load_campaign() -> Dictionary:
 		if parsed is Dictionary and parsed.get("format")=="nocrim-godot-2": data=parsed; break
 	if data.get("format") != "nocrim-godot-2" or not data.get("state") is Dictionary: return {}
 	var s = data.state
+	# Saves from before the local-road map retain their campaign and start at garrison.
+	if not s.has("map_node"): s.map_node = s.get("location", "sol")
 	var template = preload("res://scripts/campaign.gd").new().new_game()
 	for key in template:
 		if not s.has(key): return {}
