@@ -98,3 +98,18 @@ func animate_arrival(a, bg) -> void:
 	await tween.finished
 	a.busy = false
 	if is_instance_valid(bg) and a.page == "arrival": a.command("arrival_ready")
+
+func affairs_menu(a) -> void:
+	var panel = a.overlay("산채 업무")
+	var actions = [["levy","모병 · 30냥"],["drill","부대 훈련 · 15냥"],["supply","군량 구매 · 20냥"],["amnesty","구휼 · 20냥"]]
+	for i in actions.size():
+		var action: String = actions[i][0]
+		a.button("affairs_"+action,actions[i][1]+" / 시간대 1",Rect2(280,223+i*58,344,46),func(): a.command(action),false,panel)
+	a.button("camp_finales","산역의 향방 · 결말",Rect2(653,223,345,46),a.show_finales,false,panel)
+	var contact_index: int = 0
+	for region in a.campaign.s.owned:
+		if region == a.campaign.s.location: continue
+		var target: String = region
+		a.button("camp_contact_"+target,a.campaign.world.regions[target].name+" 전음",Rect2(653,284+contact_index*39,345,34),func(): a.command("communicate",{"target":target}),target in a.campaign.s.communicated or a.campaign.s.qi<1,panel)
+		contact_index += 1
+	a.label("정비는 한 시간대 · 전음은 한 시간대와 비술 1",Rect2(282,573,710,30),15,a.MUTED,panel)

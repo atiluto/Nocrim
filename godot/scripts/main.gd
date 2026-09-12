@@ -3,14 +3,17 @@ const Campaign = preload("res://scripts/campaign.gd")
 const Assets = preload("res://scripts/assets.gd")
 const Persistence = preload("res://scripts/persistence.gd")
 const Sound = preload("res://scripts/sound.gd")
+const MapViews = preload("res://scripts/map_views.gd")
+var map_views = MapViews.new()
+var map_popup = false
 const CampViews = preload("res://scripts/camp_views.gd")
 var camp_views = CampViews.new()
 const Story = preload("res://scripts/story.gd")
-const INK = Color("101f1e")
-const PAPER = Color("efe6cc")
-const GOLD = Color("d4bb80")
-const TEAL = Color("8ebeb0")
-const MUTED = Color("adb9af")
+const INK = Color("35271d")
+const PAPER = Color("35271d")
+const GOLD = Color("8a3928")
+const TEAL = Color("45573b")
+const MUTED = Color("67523d")
 var campaign = Campaign.new()
 var assets = Assets.new()
 var persistence = Persistence.new()
@@ -46,6 +49,8 @@ func _ready() -> void:
 	theme_font = load("res://assets/fonts/SourceHanSansLite.ttf")
 	theme_font.fallbacks = [load("res://assets/fonts/DejaVuSans.ttf")]
 	var t = Theme.new(); t.default_font = theme_font; t.default_font_size = 18; theme = t
+	t.set_stylebox("panel","TooltipPanel",paper_style())
+	t.set_color("font_color","TooltipLabel",INK)
 	add_child(sound)
 	stage = Control.new(); stage.name = "Stage"; stage.size = Vector2(1280,720); add_child(stage)
 	get_window().focus_exited.connect(func(): focused = false; ctrl_clock = 0)
@@ -88,8 +93,7 @@ func clear() -> void:
 
 func box(rect: Rect2, color: Color = Color("12231fed"), border: Color = Color("65796a"), parent: Node = null) -> Panel:
 	var node = Panel.new(); node.position = rect.position; node.size = rect.size
-	var style = StyleBoxFlat.new(); style.bg_color = color; style.border_color = border
-	style.set_border_width_all(1); style.set_corner_radius_all(3)
+	var style = paper_style()
 	node.add_theme_stylebox_override("panel", style); node.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	(parent if parent else stage).add_child(node); return node
 
@@ -105,17 +109,17 @@ func button(id: String, text: String, rect: Rect2, callback: Callable, disabled:
 	node.disabled = disabled; node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	node.add_theme_font_size_override("font_size", 17)
 	for state in ["normal","hover","pressed","disabled","focus"]:
-		var style = StyleBoxFlat.new()
-		style.bg_color = Color("cbb98b") if accent else Color("152824ed")
-		if state == "hover": style.bg_color = Color("e8d6a7") if accent else Color("2c4940")
-		if state == "pressed": style.bg_color = Color("8aa693")
-		if state == "disabled": style.bg_color = Color("17221fc4")
-		style.border_color = GOLD if accent or state in ["hover","focus"] else Color("66776a")
-		style.set_border_width_all(1); style.set_corner_radius_all(3)
+		var style = paper_style()
+		style.modulate_color = Color("fff4da") if accent else Color.WHITE
+		if state in ["hover","focus"]: style.modulate_color = Color("ffdea0")
+		if state == "pressed": style.modulate_color = Color("d9b77b")
+		if state == "disabled": style.modulate_color = Color("c2b59f")
 		node.add_theme_stylebox_override(state, style)
 	node.add_theme_color_override("font_color", INK if accent else PAPER)
-	node.add_theme_color_override("font_hover_color", INK if accent else Color.WHITE)
-	node.add_theme_color_override("font_disabled_color", Color("7a8276"))
+	node.add_theme_color_override("font_hover_color", INK)
+	node.add_theme_color_override("font_pressed_color", INK)
+	node.add_theme_color_override("font_focus_color", INK)
+	node.add_theme_color_override("font_disabled_color", Color("807461"))
 	node.pressed.connect(func():
 		if busy and id != "fx_speed": return
 		sound.sfx("ui_confirm"); callback.call())
@@ -136,8 +140,8 @@ func shade(rect: Rect2, color: Color, parent: Node = null) -> ColorRect:
 func background(dark: float = .36) -> TextureRect:
 	var bg = picture(assets.texture("backgrounds/mountains.png"), Rect2(0,0,1280,720))
 	bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	shade(Rect2(0,0,1280,720), Color(0.02,.07,.065,dark))
-	shade(Rect2(0,660,1280,60), Color("0c1a17dd"))
+	shade(Rect2(0,0,1280,720), Color(.94,.88,.74,.70 + dark*.15))
+	box(Rect2(0,660,1280,60))
 	return bg
 
 func show_title() -> void:
@@ -168,6 +172,7 @@ func start_game(quick: bool, seed_value: int = 0) -> void:
 	if seed_value == 0: seed_value = int(Time.get_unix_time_from_system()) ^ Time.get_ticks_msec()
 	campaign.new_game(seed_value); campaign.s.prologue = not quick
 	hand_stamp = ""
+	map_popup = false
 	squad = ["you","yeon"]; page = "base"; selected = "dal"; map_selected = "sol"
 	save_game(false); refresh()
 
@@ -179,6 +184,7 @@ func save_game(notify: bool = true) -> void:
 func load_game() -> void:
 	var loaded = persistence.load_campaign()
 	if loaded.is_empty(): toast("읽을 수 있는 Godot 저장 파일이 없습니다."); return
+	map_popup = false
 	campaign.s = loaded; map_selected = loaded.get("map_node", loaded.location)
 	campaign.settle_clock()
 	squad = campaign.s.roster.slice(0,3); page = "base" if campaign.life.at_base(campaign) else "map"; busy = false; refresh()
@@ -194,7 +200,8 @@ func refresh() -> void:
 	elif s.arrival: page = "arrival"
 	elif page not in ["map","roster","sortie","base"]: page = "base" if campaign.life.at_base(campaign) else "map"
 	if page == "base" and not campaign.life.at_base(campaign): page = "map"
-	clear(); background(.27 if page in ["story","title"] else .48)
+	clear()
+	if page != "map": background(.27 if page in ["story","title"] else .48)
 	match page:
 		"base": camp_views.draw_base(self)
 		"arrival": camp_views.draw_arrival(self)
@@ -221,6 +228,7 @@ func command(action: String, args: Dictionary = {}) -> void:
 		await get_tree().create_timer(.12 if quick_fx else .32).timeout
 		busy = false
 	if action in ["travel","teleport","arrival_done","claim"]:
+		map_popup = false
 		page = "base" if campaign.life.at_base(campaign) else "map"
 		map_selected = campaign.s.map_node
 	if result.get("outcome", "") in ["lose","retreat"]:
@@ -231,7 +239,7 @@ func command(action: String, args: Dictionary = {}) -> void:
 	elif action not in ["choice","card","battle_end","path","claim","finale","attack","travel","arrival_ready","arrival_choice","arrival_done"]: toast(result.get("text",""))
 
 func header(title: String) -> void:
-	shade(Rect2(0,0,1280,74),Color("0a1915ee"))
+	box(Rect2(0,0,1280,74))
 	label(title,Rect2(28,17,230,40),25,GOLD)
 	var s = campaign.s
 	label("%02d일 · %s   비술 %d/%d   체력 %d" % [s.turn,campaign.phase_name(),s.qi,s.qi_max,s.health],Rect2(260,13,790,25),19,PAPER)
@@ -240,6 +248,7 @@ func header(title: String) -> void:
 	button("menu","메뉴",Rect2(1156,18,88,36),pause_menu)
 
 func footer() -> void:
+	if page == "base": button("camp_affairs","산채 업무",Rect2(863,670,162,34),func(): camp_views.affairs_menu(self))
 	button("map_tab","산하 지도",Rect2(26,670,124,34),func(): page = "map"; refresh(),false,null,page == "map")
 	button("people_tab","인연 · 등용",Rect2(162,670,136,34),func(): page = "roster"; refresh(),false,null,page == "roster")
 	if campaign.life.at_base(campaign) and page != "base": button("base_tab","거점으로",Rect2(860,670,160,34),func(): page = "base"; refresh())
@@ -249,9 +258,10 @@ func footer() -> void:
 
 func map_point(id: String) -> Vector2:
 	var p = campaign.local_map.data.nodes[id].pos
-	return Vector2(24 + p[0], 112 + p[1])
+	return Vector2(p[0]*1280.0/840.0,p[1]*720.0/425.0)
 
 func choose_map_node(id: String) -> void:
+	map_popup = true
 	map_selected = id
 	if campaign.world.regions.has(id): selected = id
 	refresh()
@@ -284,73 +294,16 @@ func map_stone(id: String, node: Dictionary, owned: bool, reachable: bool) -> vo
 	if major:
 		var offset_x: float = -112.0 if p.x > 775 else 18.0
 		var title = label(node.name,Rect2(p+Vector2(offset_x,-12),Vector2(112,30)),17,Color("352d20"))
+		title.add_theme_color_override("font_outline_color",Color("f1e2b8"))
+		title.add_theme_constant_override("outline_size",4)
 		title.add_theme_color_override("font_shadow_color",Color("f1e2b8"))
 		title.add_theme_constant_override("shadow_offset_x",1)
 		title.add_theme_constant_override("shadow_offset_y",1)
 	if id == campaign.s.get("map_node",campaign.s.location):
-		label("現",Rect2(p+Vector2(-13,-37),Vector2(27,25)),19,Color("a23826")).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		map_views.icon(self,"pin",Rect2(p+Vector2(-12,-43),Vector2(24,29)),"현재 위치")
 
 func map_screen() -> void:
-	sound.music("hub"); header("솔바람 산역"); footer()
-	var s = campaign.s
-	var atlas = campaign.local_map
-	if not atlas.data.nodes.has(map_selected): map_selected = s.location
-	var here: String = s.get("map_node",s.location)
-	label("제1장   ·   점령 %d / 8   ·   주둔 %s   ·   현재 %s" % [s.owned.size(),campaign.world.regions[s.location].name,atlas.data.nodes[here].name],Rect2(30,79,828,30),15,PAPER)
-	picture(assets.texture(atlas.data.background),Rect2(24,112,840,425))
-	var route: Array = atlas.path_to(here,map_selected,s.owned)
-	for edge in atlas.data.edges:
-		var a = map_point(edge[0]); var b = map_point(edge[1])
-		var line = Line2D.new()
-		var bend: Vector2 = (b-a).orthogonal().normalized()*3.0
-		line.points = PackedVector2Array([a,a.lerp(b,.35)+bend,a.lerp(b,.7)-bend,b])
-		var highlighted: bool = edge[0] in route and edge[1] in route
-		line.width = 3.0 if highlighted else 1.4
-		line.default_color = Color("406f63") if highlighted else Color("9a523bb0")
-		line.antialiased = true; stage.add_child(line)
-	for id in atlas.data.nodes:
-		map_stone(id,atlas.data.nodes[id],id in s.owned,atlas.accessible(id,s.owned))
-	label("흰 돌  아군 길    먹돌  적 거점    現  현재 위치    붉은 테두리  선택",Rect2(43,510,770,25),13,Color("54432c"))
-	box(Rect2(876,89,368,459),Color("11221bf2"),Color("a08b60"))
-	var node: Dictionary = atlas.data.nodes[map_selected]
-	var kind_name: String = {"mountain":"산채", "road":"길목", "city":"장시", "river":"강 · 나루", "guild":"표국", "clan":"가문", "exit":"지역 경계"}.get(node.kind,"길목")
-	label("솔바람 산역  /  " + kind_name,Rect2(898,104,320,28),16,TEAL)
-	label(node.name,Rect2(898,141,320,66),28,PAPER)
-	label(node.description,Rect2(898,214,319,94),17,PAPER)
-	if node.kind == "mountain":
-		var region = campaign.world.regions[map_selected]
-		label("수비 %d  ·  하루 수입 %d냥" % [region.strength,region.income],Rect2(898,311,320,25),16,GOLD)
-	else:
-		label("이동 %d/3칸 · 세 칸마다 한 시간대" % s.walk_steps,Rect2(898,311,320,25),15,GOLD)
-	if node.kind == "exit":
-		button("chapter_02","제2장 · 아직 열리지 않은 길",Rect2(898,354,324,49),func(): pass,true)
-		label("이번 지도는 프롤로그 지역입니다.\n다음 지역은 추후 이 관문에 연결됩니다.",Rect2(898,417,320,75),17,MUTED)
-	else:
-		var can_walk: bool = map_selected in atlas.neighbors(here) and atlas.accessible(map_selected,s.owned)
-		button("travel","길 따라 이동",Rect2(898,350,152,44),func(): command("travel",{"target":map_selected}),not can_walk)
-		if map_selected in s.owned:
-			button("teleport","귀산술 · 비술 1",Rect2(1064,350,158,44),func(): command("teleport",{"target":map_selected}),map_selected == here or s.qi < 1)
-			button("communicate","전음 · 보급 조율",Rect2(898,408,324,44),func(): command("communicate",{"target":map_selected}),map_selected == s.location or s.qi < 1 or map_selected in s.communicated)
-		else:
-			var targets: Array = atlas.attack_targets(map_selected,campaign.frontier())
-			for i in targets.size():
-				var target: String = targets[i]
-				button("sortie" if i == 0 else "sortie_"+target,campaign.world.regions[target].name+" 공격 개시",Rect2(898,405+i*49,206,42),func(): prepare_map_attack(target),s.ap < 1,null,true)
-				button("scout" if i == 0 else "scout_"+target,"정찰",Rect2(1114,405+i*49,108,42),func(): command("scout",{"target":target}),target in s.scouted or s.ap < 1 or s.gold < 10)
-			if targets.is_empty():
-				var note: String = "연결된 아군 길을 확보하면 방문할 수 있습니다."
-				if node.kind == "mountain" and map_selected == "tae": note = "여섯 산을 확보하고 회의를 마치면 전선이 열립니다."
-				elif here == map_selected: note = "도착한 길목입니다. 이어진 바둑알을 선택하세요."
-				elif can_walk: note = "청록색 길을 따라 이동합니다. 적 산채는 통과할 수 없습니다."
-				label(note,Rect2(898,410,320,91),17,MUTED)
-	label("이동 %d/3칸  ·  정비는 거점에서 한 시간대" % s.walk_steps,Rect2(35,550,760,28),16,GOLD)
-	var actions = [["levy","모병\n30냥"],["drill","훈련\n15냥"],["supply","군량 구매\n20냥"],["amnesty","구휼\n20냥"],["rest","휴식\n무료"]]
-	for i in actions.size():
-		var action = actions[i][0]
-		button(action,actions[i][1],Rect2(35+i*151,585,140,60),func(): command(action),s.ap < 1 or not campaign.life.at_base(campaign))
-	button("finales","산역의 향방 · 결말 조건",Rect2(877,561,367,43),show_finales)
-	label("정보 %d · 회복약 %d · 숙련 %d · 사기 %d\n내일 수입 %d냥 / 군량 유지비 %d" % [s.intel,s.medicine,s.training,s.morale,campaign.income(),campaign.upkeep()],Rect2(899,611,329,47),15,MUTED)
-
+	map_views.draw(self)
 
 func roster_screen() -> void:
 	sound.music("hub"); header("인연과 식객"); footer()
@@ -442,7 +395,7 @@ func exploration_screen() -> void:
 	button("retreat","철수 · 병력 5 손실",Rect2(984,651,261,48),func(): command("retreat"))
 
 func bar(value: float, maximum: float, rect: Rect2, color: Color = TEAL) -> void:
-	shade(rect,Color("172420")); shade(Rect2(rect.position,Vector2(rect.size.x*clampf(value/maximum,0,1),rect.size.y)),color)
+	shade(rect,Color("b9a582")); shade(Rect2(rect.position,Vector2(rect.size.x*clampf(value/maximum,0,1),rect.size.y)),color)
 
 func battle_screen() -> void:
 	var b = campaign.s.battle
@@ -718,3 +671,12 @@ func toast(message: String) -> void:
 	var panel = box(Rect2(287,86,706,81),Color("10231ff5"),GOLD)
 	label(message,Rect2(20,10,666,63),18,PAPER,panel)
 	var t = create_tween(); t.tween_interval(2.5); t.tween_property(panel,"modulate:a",0.0,.35); t.tween_callback(panel.queue_free)
+
+func paper_style() -> StyleBoxTexture:
+	var style = StyleBoxTexture.new()
+	style.texture = assets.texture("ui/paper_panel.png")
+	for side in [SIDE_LEFT,SIDE_TOP,SIDE_RIGHT,SIDE_BOTTOM]:
+		style.set_texture_margin(side,16)
+		style.set_content_margin(side,6)
+		style.set_expand_margin(side,2)
+	return style

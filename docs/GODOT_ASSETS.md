@@ -63,3 +63,7 @@
 ## 거점·산길 배경 (2026-09-12)
 
 Higgsfield GPT Image 2.5 Sunburst로 만든 `backgrounds/base_camp.png`, `backgrounds/road.png` 사용. 원본·생성 기록은 `art-source/camp-life/`. 사물 위치에 맞춘 클릭 영역과 산길 두 번 흔들기를 연결했다. 장면 배경에는 캐릭터용 마젠타 규칙을 적용하지 않는다. 이미지 확인 완료, 게임 실행은 생략.
+
+## 그림 지도·종이 UI (2026-09-12)
+
+내장 image_gen으로 `backgrounds/chapter_01_painted.png`, `ui/paper_panel.png`를 새로 생성했다. 지도는 원화를 전체 화면에 표시하며 노드·길·지명은 코드로 겹친다. 종이 이미지는 크기에 따라 늘어나는 패널 재질이다. `ui/icons/`는 글꼴에 의존하지 않는 SVG 픽토그램. 최종 프롬프트·디자인 참고 출처는 `art-source/map-redesign/제작기록.md`.

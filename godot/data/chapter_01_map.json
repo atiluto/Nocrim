@@ -6,7 +6,7 @@
     840,
     425
   ],
-  "background": "backgrounds/chapter_01_map.svg",
+  "background": "backgrounds/chapter_01_painted.png",
   "nodes": {
     "sol": {
       "name": "솔바람채",
@@ -890,5 +890,9 @@
       "target_chapter": "chapter_02",
       "enabled": false
     }
-  ]
+  ],
+  "calendar": {
+    "start_year": 1,
+    "days_per_year": 365
+  }
 }
