@@ -67,9 +67,11 @@ func setup(app) -> void:
 	host.shade(Rect2(30,24,890,42),Color(0,0,0,.55),hud)
 	title_label=host.label("",Rect2(43,30,730,32),19,host.PAPER,hud)
 	progress_label=host.label("",Rect2(792,31,120,29),16,host.GOLD,hud)
-	next_button=host.button("prologue_next","",Rect2(268,541,917,172),func(): advance(),false,hud)
+	next_button=host.button("prologue_next","",Rect2(0,0,1280,720),func(): advance(),false,hud)
+	# Receive background clicks behind the HUD; interactive controls consume their own clicks.
+	hud.move_child(next_button,0)
 	for state in ["normal","hover","pressed","focus"]: next_button.add_theme_stylebox_override(state,StyleBoxEmpty.new())
-	host.label("클릭 · Space 다음",Rect2(46,647,212,25),13,host.MUTED,hud)
+	host.label("화면 클릭 · Space 다음",Rect2(46,647,212,25),13,host.MUTED,hud)
 	host.button("prologue_save","저장",Rect2(1081,26,77,36),func(): save_cursor(); host.save_game(),false,hud)
 	host.button("prologue_menu","메뉴",Rect2(1171,26,77,36),host.pause_menu,false,hud)
 	host.button("prologue_auto","자동",Rect2(45,679,72,28),func(): auto_mode=not auto_mode; delay=0; host.buttons.prologue_auto.text="자동 끄기" if auto_mode else "자동",false,hud)

@@ -579,13 +579,14 @@ func story_screen() -> void:
 	dialogue.add_theme_font_override("font",theme_font)
 	dialogue.add_theme_constant_override("line_spacing",7)
 	printed = 0; dialogue.visible_characters=0
-	var click = Button.new(); click.name="dialogue_advance"; click.position=Vector2(284,539); click.size=Vector2(873,172)
+	var click = Button.new(); click.name="dialogue_advance"; click.position=Vector2.ZERO; click.size=Vector2(1280,720)
 	click.flat=true; click.mouse_default_cursor_shape=Control.CURSOR_POINTING_HAND
 	click.add_theme_stylebox_override("normal",StyleBoxEmpty.new()); click.add_theme_stylebox_override("hover",StyleBoxEmpty.new()); click.add_theme_stylebox_override("pressed",StyleBoxEmpty.new()); click.add_theme_stylebox_override("focus",StyleBoxEmpty.new())
 	click.pressed.connect(func(): if not busy: advance_story())
 	stage.add_child(click); buttons.dialogue_advance=click
+	stage.move_child(click,0)
 	button("story_skip","넘기기",Rect2(1167,624,91,40),func(): advance_story(true,true))
-	label("Space / 클릭",Rect2(42,673,203,23),13,MUTED)
+	label("Space / 화면 클릭",Rect2(42,673,203,23),13,MUTED)
 
 func advance_story(force: bool = false, skip: bool = false) -> void:
 	if is_instance_valid(prologue_view):
