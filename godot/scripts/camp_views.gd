@@ -69,47 +69,64 @@ func sense_menu(a) -> void:
 		a.button("omen_"+omen.id,text,Rect2(280,216+i*44,720,39),func(): a.command("omen_visit",{"id":omen.id}),false,panel)
 	a.label("현장으로 이동: 한 시간대 · 다른 산이면 비술 1 추가",Rect2(282,573,711,30),15,a.MUTED,panel)
 
-func draw_arrival(a) -> void:
-	var arrival: Dictionary = a.campaign.s.arrival
-	var bg = a.picture(a.assets.texture("backgrounds/road.png"),Rect2(-12,64,1304,592))
-	bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	a.header(a.campaign.local_map.data.nodes[arrival.node].name)
-	a.box(Rect2(32,443,1216,208),Color("10231ff0"))
-	if arrival.phase == "enter":
-		a.label("산길을 따라 걸었다…",Rect2(57,467,1130,65),25)
-		a.busy = true
-		animate_arrival(a,bg)
-		return
-	var text: String = arrival.text
-	if arrival.phase == "choices":
-		text = a.campaign.local_map.data.nodes[arrival.node].name+"에 도착했다.\n"+text
-		text += {"fallen":" 누군가 길가에 쓰러져 있다.","skirmish":" 누군가 싸움을 벌이고 있다.","none":" 조용한 길이다."}.get(arrival.event,"")
-	a.label(text,Rect2(57,461,1155,104),23)
-	if arrival.phase == "result":
-		a.button("arrival_done","거점으로" if a.campaign.life.at_base(a.campaign) else "지도를 펼친다",Rect2(883,579,328,48),func(): a.command("arrival_done"))
-		return
-	var choices: Array = []
-	match arrival.event:
-		"fallen": choices.append(["help","도와준다 · 군량 8"])
-		"skirmish": choices.append(["fight","싸움에 개입한다"])
-		"city": choices.append(["visit","마을에 들른다"])
-		"guild": choices.append(["visit","표국에 들른다"])
-		"clan": choices.append(["visit","가문에 들른다"])
-		"river": choices.append(["walk","산책한다"])
-	choices.append(["pass","그냥 지나간다"])
-	for i in choices.size():
-		var pick: String = choices[i][0]
-		a.button("arrival_"+pick,choices[i][1]+(" · 한 시간대" if pick != "pass" else ""),Rect2(60+i*573,579,550,48),func(): a.command("arrival_choice",{"pick":pick}))
+func arrival_button(a, id: String, text: String, y: float, action: Callable, disabled: bool=false, hint: String="") -> void:
+	var b=a.button(id,text,Rect2(280,y,720,48),action,disabled)
+	a.interface.choice_style(b)
+	b.tooltip_text=hint
 
-func animate_arrival(a, bg) -> void:
-	var tween = a.create_tween()
-	for i in 2:
-		tween.tween_property(bg,"position:y",58.0,.2).set_trans(Tween.TRANS_SINE)
-		tween.tween_property(bg,"position:y",70.0,.2).set_trans(Tween.TRANS_SINE)
-	tween.tween_property(bg,"position:y",64.0,.12)
-	await tween.finished
-	a.busy = false
-	if is_instance_valid(bg) and a.page == "arrival": a.command("arrival_ready")
+func draw_arrival(a) -> void:
+	var s: Dictionary=a.campaign.s
+	var arrival: Dictionary=s.arrival
+	var node: Dictionary=a.campaign.local_map.data.nodes[arrival.node]
+	var path: String="prologue/village_overcast.png" if node.kind in ["city","guild","clan"] else "prologue/forest_path.png"
+	var bg=a.picture(a.assets.texture(path),Rect2(-12,-8,1304,736))
+	bg.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	a.sound.music("hub")
+	a.shade(Rect2(0,0,1280,720),Color(0.025,0.03,0.025,.50))
+	var text: String=arrival.text
+	if arrival.phase!="result" and text.is_empty():
+		text={"fallen":"쓰러진 사람을 발견했다.","skirmish":"앞에서 싸움이 벌어지고 있었다.","none":"산길에 잠시 멈춰 주위를 살폈다.","mountain":"산채 앞에서 발걸음을 멈췄다.","city":"장터에 들어서자 사람들의 말소리가 들렸다.","guild":"표국 앞에 도착했다.","clan":"가문의 거점 앞에 도착했다.","river":"강가에 도착했다. 잔잔한 물소리가 들렸다."}.get(arrival.event,node.name+"에 도착했다.")
+	a.shade(Rect2(0,535,1280,185),Color(.04,.045,.04,.82))
+	a.shade(Rect2(26,535,1228,1),Color("bca37966"))
+	a.label(text,Rect2(192,554,896,116),a.dialogue_size,a.PAPER).add_theme_font_override("font",a.dialogue_font)
+	if arrival.phase in ["enter","result"]:
+		var click=a.button("arrival_advance","",Rect2(0,0,1280,720),func(): advance_arrival(a))
+		click.focus_mode=Control.FOCUS_NONE
+		for state in ["normal","hover","pressed","focus"]: click.add_theme_stylebox_override(state,StyleBoxEmpty.new())
+		a.label("화면 클릭 · Space 다음",Rect2(40,679,260,24),13,a.MUTED)
+	a.map_views.hud(a)
+	a.label(node.name,Rect2(35,82,600,28),17,a.GOLD)
+	if arrival.phase in ["enter","result"]:
+		return
+	# Encounter decisions stay focused on the person/event; map actions can be reopened afterward.
+	var targets: Array=[] if arrival.event in ["fallen","skirmish"] else a.campaign.local_map.attack_targets(s.map_node,a.campaign.frontier())
+	var choices: Array=[]
+	match arrival.event:
+		"fallen":
+			choices.append(["help","도와준다",s.rice<8,"군량 8 · 시간대 1"])
+			choices.append(["examine","상태를 살펴본다",false,"자원 소모 없음"])
+		"skirmish": choices.append(["fight","싸움에 개입한다",s.roster.all(func(p): return s.wounds.get(p,0)>0),"시간대 1"])
+		"city", "guild", "clan": choices.append(["visit",{"city":"마을의 이야기를 듣는다","guild":"표국의 이야기를 듣는다","clan":"가문의 이야기를 듣는다"}[arrival.event],s.facility_visits.get(arrival.node,-1)==s.turn,"시간대 1 · 한 순에 한 번"])
+		"river": choices.append(["walk","강가를 걷는다",false,"시간대 1"])
+	choices.append(["pass","지나간다",false,""])
+	var choice_count: int=targets.size()*2+choices.size()
+	var y: float=(720.0-((choice_count-1)*58+48))/2.0
+	for target in targets:
+		var name: String=a.campaign.world.regions[target].name
+		arrival_button(a,"arrival_attack_"+target,name+"을 공격한다",y,func(): a.prepare_map_attack(target),s.ap<1 or s.rice<25 or s.troops<30,"시간대 1 · 군량 25 · 병력 30 이상")
+		y+=58
+		arrival_button(a,"arrival_scout_"+target,name+"을 정찰한다",y,func(): a.command("scout",{"target":target}),target in s.scouted or s.gold<10 or s.ap<1,"은전 10 · 시간대 1")
+		y+=58
+	for row in choices:
+		var pick: String=row[0]
+		arrival_button(a,"arrival_"+pick,row[1],y,func(): a.command("arrival_choice",{"pick":pick}),row[2],row[3])
+		y+=58
+
+func advance_arrival(a) -> void:
+	if a.busy or a.page!="arrival" or is_instance_valid(a.modal) or not a.campaign.s.arrival: return
+	match a.campaign.s.arrival.phase:
+		"enter": a.command("arrival_ready")
+		"result": a.command("arrival_done")
 
 func affairs_menu(a) -> void:
 	var panel = a.overlay("산채 업무")

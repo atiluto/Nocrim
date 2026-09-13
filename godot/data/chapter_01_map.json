@@ -892,7 +892,11 @@
     }
   ],
   "calendar": {
-    "start_year": 1,
-    "days_per_year": 365
+    "source": "res://data/calendar.json",
+    "era": "murim",
+    "start_year": 732,
+    "start_month": 3,
+    "segments_per_month": 3,
+    "phases_per_segment": 3
   }
 }

@@ -73,7 +73,7 @@ func load_menu(a) -> void:
 		return
 	a.label("최근 여정",Rect2(290,228,650,38),26,a.GOLD,p)
 	a.shade(Rect2(288,282,697,1),Color("baaa8160"),p)
-	var summary = "%d일 · %s\n점령한 산 %d곳 · 동료 %d명" % [saved.turn,{3:"아침",2:"낮",1:"밤",0:"밤 · 행동 마무리"}.get(int(saved.ap),"아침"),saved.owned.size(),saved.roster.size()]
+	var summary = "%s\n점령한 산 %d곳 · 동료 %d명" % [a.campaign.calendar.saved_label(saved),saved.owned.size(),saved.roster.size()]
 	if saved.prologue:
 		summary = "서장 · 강산의 이야기\n" + ("끝까지 읽은 여정" if saved.get("prologue_beat","")=="END" else "읽던 대사에서 계속" if saved.get("prologue_script","")=="universe-v1" else "개편된 서장 첫 장에서 시작")
 	a.label(summary,Rect2(291,305,660,126),25,a.PAPER,p)
@@ -93,11 +93,17 @@ func collection(a) -> void:
 
 func choice_style(b: Button) -> void:
 	for state in ["normal","hover","focus","pressed","disabled"]:
-		var style = StyleBoxFlat.new(); style.bg_color=Color("ddd4bde8") if state != "disabled" else Color("706d6266")
-		if state in ["hover","focus"]: style.bg_color=Color("f4e4be")
-		style.border_color=Color("a18c65"); style.set_border_width_all(1); style.set_corner_radius_all(22)
+		var style = StyleBoxTexture.new()
+		style.texture=load("res://assets/ui/choice_scroll.svg")
+		style.texture_margin_left=26; style.texture_margin_right=104
+		style.content_margin_left=28; style.content_margin_right=105
+		style.modulate_color=Color(1,1,1,.38) if state=="disabled" else Color(1.08,1.06,1.0) if state in ["hover","focus"] else Color.WHITE
 		b.add_theme_stylebox_override(state,style)
 	for key in ["font_color","font_hover_color","font_pressed_color","font_focus_color"]: b.add_theme_color_override(key,Color("22211d"))
+	b.add_theme_color_override("font_disabled_color",Color("b1a995"))
+	b.add_theme_font_size_override("font_size",19)
+	b.alignment=HORIZONTAL_ALIGNMENT_LEFT
+	b.clip_text=true
 
 func card_style(b: Button, disabled: bool) -> void:
 	for state in ["normal","hover","focus","pressed","disabled"]:

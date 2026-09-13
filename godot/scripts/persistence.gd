@@ -60,6 +60,8 @@ func load_campaign() -> Dictionary:
 	for key in template:
 		if not s.has(key): return {}
 	if s.version != 2 or s.owned.is_empty() or s.seed < 1: return {}
+	s.queue.erase("opening")
+	if "opening" not in s.seen: s.seen.append("opening")
 	return s
 
 func remember(ending: String) -> void:

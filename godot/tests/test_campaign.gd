@@ -37,7 +37,8 @@ func fight(g) -> bool:
 func _init() -> void:
 	var g = Campaign.new(); g.new_game(719)
 	var previous = g.s.duplicate(true)
-	check(not g.perform("attack",{"target":"dal"}).ok,"event prevents orders")
+	check(g.s.queue.is_empty(),"opening is skipped for direct base entry")
+	check(not g.perform("attack",{"target":"tae"}).ok,"closed mountain prevents orders")
 	check(g.s==previous,"invalid transitions are atomic")
 	settle(g)
 	check(g.s.roster==["you","yeon"],"starting party")

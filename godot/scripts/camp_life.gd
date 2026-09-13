@@ -1,9 +1,9 @@
 extends RefCounted
 var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/camp_life.json"))
-const ACTIONS = ["travel","arrival_ready","arrival_choice","arrival_done","camp_rest","camp_train","study","sense","omen_visit","fire_talk"]
+const ACTIONS = ["travel","inspect_location","arrival_ready","arrival_choice","arrival_done","arrival_prepare_attack","arrival_cancel_attack","camp_rest","camp_train","study","sense","omen_visit","fire_talk"]
 
 func defaults() -> Dictionary:
-	return {"life_version":1,"health":100,"health_max":100,"speech":0,"strategy":0,"lore":0,
+	return {"life_version":1,"calendar_cycle_offset":0,"health":100,"health_max":100,"speech":0,"strategy":0,"lore":0,
 		"walk_steps":0,"arrival":null,"road_seen":[],"book_reads":{},"books":["blade","speech","strategy","gazetteer","iron_note"],
 		"hints":[],"omens":[],"sense_checked":{},"facility_visits":{}}
 
@@ -21,7 +21,7 @@ func handle(c, action: String, args: Dictionary) -> bool:
 		"travel":
 			var target: String = args.get("target", "")
 			var here: String = s.map_node
-			if target not in c.local_map.neighbors(here) or not c.local_map.accessible(target,s.owned):
+			if target not in c.local_map.neighbors(here) or not (c.local_map.accessible(target,s.owned) or target in c.frontier()):
 				return c.reject("바로 이어진 바둑알을 하나씩 선택하세요. 적 산채는 통과할 수 없습니다.")
 			s.map_node = target; s.walk_steps += 1
 			if s.walk_steps >= 3: s.walk_steps = 0; s.ap -= 1
@@ -38,6 +38,18 @@ func handle(c, action: String, args: Dictionary) -> bool:
 						s.road_seen.append(target)
 				s.arrival = {"node":target,"event":event,"phase":"enter","omen_id":"","text":""}
 			c.feedback.text = c.local_map.data.nodes[target].name + "에 도착했다."
+		"inspect_location":
+			if s.map_node in s.owned: return c.reject("현재 산채의 거점으로 들어가세요.")
+			var node: Dictionary=c.local_map.data.nodes[s.map_node]
+			s.arrival={"node":s.map_node,"event":"none" if node.kind=="road" else node.kind,"phase":"enter","omen_id":"","text":""}
+		"arrival_prepare_attack":
+			if not s.arrival or s.arrival.phase!="choices": return c.reject("도착한 곳에서 공격을 선택하세요.")
+			var target: String=args.get("target","")
+			if target not in c.local_map.attack_targets(s.map_node,c.frontier()): return c.reject("이곳에서 접근할 수 없는 산채입니다.")
+			s.arrival.phase="sortie"; s.arrival.target=target
+		"arrival_cancel_attack":
+			if not s.arrival or s.arrival.phase!="sortie": return c.reject("준비 중인 출정이 없습니다.")
+			s.arrival.phase="choices"; s.arrival.erase("target")
 		"arrival_ready":
 			if not s.arrival or s.arrival.phase != "enter": return c.reject("도착 연출이 이미 끝났습니다.")
 			s.arrival.phase = "choices"
@@ -49,7 +61,7 @@ func handle(c, action: String, args: Dictionary) -> bool:
 		"camp_rest":
 			s.health = mini(s.health_max,s.health+35); s.morale = mini(100,s.morale+15); s.ap -= 1
 			for who in s.wounds: s.wounds[who] = maxi(0,s.wounds[who]-1)
-			c.feedback.text = "통나무 집에서 쉬었다. 체력 +35, 사기 +15, 부상 회복 1일."
+			c.feedback.text = "통나무 집에서 쉬었다. 체력 +35, 사기 +15, 부상 회복 1순."
 		"camp_train":
 			s.training = mini(80,s.training+8); s.ap -= 1
 			c.feedback.text = "땅에 놓인 검을 들고 기본식을 반복했다. 무공 숙련 +8."
@@ -84,7 +96,7 @@ func handle(c, action: String, args: Dictionary) -> bool:
 				if s.qi < 1: return c.reject("그 산으로 이동할 비술이 부족합니다.")
 				s.qi -= 1
 			s.map_node = omen.region; s.location = omen.region; s.ap -= 1
-			s.arrival = {"node":omen.region,"event":data.omens[omen.kind].encounter,"phase":"choices","omen_id":omen.id,"text":data.omens[omen.kind].text}
+			s.arrival = {"node":omen.region,"event":data.omens[omen.kind].encounter,"phase":"enter","omen_id":omen.id,"text":data.omens[omen.kind].text}
 			c.feedback.text = c.world.regions[omen.region].name + "의 불안한 기운을 찾아왔다."
 		"fire_talk":
 			var who: String = args.get("who", "")
@@ -103,11 +115,13 @@ func arrival_choice(c, pick: String) -> bool:
 	var arrival: Dictionary = s.arrival
 	var event: String = arrival.event
 	if pick == "pass":
-		arrival.text = "나는 무사히 길을 지나갔다."
+		arrival.text = "나는 못 본 체하고 지나갔다." if event in ["fallen","skirmish"] else "나는 발걸음을 옮겼다."
+	elif pick == "examine" and event == "fallen":
+		arrival.text = "가까이서 살펴보니 숨은 붙어 있었다.\n나는 그를 뒤로하고 발걸음을 옮겼다."
 	elif pick == "help" and event == "fallen":
 		if s.rice < 8: return c.reject("쓰러진 사람에게 나눌 군량 8이 필요합니다.")
 		s.rice -= 8; s.mercy = mini(100,s.mercy+6); s.ap -= 1
-		arrival.text = "쓰러진 사람에게 물과 주먹밥을 건넸다. 숨을 고른 그가 감사 인사를 했다. 민심 +6."
+		arrival.text = "물과 주먹밥을 건네 쓰러진 사람을 도와주었다.\n민심 +6 · 군량 -8"
 	elif pick == "fight" and event == "skirmish":
 		var fighters: Array = s.roster.filter(func(who): return not s.wounds.get(who,0)).slice(0,3)
 		if fighters.is_empty(): return c.reject("싸울 수 있는 동료가 없습니다.")
@@ -117,7 +131,7 @@ func arrival_choice(c, pick: String) -> bool:
 		c.start_battle({"target":region,"squad":fighters,"paths":["supply"],"encounter":true},0)
 		return true
 	elif pick == "visit" and event in ["city","guild","clan"]:
-		if s.facility_visits.get(arrival.node,-1) == s.turn: return c.reject("오늘은 이미 이곳의 이야기를 들었습니다.")
+		if s.facility_visits.get(arrival.node,-1) == s.turn: return c.reject("이번 순에는 이미 이곳의 이야기를 들었습니다.")
 		s.facility_visits[arrival.node] = s.turn; s.ap -= 1; s.lore = mini(100,s.lore+2)
 		arrival.text = {"city":"장터를 둘러보고 사람들의 사는 이야기를 들었다.","guild":"표국에 들러 산길의 소문을 들었다.","clan":"가문의 문객과 예를 나누고 이 지역의 사정을 들었다."}[event] + " 세계 이해 +2."
 	elif pick == "walk" and event == "river":

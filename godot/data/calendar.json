@@ -1,0 +1,8 @@
+{
+  "segments": ["상순", "중순", "하순"],
+  "phases": ["아침", "낮", "밤"],
+  "eras": {
+    "modern": {"year": 2026, "month": 6, "prefix": ""},
+    "murim": {"year": 732, "month": 3, "prefix": "서력 "}
+  }
+}

@@ -3,6 +3,21 @@ extends RefCounted
 const DATA_PATH = "res://data/chapter_01_map.json"
 var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(DATA_PATH))
 
+func point(id: String) -> Vector2:
+	var p: Array=data.nodes[id].pos
+	return Vector2(p[0]*1280.0/840.0,p[1]*720.0/425.0)
+
+func edge_points(origin: String, target: String) -> PackedVector2Array:
+	# Use the same oriented curve in both directions as the road drawn on the map.
+	for edge in data.edges:
+		if (edge[0]==origin and edge[1]==target) or (edge[1]==origin and edge[0]==target):
+			var p: Vector2=point(edge[0]); var q: Vector2=point(edge[1])
+			var bend: Vector2=(q-p).orthogonal().normalized()*7.0
+			var points=PackedVector2Array([p,p.lerp(q,.33)+bend,p.lerp(q,.67)-bend,q])
+			if edge[0]!=origin: points.reverse()
+			return points
+	return PackedVector2Array()
+
 func neighbors(id: String) -> Array:
 	var result: Array = []
 	for edge in data.edges:

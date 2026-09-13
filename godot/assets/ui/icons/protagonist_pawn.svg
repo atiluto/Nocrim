@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="88" viewBox="0 0 64 88">
+ <defs>
+  <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#815333"/><stop offset=".3" stop-color="#d7ae70"/><stop offset=".65" stop-color="#be8b50"/><stop offset="1" stop-color="#75482c"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d7ac6e"/><stop offset="1" stop-color="#865633"/></linearGradient>
+ </defs>
+ <!-- A carved commoner's token: shaggy head, collar and plain robe; no facial features. -->
+ <path d="M20 34 13 43 8 65q-1 5 5 6l5-11-2 18h32l-2-18 5 11q6-1 5-6l-5-22-11-9V26H24v8Z" fill="url(#wood)" stroke="#493322" stroke-width="2.8" stroke-linejoin="round"/>
+ <path d="M19 11q12-10 25 0l2 11q0 14-14 17-14-3-14-17Z" fill="url(#wood)" stroke="#493322" stroke-width="2.8"/>
+ <path d="m16 19 1-7 7-5 3-4 6 3 7-2 6 8 3 10-8-6-2 7-7-8-4 9-4-7-7 6Z" fill="#604127" stroke="#493322" stroke-width="2" stroke-linejoin="round"/>
+ <path d="m23 35 9 10 9-10M32 45l-8 16m-6-3q14 5 29 0M32 61l6 13" fill="none" stroke="#704626" stroke-width="2.4" stroke-linecap="round"/>
+ <path d="m18 45-5 18m34-18 4 18M24 24l1 7m14-7-1 7M25 67l-1 7m17-27-2 6" fill="none" stroke="#edcb92" stroke-opacity=".55" stroke-width="1.4" stroke-linecap="round"/>
+ <path d="M15 76q17-4 34 0v5q-17 6-34 0Z" fill="url(#edge)" stroke="#493322" stroke-width="2.8"/>
+ <path d="M18 77q14 3 28 0" fill="none" stroke="#e6bf80" stroke-width="1.5"/>
+</svg>

@@ -35,7 +35,7 @@ goto failure
 :compile_error
 echo.
 echo Dialogue could not be applied.
-echo Fix the scene ID shown above and run this file again.
+echo Fix the file, field, or scene ID shown above and run this file again.
 goto failure
 
 :verify_error

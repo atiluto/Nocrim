@@ -10,7 +10,9 @@ const CampViews = preload("res://scripts/camp_views.gd")
 var camp_views = CampViews.new()
 const Interface = preload("res://scripts/interface.gd")
 var interface = Interface.new()
-var heading_font: SystemFont
+var heading_font: Font
+var dialogue_font: Font
+var dialogue_bold_font: Font
 var text_speed = 48.0
 var dialogue_size = 23
 const Story = preload("res://scripts/story.gd")
@@ -53,14 +55,17 @@ var fast_toggle: Button
 var hand_stamp = ""
 
 func _ready() -> void:
-	theme_font = load("res://assets/fonts/SourceHanSansLite.ttf")
-	theme_font.fallbacks = [load("res://assets/fonts/DejaVuSans.ttf")]
+	theme_font = load("res://assets/fonts/Ansungtangmyun-ESG.ttf")
+	heading_font = load("res://assets/fonts/Ansungtangmyun-Bold.ttf")
+	dialogue_font = load("res://assets/fonts/NanumGothicCoding-Regular.ttf")
+	dialogue_bold_font = load("res://assets/fonts/NanumGothicCoding-Bold.ttf")
+	for font in [theme_font,heading_font,dialogue_font,dialogue_bold_font]:
+		font.fallbacks = [load("res://assets/fonts/SourceHanSansLite.ttf"),load("res://assets/fonts/DejaVuSans.ttf")]
 	var t = Theme.new(); t.default_font = theme_font; t.default_font_size = 18; theme = t
 	t.set_stylebox("panel","TooltipPanel",panel_style())
 	t.set_color("font_color","TooltipLabel",PAPER)
-	heading_font = SystemFont.new()
-	heading_font.font_names = PackedStringArray(["Gungsuh","궁서","Batang"])
-	heading_font.fallbacks = [theme_font]
+	t.set_font("normal_font","RichTextLabel",theme_font)
+	t.set_font("bold_font","RichTextLabel",heading_font)
 	var track = StyleBoxFlat.new(); track.bg_color=Color("827a6377"); track.content_margin_top=2; track.content_margin_bottom=2
 	var fill = StyleBoxFlat.new(); fill.bg_color=GOLD; fill.content_margin_top=2; fill.content_margin_bottom=2
 	t.set_stylebox("slider","HSlider",track); t.set_stylebox("grabber_area","HSlider",fill); t.set_stylebox("grabber_area_highlight","HSlider",fill)
@@ -100,6 +105,8 @@ func _input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 		elif event.keycode in [KEY_SPACE, KEY_ENTER] and page == "story" and not is_instance_valid(modal):
 			advance_story(); get_viewport().set_input_as_handled()
+		elif event.keycode in [KEY_SPACE, KEY_ENTER] and page=="arrival" and not is_instance_valid(modal) and campaign.s.arrival and campaign.s.arrival.phase in ["enter","result"]:
+			camp_views.advance_arrival(self); get_viewport().set_input_as_handled()
 
 func clear() -> void:
 	prologue_view = null
@@ -124,6 +131,7 @@ func label(text: String, rect: Rect2, font_size: int = 18, color: Color = PAPER,
 func button(id: String, text: String, rect: Rect2, callback: Callable, disabled: bool = false, parent: Node = null, accent: bool = false) -> Button:
 	var node = Button.new(); node.name = id; node.text = text; node.position = rect.position; node.size = rect.size
 	node.disabled = disabled; node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	if accent: node.add_theme_font_override("font",heading_font)
 	node.add_theme_font_size_override("font_size", 17)
 	for state in ["normal","hover","pressed","disabled","focus"]:
 		var style = panel_style()
@@ -187,6 +195,17 @@ func save_game(notify: bool = true) -> void:
 	if not persistence.save_campaign(campaign.s): toast(persistence.last_error)
 	elif notify: toast("현재 시점이 저장되었습니다. 카드와 산길 정보도 이어집니다.")
 
+func enter_strategy(last_calendar: Dictionary={}) -> void:
+	campaign.complete_prologue(last_calendar)
+	busy=false; map_popup=false; page="base"; map_selected=campaign.s.map_node
+	squad=campaign.s.roster.filter(func(p): return not campaign.s.wounds.get(p,0)).slice(0,3)
+	save_game(false); refresh()
+	var cover=shade(Rect2(0,0,1280,720),Color.BLACK)
+	cover.mouse_filter=Control.MOUSE_FILTER_STOP
+	var fade=create_tween()
+	fade.tween_property(cover,"color:a",0.0,.9)
+	fade.tween_callback(cover.queue_free)
+
 func load_game() -> void:
 	var loaded = persistence.load_campaign()
 	if loaded.is_empty(): toast("읽을 수 있는 Godot 저장 파일이 없습니다."); return
@@ -195,15 +214,18 @@ func load_game() -> void:
 	campaign.settle_clock()
 	squad = campaign.s.roster.slice(0,3); page = "base" if campaign.life.at_base(campaign) else "map"; busy = false; refresh()
 
-func refresh() -> void:
+func refresh(defer_story: bool=false) -> void:
 	if campaign.s.is_empty(): return
 	var s = campaign.s
 	if s.finished: page = "ending"
 	elif s.reward: page = "reward"
 	elif s.expedition: page = "exploration"
 	elif s.battle: page = "battle"
-	elif s.prologue or s.vignette or not s.queue.is_empty(): page = "story"
-	elif s.arrival: page = "arrival"
+	elif s.prologue: page = "story"
+	elif s.arrival:
+		page = "sortie" if s.arrival.phase=="sortie" else "arrival"
+		if page=="sortie": selected=s.arrival.target
+	elif not defer_story and (s.vignette or not s.queue.is_empty()): page = "story"
 	elif page not in ["map","roster","sortie","base"]: page = "base" if campaign.life.at_base(campaign) else "map"
 	if page == "base" and not campaign.life.at_base(campaign): page = "map"
 	clear()
@@ -222,9 +244,17 @@ func refresh() -> void:
 
 func command(action: String, args: Dictionary = {}) -> void:
 	if busy: return
+	if page=="map" and not campaign.s.arrival and not campaign.s.queue.is_empty():
+		refresh(); return
+	var map_origin: String=campaign.s.map_node
+	var animate_map: bool=page=="map" and action in ["travel","teleport"]
 	var result = campaign.perform(action,args); last_result = result
 	if not result.ok: sound.sfx("ui_denied"); toast(result.text); return
 	save_game(false)
+	if animate_map:
+		busy=true
+		await map_views.animate_move(self,map_origin,campaign.s.map_node,action=="teleport")
+		busy=false
 	if action in ["card","battle_end","medicine"]:
 		await animate_combat(result)
 	elif action == "path":
@@ -236,19 +266,21 @@ func command(action: String, args: Dictionary = {}) -> void:
 	if action in ["travel","teleport","arrival_done","claim"]:
 		map_popup = false
 		page = "base" if campaign.life.at_base(campaign) else "map"
+		if action=="arrival_done": page="map"
 		map_selected = campaign.s.map_node
 	if result.get("outcome", "") in ["lose","retreat"]:
 		page = "base" if campaign.life.at_base(campaign) else "map"; refresh(); sound.music("defeat"); result_window("철수 보고",result.text); return
-	refresh()
+	refresh(action=="arrival_done")
 	if action == "sense" and page == "base": camp_views.sense_menu(self)
 	elif action == "end_turn": result_window("시간의 흐름",result.text)
-	elif action not in ["choice","card","battle_end","path","claim","finale","attack","travel","arrival_ready","arrival_choice","arrival_done"]: toast(result.get("text",""))
+	elif action=="scout" and campaign.s.arrival: pass
+	elif action not in ["choice","card","battle_end","path","claim","finale","attack","travel","inspect_location","arrival_ready","arrival_choice","arrival_done","arrival_prepare_attack","arrival_cancel_attack"]: toast(result.get("text",""))
 
 func header(title: String) -> void:
 	box(Rect2(0,0,1280,74))
 	label(title,Rect2(28,17,230,40),25,GOLD)
 	var s = campaign.s
-	label("%02d일 · %s   비술 %d/%d   체력 %d" % [s.turn,campaign.phase_name(),s.qi,s.qi_max,s.health],Rect2(260,13,790,25),19,PAPER)
+	label("%s   비술 %d/%d   체력 %d" % [campaign.calendar.label_for(s),s.qi,s.qi_max,s.health],Rect2(260,13,790,25),19,PAPER)
 	label("은전 %d냥   군량 %d   병력 %d   민심 %d   위세 %d" % [s.gold,s.rice,s.troops,s.mercy,s.fear],Rect2(260,41,760,23),16,MUTED)
 	button("save","저장",Rect2(1068,18,78,36),func(): save_game())
 	button("menu","메뉴",Rect2(1156,18,88,36),pause_menu)
@@ -263,8 +295,7 @@ func footer() -> void:
 	button("end_day","시간 보내기  →",Rect2(1044,667,200,40),func(): command("end_turn"),false,null,true)
 
 func map_point(id: String) -> Vector2:
-	var p = campaign.local_map.data.nodes[id].pos
-	return Vector2(p[0]*1280.0/840.0,p[1]*720.0/425.0)
+	return campaign.local_map.point(id)
 
 func choose_map_node(id: String) -> void:
 	map_popup = true
@@ -273,10 +304,8 @@ func choose_map_node(id: String) -> void:
 	refresh()
 
 func prepare_map_attack(target: String) -> void:
-	selected = target
-	page = "sortie"
 	squad = campaign.s.roster.filter(func(p): return not campaign.s.wounds.get(p,0)).slice(0,3)
-	refresh()
+	command("arrival_prepare_attack",{"target":target})
 
 func map_stone(id: String, node: Dictionary, owned: bool, reachable: bool) -> void:
 	var p = map_point(id)
@@ -302,8 +331,6 @@ func map_stone(id: String, node: Dictionary, owned: bool, reachable: bool) -> vo
 		var offset: Vector2 = offsets.get(id,Vector2(18,-12))
 		shade(Rect2(p+offset-Vector2(4,0),Vector2(126,29)),Color(0.05,.06,.05,.72))
 		label(node.name,Rect2(p+offset,Vector2(120,29)),17,PAPER)
-	if id == campaign.s.get("map_node",campaign.s.location):
-		map_views.icon(self,"pin",Rect2(p+Vector2(-12,-43),Vector2(24,29)),"현재 위치")
 
 func map_screen() -> void:
 	map_views.draw(self)
@@ -327,7 +354,7 @@ func roster_screen() -> void:
 	label(info.name,Rect2(690,124,525,52),37,GOLD)
 	label("%d세  /  %s" % [info.age,info.role],Rect2(691,184,510,35),18,TEAL)
 	label(info.bio,Rect2(691,240,516,100),21,PAPER)
-	label("무력 %d    지략 %d    부상 %d일" % [info.might,info.wit,s.wounds.get(person,0)],Rect2(691,350,510,37),18,MUTED)
+	label("무력 %d    지략 %d    부상 %d순" % [info.might,info.wit,s.wounds.get(person,0)],Rect2(691,350,510,37),18,MUTED)
 	if person in s.aff:
 		var a = s.aff[person]
 		label("인연  %d / 100    %s" % [a,"마음이 닿다" if a >= 65 else "신뢰" if a >= 40 else "관심" if a >= 20 else "낯선 사이"],Rect2(691,398,505,30),21,GOLD)
@@ -358,7 +385,9 @@ func sortie_screen() -> void:
 			else: toast("세 명까지 출전할 수 있습니다."); return
 			refresh(),bool(campaign.s.wounds.get(id,0)),null,id in squad)
 	label("출전 전력 %d   /   상대 전력 %d" % [campaign.power(squad),campaign.world.regions[selected].strength],Rect2(44,601,700,36),22,TEAL)
-	button("cancel_sortie","지도 돌아가기",Rect2(42,660,211,45),func(): page="map"; refresh())
+	button("cancel_sortie","선택지로 돌아가기" if campaign.s.arrival else "지도 돌아가기",Rect2(42,660,211,45),func():
+		if campaign.s.arrival: command("arrival_cancel_attack")
+		else: page="map"; refresh())
 	button("depart","산길에 들어선다  →",Rect2(916,643,329,60),func(): command("attack",{"target":selected,"squad":squad}),squad.is_empty(),null,true)
 
 func figure(id: String, pos: Vector2, height: float, state: String = "idle") -> Control:
@@ -554,16 +583,20 @@ func story_screen() -> void:
 	if portrait: picture(portrait,Rect2(651,88,510,655))
 	shade(Rect2(25,22,786,43),Color(0,0,0,.45))
 	label(chapter+"  ·  "+story_title,Rect2(42,29,752,32),20,PAPER)
+	shade(Rect2(25,67,786,32),Color(0,0,0,.45))
+	label(campaign.calendar.label_for(s),Rect2(42,70,752,28),17,GOLD)
 	button("story_save","저장",Rect2(1160,26,86,36),func(): save_game())
 	if index >= story_lines.size():
 		if story_mode=="event":
 			var e = campaign.world.events[s.queue[0]]
 			var allowed = campaign.available_choices(s.queue[0])
+			shade(Rect2(0,76,1280,644),Color(0,0,0,.42))
+			var choice_y: float=(720.0-((e.choices.size()-1)*64+48))/2.0
 			for i in e.choices.size():
 				var c = e.choices[i]
-				var choice_button = button("choice_"+str(i),c.text,Rect2(268,211+i*108,745,57),func(): command("choice",{"event":s.queue[0],"index":i}),not allowed[i],null,true)
+				var choice_button = button("choice_"+str(i),c.text,Rect2(280,choice_y+i*64,720,48),func(): command("choice",{"event":s.queue[0],"index":i}),not allowed[i],null,true)
 				interface.choice_style(choice_button)
-				label(c.hint,Rect2(281,274+i*108,715,31),16,PAPER)
+				choice_button.tooltip_text=c.text+"\n"+c.hint
 		else: finish_story()
 		return
 	shade(Rect2(0,535,1280,185),Color(.04,.045,.04,.78))
@@ -572,11 +605,12 @@ func story_screen() -> void:
 	var speaker = "" if entry[0]=="n" else campaign.world.people.get(entry[0],{}).get("name",entry[0])
 	var role: String = campaign.world.people.get(entry[0],{}).get("role","")
 	var role_label = label(role,Rect2(42,551,236,27),16,MUTED)
+	role_label.add_theme_font_override("font",dialogue_font)
 	role_label.autowrap_mode=TextServer.AUTOWRAP_OFF
 	role_label.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
-	label(speaker,Rect2(41,587,238,48),29,GOLD)
+	label(speaker,Rect2(41,587,238,48),29,GOLD).add_theme_font_override("font",dialogue_bold_font)
 	dialogue = label(entry[1],Rect2(304,554,845,151),dialogue_size,PAPER)
-	dialogue.add_theme_font_override("font",theme_font)
+	dialogue.add_theme_font_override("font",dialogue_font)
 	dialogue.add_theme_constant_override("line_spacing",7)
 	printed = 0; dialogue.visible_characters=0
 	var click = Button.new(); click.name="dialogue_advance"; click.position=Vector2.ZERO; click.size=Vector2(1280,720)
@@ -633,7 +667,7 @@ func ending_screen() -> void:
 	elif campaign.s.finished=="home" and not campaign.s.bonds.is_empty():
 		text += "\n\n약속을 나눈 이들에게 작별을 고했다. 남겨진 사람들은 기다리는 대신 각자의 산길을 계속 걸었다."
 	scroll_text(text,Rect2(61,218,1159,373))
-	label("%d일의 여정   /   점령 %d/8   /   인연 %d명\n새 회차: 산·재화·동료·관계 초기화. 결말 수첩은 유지됩니다." % [campaign.s.turn,campaign.s.owned.size(),campaign.s.bonds.size()],Rect2(63,603,856,87),18,MUTED)
+	label("%s   /   점령 %d/8   /   인연 %d명\n새 회차: 산·재화·동료·관계 초기화. 결말 수첩은 유지됩니다." % [campaign.calendar.label_for(campaign.s),campaign.s.owned.size(),campaign.s.bonds.size()],Rect2(63,603,856,87),18,MUTED)
 	button("ending_title","산문으로 돌아가기",Rect2(949,642,273,52),show_title,false,null,true)
 
 func overlay(title: String) -> Control:

@@ -48,19 +48,22 @@ func setup(app) -> void:
 		host.campaign.s.prologue_beat = ""
 	cursor = clampi(int(host.campaign.s.prologue_cursor),0,beats.size())
 	var saved_id: String = host.campaign.s.get("prologue_beat","")
-	if int(host.campaign.s.get("prologue_pagination",1))<2:
-		var previous: Array=data.get("previous_beat_ids",[])
+	var saved_revision: int=int(host.campaign.s.get("prologue_pagination",1))
+	if saved_revision<3:
+		var previous: Array=data.get("previous_beat_ids" if saved_revision<2 else "previous_paginated_beat_ids",[])
 		var reached: int=int(host.campaign.s.get("prologue_reached",0))
-		if reached>=previous.size():
-			host.campaign.s.prologue_reached=beats.size()
-		elif reached>=0 and not previous.is_empty():
-			for i in beats.size():
-				if beats[i].id==previous[reached]: host.campaign.s.prologue_reached=i; break
-		host.campaign.s.prologue_pagination=2
+		if not previous.is_empty():
+			if reached>=previous.size():
+				host.campaign.s.prologue_reached=beats.size()
+			elif reached>=0:
+				host.campaign.s.prologue_reached=find_beat_index(previous[reached],cursor)
+			if saved_id.is_empty():
+				var old_cursor: int=int(host.campaign.s.get("prologue_cursor",0))
+				saved_id=previous[old_cursor] if old_cursor>=0 and old_cursor<previous.size() else "END"
+		host.campaign.s.prologue_pagination=3
 	if saved_id=="END": cursor=beats.size()
 	if not saved_id.is_empty() and saved_id != "END":
-		for i in beats.size():
-			if beats[i].id == saved_id: cursor=i; break
+		cursor=find_beat_index(saved_id,cursor)
 	for layer_name in ["Background","Actors","Effects","Memory","Dialogue","Transitions"]:
 		var layer = Control.new(); layer.name=layer_name; layer.mouse_filter=Control.MOUSE_FILTER_IGNORE; add_child(layer)
 	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects")
@@ -71,9 +74,11 @@ func setup(app) -> void:
 	ambience=AudioStreamPlayer.new(); ambience.bus="Effects"; add_child(ambience)
 	host.shade(Rect2(0,536,1280,184),Color(.03,.035,.035,.88),hud)
 	host.shade(Rect2(40,537,1200,1),Color("bfa57b88"),hud)
-	name_label=host.label("",Rect2(47,557,209,45),27,host.GOLD,hud)
-	text_label=host.label("",Rect2(277,557,899,145),host.dialogue_size,host.PAPER,hud)
-	text_label.add_theme_font_override("font",host.theme_font)
+	name_label=host.label("",Rect2(40,557,140,70),21,host.GOLD,hud)
+	name_label.add_theme_font_override("font",host.dialogue_bold_font)
+	text_label=host.label("",Rect2(192,557,896,145),host.dialogue_size,host.PAPER,hud)
+	text_label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	text_label.add_theme_font_override("font",host.dialogue_font)
 	text_label.add_theme_constant_override("line_spacing",6)
 	host.shade(Rect2(30,24,890,79),Color(.025,.03,.03,.72),hud)
 	host.shade(Rect2(43,66,864,1),Color("bfa57b44"),hud)
@@ -122,8 +127,15 @@ func advance(force: bool = false) -> void:
 		cursor=next_cursor
 		show_beat()
 
+func find_beat_index(identity: String, fallback: int) -> int:
+	# Old auto-split pages resume at their authored beat rather than an unrelated numeric cursor.
+	var source_id: String=identity.get_slice("-PAGE",0)
+	for i in beats.size():
+		if beats[i].id==identity or beats[i].id==source_id: return i
+	return clampi(fallback,0,beats.size())
+
 func save_cursor() -> void:
-	host.campaign.s.prologue_pagination=2
+	host.campaign.s.prologue_pagination=3
 	host.campaign.s.prologue_cursor=cursor
 	host.campaign.s.prologue_beat=beats[cursor].id if cursor<beats.size() else "END"
 	host.campaign.s.prologue_reached=maxi(int(host.campaign.s.get("prologue_reached",0)),cursor)
@@ -139,8 +151,6 @@ func show_beat(initial: bool = false) -> void:
 	scene_status_label.text="%s   |   %s   |   %s" % [scene_status.get("date",""),scene_status.get("location",""),scene_status.get("period","")]
 	progress_label.text="%d / %d" % [cursor+1,beats.size()]
 	name_label.text="" if beat.speaker=="독백" else beat.speaker
-	text_label.position.x=47 if beat.speaker=="독백" else 277
-	text_label.size.x=1129 if beat.speaker=="독백" else 899
 	text_label.text=beat.text; text_label.visible_characters=0
 	var background_changed: bool=beat.background!=background_key
 	set_background(beat.background)
@@ -276,6 +286,7 @@ func show_history() -> void:
 	for i in range(maxi(0,cursor-35),mini(cursor+1,beats.size())):
 		var prefix: String="" if beats[i].speaker=="독백" else beats[i].speaker+"  ·  "
 		var line=Label.new(); line.text=prefix+beats[i].text
+		line.add_theme_font_override("font",host.dialogue_font)
 		line.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART; line.custom_minimum_size.x=730; line.add_theme_font_size_override("font_size",19); body.add_child(line)
 	host.button("history_close","닫기",Rect2(904,638,103,42),func(): host.modal.queue_free(); host.modal=null,false,panel)
 
@@ -299,13 +310,4 @@ func confirm_skip() -> void:
 
 func finish() -> void:
 	done=true; auto_mode=false; hud.hide(); cast_stage.clear_cast(); set_ambience("")
-	for child in effect_layer.get_children(): child.queue_free()
-	host.sound.music_file("bgm/bgm_inn_afterhours.mp3",-21.0)
-	var end=Control.new(); add_child(end)
-	host.shade(Rect2(0,0,1280,720),Color(0,0,0,.66),end)
-	host.label("서장 끝",Rect2(465,187,400,70),52,host.GOLD,end)
-	host.label("나는 집 하나 갖고 싶었을 뿐이었다.",Rect2(326,295,754,54),29,host.PAPER,end)
-	host.label("솔바람과 매골, 두 집을 잇는 이야기가 시작됐다.",Rect2(314,365,790,49),22,host.PAPER,end)
-	host.button("prologue_title","처음 화면으로",Rect2(449,467,371,52),host.show_title,false,end)
-	host.button("prologue_replay","서장 다시 읽기",Rect2(449,536,371,52),func():
-		end.queue_free(); done=false; hud.show(); cursor=0; show_beat(),false,end)
+	host.call_deferred("enter_strategy",beats[-1].scene_status.get("calendar",{}))

@@ -1,23 +1,49 @@
 """Compile the editable prologue Markdown. Never runs automatically on game launch."""
 from pathlib import Path
-import json, re, argparse, textwrap
+import json, re, argparse, difflib
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / 'scenario'
 OUTPUT = ROOT / 'godot/data/prologue.json'
 
+def resolve_scene_status(status, identity, calendar):
+    status = status.copy()
+    if set(status) not in ({'date','location','period'}, {'date','location','period','calendar'}):
+        raise ValueError('Scene status needs date, location, period (optional calendar): '+identity)
+    if 'calendar' in status:
+        value = status['calendar']
+        if not isinstance(value,dict) or set(value)!={'era','cycle'} or value['era'] not in calendar['eras'] or type(value['cycle']) is not int or value['cycle']<0:
+            raise ValueError('Invalid scene calendar (era, nonnegative integer cycle): '+identity)
+        start = calendar['eras'][value['era']]
+        index = (start['month']-1)*3+value['cycle']
+        status['date'] = f"{start['prefix']}{start['year']+index//36}년 {(index%36)//3+1}월 {calendar['segments'][index%3]}"
+    if status['period'] not in calendar['phases']:
+        raise ValueError('Invalid scene period: '+identity)
+    if not all(isinstance(status[key],str) and status[key].strip() for key in ['date','location','period']):
+        raise ValueError('Empty scene status: '+identity)
+    return status
+
 def compile_data():
     manifest = json.loads((BASE/'manifest.json').read_text(encoding='utf-8'))
     presentation = json.loads((BASE/'presentation.json').read_text(encoding='utf-8'))
     scene_status = presentation['scene_status']
+    calendar = json.loads((ROOT/'godot/data/calendar.json').read_text(encoding='utf-8'))
     current_status = None
     staging = json.loads((BASE/'staging.json').read_text(encoding='utf-8'))
     cast, slots, cues = staging['cast'], staging['slots'], staging['cues']
     sprite_roles = staging['sprite_roles']
     exclusive = staging['exclusive_sprites']
     for actor, spec in cast.items():
-        if not isinstance(spec.get('speaker'),str) or not (ROOT/'godot/assets/prologue'/(spec['sprite']+'.png')).is_file():
-            raise ValueError('Invalid cast asset or speaker: '+actor)
+        if not isinstance(spec.get('speaker'),str):
+            raise ValueError('Invalid speaker in scenario/staging.json cast: '+actor)
+        sprite_path = ROOT/'godot/assets/prologue'/(spec['sprite']+'.png')
+        if not sprite_path.is_file():
+            similar = difflib.get_close_matches(sprite_path.name,
+                [path.name for path in sprite_path.parent.glob('*.png')], n=3, cutoff=0.8)
+            hint = ' Similar existing filenames: '+', '.join(similar)+'.' if similar else ''
+            raise ValueError('Missing character image for '+actor+': '+
+                sprite_path.relative_to(ROOT).as_posix()+'.'+hint+
+                ' Check the image filename; this is not a dialogue text error.')
         if not spec.get('role') or sprite_roles.get(spec['sprite'])!=spec['role']:
             raise ValueError('Sprite used outside its registered role: '+actor)
         if spec['sprite'] in exclusive and exclusive[spec['sprite']]!=actor:
@@ -45,13 +71,7 @@ def compile_data():
             for key, source in [('speaker','화자'),('background','배경'),('sprite','인물'),('side','위치'),('music','음악'),('ambience','환경음'),('sfx','효과음'),('effect','연출'),('transition','장면')]:
                 beat[key] = fields.get(source,'')
             if identity in scene_status:
-                current_status = scene_status[identity]
-                if set(current_status) != {'date', 'location', 'period'}:
-                    raise ValueError('Scene status needs date, location, period: '+identity)
-                if current_status['period'] not in ['아침','낮','밤']:
-                    raise ValueError('Invalid scene period: '+identity)
-                if not all(isinstance(value,str) and value.strip() for value in current_status.values()):
-                    raise ValueError('Empty scene status: '+identity)
+                current_status = resolve_scene_status(scene_status[identity],identity,calendar)
             if current_status is None: raise ValueError('Missing initial scene status: '+identity)
             beat['transition'] = identity in scene_status or bool(beat['transition'])
             beat['scene_status'] = current_status.copy()
@@ -92,24 +112,10 @@ def compile_data():
             if beat['background']!='black' and not (ROOT/'godot/assets/prologue'/(beat['background']+'.png')).is_file(): raise ValueError('Missing background '+identity)
             for key in ['music','ambience','sfx']:
                 if beat[key] and not (ROOT/'godot/assets/audio'/beat[key]).is_file(): raise ValueError('Missing audio '+beat[key])
-            # Let authors write naturally. Game data is paginated without rewriting Markdown.
-            wrapped = []
-            for source_line in beat['text'].splitlines():
-                wrapped.extend(textwrap.wrap(source_line, width=28, break_long_words=True,
-                                             break_on_hyphens=False) or [''])
-            pages = ['\n'.join(wrapped[i:i+2]) for i in range(0,len(wrapped),2)]
-            for page_index, page in enumerate(pages):
-                page_beat = beat.copy()
-                page_beat['id'] = identity if page_index==0 else identity+'-PAGE%02d' % (page_index+1)
-                page_beat['text'] = page
-                if page_index>0:
-                    page_beat['sfx'] = ''
-                    page_beat['effect'] = ''
-                    page_beat['transition'] = False
-                    page_beat['actor_motions'] = []
-                if page_beat['id'] in runtime_ids: raise ValueError('Generated page ID collision '+page_beat['id'])
-                runtime_ids.add(page_beat['id'])
-                beats.append(page_beat)
+            # One authored beat per click. Preserve explicit newlines; the UI wraps to its width.
+            if identity in runtime_ids: raise ValueError('Beat ID collision '+identity)
+            runtime_ids.add(identity)
+            beats.append(beat)
     if not beats: raise ValueError('No beats')
     if set(scene_status)-ids: raise ValueError('Unknown scene status IDs: '+str(sorted(set(scene_status)-ids)))
     if set(cues)-ids: raise ValueError('Unknown staging IDs: '+str(sorted(set(cues)-ids)))
@@ -121,7 +127,9 @@ def compile_data():
         if any(entry['sprite']==sprite for beat in beats[positions[end_id]:] for entry in beat['actors']):
             raise ValueError('Retired NPC image reappears: '+actor)
     if len(chapters)!=11: raise ValueError('Prologue must have 11 scenes')
-    return {'version':1,'pagination_revision':2,'previous_beat_ids':manifest.get('previous_beat_ids',[]),'source':'scenario/manifest.json','chapters':chapters,'beats':beats}
+    return {'version':1,'pagination_revision':3,'previous_beat_ids':manifest.get('previous_beat_ids',[]),
+            'previous_paginated_beat_ids':manifest.get('previous_paginated_beat_ids',[]),
+            'source':'scenario/manifest.json','chapters':chapters,'beats':beats}
 
 if __name__=='__main__':
     args=argparse.ArgumentParser(); args.add_argument('--check',action='store_true'); ns=args.parse_args()
