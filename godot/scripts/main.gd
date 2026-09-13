@@ -10,6 +10,7 @@ const CampViews = preload("res://scripts/camp_views.gd")
 var camp_views = CampViews.new()
 const Interface = preload("res://scripts/interface.gd")
 var interface = Interface.new()
+var event_views=preload("res://scripts/event_views.gd").new()
 var heading_font: Font
 var dialogue_font: Font
 var dialogue_bold_font: Font
@@ -103,8 +104,10 @@ func _input(event: InputEvent) -> void:
 			if is_instance_valid(modal): modal.queue_free(); modal = null
 			else: pause_menu()
 			get_viewport().set_input_as_handled()
-		elif event.keycode in [KEY_SPACE, KEY_ENTER] and page == "story" and not is_instance_valid(modal):
+		elif event.keycode in [KEY_SPACE, KEY_ENTER] and (page == "story" or (page=="regional" and is_instance_valid(prologue_view))) and not is_instance_valid(modal):
 			advance_story(); get_viewport().set_input_as_handled()
+		elif event.keycode in [KEY_SPACE,KEY_ENTER] and page=="regional" and not is_instance_valid(modal) and campaign.events.current(campaign).get("type","")=="result":
+			command("event_next"); get_viewport().set_input_as_handled()
 		elif event.keycode in [KEY_SPACE, KEY_ENTER] and page=="arrival" and not is_instance_valid(modal) and campaign.s.arrival and campaign.s.arrival.phase in ["enter","result"]:
 			camp_views.advance_arrival(self); get_viewport().set_input_as_handled()
 
@@ -212,6 +215,7 @@ func load_game() -> void:
 	map_popup = false
 	campaign.s = loaded; map_selected = loaded.get("map_node", loaded.location)
 	campaign.settle_clock()
+	campaign.events.tick(campaign)
 	squad = campaign.s.roster.slice(0,3); page = "base" if campaign.life.at_base(campaign) else "map"; busy = false; refresh()
 
 func refresh(defer_story: bool=false) -> void:
@@ -222,6 +226,7 @@ func refresh(defer_story: bool=false) -> void:
 	elif s.expedition: page = "exploration"
 	elif s.battle: page = "battle"
 	elif s.prologue: page = "story"
+	elif not s.regional.active.is_empty() or s.regional.menu: page="regional"
 	elif s.arrival:
 		page = "sortie" if s.arrival.phase=="sortie" else "arrival"
 		if page=="sortie": selected=s.arrival.target
@@ -231,6 +236,7 @@ func refresh(defer_story: bool=false) -> void:
 	clear()
 	if page != "map": background(.27 if page in ["story","title"] else .48)
 	match page:
+		"regional": event_views.draw(self)
 		"base": camp_views.draw_base(self)
 		"arrival": camp_views.draw_arrival(self)
 		"map": map_screen()
@@ -268,11 +274,13 @@ func command(action: String, args: Dictionary = {}) -> void:
 		page = "base" if campaign.life.at_base(campaign) else "map"
 		if action=="arrival_done": page="map"
 		map_selected = campaign.s.map_node
+	if action=="event_leave": page="map"
 	if result.get("outcome", "") in ["lose","retreat"]:
 		page = "base" if campaign.life.at_base(campaign) else "map"; refresh(); sound.music("defeat"); result_window("철수 보고",result.text); return
 	refresh(action=="arrival_done")
 	if action == "sense" and page == "base": camp_views.sense_menu(self)
 	elif action == "end_turn": result_window("시간의 흐름",result.text)
+	elif action.begins_with("event_"): pass
 	elif action=="scout" and campaign.s.arrival: pass
 	elif action not in ["choice","card","battle_end","path","claim","finale","attack","travel","inspect_location","arrival_ready","arrival_choice","arrival_done","arrival_prepare_attack","arrival_cancel_attack"]: toast(result.get("text",""))
 

@@ -28,6 +28,7 @@ func neighbors(id: String) -> Array:
 func accessible(id: String, owned: Array) -> bool:
 	if not data.nodes.has(id): return false
 	var node: Dictionary = data.nodes[id]
+	if node.get("visitable",false): return true
 	if node.kind == "exit": return false
 	if node.kind == "mountain": return id in owned
 	for guard in node.guards:

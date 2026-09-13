@@ -20,7 +20,8 @@ func _init() -> void:
 	var ap: int=c.s.ap
 	c.s.road_seen.append("road_dal_sol_2")
 	check(c.perform("travel",{"target":"road_dal_sol_2"}).ok,"move to adjacent stone")
-	check(c.s.arrival.phase=="enter" and c.s.ap==ap and c.s.walk_steps==1,"arrival animation and step cost")
+	check(c.s.regional.menu and c.s.ap==ap and c.s.walk_steps==1,"regional menu and movement cost")
+	check(c.perform("event_leave").ok and c.perform("inspect_location").ok,"legacy military menu remains accessible")
 	check(not c.perform("arrival_prepare_attack",{"target":"dal"}).ok,"cannot attack before arrival completes")
 	check(c.perform("arrival_ready").ok,"arrival choices open")
 	var before=c.s.duplicate(true)
@@ -40,7 +41,9 @@ func _init() -> void:
 	check(c.perform("attack",{"target":"dal","squad":["you"]}).ok,"existing combat entry works")
 	check(c.s.expedition.target=="dal" and c.s.arrival==null and c.s.rice==rice-25,"successful sortie clears arrival once")
 	c.new_game(19); c.s.map_node="road_dal_sol_1"
-	check(c.perform("travel",{"target":"dal"}).ok and c.s.arrival.event=="mountain","enemy mountain opens arrival rather than conquering")
+	check(c.perform("travel",{"target":"dal"}).ok and c.s.regional.active.get("id")=="DG-C01","visiting enemy mountain starts regional first meeting")
+	check(c.perform("event_next").ok and c.perform("event_leave").ok,"regional result returns to map")
+	check(c.perform("inspect_location").ok and c.s.arrival.event=="mountain","military menu remains separate")
 	check("dal" not in c.s.owned,"movement does not grant ownership")
 	check(c.perform("arrival_ready").ok,"mountain choices ready")
 	check(c.perform("arrival_choice",{"pick":"pass"}).ok and c.perform("arrival_done").ok,"free pass fallback")

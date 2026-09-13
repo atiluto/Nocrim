@@ -23,13 +23,13 @@ def resolve_scene_status(status, identity, calendar):
         raise ValueError('Empty scene status: '+identity)
     return status
 
-def compile_data():
-    manifest = json.loads((BASE/'manifest.json').read_text(encoding='utf-8'))
-    presentation = json.loads((BASE/'presentation.json').read_text(encoding='utf-8'))
+def compile_data(base=BASE, event_mode=False):
+    manifest = json.loads((base/'manifest.json').read_text(encoding='utf-8'))
+    presentation = json.loads((base/'presentation.json').read_text(encoding='utf-8'))
     scene_status = presentation['scene_status']
     calendar = json.loads((ROOT/'godot/data/calendar.json').read_text(encoding='utf-8'))
     current_status = None
-    staging = json.loads((BASE/'staging.json').read_text(encoding='utf-8'))
+    staging = json.loads((base/'staging.json').read_text(encoding='utf-8'))
     cast, slots, cues = staging['cast'], staging['slots'], staging['cues']
     sprite_roles = staging['sprite_roles']
     exclusive = staging['exclusive_sprites']
@@ -50,7 +50,7 @@ def compile_data():
             raise ValueError('Exclusive character sprite reused: '+actor)
     beats, chapters, ids, runtime_ids = [], [], set(), set()
     for filename in manifest['chapters']:
-        path = BASE / filename
+        path = base / filename
         text = path.read_text(encoding='utf-8')
         title = text.splitlines()[0].removeprefix('# ')
         chapter_id = path.stem.split('_')[0]
@@ -71,7 +71,11 @@ def compile_data():
             for key, source in [('speaker','화자'),('background','배경'),('sprite','인물'),('side','위치'),('music','음악'),('ambience','환경음'),('sfx','효과음'),('effect','연출'),('transition','장면')]:
                 beat[key] = fields.get(source,'')
             if identity in scene_status:
-                current_status = resolve_scene_status(scene_status[identity],identity,calendar)
+                if event_mode and scene_status[identity].get('live'):
+                    current_status=scene_status[identity].copy()
+                    if set(current_status)!={'date','location','period','live'}: raise ValueError('Invalid live scene status: '+identity)
+                else:
+                    current_status = resolve_scene_status(scene_status[identity],identity,calendar)
             if current_status is None: raise ValueError('Missing initial scene status: '+identity)
             beat['transition'] = identity in scene_status or bool(beat['transition'])
             beat['scene_status'] = current_status.copy()
@@ -126,7 +130,7 @@ def compile_data():
         if exclusive.get(sprite)!=actor: raise ValueError('Retired NPC must have an exclusive image: '+actor)
         if any(entry['sprite']==sprite for beat in beats[positions[end_id]:] for entry in beat['actors']):
             raise ValueError('Retired NPC image reappears: '+actor)
-    if len(chapters)!=11: raise ValueError('Prologue must have 11 scenes')
+    if not event_mode and len(chapters)!=11: raise ValueError('Prologue must have 11 scenes')
     return {'version':1,'pagination_revision':3,'previous_beat_ids':manifest.get('previous_beat_ids',[]),
             'previous_paginated_beat_ids':manifest.get('previous_paginated_beat_ids',[]),
             'source':'scenario/manifest.json','chapters':chapters,'beats':beats}

@@ -1,0 +1,218 @@
+{
+  "cast": {},
+  "slots": {
+    "left_back": {
+      "x": 5,
+      "enter": "left"
+    },
+    "left": {
+      "x": 135,
+      "enter": "left"
+    },
+    "center_left": {
+      "x": 300,
+      "enter": "left"
+    },
+    "center": {
+      "x": 435,
+      "enter": "right"
+    },
+    "center_right": {
+      "x": 610,
+      "enter": "right"
+    },
+    "right": {
+      "x": 740,
+      "enter": "right"
+    },
+    "right_back": {
+      "x": 830,
+      "enter": "right"
+    }
+  },
+  "cues": {
+    "MY-AG-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-AG-01-TAIL-001": {
+      "stage": []
+    },
+    "MY-AG-01-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-AG-01-BRANCH2-001": {
+      "stage": []
+    },
+    "MY-AG-01-BRANCH3-001": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-AG-02-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-AG-02-BRANCH2-001": {
+      "stage": []
+    },
+    "MY-AG-02-BRANCH3-001": {
+      "stage": []
+    },
+    "MY-AG-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-AG-03-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-BU-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-BU-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-BU-04-COMMON-001": {
+      "stage": []
+    },
+    "MY-CM-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-CM-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-CM-02-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-CM-02-BRANCH2-001": {
+      "stage": []
+    },
+    "MY-CM-02-BRANCH3-001": {
+      "stage": []
+    },
+    "MY-CM-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-SJ-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-SJ-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-SJ-02-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-SJ-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-SJ-04-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-04-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-05-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-06-COMMON-001": {
+      "stage": []
+    },
+    "MY-SB-07-COMMON-001": {
+      "stage": []
+    },
+    "MY-JS-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-DG-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-DN-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-DN-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-HD-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-HD-01-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-HD-01-BRANCH3-001": {
+      "stage": []
+    },
+    "MY-CH-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-CH-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-CH-02-BRANCH1-001": {
+      "stage": []
+    },
+    "MY-YG-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-GM-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-GM-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-TB-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-01-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-02-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-03-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-04-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-05-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-06-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-07-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-08-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-09-COMMON-001": {
+      "stage": []
+    },
+    "MY-R-10-COMMON-001": {
+      "stage": []
+    },
+    "MY-FAIL-01-COMMON-002": {
+      "stage": []
+    }
+  },
+  "sprite_roles": {},
+  "exclusive_sprites": {},
+  "retired_at": {}
+}

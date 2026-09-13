@@ -33,6 +33,10 @@ func draw(a) -> void:
 		line.antialiased = true; a.stage.add_child(line)
 	for id in atlas.data.nodes:
 		a.map_stone(id,atlas.data.nodes[id],id in s.owned,atlas.accessible(id,s.owned))
+		var events: Array=a.campaign.events.markers(a.campaign,id)
+		if not events.is_empty():
+			var mark=a.label("!",Rect2(atlas.point(id)+Vector2(-30,-39),Vector2(25,35)),29,Color("e8835e") if events[0].priority>=100 else a.GOLD)
+			mark.tooltip_text=events[0].title
 	pawn=MapToken.new(); pawn.name="ProtagonistMapToken"
 	a.stage.add_child(pawn)
 	pawn.setup(a.assets.texture("ui/icons/protagonist_pawn.svg"))
@@ -88,10 +92,8 @@ func location_menu(a) -> void:
 	var action: Callable
 	var hint: String = "바로 이어진 바둑알로 이동"
 	if id==here:
-		title="거점으로" if id in s.owned else "주변 살피기"
-		action=func():
-			if id in s.owned: a.map_popup=false; a.page="base"; a.refresh()
-			else: a.map_popup=false; a.command("inspect_location")
+		title="주변 살피기"
+		action=func(): a.map_popup=false; a.command("event_menu")
 	elif id in s.owned:
 		title="귀산술 사용"
 		hint="비술 1 · 시간대 1"
@@ -99,7 +101,7 @@ func location_menu(a) -> void:
 		action=func(): a.command("teleport",{"target":id})
 	else:
 		disabled=id not in atlas.neighbors(here) or not (atlas.accessible(id,s.owned) or id in a.campaign.frontier())
-		if node.kind=="exit": hint="아직 열리지 않은 길"
+		if node.kind=="exit" and not disabled: hint="관문 방문 · 외부 지역은 준비 중"
 		elif disabled: hint="이어진 바둑알부터 이동"
 		action=func(): a.command("travel",{"target":id})
 	var b=a.button("map_travel",title,Rect2(x+12,y+40,200,34),action,disabled)

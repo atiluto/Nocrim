@@ -7,6 +7,7 @@ var feedback: Dictionary = {}
 var life = preload("res://scripts/camp_life.gd").new()
 var local_map = preload("res://scripts/chapter_map.gd").new()
 var calendar = preload("res://scripts/calendar.gd").new()
+var events = preload("res://scripts/region_events.gd").new()
 
 func new_game(seed_value: int = 91723) -> Dictionary:
 	s = {"version":2, "seed":maxi(1, seed_value & 0xffffffff), "turn":1, "ap":3,
@@ -19,6 +20,8 @@ func new_game(seed_value: int = 91723) -> Dictionary:
 		"bonds":[], "expedition":null, "reward":null, "medicine":1, "story_cursor":0,
 		"prologue":false, "prologue_cursor":0, "vignette":null}
 	s.merge(life.defaults())
+	s.calendar_day=0
+	events.ensure(self)
 	skip_opening()
 	return s
 
@@ -30,11 +33,17 @@ func skip_opening() -> void:
 func complete_prologue(last_calendar: Dictionary={}) -> void:
 	if not flag("prologue_complete") and last_calendar.get("era","")=="murim":
 		# Story time may skip cycles; hand off to the following morning without advancing economic turns.
-		s.calendar_cycle_offset=int(last_calendar.cycle)+1-(int(s.turn)-1)
+		s.calendar_cycle_offset=2-(int(s.turn)-1)
+		s.calendar_day=1
 		s.ap=3
 	skip_opening()
 	s.prologue=false; s.prologue_beat="END"
 	s.flags.prologue_complete=true
+	s.flags.sandbox_open=true
+	s.flags.maegol_complete=true
+	s.flags.gigam_unlocked=true
+	s.flags.solbaram_house_built=true
+	events.ensure(self)
 	s.map_node=s.location if s.location in s.owned else s.owned[0]
 	s.location=s.map_node
 
@@ -162,10 +171,15 @@ func perform(action: String, args: Dictionary = {}) -> Dictionary:
 	s = s.duplicate(true)
 	error = ""
 	feedback = {}
+	events.ensure(self)
 	if not transition(action, args):
 		s = previous
 		return {"ok":false,"text":error}
 	settle_clock()
+	events.tick(self)
+	if action in ["travel","teleport"] and s.regional.active.is_empty():
+		s.arrival=null
+		events.visit(self)
 	discover()
 	if feedback.get("text", ""): log_line(feedback.text)
 	feedback.ok = true
@@ -173,6 +187,10 @@ func perform(action: String, args: Dictionary = {}) -> Dictionary:
 
 func transition(action: String, args: Dictionary) -> bool:
 	if s.finished: return reject("이미 막을 내린 이야기입니다.")
+	if not s.regional.active.is_empty() and action not in events.ACTIONS: return reject("진행 중인 사건을 먼저 마치세요.")
+	if action in events.ACTIONS:
+		if s.battle or s.expedition or s.reward: return reject("전투를 먼저 마치세요.")
+		return events.handle(self,action,args)
 	if s.reward and action != "claim": return reject("전리품을 먼저 선택하세요.")
 	if s.expedition and action not in ["path","reveal","retreat"]: return reject("앞의 산길을 선택하세요.")
 	if s.battle and action not in ["card","battle_end","retreat","medicine"]: return reject("전투를 먼저 마쳐야 합니다.")
@@ -327,6 +345,12 @@ func transition(action: String, args: Dictionary) -> bool:
 	return true
 
 func advance_day() -> void:
+	if s.has("calendar_day") and int(s.calendar_day)<9:
+		s.calendar_day+=1; s.ap=3; s.qi=s.qi_max
+		s.talked=[]; s.communicated=[]
+		feedback.text=calendar.label_for(s)+". 아침이 밝았다."
+		return
+	s.calendar_day=0
 	var earned = income()
 	s.gold += earned
 	s.rice += 16 * s.owned.size()
@@ -491,7 +515,7 @@ func phase_name() -> String:
 	return calendar.phase(s)
 
 func settle_clock() -> void:
-	if s.ap > 0 or s.battle or s.expedition or s.reward or s.finished: return
+	if s.ap > 0 or s.battle or s.expedition or s.reward or s.finished or not s.get("regional",{}).get("active",{}).is_empty(): return
 	var previous_text: String = feedback.get("text", "")
 	advance_day()
 	feedback.text = previous_text + "\n" + feedback.get("text", "")

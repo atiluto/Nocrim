@@ -22,6 +22,11 @@ if errorlevel 1 goto compile_error
 if errorlevel 1 goto verify_error
 
 echo.
+%NOCRIM_PYTHON% tools\compile_events.py
+if errorlevel 1 goto compile_error
+%NOCRIM_PYTHON% tools\compile_events.py --check
+if errorlevel 1 goto verify_error
+
 echo Dialogue applied successfully.
 echo You can now test it with play.bat.
 goto success

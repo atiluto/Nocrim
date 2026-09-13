@@ -17,7 +17,25 @@ func phase(state: Dictionary) -> String:
 	return data.phases[clampi(3-int(state.ap),0,2)]
 
 func label_for(state: Dictionary) -> String:
-	return date_text(cycle_for(state))+" · "+phase(state)
+	return date_text(cycle_for(state))+" · %d일 · " % int(date_for(state).day)+phase(state)
+
+func date_for(state: Dictionary) -> Dictionary:
+	var date=date_at(cycle_for(state))
+	date.day=(cycle_for(state)+(int(data.eras.murim.month)-1)*3)%3*10+int(state.get("calendar_day",0))+1
+	return date
+
+func stamp(state: Dictionary) -> int:
+	return (cycle_for(state)*10+int(state.get("calendar_day",0)))*3+clampi(3-int(state.ap),0,2)
+
+func stamp_date(date: Dictionary) -> int:
+	var months: int=(int(date.year)-int(data.eras.murim.year))*12+int(date.month)-int(data.eras.murim.month)
+	return (months*30+int(date.get("day",1))-1)*3+int(date.get("period",0))
+
+func set_date(state: Dictionary, date: Dictionary) -> void:
+	var days: int=maxi(0,int(stamp_date(date)/3.0))
+	state.calendar_cycle_offset=int(days/10.0)-(int(state.turn)-1)
+	state.calendar_day=days%10
+	state.ap=3-int(date.get("period",0))
 
 func saved_label(state: Dictionary) -> String:
 	if state.get("prologue",false):

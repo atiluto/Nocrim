@@ -56,6 +56,9 @@ func load_campaign() -> Dictionary:
 	if not s.has("map_node"): s.map_node = s.get("location", "sol")
 	var life_defaults = preload("res://scripts/camp_life.gd").new().defaults()
 	s.merge(life_defaults)
+	if not s.has("calendar_day"): s.calendar_day=0
+	var event_host=preload("res://scripts/campaign.gd").new()
+	event_host.s=s; event_host.events.ensure(event_host)
 	var template = preload("res://scripts/campaign.gd").new().new_game()
 	for key in template:
 		if not s.has(key): return {}

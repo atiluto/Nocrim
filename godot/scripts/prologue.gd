@@ -34,22 +34,24 @@ var memory_tween: Tween
 var chapter_tween: Tween
 var transitioning = false
 var reveal_wait = 0.0
+var event_mode=false
 
-func setup(app) -> void:
+func setup(app, event_pack: Dictionary={}, event_cursor: int=0) -> void:
 	host = app
+	event_mode=not event_pack.is_empty()
 	size = Vector2(1280,720)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	data = JSON.parse_string(FileAccess.get_file_as_string(preload("res://scripts/story.gd").PROLOGUE_DATA_PATH))
+	data = event_pack if event_mode else JSON.parse_string(FileAccess.get_file_as_string(preload("res://scripts/story.gd").PROLOGUE_DATA_PATH))
 	beats = data.beats
 	# Old prologue cursors refer to an unrelated story: reset only that cursor.
-	if host.campaign.s.get("prologue_script","") != "universe-v1":
+	if not event_mode and host.campaign.s.get("prologue_script","") != "universe-v1":
 		host.campaign.s.prologue_cursor = 0
 		host.campaign.s.prologue_script = "universe-v1"
 		host.campaign.s.prologue_beat = ""
 	cursor = clampi(int(host.campaign.s.prologue_cursor),0,beats.size())
 	var saved_id: String = host.campaign.s.get("prologue_beat","")
 	var saved_revision: int=int(host.campaign.s.get("prologue_pagination",1))
-	if saved_revision<3:
+	if not event_mode and saved_revision<3:
 		var previous: Array=data.get("previous_beat_ids" if saved_revision<2 else "previous_paginated_beat_ids",[])
 		var reached: int=int(host.campaign.s.get("prologue_reached",0))
 		if not previous.is_empty():
@@ -64,6 +66,10 @@ func setup(app) -> void:
 	if saved_id=="END": cursor=beats.size()
 	if not saved_id.is_empty() and saved_id != "END":
 		cursor=find_beat_index(saved_id,cursor)
+	if event_mode:
+		cursor=clampi(event_cursor,0,beats.size()-1)
+		var event_beat: String=host.campaign.s.regional.active.get("beat","")
+		if not event_beat.is_empty(): cursor=clampi(find_beat_index(event_beat,cursor),0,beats.size()-1)
 	for layer_name in ["Background","Actors","Effects","Memory","Dialogue","Transitions"]:
 		var layer = Control.new(); layer.name=layer_name; layer.mouse_filter=Control.MOUSE_FILTER_IGNORE; add_child(layer)
 	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects")
@@ -96,6 +102,8 @@ func setup(app) -> void:
 	host.button("prologue_history","기록",Rect2(126,679,72,28),show_history,false,hud)
 	host.button("prologue_chapters","목차",Rect2(207,679,62,28),show_chapters,false,hud)
 	host.button("prologue_skip","장 넘김",Rect2(1187,654,85,42),confirm_skip,false,hud)
+	if event_mode:
+		host.buttons.prologue_chapters.hide(); host.buttons.prologue_skip.hide()
 	show_beat(true)
 
 func _process(delta: float) -> void:
@@ -119,6 +127,7 @@ func advance(force: bool = false) -> void:
 	if not force and chars<text_label.text.length():
 		chars=text_label.text.length(); text_label.visible_characters=-1; return
 	var next_cursor=cursor+1
+	if event_mode and next_cursor>=beats.size(): finish(); return
 	if next_cursor>=beats.size() or beats[next_cursor].chapter!=beats[cursor].chapter:
 		chapter_transition(next_cursor)
 	elif bool(beats[next_cursor].get("transition",false)) or beats[next_cursor].get("scene_status",{})!=beats[cursor].get("scene_status",{}) or beats[next_cursor].background!=beats[cursor].background:
@@ -135,6 +144,11 @@ func find_beat_index(identity: String, fallback: int) -> int:
 	return clampi(fallback,0,beats.size())
 
 func save_cursor() -> void:
+	if event_mode:
+		host.campaign.s.regional.active.cursor=cursor
+		host.campaign.s.regional.active.beat=beats[cursor].id if cursor<beats.size() else ""
+		host.save_game(false)
+		return
 	host.campaign.s.prologue_pagination=3
 	host.campaign.s.prologue_cursor=cursor
 	host.campaign.s.prologue_beat=beats[cursor].id if cursor<beats.size() else "END"
@@ -310,4 +324,7 @@ func confirm_skip() -> void:
 
 func finish() -> void:
 	done=true; auto_mode=false; hud.hide(); cast_stage.clear_cast(); set_ambience("")
+	if event_mode:
+		host.call_deferred("command","event_next")
+		return
 	host.call_deferred("enter_strategy",beats[-1].scene_status.get("calendar",{}))

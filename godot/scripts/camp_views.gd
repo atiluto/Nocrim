@@ -21,6 +21,7 @@ func draw_base(a) -> void:
 	bg.stretch_mode = TextureRect.STRETCH_SCALE
 	if s.ap == 1: a.shade(Rect2(0,0,1280,720),Color(.03,.07,.2,.32))
 	a.sound.music("hub"); a.map_views.hud(a)
+	a.map_views.icon_button(a,"camp_events","eye",Rect2(957,17,46,46),"산채의 일과 지역 사건",func(): a.command("event_menu"))
 	hotspot(a,"camp_map","이동",Rect2(555,240,250,230),func(): a.page="map"; a.map_selected=s.map_node; a.refresh())
 	hotspot(a,"camp_house","휴식",Rect2(75,145,395,245),func(): a.command("camp_rest"))
 	hotspot(a,"camp_sword","훈련",Rect2(131,491,235,121),func(): a.command("camp_train"))

@@ -70,4 +70,6 @@ Higgsfield GPT Image 2.5 Sunburst로 만든 `backgrounds/base_camp.png`, `backgr
 
 ## 최신 무협 UI·환경 (2026-09-12)
 
+글꼴 최신 적용(2026-09-14): `godot/assets/fonts/`의 `NanumGothicCoding-Regular.ttf`는 프롤로그·일반 대사·도착 사건·대사 기록 본문, `NanumGothicCoding-Bold.ttf`는 화자 이름에 사용한다. 나머지 UI는 `Ansungtangmyun-ESG.ttf`, 제목·강조 버튼은 `Ansungtangmyun-Bold.ttf`를 사용한다. 아래의 시스템 궁서 사용 기록을 대체하며, SourceHanSansLite·DejaVuSans는 누락 문자용 보조 글꼴로만 남긴다. 기존 대사 크기 설정·좌우 여백·명시적 줄바꿈은 유지한다.
+
 `chapter_01_ink.png` 지도와 `wuxia_scenes.png` 환경 아틀라스를 사용한다. 좌상 타이틀·대화 / 우상 거점 / 좌하 전투 / 우하 산길. 새 이미지 2장은 내장 image_gen으로 제작하고 원본 그대로 AtlasTexture 영역으로 연결했다. 종이 패널 사진은 활성 UI에서 사용하지 않는다. 붓자국은 `ui/ink_brush.svg`, 제목은 Windows 시스템 궁서 계열 및 번들 fallback, 본문은 기존 한글 글꼴이다. 캐릭터 파일·로드 우선순위·투명 처리 모두 유지. 첨부 14장 분석과 최종 프롬프트는 `art-source/ui-wuxia/디자인분석_제작기록.md`.

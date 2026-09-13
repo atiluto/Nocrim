@@ -1,0 +1,364 @@
+{
+  "scene_status": {
+    "MY-AG-01-COMMON-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-01-TAIL-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-01-BRANCH1-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-01-BRANCH2-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-01-BRANCH3-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-02-COMMON-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-02-BRANCH1-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-02-BRANCH2-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-02-BRANCH3-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-03-COMMON-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-AG-03-BRANCH1-001": {
+      "date": "현재",
+      "location": "mist",
+      "period": "현재",
+      "live": true
+    },
+    "MY-BU-01-COMMON-001": {
+      "date": "현재",
+      "location": "white",
+      "period": "현재",
+      "live": true
+    },
+    "MY-BU-02-COMMON-001": {
+      "date": "현재",
+      "location": "white",
+      "period": "현재",
+      "live": true
+    },
+    "MY-BU-03-COMMON-001": {
+      "date": "현재",
+      "location": "white",
+      "period": "현재",
+      "live": true
+    },
+    "MY-BU-04-COMMON-001": {
+      "date": "현재",
+      "location": "white",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-01-COMMON-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-02-COMMON-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-02-BRANCH1-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-02-BRANCH2-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-02-BRANCH3-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CM-03-COMMON-001": {
+      "date": "현재",
+      "location": "iron",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SJ-01-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SJ-02-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SJ-02-BRANCH1-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SJ-03-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SJ-04-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-01-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-02-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-03-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-04-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-05-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-06-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-SB-07-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "MY-JS-01-COMMON-001": {
+      "date": "현재",
+      "location": "red",
+      "period": "현재",
+      "live": true
+    },
+    "MY-JS-03-COMMON-001": {
+      "date": "현재",
+      "location": "red",
+      "period": "현재",
+      "live": true
+    },
+    "MY-DG-01-COMMON-001": {
+      "date": "현재",
+      "location": "dal",
+      "period": "현재",
+      "live": true
+    },
+    "MY-DN-01-COMMON-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "MY-DN-02-COMMON-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "MY-HD-01-COMMON-001": {
+      "date": "현재",
+      "location": "guild",
+      "period": "현재",
+      "live": true
+    },
+    "MY-HD-01-BRANCH1-001": {
+      "date": "현재",
+      "location": "guild",
+      "period": "현재",
+      "live": true
+    },
+    "MY-HD-01-BRANCH3-001": {
+      "date": "현재",
+      "location": "guild",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CH-01-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CH-02-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "MY-CH-02-BRANCH1-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "MY-YG-01-COMMON-001": {
+      "date": "현재",
+      "location": "clan",
+      "period": "현재",
+      "live": true
+    },
+    "MY-GM-01-COMMON-001": {
+      "date": "현재",
+      "location": "exit_east",
+      "period": "현재",
+      "live": true
+    },
+    "MY-GM-02-COMMON-001": {
+      "date": "현재",
+      "location": "exit_east",
+      "period": "현재",
+      "live": true
+    },
+    "MY-TB-01-COMMON-001": {
+      "date": "현재",
+      "location": "tae",
+      "period": "현재",
+      "live": true
+    },
+    "MY-TB-02-COMMON-001": {
+      "date": "현재",
+      "location": "tae",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-01-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-02-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-03-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-04-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-05-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-06-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-07-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-08-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-09-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-R-10-COMMON-001": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    },
+    "MY-FAIL-01-COMMON-002": {
+      "date": "현재",
+      "location": "*",
+      "period": "현재",
+      "live": true
+    }
+  }
+}
