@@ -1,0 +1,733 @@
+{
+  "note": "역할 고정 무대 연출. sprite_roles는 이미지별 단일 역할, exclusive_sprites는 전용 인물, retired_at은 사망 후 재등장 금지 시작 대사. stage는 화면 전체 인물 목록(뒤→앞), 생략 시 유지, []는 모두 퇴장. 평상시 높이·크기는 고정하고 좌우로만 이동한다. jump/approach만 일시적으로 위아래 반응.",
+  "cast": {
+    "parksu": {
+      "speaker": "박달수",
+      "sprite": "npc_bandit_scout",
+      "role": "bandit"
+    },
+    "mansik": {
+      "speaker": "조만식",
+      "sprite": "npc_bandit_brute",
+      "role": "bandit"
+    },
+    "eokchil": {
+      "speaker": "최억칠",
+      "sprite": "extra",
+      "role": "bandit"
+    },
+    "villager": {
+      "speaker": "마을 사람",
+      "sprite": "npc_merchant",
+      "role": "merchant"
+    },
+    "woodcutter": {
+      "speaker": "나무꾼",
+      "sprite": "npc_villager",
+      "role": "woodcutter"
+    },
+    "raider": {
+      "speaker": "매골채 산적",
+      "sprite": "npc_bandit_raider",
+      "role": "bandit"
+    },
+    "lookout": {
+      "speaker": "",
+      "sprite": "npc_bandit_patrol",
+      "role": "bandit"
+    },
+    "refugee": {
+      "speaker": "도망친 사람",
+      "sprite": "npc_captive",
+      "role": "captive"
+    },
+    "pursuer": {
+      "speaker": "추격자",
+      "sprite": "npc_bandit_patrol",
+      "role": "bandit"
+    },
+    "prisoner": {
+      "speaker": "포로",
+      "sprite": "npc_captive",
+      "role": "captive"
+    },
+    "captive_bandit": {
+      "speaker": "붙잡힌 산적",
+      "sprite": "npc_bandit_patrol",
+      "role": "bandit"
+    },
+    "mawung": {
+      "speaker": "마웅철",
+      "sprite": "mawung",
+      "role": "bandit_chief"
+    },
+    "patrol": {
+      "speaker": "",
+      "sprite": "npc_bandit_patrol",
+      "role": "bandit"
+    },
+    "escort_guard": {
+      "speaker": "",
+      "sprite": "npc_escort_guard",
+      "role": "escort_guard"
+    },
+    "escort_captain": {
+      "speaker": "진여명",
+      "sprite": "npc_escort_captain",
+      "role": "escort_captain"
+    }
+  },
+  "slots": {
+    "left_back": {
+      "x": 5,
+      "enter": "left"
+    },
+    "left": {
+      "x": 135,
+      "enter": "left"
+    },
+    "center_left": {
+      "x": 300,
+      "enter": "left"
+    },
+    "center": {
+      "x": 435,
+      "enter": "right"
+    },
+    "center_right": {
+      "x": 610,
+      "enter": "right"
+    },
+    "right": {
+      "x": 740,
+      "enter": "right"
+    },
+    "right_back": {
+      "x": 830,
+      "enter": "right"
+    }
+  },
+  "cues": {
+    "P02-001": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "right"
+        }
+      ]
+    },
+    "P02-003": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "parksu",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P02-004": {
+      "motions": []
+    },
+    "P02-007": {
+      "stage": []
+    },
+    "P02-010": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left"
+        },
+        {
+          "actor": "mansik",
+          "slot": "right"
+        }
+      ]
+    },
+    "P02-011": {
+      "motions": []
+    },
+    "P02-016-02": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left"
+        },
+        {
+          "actor": "eokchil",
+          "slot": "right_back"
+        },
+        {
+          "actor": "mansik",
+          "slot": "center_right"
+        }
+      ]
+    },
+    "P02-017": {
+      "stage": [
+        {
+          "actor": "eokchil",
+          "slot": "right_back"
+        },
+        {
+          "actor": "mansik",
+          "slot": "right"
+        },
+        {
+          "actor": "parksu",
+          "slot": "center_left"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "parksu",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P02-019": {
+      "motions": [
+        {
+          "actor": "parksu",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P02-023-04": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left_back"
+        },
+        {
+          "actor": "mansik",
+          "slot": "right_back"
+        },
+        {
+          "actor": "eokchil",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "eokchil",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P02-024": {
+      "motions": [
+        {
+          "actor": "eokchil",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P02-025": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left_back"
+        },
+        {
+          "actor": "mansik",
+          "slot": "right_back"
+        }
+      ]
+    },
+    "P02-025-03": {
+      "stage": []
+    },
+    "P04-001": {
+      "stage": [
+        {
+          "actor": "villager",
+          "slot": "right"
+        }
+      ]
+    },
+    "P04-004": {
+      "motions": []
+    },
+    "P04-006-04": {
+      "stage": []
+    },
+    "P04-011": {
+      "stage": [
+        {
+          "actor": "woodcutter",
+          "slot": "right"
+        }
+      ]
+    },
+    "P04-012": {
+      "stage": [
+        {
+          "actor": "woodcutter",
+          "slot": "center_right"
+        }
+      ],
+      "motions": []
+    },
+    "P04-014-02": {
+      "stage": []
+    },
+    "P05-001": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "right_back"
+        },
+        {
+          "actor": "raider",
+          "slot": "center_right"
+        }
+      ]
+    },
+    "P05-004": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "right"
+        },
+        {
+          "actor": "raider",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "raider",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P05-007": {
+      "motions": []
+    },
+    "P05-010": {
+      "motions": [
+        {
+          "actor": "raider",
+          "motion": "jump"
+        }
+      ]
+    },
+    "P05-015": {
+      "motions": []
+    },
+    "P05-016-06": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "right"
+        }
+      ]
+    },
+    "P05-017": {
+      "stage": []
+    },
+    "P06-001": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "left"
+        }
+      ]
+    },
+    "P06-002": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "center_left"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "refugee",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P06-004-05": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "left"
+        }
+      ]
+    },
+    "P06-005-02": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "left"
+        },
+        {
+          "actor": "pursuer",
+          "slot": "right"
+        }
+      ]
+    },
+    "P06-006": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "left"
+        },
+        {
+          "actor": "pursuer",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "pursuer",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P06-011": {
+      "motions": [
+        {
+          "actor": "pursuer",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P06-017-03": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "left"
+        }
+      ]
+    },
+    "P06-019": {
+      "stage": [
+        {
+          "actor": "refugee",
+          "slot": "center_left"
+        }
+      ],
+      "motions": []
+    },
+    "P06-024": {
+      "stage": []
+    },
+    "P07-001": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "left_back"
+        }
+      ]
+    },
+    "P07-001-03": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "left_back"
+        },
+        {
+          "actor": "mawung",
+          "slot": "right"
+        }
+      ]
+    },
+    "P07-002-02": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "left_back"
+        },
+        {
+          "actor": "prisoner",
+          "slot": "left"
+        },
+        {
+          "actor": "mawung",
+          "slot": "right"
+        }
+      ]
+    },
+    "P07-002-04": {
+      "motions": [
+        {
+          "actor": "prisoner",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P07-003": {
+      "motions": []
+    },
+    "P07-004-05": {
+      "stage": []
+    },
+    "P07-005-04": {
+      "stage": [
+        {
+          "actor": "captive_bandit",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "captive_bandit",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P07-011": {
+      "motions": []
+    },
+    "P08-001": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right"
+        }
+      ]
+    },
+    "P08-001-02": {
+      "stage": []
+    },
+    "P08-003-03": {
+      "stage": [
+        {
+          "actor": "lookout",
+          "slot": "right"
+        }
+      ]
+    },
+    "P08-003-04": {
+      "stage": []
+    },
+    "P08-004-04": {
+      "stage": [
+        {
+          "actor": "prisoner",
+          "slot": "left"
+        }
+      ]
+    },
+    "P08-007": {
+      "stage": [
+        {
+          "actor": "prisoner",
+          "slot": "center_left"
+        }
+      ],
+      "motions": []
+    },
+    "P08-010": {
+      "motions": [
+        {
+          "actor": "prisoner",
+          "motion": "jump"
+        }
+      ]
+    },
+    "P08-013-02": {
+      "stage": [
+        {
+          "actor": "prisoner",
+          "slot": "left"
+        },
+        {
+          "actor": "patrol",
+          "slot": "right"
+        }
+      ]
+    },
+    "P08-015": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right"
+        }
+      ]
+    },
+    "P08-015-02": {
+      "stage": []
+    },
+    "P09-001": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right"
+        }
+      ]
+    },
+    "P09-003": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right"
+        }
+      ]
+    },
+    "P09-003-03": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right_back"
+        },
+        {
+          "actor": "mawung",
+          "slot": "right"
+        }
+      ]
+    },
+    "P09-004": {
+      "stage": [
+        {
+          "actor": "patrol",
+          "slot": "right_back"
+        },
+        {
+          "actor": "mawung",
+          "slot": "center_right"
+        }
+      ],
+      "motions": []
+    },
+    "P09-008": {
+      "motions": [
+        {
+          "actor": "mawung",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P09-011": {
+      "stage": [
+        {
+          "actor": "mawung",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "mawung",
+          "motion": "approach"
+        }
+      ]
+    },
+    "P09-013-02": {
+      "stage": [
+        {
+          "actor": "mawung",
+          "slot": "right"
+        }
+      ]
+    },
+    "P09-013-04": {
+      "stage": []
+    },
+    "P02-018": {
+      "stage": [
+        {
+          "actor": "escort_captain",
+          "slot": "right_back"
+        },
+        {
+          "actor": "parksu",
+          "slot": "left"
+        },
+        {
+          "actor": "escort_guard",
+          "slot": "right"
+        }
+      ]
+    },
+    "P02-020": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left_back"
+        },
+        {
+          "actor": "escort_guard",
+          "slot": "center"
+        }
+      ]
+    },
+    "P02-020-04": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left_back"
+        },
+        {
+          "actor": "escort_guard",
+          "slot": "center"
+        }
+      ],
+      "motions": [
+        {
+          "actor": "escort_guard",
+          "motion": "shake"
+        }
+      ]
+    },
+    "P02-023": {
+      "stage": [
+        {
+          "actor": "parksu",
+          "slot": "left_back"
+        },
+        {
+          "actor": "mansik",
+          "slot": "right_back"
+        }
+      ]
+    },
+    "P02-026-02": {
+      "stage": [
+        {
+          "actor": "escort_captain",
+          "slot": "center"
+        }
+      ]
+    },
+    "P02-026-04": {
+      "stage": []
+    }
+  },
+  "sprite_roles": {
+    "npc_bandit_scout": "bandit",
+    "npc_bandit_brute": "bandit",
+    "extra": "bandit",
+    "npc_merchant": "merchant",
+    "npc_villager": "woodcutter",
+    "npc_bandit_raider": "bandit",
+    "npc_bandit_patrol": "bandit",
+    "npc_captive": "captive",
+    "mawung": "bandit_chief",
+    "npc_escort_guard": "escort_guard",
+    "npc_escort_captain": "escort_captain"
+  },
+  "exclusive_sprites": {
+    "npc_bandit_scout": "parksu",
+    "npc_bandit_brute": "mansik",
+    "extra": "eokchil",
+    "npc_bandit_raider": "raider",
+    "npc_escort_guard": "escort_guard",
+    "npc_escort_captain": "escort_captain",
+    "mawung": "mawung"
+  },
+  "retired_at": {
+    "escort_guard": "P02-023",
+    "eokchil": "P02-025",
+    "parksu": "P02-025-03",
+    "mansik": "P02-025-03",
+    "escort_captain": "P02-026-04",
+    "raider": "P05-016-06"
+  }
+}

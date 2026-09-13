@@ -7,6 +7,7 @@ var cursor = 0
 var text_label: Label
 var name_label: Label
 var title_label: Label
+var scene_status_label: Label
 var progress_label: Label
 var background_layer: Control
 var actor_layer: Control
@@ -14,11 +15,9 @@ var effect_layer: Control
 var memory_layer: Control
 var hud: Control
 var transition_layer: Control
-var portrait: TextureRect
+var cast_stage
 var background_image: Control
-var actor_key = ""
 var background_key = ""
-var position_tween: Tween
 var effect_tween: Tween
 var chars = 0.0
 var delay = 0.0
@@ -66,6 +65,8 @@ func setup(app) -> void:
 		var layer = Control.new(); layer.name=layer_name; layer.mouse_filter=Control.MOUSE_FILTER_IGNORE; add_child(layer)
 	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects")
 	memory_layer=get_node("Memory"); hud=get_node("Dialogue"); transition_layer=get_node("Transitions")
+	cast_stage=preload("res://scripts/prologue_cast.gd").new()
+	actor_layer.add_child(cast_stage); cast_stage.setup(host)
 	build_memory_overlay()
 	ambience=AudioStreamPlayer.new(); ambience.bus="Effects"; add_child(ambience)
 	host.shade(Rect2(0,536,1280,184),Color(.03,.035,.035,.88),hud)
@@ -74,8 +75,10 @@ func setup(app) -> void:
 	text_label=host.label("",Rect2(277,557,899,145),host.dialogue_size,host.PAPER,hud)
 	text_label.add_theme_font_override("font",host.theme_font)
 	text_label.add_theme_constant_override("line_spacing",6)
-	host.shade(Rect2(30,24,890,42),Color(0,0,0,.55),hud)
+	host.shade(Rect2(30,24,890,79),Color(.025,.03,.03,.72),hud)
+	host.shade(Rect2(43,66,864,1),Color("bfa57b44"),hud)
 	title_label=host.label("",Rect2(43,30,730,32),19,host.PAPER,hud)
+	scene_status_label=host.label("",Rect2(43,72,850,25),16,host.GOLD,hud)
 	progress_label=host.label("",Rect2(792,31,120,29),16,host.GOLD,hud)
 	next_button=host.button("prologue_next","",Rect2(0,0,1280,720),func(): advance(),false,hud)
 	# Receive background clicks behind the HUD; interactive controls consume their own clicks.
@@ -113,6 +116,8 @@ func advance(force: bool = false) -> void:
 	var next_cursor=cursor+1
 	if next_cursor>=beats.size() or beats[next_cursor].chapter!=beats[cursor].chapter:
 		chapter_transition(next_cursor)
+	elif bool(beats[next_cursor].get("transition",false)) or beats[next_cursor].get("scene_status",{})!=beats[cursor].get("scene_status",{}) or beats[next_cursor].background!=beats[cursor].background:
+		chapter_transition(next_cursor,false)
 	else:
 		cursor=next_cursor
 		show_beat()
@@ -130,6 +135,8 @@ func show_beat(initial: bool = false) -> void:
 	if cursor>=beats.size(): finish(); return
 	var beat: Dictionary=beats[cursor]
 	title_label.text=beat.title
+	var scene_status: Dictionary=beat.get("scene_status",{})
+	scene_status_label.text="%s   |   %s   |   %s" % [scene_status.get("date",""),scene_status.get("location",""),scene_status.get("period","")]
 	progress_label.text="%d / %d" % [cursor+1,beats.size()]
 	name_label.text="" if beat.speaker=="독백" else beat.speaker
 	text_label.position.x=47 if beat.speaker=="독백" else 277
@@ -137,34 +144,15 @@ func show_beat(initial: bool = false) -> void:
 	text_label.text=beat.text; text_label.visible_characters=0
 	var background_changed: bool=beat.background!=background_key
 	set_background(beat.background)
-	set_actor(beat.sprite,beat.side,beat.speaker)
+	cast_stage.set_cast(beat.get("actors",[]),beat.speaker,initial)
 	set_memory(bool(beat.get("memory",false)))
 	host.sound.music_file(beat.music,-21.0)
 	set_ambience(beat.ambience)
 	if background_changed and not transitioning: reveal_wait=.65
-	if not transitioning and not String(beat.get("transition","")).is_empty():
-		scene_transition_card(String(beat.transition))
-	if not initial and not Input.is_key_pressed(KEY_CTRL):
+	if not initial and not transitioning and not Input.is_key_pressed(KEY_CTRL):
 		host.sound.effect_file(beat.sfx,-17.0)
-		animate(beat.effect)
-
-func scene_transition_card(caption: String) -> void:
-	transitioning=true; reveal_wait=0
-	if chapter_tween: chapter_tween.kill()
-	for child in transition_layer.get_children(): child.queue_free()
-	var cover=host.shade(Rect2(0,0,1280,720),Color(0,0,0,0),transition_layer)
-	cover.mouse_filter=Control.MOUSE_FILTER_STOP
-	var card=host.label(caption,Rect2(230,314,820,62),30,host.PAPER,transition_layer)
-	card.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; card.modulate.a=0
-	chapter_tween=create_tween()
-	chapter_tween.tween_property(cover,"color:a",.92,.58).set_trans(Tween.TRANS_SINE)
-	chapter_tween.tween_property(card,"modulate:a",1.0,.28)
-	chapter_tween.tween_interval(1.15)
-	chapter_tween.tween_property(card,"modulate:a",0.0,.25)
-	chapter_tween.tween_property(cover,"color:a",0.0,.72).set_trans(Tween.TRANS_SINE)
-	chapter_tween.tween_callback(func():
-		transitioning=false
-		for child in transition_layer.get_children(): child.queue_free())
+		animate("" if beat.effect=="jump" and not beat.get("actor_motions",[]).is_empty() else beat.effect)
+		cast_stage.play_motions(beat.get("actor_motions",[]))
 
 func build_memory_overlay() -> void:
 	memory_overlay=Control.new(); memory_overlay.size=Vector2(1280,720); memory_overlay.modulate.a=0
@@ -188,47 +176,38 @@ func set_memory(enabled: bool) -> void:
 	memory_tween=create_tween()
 	memory_tween.tween_property(memory_overlay,"modulate:a",1.0 if enabled else 0.0,.65)
 
-func chapter_transition(target_cursor: int) -> void:
+func chapter_transition(target_cursor: int, chapter_break: bool = true) -> void:
 	transitioning=true; delay=0; reveal_wait=0
 	if chapter_tween: chapter_tween.kill()
 	for child in transition_layer.get_children(): child.queue_free()
 	var cover=host.shade(Rect2(0,0,1280,720),Color(0,0,0,0),transition_layer)
 	cover.mouse_filter=Control.MOUSE_FILTER_STOP
-	var kicker_text: String="장 마침" if target_cursor>=beats.size() else "다음 장"
-	var kicker=host.label(kicker_text,Rect2(440,244,400,35),19,host.MUTED,transition_layer)
-	var next_title: String="서장 끝" if target_cursor>=beats.size() else beats[target_cursor].title
-	var card=host.label(next_title,Rect2(215,285,850,72),42,host.PAPER,transition_layer)
-	var scene_caption: String="" if target_cursor>=beats.size() else String(beats[target_cursor].get("transition",""))
-	var scene_label=host.label(scene_caption,Rect2(250,365,780,42),21,host.MUTED,transition_layer)
-	kicker.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; card.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	scene_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
-	kicker.modulate.a=0; card.modulate.a=0; scene_label.modulate.a=0
 	chapter_tween=create_tween()
-	chapter_tween.tween_property(cover,"color:a",1.0,1.0).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_property(cover,"color:a",1.0,1.0 if chapter_break else .65).set_trans(Tween.TRANS_SINE)
 	chapter_tween.tween_callback(func():
-		hud.hide(); set_actor("","right",""); set_memory(false)
+		# Change the stage only once fully black, keeping destination details out of the fade-out.
+		hud.hide(); animate("")
+		if chapter_break:
+			cast_stage.clear_cast(); set_memory(false)
 		if target_cursor<beats.size():
 			cursor=target_cursor; show_beat(true)
 		else:
-			set_ambience("")
-		host.sound.effect_file("sfx/sfx_title_reveal_chime_01.wav",-23.0))
-	chapter_tween.tween_property(kicker,"modulate:a",1.0,.28)
-	chapter_tween.parallel().tween_property(card,"modulate:a",1.0,.38)
-	chapter_tween.parallel().tween_property(scene_label,"modulate:a",1.0,.38)
-	chapter_tween.tween_interval(1.25)
-	chapter_tween.tween_property(kicker,"modulate:a",0.0,.25)
-	chapter_tween.parallel().tween_property(card,"modulate:a",0.0,.3)
-	chapter_tween.parallel().tween_property(scene_label,"modulate:a",0.0,.3)
+			set_ambience(""))
+	chapter_tween.tween_interval(.8)
 	chapter_tween.tween_callback(func():
-		if target_cursor>=beats.size(): finish()
+		if target_cursor>=beats.size():
+			finish()
+			move_child(transition_layer,get_child_count()-1)
 		else: hud.show())
-	chapter_tween.tween_property(cover,"color:a",0.0,.9).set_trans(Tween.TRANS_SINE)
+	chapter_tween.tween_property(cover,"color:a",0.0,.9 if chapter_break else .7).set_trans(Tween.TRANS_SINE)
 	chapter_tween.tween_callback(func():
 		transitioning=false
 		if target_cursor<beats.size() and not Input.is_key_pressed(KEY_CTRL):
 			var beat: Dictionary=beats[cursor]
 			host.sound.effect_file(beat.sfx,-17.0)
-			animate(beat.effect)
+			if beat.effect not in ["flash","blackout","fade","fadein"]:
+				animate("" if beat.effect=="jump" and not beat.get("actor_motions",[]).is_empty() else beat.effect)
+			cast_stage.play_motions(beat.get("actor_motions",[]))
 		for child in transition_layer.get_children(): child.queue_free())
 
 func set_background(key: String) -> void:
@@ -252,34 +231,15 @@ func set_background(key: String) -> void:
 	fade.tween_property(background_image,"modulate:a",1.0,.72)
 	if is_instance_valid(old): fade.tween_callback(old.queue_free)
 
-func set_actor(id: String, side: String, speaker: String) -> void:
-	var key=id+":"+side if not id.is_empty() else ""
-	if key==actor_key: return
-	actor_key=key
-	if position_tween: position_tween.kill()
-	if is_instance_valid(portrait):
-		var old=portrait
-		var exit_x=-510.0 if old.position.x<500 else 1300.0
-		var exit_tween=create_tween().set_parallel(true)
-		exit_tween.tween_property(old,"position:x",exit_x,.24).set_trans(Tween.TRANS_SINE)
-		exit_tween.tween_property(old,"modulate:a",0.0,.24)
-		exit_tween.chain().tween_callback(old.queue_free)
-	portrait=null
-	if id.is_empty(): return
-	# Opaque white originals are intentionally retained for the user's manual cutout workflow.
-	var target=Vector2(50 if side=="left" else 815,71)
-	portrait=host.picture(host.assets.texture("prologue/"+id+".png"),Rect2(target,Vector2(415,623)),actor_layer)
-	portrait.position.x=-440 if side=="left" else 1300
-	portrait.modulate.a=0
-	position_tween=create_tween().set_parallel(true)
-	position_tween.tween_property(portrait,"position",target,.34).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	position_tween.tween_property(portrait,"modulate:a",1.0,.28)
 
 func animate(effect: String) -> void:
 	if effect_tween: effect_tween.kill()
 	background_layer.position=Vector2.ZERO; actor_layer.position=Vector2.ZERO; hud.position=Vector2.ZERO
 	for child in effect_layer.get_children(): child.queue_free()
 	if effect.is_empty(): return
+	if effect=="jump":
+		cast_stage.react_speaker()
+		return
 	effect_tween=create_tween()
 	if effect in ["flash","blackout","fade","fadein"]:
 		var cover=host.shade(Rect2(0,0,1280,536),Color.WHITE if effect=="flash" else Color.BLACK,effect_layer)
@@ -290,10 +250,6 @@ func animate(effect: String) -> void:
 			if effect=="fadein": cover.color=Color.BLACK
 			effect_tween.tween_property(cover,"color:a",0.0,.55)
 			effect_tween.tween_callback(cover.queue_free)
-	elif effect=="jump":
-		var target: Control=actor_layer if is_instance_valid(portrait) else hud
-		effect_tween.tween_property(target,"position:y",-19.0 if target==actor_layer else -6.0,.11).set_trans(Tween.TRANS_SINE)
-		effect_tween.tween_property(target,"position:y",0.0,.17).set_trans(Tween.TRANS_SINE)
 	else:
 		for i in range(4):
 			effect_tween.tween_property(background_layer,"position",Vector2(0,-5 if i%2==0 else 5) if effect=="walk" else Vector2(-7 if i%2==0 else 7,2),.13 if effect=="walk" else .055)
@@ -329,19 +285,20 @@ func show_chapters() -> void:
 		var chapter: Dictionary=data.chapters[i]
 		var available=int(chapter.start)<=int(host.campaign.s.get("prologue_reached",cursor))
 		host.button("chapter_"+str(i),chapter.title,Rect2(244+(i%2)*403,211+int(i/2)*65,389,49),func():
-			host.modal.queue_free(); host.modal=null; cursor=int(chapter.start); done=false; show_beat(),not available,panel)
+			host.modal.queue_free(); host.modal=null; done=false; chapter_transition(int(chapter.start)),not available,panel)
 
 func confirm_skip() -> void:
 	var panel=host.overlay("이번 장을 넘길까요?")
 	host.label("다음 장의 첫 대사로 이동합니다.",Rect2(282,276,690,62),24,host.PAPER,panel)
 	host.button("skip_yes","다음 장으로",Rect2(307,416,266,53),func():
 		var chapter: String=beats[cursor].chapter
-		while cursor<beats.size() and beats[cursor].chapter==chapter: cursor+=1
-		host.modal.queue_free(); host.modal=null; show_beat(),false,panel)
+		var target_cursor: int=cursor
+		while target_cursor<beats.size() and beats[target_cursor].chapter==chapter: target_cursor+=1
+		host.modal.queue_free(); host.modal=null; chapter_transition(target_cursor),false,panel)
 	host.button("skip_no","계속 읽기",Rect2(648,416,266,53),func(): host.modal.queue_free(); host.modal=null,false,panel)
 
 func finish() -> void:
-	done=true; auto_mode=false; hud.hide(); set_actor("","right",""); set_ambience("")
+	done=true; auto_mode=false; hud.hide(); cast_stage.clear_cast(); set_ambience("")
 	for child in effect_layer.get_children(): child.queue_free()
 	host.sound.music_file("bgm/bgm_inn_afterhours.mp3",-21.0)
 	var end=Control.new(); add_child(end)

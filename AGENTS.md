@@ -14,6 +14,8 @@
 
 ## Delivery
 
+- NPC casting rule (2026-09-13): one sprite has one role, recorded in `scenario/staging.json` `sprite_roles`. Do not reuse bandits as merchants, escort guards/captains, or civilians. Respect `exclusive_sprites` and `retired_at`: named/dead characters' dedicated art must not reappear as another NPC. `extra.png` now belongs only to Choi Eokchil. Keep standing sprite Y/size fixed; ordinary movement changes X only. Preserve source aspect ratio and extend portrait bottoms beyond the viewport; only explicit sudden reactions may offset Y briefly.
+
 - Editable in-game dialogue now lives in `scenario/` (start with `scenario/README.md`), separately from universe prose. The user can apply supported dialogue-format edits with root `대사_적용.bat`; it compiles and checks `godot/data/prologue.json` without launching the game. For requested dialogue edits preserve stable beat IDs, compare changes, and run `python tools/compile_scenario.py` then `--check`. Do not rerun the one-time `prepare_prologue.py` over authored edits. The prologue is a linear 11-scene adaptation; future route folders do not imply implemented branch mechanics. Keep main combat and legacy campaign separate unless explicitly requested.
 - Prologue art override (2026-09-12): user explicitly authorized necessary character creation and opaque white backgrounds. New prologue sprites use WHITE, not magenta; anonymous extras share one faceless image. Preserve white originals for manual removal. See `art-source/prologue/생성기록.md`. This supersedes older magenta guidance for this production batch.
 
