@@ -2,7 +2,7 @@
 
 ### MY-CH-02-BRANCH1-001
 화자: 강산
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -15,7 +15,7 @@
 
 ### MY-CH-02-BRANCH1-002
 화자: 마영란
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -28,7 +28,7 @@
 
 ### MY-CH-02-BRANCH1-003
 화자: 강산
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -41,7 +41,7 @@
 
 ### MY-CH-02-BRANCH1-004
 화자: 마영란
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -54,7 +54,7 @@
 
 ### MY-CH-02-BRANCH1-005
 화자: 강산
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -67,7 +67,7 @@
 
 ### MY-CH-02-BRANCH1-006
 화자: 마영란
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -80,7 +80,7 @@
 
 ### MY-CH-02-BRANCH1-007
 화자: 강산
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -93,7 +93,7 @@
 
 ### MY-CH-02-BRANCH1-008
 화자: 마영란
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -106,7 +106,7 @@
 
 ### MY-CH-02-BRANCH1-009
 화자: 강산
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -119,7 +119,7 @@
 
 ### MY-CH-02-BRANCH1-010
 화자: 마영란
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -132,7 +132,7 @@
 
 ### MY-CH-02-BRANCH1-011
 화자: 독백
-배경: forest_path
+배경: bg_cheonghak_clearing
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3

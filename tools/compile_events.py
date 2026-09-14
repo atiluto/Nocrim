@@ -1,7 +1,34 @@
 """Compile event graphs plus MD through the existing scenario compiler."""
-import json,argparse
+import json,argparse,re
 from compile_scenario import ROOT,compile_data
 BASE=ROOT/'scenario/events'
+
+def load_catalog():
+    data=json.loads((BASE/'catalog.json').read_text(encoding='utf-8'))
+    manifest=json.loads((BASE/'manifest.json').read_text(encoding='utf-8'))
+    seen=set()
+    for filename in manifest.get('route_sources',[]):
+        path=(BASE/filename).resolve()
+        assert path.is_relative_to(BASE.resolve()),'Route source outside scenario/events'
+        blocks=re.findall(r'^```route-json\n(.*?)^```',path.read_text(encoding='utf-8'),re.M|re.S)
+        assert len(blocks)==1,('Exactly one route-json block required',filename)
+        package=json.loads(blocks[0])
+        replacements=set(package.get('replace_events',[]))
+        assert replacements<=set(package['events']),('Missing replacement definition',filename)
+        for key,event in package['events'].items():
+            assert key not in seen,('Duplicate route event',key)
+            assert (key in data['events'])==(key in replacements),('Declare existing event replacement explicitly',key)
+            seen.add(key); data['events'][key]=event
+        for group,values in package.get('defaults',{}).items():
+            assert group in ['vars','items','factions','locations'],group
+            for key,value in values.items():
+                assert key not in data['defaults'].get(group,{}),('Duplicate default',group,key)
+                data['defaults'].setdefault(group,{})[key]=value
+        for key,spec in package.get('companions',{}).items():
+            assert key not in data.setdefault('route_companions',{}),key
+            data['route_companions'][key]=spec
+        data.setdefault('passive_income',[]).extend(package.get('passive_income',[]))
+    return data
 
 def validate_condition(value, context):
     if isinstance(value,list):
@@ -44,11 +71,20 @@ def validate_effects(effects,context,events,places):
             validate_path(effect.get('path',''),context)
             if op in ['add','max']:assert isinstance(effect.get('value'),(int,float)),context
 def compile_events(check=False):
-    data=json.loads((BASE/'catalog.json').read_text(encoding='utf-8'))
+    data=load_catalog()
     dialogue=compile_data(BASE,True)
     ids={b['id'] for b in dialogue['beats']}
     places=json.loads((ROOT/'godot/data/chapter_01_map.json').read_text(encoding='utf-8'))['nodes']
     events=data['events']
+    for spec in data.get('route_companions',{}).values():
+        validate_path(spec['toggle_path'],'companion')
+        validate_condition(spec['conditions'],'companion')
+        for place,effects in spec.get('visit_effects',{}).items():
+            assert place in places,place
+            validate_effects(effects,'companion',events,places)
+    for income in data.get('passive_income',[]):
+        validate_condition(income['conditions'],'passive income')
+        assert type(income['amount'])==int and income['amount']>=0,'Invalid income'
     for id,event in events.items():
         assert id==event['id']
         assert all(p in places or p=='*' for p in event['locations']),id

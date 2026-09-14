@@ -61,6 +61,10 @@ func draw(a) -> void:
 			rows.append({"id":"event_static_"+event.id,"text":event.title,"action":func(): scroll_offset=0; a.command("event_open",{"id":event.id})})
 		if c.events.test(c,c.events.data.companion.conditions):
 			rows.append({"id":"event_companion","text":"마영란과 잠시 따로 걷는다" if r.vars.my_companion else "마영란에게 동행을 부탁한다","action":func(): a.command("event_companion")})
+		for id in c.events.data.get("route_companions",{}):
+			var spec: Dictionary=c.events.data.route_companions[id]
+			if c.events.test(c,spec.conditions):
+				rows.append({"id":"event_companion_"+id,"text":spec.name+("과 잠시 따로 걷는다" if c.events.value(c,spec.toggle_path) else "에게 동행을 부탁한다"),"action":func(): a.command("event_companion",{"id":id})})
 		rows.append({"id":"event_map","text":"이동","action":func(): scroll_offset=0; a.command("event_leave")})
 		if not c.local_map.attack_targets(c.s.map_node,c.frontier()).is_empty():
 			rows.append({"id":"event_military","text":"주변 산채의 군사 상황을 살핀다","action":func(): c.s.regional.menu=false; a.command("inspect_location")})

@@ -54,9 +54,14 @@ func set_cast(stage: Array, speaker: String, instant: bool = false) -> void:
 			sprite.mouse_filter=Control.MOUSE_FILTER_IGNORE
 			node.position=Vector2(-520 if spec.enter=="left" else 1320,target.y)
 			node.modulate.a=0
-			actors[spec.id]={"node":node,"sprite":sprite,"target":target,"move":null,"reaction":null,"focus":null}
+			actors[spec.id]={"node":node,"sprite":sprite,"image":spec.sprite,"target":target,"move":null,"reaction":null,"focus":null}
 		var entry: Dictionary=actors[spec.id]
 		var node: Control=entry.node
+		if entry.image!=spec.sprite:
+			var texture: Texture2D=host.assets.texture("prologue/"+spec.sprite+".png")
+			entry.sprite.texture=texture
+			entry.sprite.size=Vector2(PORTRAIT_HEIGHT*float(texture.get_width())/float(texture.get_height()),PORTRAIT_HEIGHT)
+			entry.image=spec.sprite
 		# Order actors inside this stage without lifting them above the dialogue/effect layers.
 		node.z_index=0
 		move_child(node,get_child_count()-1)

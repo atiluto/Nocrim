@@ -1,0 +1,190 @@
+{
+  "date": "2026-09-14",
+  "generation_mode": "builtin_image_gen",
+  "character_background": "opaque white; manual removal by user",
+  "assets": [
+    {
+      "id": "ma_yeongran_neutral",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_neutral.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_neutral.png",
+      "prompt": "prompts/ma_neutral.txt",
+      "generation_output": "exec-e6f16e30-ab4a-436e-883c-04ac3d53f3f6.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a56028c717286646aeab9ea5386147c3dde9174552e1480dcbe096128b5715c1"
+    },
+    {
+      "id": "ma_yeongran_smile",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_smile.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_smile.png",
+      "prompt": "prompts/ma_smile.txt",
+      "generation_output": "exec-12dfbc40-a3bd-4943-9756-3e6760013b65.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f0890cd627a0cac1a174dccf518f2c4225f5cc2b3aace5c016b5b06c4e1456bd"
+    },
+    {
+      "id": "ma_yeongran_surprised",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_surprised.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_surprised.png",
+      "prompt": "prompts/ma_surprised.txt",
+      "generation_output": "exec-b727af95-f028-4909-b2f7-45806a4a3e79.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5569751d464c8f5c555837ca98ebbed9550ea04a3daa8b1423044b77d12e152c"
+    },
+    {
+      "id": "ma_yeongran_angry",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_angry.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_angry.png",
+      "prompt": "prompts/ma_angry.txt",
+      "generation_output": "exec-3ec7ae08-3b94-49c0-9f2c-5f5b4436f079.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d93b73fe74a5a1e583dd90e5b4eee2e22b58b09a79c4d721fbeef1f7d4d3e2df"
+    },
+    {
+      "id": "ma_yeongran_worried",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_worried.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_worried.png",
+      "prompt": "prompts/ma_worried.txt",
+      "generation_output": "exec-070d1e24-6135-4d20-85bb-4e019a034d69.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "9fd4eb5c46441842159b80f310c9c723a50356a26e9ae59ba07aa5e6cb7d83d0"
+    },
+    {
+      "id": "ma_yeongran_shy",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ma_yeongran_shy.png",
+      "runtime_file": "godot/assets/prologue/ma_yeongran_shy.png",
+      "prompt": "prompts/ma_shy.txt",
+      "generation_output": "exec-827375e6-90e9-4b8c-95cd-6dce3659f8e6.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "50cf98bd84f925c827dd5243c0ddda72bbfdecb26b5ffc368ecf6d05971746ba"
+    },
+    {
+      "id": "jang_soyeon_neutral",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/jang_soyeon_neutral.png",
+      "runtime_file": "godot/assets/prologue/jang_soyeon_neutral.png",
+      "prompt": "prompts/jang_neutral.txt",
+      "generation_output": "exec-795d5a64-3216-435b-bda1-707d7f9f4f91.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7bfbf99d4f2cfaafbdd62d8a3606b32218b645e0a2c51b6d97393bb63fe3d157"
+    },
+    {
+      "id": "jang_soyeon_smile",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/jang_soyeon_smile.png",
+      "runtime_file": "godot/assets/prologue/jang_soyeon_smile.png",
+      "prompt": "prompts/jang_smile.txt",
+      "generation_output": "exec-5f89c82b-0777-431b-876e-f0e2b980952a.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6d44ca303c1f8c10cdd256a0e8432fa46dd6b6c1aecba88cc2b3384a857601c3"
+    },
+    {
+      "id": "jang_soyeon_serious",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/jang_soyeon_serious.png",
+      "runtime_file": "godot/assets/prologue/jang_soyeon_serious.png",
+      "prompt": "prompts/jang_serious.txt",
+      "generation_output": "exec-a6c37997-3859-45cf-b9ee-c1a8532d1487.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8e15bf2d23af857979a0a53fed885cb061f26a40d65382fa9bdb23b4c0e47653"
+    },
+    {
+      "id": "ha_ryeonghwa_neutral",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ha_ryeonghwa_neutral.png",
+      "runtime_file": "godot/assets/prologue/ha_ryeonghwa_neutral.png",
+      "prompt": "prompts/ha_neutral.txt",
+      "generation_output": "exec-a7a7ccd6-5dba-464c-91bd-f7a0c6bad198.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "64bae76c712b56a3ecaa0d73049c75b8c9b1e2228f4d25be5c94990271732913"
+    },
+    {
+      "id": "ha_ryeonghwa_smile",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ha_ryeonghwa_smile.png",
+      "runtime_file": "godot/assets/prologue/ha_ryeonghwa_smile.png",
+      "prompt": "prompts/ha_smile.txt",
+      "generation_output": "exec-b38d698c-ddac-4690-b6f9-06da9df0f090.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7c688862dc99b7f26decfb7e6eef15e79f80b520171e074fef229ba9619c6a16"
+    },
+    {
+      "id": "ha_ryeonghwa_worried",
+      "type": "sprite",
+      "source_file": "art-source/heroines-20260914/ha_ryeonghwa_worried.png",
+      "runtime_file": "godot/assets/prologue/ha_ryeonghwa_worried.png",
+      "prompt": "prompts/ha_worried.txt",
+      "generation_output": "exec-7ee8d347-7d1e-4d19-a967-db1ad793d411.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "29760f9b6bab90a94cb639b640420520a97dd46b6340fb8a9aaaf9fc8bcae599"
+    },
+    {
+      "id": "bg_solbaram_noodles",
+      "type": "background",
+      "source_file": "art-source/heroines-20260914/bg_solbaram_noodles.png",
+      "runtime_file": "godot/assets/prologue/bg_solbaram_noodles.png",
+      "prompt": "prompts/bg_noodles.txt",
+      "generation_output": "exec-a52798d0-864b-4979-aff7-4a16e2afbd9b.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b8fdabecf224e951f876b7f5814fcfcfd13b566020cb4e158c8634b0cc0817d2"
+    },
+    {
+      "id": "bg_mountain_shelter",
+      "type": "background",
+      "source_file": "art-source/heroines-20260914/bg_mountain_shelter.png",
+      "runtime_file": "godot/assets/prologue/bg_mountain_shelter.png",
+      "prompt": "prompts/bg_shelter.txt",
+      "generation_output": "exec-e679d347-734d-4bb5-bb1f-bab314f7c257.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "533a7ab9743978251a39d90c6f35aa0a44b1dac7eb5c75066c3ce49f31f3c25c"
+    },
+    {
+      "id": "bg_cheonghak_clearing",
+      "type": "background",
+      "source_file": "art-source/heroines-20260914/bg_cheonghak_clearing.png",
+      "runtime_file": "godot/assets/prologue/bg_cheonghak_clearing.png",
+      "prompt": "prompts/bg_clearing.txt",
+      "generation_output": "exec-2356d0c4-68a8-4e64-8bb4-560a2b935dbb.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f5b707450fa32f13f6cf78bb07445df20b95df4381b4cae2b2abce92313bdf1b"
+    },
+    {
+      "id": "cg_ma_bandage",
+      "type": "cg",
+      "source_file": "art-source/heroines-20260914/cg_ma_bandage.png",
+      "runtime_file": "godot/assets/prologue/cg_ma_bandage.png",
+      "prompt": "prompts/cg_bandage.txt",
+      "generation_output": "exec-2f61a7a9-31a2-4831-8eb5-583a0d35426a.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7e766787141458e388d12ec91a7049f415bf83c6b034631f481db4f9b774d5ca"
+    }
+  ],
+  "not_generated": [
+    {
+      "id": "bg_rock_overhang",
+      "reason": "image generation usage limit",
+      "prompt": "prompts/bg_rock_not_generated.txt"
+    }
+  ]
+}

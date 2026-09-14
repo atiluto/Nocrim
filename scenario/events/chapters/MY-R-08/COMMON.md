@@ -2,11 +2,11 @@
 
 ### MY-R-08-COMMON-001
 화자: 독백
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -15,11 +15,11 @@
 
 ### MY-R-08-COMMON-002
 화자: 마영란
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -28,11 +28,11 @@
 
 ### MY-R-08-COMMON-003
 화자: 강산
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -41,11 +41,11 @@
 
 ### MY-R-08-COMMON-004
 화자: 마영란
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -54,11 +54,11 @@
 
 ### MY-R-08-COMMON-005
 화자: 강산
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -67,11 +67,11 @@
 
 ### MY-R-08-COMMON-006
 화자: 마영란
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -80,11 +80,11 @@
 
 ### MY-R-08-COMMON-007
 화자: 강산
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -93,11 +93,11 @@
 
 ### MY-R-08-COMMON-008
 화자: 마영란
-배경: forest_path
+배경: bg_mountain_shelter
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 

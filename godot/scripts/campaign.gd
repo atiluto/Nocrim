@@ -83,6 +83,8 @@ func power(squad: Array = []) -> int:
 func income() -> int:
 	var value = 12 if flag("trade") else 0
 	for r in s.owned: value += int(world.regions[r].income)
+	for entry in events.data.get("passive_income",[]):
+		if events.test(self,entry.conditions): value+=int(entry.amount)
 	return value
 
 func upkeep() -> int:

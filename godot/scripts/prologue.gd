@@ -10,6 +10,8 @@ var title_label: Label
 var scene_status_label: Label
 var progress_label: Label
 var background_layer: Control
+var weather_layer: Control
+var weather_view: Control
 var actor_layer: Control
 var effect_layer: Control
 var memory_layer: Control
@@ -70,9 +72,12 @@ func setup(app, event_pack: Dictionary={}, event_cursor: int=0) -> void:
 		cursor=clampi(event_cursor,0,beats.size()-1)
 		var event_beat: String=host.campaign.s.regional.active.get("beat","")
 		if not event_beat.is_empty(): cursor=clampi(find_beat_index(event_beat,cursor),0,beats.size()-1)
-	for layer_name in ["Background","Actors","Effects","Memory","Dialogue","Transitions"]:
+	for layer_name in ["Background","Weather","Actors","Effects","Memory","Dialogue","Transitions"]:
 		var layer = Control.new(); layer.name=layer_name; layer.mouse_filter=Control.MOUSE_FILTER_IGNORE; add_child(layer)
 	background_layer=get_node("Background"); actor_layer=get_node("Actors"); effect_layer=get_node("Effects")
+	weather_layer=get_node("Weather")
+	weather_view=preload("res://scripts/vn_weather.gd").new()
+	weather_view.host=host; weather_layer.add_child(weather_view)
 	memory_layer=get_node("Memory"); hud=get_node("Dialogue"); transition_layer=get_node("Transitions")
 	cast_stage=preload("res://scripts/prologue_cast.gd").new()
 	actor_layer.add_child(cast_stage); cast_stage.setup(host)
@@ -168,6 +173,7 @@ func show_beat(initial: bool = false) -> void:
 	text_label.text=beat.text; text_label.visible_characters=0
 	var background_changed: bool=beat.background!=background_key
 	set_background(beat.background)
+	weather_view.set_weather(beat.get("weather",""))
 	cast_stage.set_cast(beat.get("actors",[]),beat.speaker,initial)
 	set_memory(bool(beat.get("memory",false)))
 	host.sound.music_file(beat.music,-21.0)

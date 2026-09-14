@@ -802,6 +802,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -829,6 +830,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -856,6 +858,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -883,6 +886,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -910,6 +914,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -937,6 +942,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -964,6 +970,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -991,6 +998,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1018,6 +1026,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1045,6 +1054,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1072,6 +1082,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1099,6 +1110,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1126,6 +1138,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1153,6 +1166,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1180,6 +1194,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1207,6 +1222,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1234,6 +1250,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1261,6 +1278,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1288,6 +1306,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1315,6 +1334,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1342,6 +1362,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1369,6 +1390,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1396,6 +1418,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1423,6 +1446,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1450,6 +1474,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1477,6 +1502,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1504,6 +1530,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1531,6 +1558,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1558,6 +1586,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1585,6 +1614,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1612,6 +1642,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1639,6 +1670,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1666,6 +1698,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1693,6 +1726,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1720,6 +1754,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1747,6 +1782,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1774,6 +1810,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1801,6 +1838,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1828,6 +1866,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1855,6 +1894,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1882,6 +1922,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1909,6 +1950,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1936,6 +1978,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1963,6 +2006,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -1990,6 +2034,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2017,6 +2062,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2044,6 +2090,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2071,6 +2118,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2098,6 +2146,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2125,6 +2174,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2152,6 +2202,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2179,6 +2230,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2206,6 +2258,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2233,6 +2286,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2260,6 +2314,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2287,6 +2342,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2314,6 +2370,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2341,6 +2398,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2368,6 +2426,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2395,6 +2454,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2422,6 +2482,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2449,6 +2510,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2476,6 +2538,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2503,6 +2566,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2530,6 +2594,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2557,6 +2622,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2584,6 +2650,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2611,6 +2678,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2638,6 +2706,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2665,6 +2734,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -2692,6 +2762,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2728,6 +2799,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2764,6 +2836,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2800,6 +2873,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2836,6 +2910,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2877,6 +2952,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2913,6 +2989,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2949,6 +3026,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -2985,6 +3063,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3021,6 +3100,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3057,6 +3137,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3093,6 +3174,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3129,6 +3211,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3156,6 +3239,7 @@
         }
       },
       "memory": true,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3183,6 +3267,7 @@
         }
       },
       "memory": true,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3210,6 +3295,7 @@
         }
       },
       "memory": true,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3237,6 +3323,7 @@
         }
       },
       "memory": true,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3264,6 +3351,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3291,6 +3379,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3318,6 +3407,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3345,6 +3435,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3372,6 +3463,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -3399,6 +3491,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3443,6 +3536,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3487,6 +3581,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3531,6 +3626,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3575,6 +3671,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3619,6 +3716,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3663,6 +3761,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3707,6 +3806,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3751,6 +3851,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3795,6 +3896,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3839,6 +3941,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3891,6 +3994,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3943,6 +4047,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -3995,6 +4100,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "eokchil",
@@ -4052,6 +4158,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -4104,6 +4211,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -4156,6 +4264,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -4208,6 +4317,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -4265,6 +4375,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4309,6 +4420,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4353,6 +4465,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4397,6 +4510,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4446,6 +4560,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4490,6 +4605,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4534,6 +4650,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4578,6 +4695,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4622,6 +4740,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4666,6 +4785,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4710,6 +4830,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4754,6 +4875,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4811,6 +4933,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4868,6 +4991,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4912,6 +5036,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "parksu",
@@ -4956,6 +5081,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -4983,6 +5109,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5010,6 +5137,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5037,6 +5165,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5064,6 +5193,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5091,6 +5221,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5118,6 +5249,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -5154,6 +5286,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "escort_captain",
@@ -5190,6 +5323,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5217,6 +5351,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5244,6 +5379,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5271,6 +5407,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5298,6 +5435,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5325,6 +5463,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5352,6 +5491,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5379,6 +5519,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5406,6 +5547,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5433,6 +5575,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5460,6 +5603,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5487,6 +5631,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5514,6 +5659,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5541,6 +5687,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5568,6 +5715,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5595,6 +5743,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5622,6 +5771,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5649,6 +5799,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5676,6 +5827,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5703,6 +5855,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5730,6 +5883,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5757,6 +5911,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5784,6 +5939,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5811,6 +5967,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5838,6 +5995,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5865,6 +6023,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5892,6 +6051,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5919,6 +6079,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5946,6 +6107,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -5973,6 +6135,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6000,6 +6163,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6027,6 +6191,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6054,6 +6219,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6081,6 +6247,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6108,6 +6275,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6135,6 +6303,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6162,6 +6331,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6189,6 +6359,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6216,6 +6387,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6243,6 +6415,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6270,6 +6443,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6297,6 +6471,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6324,6 +6499,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6351,6 +6527,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6378,6 +6555,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6405,6 +6583,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6432,6 +6611,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6459,6 +6639,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6486,6 +6667,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6513,6 +6695,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -6540,6 +6723,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6576,6 +6760,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6612,6 +6797,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6648,6 +6834,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6684,6 +6871,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6720,6 +6908,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6756,6 +6945,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6792,6 +6982,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6828,6 +7019,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6864,6 +7056,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6900,6 +7093,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6936,6 +7130,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -6972,6 +7167,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7008,6 +7204,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7044,6 +7241,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7080,6 +7278,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7116,6 +7315,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7152,6 +7352,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7188,6 +7389,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7224,6 +7426,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7260,6 +7463,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7296,6 +7500,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7332,6 +7537,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "villager",
@@ -7368,6 +7574,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7395,6 +7602,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7422,6 +7630,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7449,6 +7658,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7476,6 +7686,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7503,6 +7714,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7530,6 +7742,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7557,6 +7770,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7584,6 +7798,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "woodcutter",
@@ -7620,6 +7835,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "woodcutter",
@@ -7656,6 +7872,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "woodcutter",
@@ -7692,6 +7909,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "woodcutter",
@@ -7728,6 +7946,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7755,6 +7974,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7782,6 +8002,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7809,6 +8030,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7836,6 +8058,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7863,6 +8086,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7890,6 +8114,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -7917,6 +8142,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -7961,6 +8187,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8005,6 +8232,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8049,6 +8277,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8093,6 +8322,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8137,6 +8367,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8181,6 +8412,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8230,6 +8462,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8274,6 +8507,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8318,6 +8552,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8362,6 +8597,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8406,6 +8642,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8450,6 +8687,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8499,6 +8737,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8543,6 +8782,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8587,6 +8827,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8631,6 +8872,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8675,6 +8917,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8719,6 +8962,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8763,6 +9007,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8807,6 +9052,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8851,6 +9097,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8895,6 +9142,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8939,6 +9187,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -8983,6 +9232,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -9027,6 +9277,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -9071,6 +9322,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -9115,6 +9367,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -9151,6 +9404,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9178,6 +9432,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9205,6 +9460,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9232,6 +9488,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9259,6 +9516,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9286,6 +9544,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9313,6 +9572,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9340,6 +9600,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9367,6 +9628,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9394,6 +9656,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9421,6 +9684,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9448,6 +9712,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9475,6 +9740,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -9502,6 +9768,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9538,6 +9805,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9574,6 +9842,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9615,6 +9884,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9651,6 +9921,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9687,6 +9958,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9723,6 +9995,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9759,6 +10032,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9795,6 +10069,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9831,6 +10106,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9867,6 +10143,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9911,6 +10188,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -9960,6 +10238,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10004,6 +10283,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10048,6 +10328,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10092,6 +10373,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10136,6 +10418,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10185,6 +10468,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10229,6 +10513,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10273,6 +10558,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10317,6 +10603,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10361,6 +10648,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10405,6 +10693,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10449,6 +10738,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10493,6 +10783,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10537,6 +10828,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10581,6 +10873,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10617,6 +10910,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10653,6 +10947,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10689,6 +10984,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10725,6 +11021,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10761,6 +11058,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10797,6 +11095,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10833,6 +11132,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "refugee",
@@ -10869,6 +11169,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -10896,6 +11197,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -10923,6 +11225,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -10950,6 +11253,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -10977,6 +11281,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11004,6 +11309,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11031,6 +11337,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11058,6 +11365,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11085,6 +11393,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11121,6 +11430,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11157,6 +11467,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11201,6 +11512,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11245,6 +11557,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11289,6 +11602,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11341,6 +11655,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11393,6 +11708,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11450,6 +11766,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11502,6 +11819,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11554,6 +11872,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11606,6 +11925,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11658,6 +11978,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -11710,6 +12031,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11737,6 +12059,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11764,6 +12087,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11791,6 +12115,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11818,6 +12143,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -11845,6 +12171,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -11886,6 +12213,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -11922,6 +12250,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -11958,6 +12287,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -11994,6 +12324,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12030,6 +12361,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12066,6 +12398,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12102,6 +12435,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12138,6 +12472,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12174,6 +12509,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12210,6 +12546,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12246,6 +12583,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12282,6 +12620,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12318,6 +12657,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12354,6 +12694,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12390,6 +12731,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12426,6 +12768,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12462,6 +12805,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12498,6 +12842,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12534,6 +12879,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12570,6 +12916,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12606,6 +12953,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12642,6 +12990,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "captive_bandit",
@@ -12678,6 +13027,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -12714,6 +13064,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12741,6 +13092,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12768,6 +13120,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12795,6 +13148,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12822,6 +13176,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12849,6 +13204,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12876,6 +13232,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "lookout",
@@ -12912,6 +13269,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12939,6 +13297,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12966,6 +13325,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -12993,6 +13353,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -13020,6 +13381,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13056,6 +13418,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13092,6 +13455,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13128,6 +13492,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13164,6 +13529,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13200,6 +13566,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13236,6 +13603,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13272,6 +13640,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13308,6 +13677,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13344,6 +13714,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13385,6 +13756,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13421,6 +13793,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13457,6 +13830,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13493,6 +13867,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13537,6 +13912,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "prisoner",
@@ -13581,6 +13957,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13617,6 +13994,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -13644,6 +14022,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13680,6 +14059,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13716,6 +14096,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13752,6 +14133,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13788,6 +14170,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13824,6 +14207,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13860,6 +14244,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13904,6 +14289,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13948,6 +14334,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -13992,6 +14379,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14036,6 +14424,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14080,6 +14469,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14124,6 +14514,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14168,6 +14559,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14217,6 +14609,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14261,6 +14654,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "patrol",
@@ -14305,6 +14699,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14346,6 +14741,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14382,6 +14778,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14418,6 +14815,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14454,6 +14852,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14490,6 +14889,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14526,6 +14926,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14562,6 +14963,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14598,6 +15000,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14634,6 +15037,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14670,6 +15074,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [
         {
           "id": "mawung",
@@ -14706,6 +15111,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14733,6 +15139,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14760,6 +15167,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14787,6 +15195,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14814,6 +15223,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14841,6 +15251,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14868,6 +15279,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14895,6 +15307,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14922,6 +15335,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14949,6 +15363,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -14976,6 +15391,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15003,6 +15419,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15030,6 +15447,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15057,6 +15475,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15084,6 +15503,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15111,6 +15531,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15138,6 +15559,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15165,6 +15587,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15192,6 +15615,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15219,6 +15643,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15246,6 +15671,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15273,6 +15699,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15300,6 +15727,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15327,6 +15755,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15354,6 +15783,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15381,6 +15811,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15408,6 +15839,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15435,6 +15867,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15462,6 +15895,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15489,6 +15923,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15516,6 +15951,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15543,6 +15979,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15570,6 +16007,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15597,6 +16035,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15624,6 +16063,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15651,6 +16091,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15678,6 +16119,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15705,6 +16147,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15732,6 +16175,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15759,6 +16203,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15786,6 +16231,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15813,6 +16259,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15840,6 +16287,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15867,6 +16315,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15894,6 +16343,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15921,6 +16371,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15948,6 +16399,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -15975,6 +16427,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16002,6 +16455,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16029,6 +16483,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16056,6 +16511,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16083,6 +16539,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16110,6 +16567,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16137,6 +16595,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16164,6 +16623,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16191,6 +16651,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16218,6 +16679,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16245,6 +16707,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16272,6 +16735,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16299,6 +16763,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16326,6 +16791,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16353,6 +16819,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16380,6 +16847,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16407,6 +16875,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16434,6 +16903,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16461,6 +16931,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16488,6 +16959,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16515,6 +16987,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16542,6 +17015,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16569,6 +17043,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16596,6 +17071,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16623,6 +17099,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16650,6 +17127,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16677,6 +17155,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16704,6 +17183,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16731,6 +17211,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16758,6 +17239,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16785,6 +17267,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16812,6 +17295,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16839,6 +17323,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16866,6 +17351,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16893,6 +17379,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16920,6 +17407,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16947,6 +17435,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -16974,6 +17463,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -17001,6 +17491,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     },
@@ -17028,6 +17519,7 @@
         }
       },
       "memory": false,
+      "weather": "",
       "actors": [],
       "actor_motions": []
     }

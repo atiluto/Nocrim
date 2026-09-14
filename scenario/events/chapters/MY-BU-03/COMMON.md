@@ -327,7 +327,7 @@
 
 ### MY-BU-03-COMMON-026
 화자: 독백
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -340,7 +340,7 @@
 
 ### MY-BU-03-COMMON-027
 화자: 강산
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -353,7 +353,7 @@
 
 ### MY-BU-03-COMMON-028
 화자: 마영란
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -366,7 +366,7 @@
 
 ### MY-BU-03-COMMON-029
 화자: 강산
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -379,7 +379,7 @@
 
 ### MY-BU-03-COMMON-030
 화자: 마영란
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -392,7 +392,7 @@
 
 ### MY-BU-03-COMMON-031
 화자: 강산
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -405,7 +405,7 @@
 
 ### MY-BU-03-COMMON-032
 화자: 마영란
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -418,7 +418,7 @@
 
 ### MY-BU-03-COMMON-033
 화자: 강산
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -431,7 +431,7 @@
 
 ### MY-BU-03-COMMON-034
 화자: 마영란
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -444,7 +444,7 @@
 
 ### MY-BU-03-COMMON-035
 화자: 강산
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -457,7 +457,7 @@
 
 ### MY-BU-03-COMMON-036
 화자: 독백
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
@@ -470,7 +470,7 @@
 
 ### MY-BU-03-COMMON-037
 화자: 마영란
-배경: forest_path
+배경: cg_ma_bandage
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3

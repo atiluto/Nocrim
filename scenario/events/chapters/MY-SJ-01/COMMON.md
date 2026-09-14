@@ -2,7 +2,7 @@
 
 ### MY-SJ-01-COMMON-001
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -15,7 +15,7 @@
 
 ### MY-SJ-01-COMMON-002
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -28,7 +28,7 @@
 
 ### MY-SJ-01-COMMON-003
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -41,7 +41,7 @@
 
 ### MY-SJ-01-COMMON-004
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -54,7 +54,7 @@
 
 ### MY-SJ-01-COMMON-005
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -67,7 +67,7 @@
 
 ### MY-SJ-01-COMMON-006
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -80,7 +80,7 @@
 
 ### MY-SJ-01-COMMON-007
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -93,7 +93,7 @@
 
 ### MY-SJ-01-COMMON-008
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -106,7 +106,7 @@
 
 ### MY-SJ-01-COMMON-009
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -119,7 +119,7 @@
 
 ### MY-SJ-01-COMMON-010
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -132,7 +132,7 @@
 
 ### MY-SJ-01-COMMON-011
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -145,7 +145,7 @@
 
 ### MY-SJ-01-COMMON-012
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -158,7 +158,7 @@
 
 ### MY-SJ-01-COMMON-013
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -171,7 +171,7 @@
 
 ### MY-SJ-01-COMMON-014
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -184,7 +184,7 @@
 
 ### MY-SJ-01-COMMON-015
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -197,7 +197,7 @@
 
 ### MY-SJ-01-COMMON-016
 화자: 독백
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -210,7 +210,7 @@
 
 ### MY-SJ-01-COMMON-017
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -223,7 +223,7 @@
 
 ### MY-SJ-01-COMMON-018
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -236,7 +236,7 @@
 
 ### MY-SJ-01-COMMON-019
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -249,7 +249,7 @@
 
 ### MY-SJ-01-COMMON-020
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -262,7 +262,7 @@
 
 ### MY-SJ-01-COMMON-021
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -275,7 +275,7 @@
 
 ### MY-SJ-01-COMMON-022
 화자: 강산
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -288,7 +288,7 @@
 
 ### MY-SJ-01-COMMON-023
 화자: 마영란
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3
@@ -301,7 +301,7 @@
 
 ### MY-SJ-01-COMMON-024
 화자: 독백
-배경: village_overcast
+배경: bg_solbaram_noodles
 인물:
 위치: right
 음악: bgm/bgm_inn_afterhours.mp3

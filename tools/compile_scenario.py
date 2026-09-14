@@ -26,6 +26,12 @@ def resolve_scene_status(status, identity, calendar):
 def compile_data(base=BASE, event_mode=False):
     manifest = json.loads((base/'manifest.json').read_text(encoding='utf-8'))
     presentation = json.loads((base/'presentation.json').read_text(encoding='utf-8'))
+    backgrounds = presentation.get('backgrounds',[])
+    if not isinstance(backgrounds,list) or any(not isinstance(key,str) or not re.fullmatch(r'[a-z0-9_]+',key) for key in backgrounds):
+        raise ValueError('Background registry needs lowercase asset names')
+    weather_cues = presentation.get('weather',{})
+    if not isinstance(weather_cues,dict) or any(value not in ['', 'rain', 'snow'] for value in weather_cues.values()):
+        raise ValueError('Weather must be empty, rain or snow')
     scene_status = presentation['scene_status']
     calendar = json.loads((ROOT/'godot/data/calendar.json').read_text(encoding='utf-8'))
     current_status = None
@@ -48,6 +54,11 @@ def compile_data(base=BASE, event_mode=False):
             raise ValueError('Sprite used outside its registered role: '+actor)
         if spec['sprite'] in exclusive and exclusive[spec['sprite']]!=actor:
             raise ValueError('Exclusive character sprite reused: '+actor)
+        for expression,sprite in spec.get('expressions',{}).items():
+            if not expression or not (ROOT/'godot/assets/prologue'/(sprite+'.png')).is_file():
+                raise ValueError('Missing expression sprite: '+actor+'/'+expression)
+            if sprite_roles.get(sprite)!=spec['role'] or exclusive.get(sprite,actor)!=actor:
+                raise ValueError('Expression sprite role mismatch: '+actor+'/'+expression)
     beats, chapters, ids, runtime_ids = [], [], set(), set()
     for filename in manifest['chapters']:
         path = base / filename
@@ -56,6 +67,7 @@ def compile_data(base=BASE, event_mode=False):
         chapter_id = path.stem.split('_')[0]
         chapters.append({'id':chapter_id,'title':title,'start':len(beats),'file':filename})
         memory_mode = False
+        current_weather = ''
         stage = []
         for match in re.finditer(r'^### ([A-Z0-9-]+)\n(.*?)(?=^### |\Z)', text, re.M|re.S):
             identity, body = match.groups()
@@ -84,8 +96,10 @@ def compile_data(base=BASE, event_mode=False):
             else:
                 beat['background']={'road':'forest_path','hut':'solbaram_den','village':'village_overcast','stockade':'maegol_stockade','camp':'solbaram_night'}.get(beat['background'],beat['background'])
             beat['memory'] = memory_mode
+            current_weather = weather_cues.get(identity,current_weather)
+            beat['weather'] = current_weather
             cue = cues.get(identity,{})
-            if set(cue)-{'stage','motions'}: raise ValueError('Unknown staging field: '+identity)
+            if set(cue)-{'stage','motions','expressions'}: raise ValueError('Unknown staging field: '+identity)
             if 'stage' in cue:
                 stage = []
                 for actor in cue['stage']:
@@ -99,6 +113,12 @@ def compile_data(base=BASE, event_mode=False):
                     raise ValueError('Stage requires up to three distinct actors: '+identity)
                 if len({actor['sprite'] for actor in stage})!=len(stage):
                     raise ValueError('Duplicate NPC image in one stage: '+identity)
+            for actor_id,expression in cue.get('expressions',{}).items():
+                target=next((actor for actor in stage if actor['id']==actor_id),None)
+                if target is None or expression not in cast[actor_id].get('expressions',{}):
+                    raise ValueError('Unknown actor/expression: '+identity+' '+actor_id+'/'+expression)
+                target['sprite']=cast[actor_id]['expressions'][expression]
+                target['expression']=expression
             motions = cue.get('motions',[])
             for motion in motions:
                 if motion['actor'] not in [actor['id'] for actor in stage] or motion['motion'] not in ['jump','approach','shake']:
@@ -111,7 +131,7 @@ def compile_data(base=BASE, event_mode=False):
             if beat['side'] not in ['left','right']: raise ValueError('Invalid side '+identity)
             if beat['effect'] not in ['','fade','fadein','jump','shake','flash','blackout','walk']: raise ValueError('Invalid effect '+identity)
             if beat['sprite'] and beat['sprite'] not in sprite_roles: raise ValueError('Unknown sprite '+identity)
-            if beat['background'] not in ['black','modern_room','modern_forest','modern_rain','forest_path','solbaram_den','village_overcast','maegol_stockade','solbaram_night']: raise ValueError('Unknown background '+identity)
+            if beat['background'] not in ['black','modern_room','modern_forest','modern_rain','forest_path','solbaram_den','village_overcast','maegol_stockade','solbaram_night']+backgrounds: raise ValueError('Unknown background '+identity)
             if beat['sprite'] and not (ROOT/'godot/assets/prologue'/(beat['sprite']+'.png')).is_file(): raise ValueError('Missing sprite '+identity)
             if beat['background']!='black' and not (ROOT/'godot/assets/prologue'/(beat['background']+'.png')).is_file(): raise ValueError('Missing background '+identity)
             for key in ['music','ambience','sfx']:
@@ -123,12 +143,14 @@ def compile_data(base=BASE, event_mode=False):
     if not beats: raise ValueError('No beats')
     if set(scene_status)-ids: raise ValueError('Unknown scene status IDs: '+str(sorted(set(scene_status)-ids)))
     if set(cues)-ids: raise ValueError('Unknown staging IDs: '+str(sorted(set(cues)-ids)))
+    if set(weather_cues)-ids: raise ValueError('Unknown weather IDs: '+str(sorted(set(weather_cues)-ids)))
     positions = {beat['id']:index for index,beat in enumerate(beats)}
     for actor, end_id in staging['retired_at'].items():
         if actor not in cast or end_id not in positions: raise ValueError('Invalid retirement boundary: '+actor)
         sprite = cast[actor]['sprite']
         if exclusive.get(sprite)!=actor: raise ValueError('Retired NPC must have an exclusive image: '+actor)
-        if any(entry['sprite']==sprite for beat in beats[positions[end_id]:] for entry in beat['actors']):
+        retired_images = {sprite, *cast[actor].get('expressions',{}).values()}
+        if any(entry['id']==actor or entry['sprite'] in retired_images for beat in beats[positions[end_id]:] for entry in beat['actors']):
             raise ValueError('Retired NPC image reappears: '+actor)
     if not event_mode and len(chapters)!=11: raise ValueError('Prologue must have 11 scenes')
     return {'version':1,'pagination_revision':3,'previous_beat_ids':manifest.get('previous_beat_ids',[]),

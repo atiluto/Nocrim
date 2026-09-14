@@ -63,6 +63,25 @@ func run() -> void:
 	app.campaign.events.debug(app.campaign,"event",{"id":"BU-R01"}); app.refresh(); await process_frame
 	await click("event_choice_1"); await click("event_advance")
 	check(app.campaign.s.flags.get("merchant_cart_helped",false),"UI cart help result")
+	app.campaign.calendar.set_date(app.campaign.s,{"year":732,"month":4,"day":1})
+	app.campaign.s.regional.active={}; app.campaign.s.map_node="market"
+	app.campaign.events.begin(app.campaign,"SY-SJ-01"); app.refresh(); await process_frame
+	check(app.prologue_view.beats[0].actors[0].id=="jang_soyeon","Jang route sprite connected")
+	await dialogue(); await click("event_choice_talk"); await dialogue()
+	check(app.campaign.s.regional.vars.sy_met,"new route completes through VN and choice UI")
+	app.save_game(false); app.load_game(); await process_frame
+	check(app.campaign.s.regional.vars.sy_met,"new route saved through UI")
+	app.campaign.s.regional.vars.sy_stage=3; app.campaign.s.regional.vars.hr_stage=3
+	app.campaign.s.map_node="ferry"; app.command("event_menu"); await process_frame
+	# Call the actual button callbacks separately: each loop closure must retain its own actor ID.
+	var sy=app.buttons.get("event_companion_jang_soyeon")
+	check(is_instance_valid(sy),"Jang companion menu button")
+	if is_instance_valid(sy): sy.pressed.emit(); await process_frame
+	check(app.campaign.s.regional.vars.sy_companion and not app.campaign.s.regional.vars.hr_companion,"Jang button toggles Jang only")
+	var hr=app.buttons.get("event_companion_ha_ryeonghwa")
+	check(is_instance_valid(hr),"Ha companion menu button")
+	if is_instance_valid(hr): hr.pressed.emit(); await process_frame
+	check(app.campaign.s.regional.vars.hr_companion and app.campaign.s.regional.vars.sy_companion,"Ha button toggles Ha only")
 	if DisplayServer.get_name()!="headless":
 		app.campaign.events.debug(app.campaign,"date",{"year":732,"month":7,"day":1})
 		app.campaign.events.debug(app.campaign,"variable",{"key":"my_trust","value":30})

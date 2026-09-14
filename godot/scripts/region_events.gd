@@ -180,6 +180,17 @@ func visit(c) -> void:
 			r.locations[place].tracking=data.companion.bonuses[place]
 			c.s.intel+=1
 			if place=="sol": r.vars.security=mini(100,int(r.vars.security)+2)
+	for id in data.get("route_companions",{}):
+		var spec: Dictionary=data.route_companions[id]
+		if not test(c,spec.conditions) or not value(c,spec.toggle_path): continue
+		if not spec.get("visit_effects",{}).has(place): continue
+		if not r.locations.has(place): r.locations[place]={}
+		var key: String=id+"_visit_day"
+		var day: int=int(c.calendar.stamp(c.s)/3.0)
+		if r.locations[place].get(key,-1)==day: continue
+		r.locations[place][key]=day
+		apply(c,spec.visit_effects[place])
+		c.log_line(spec.name+": "+spec.get("visit_text",{}).get(place,"동행 도움을 받았다."))
 	var options=candidates(c,place,"CONDITIONAL")
 	if not options.is_empty(): begin(c,options[0].id); return
 	if c.roll()<=65: return
@@ -241,8 +252,15 @@ func handle(c, action: String, args: Dictionary) -> bool:
 		"event_menu": c.s.arrival=null; c.s.regional.menu=true
 		"event_leave": c.s.regional.menu=false
 		"event_companion":
-			if not test(c,data.companion.conditions): return c.reject("아직 동행할 수 없습니다.")
-			c.s.regional.vars.my_companion=not c.s.regional.vars.my_companion
+			var id: String=args.get("id","ma_yeongran")
+			if id=="ma_yeongran":
+				if not test(c,data.companion.conditions): return c.reject("아직 동행할 수 없습니다.")
+				c.s.regional.vars.my_companion=not c.s.regional.vars.my_companion
+			else:
+				if not data.get("route_companions",{}).has(id): return c.reject("알 수 없는 동행 인물입니다.")
+				var spec: Dictionary=data.route_companions[id]
+				if not test(c,spec.conditions): return c.reject("아직 동행할 수 없습니다.")
+				put(c,spec.toggle_path,not value(c,spec.toggle_path))
 		"event_open":
 			var id: String=args.get("id","")
 			if not data.events.has(id) or data.events[id].type!="STATIC" or not eligible(c,data.events[id],c.s.map_node): return c.reject("지금 선택할 수 없는 사건입니다.")

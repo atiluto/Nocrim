@@ -1,0 +1,32 @@
+[
+  {
+    "file": "bg_rock_overhang.png",
+    "job_id": "20f27a4d-e167-486e-8246-df59e4b1c17f",
+    "prompt": "Create a 16:9 background illustration for an original Korean wuxia visual novel. View from inside a cramped natural rock overhang, sheltering two travelers from heavy mountain rain. NO people. Rough stone ceiling and left wall, dry ledge in foreground, rain beyond the shelter, dense ordinary oak and pine woods on low hills with mossy boulders. Hand-drawn dark ink contours, broad simplified painted shadows and subtle brush grain. Muted gray-green, charcoal and umber, gloomy overcast natural light. Clearly illustrated painterly game background, NOT photographic or 3D. No wooden structure, no temple, no floating peaks, no signs, no text/UI. Dark uncluttered lower quarter for dialogue. Fully painted edge-to-edge.",
+    "usage": "MY-BU-04 바위틈에서 비 피하기",
+    "provider": "Higgsfield",
+    "model": "gpt_image_2_5",
+    "width": 1344,
+    "height": 752
+  },
+  {
+    "file": "bg_herbal_room.png",
+    "job_id": "232fde70-3c6b-4d6b-824c-ada541f23f26",
+    "prompt": "16:9 Korean wuxia visual novel BACKGROUND illustration, no people. Inside a humble mountain stockade's herbal treatment room, rough timber beams, paper windows showing overcast gray light, shelves of small earthen medicine jars and drying herbs, clean plain folded bandages, low treatment cot on right, mortar and pestle on small table left. Warm brown timber restrained by charcoal shadows and muted gray-green daylight. Hand-drawn ink contours, broad painterly shadow planes, subtle brush grain, not photorealistic. No modern medical equipment, no red cross, no letters or UI. Humane practical lived-in room, darker quiet bottom quarter and clear middle for character sprites, full frame.",
+    "usage": "하령화 치료·휴식·후일담",
+    "provider": "Higgsfield",
+    "model": "gpt_image_2_5",
+    "width": 1344,
+    "height": 752
+  },
+  {
+    "file": "bg_ferry_landing.png",
+    "job_id": "c16093d0-74b1-46f1-a234-a23037482d51",
+    "prompt": "16:9 hand-painted Korean wuxia visual novel BACKGROUND, no people: modest river ferry landing seen FROM THE LAND, low wooden jetty at left, tied shallow wooden freight boat carrying covered crates, muddy riverbank path at right with small storage shed and weighing scale, opposite wooded bank shrouded in gray mist. Rain has stopped, gloomy soft overcast light, charcoal dark contours, broad ink-wash/cel painted shadows, subdued brown wood and gray-green trees. Clearly illustrated, not photographic, no palace, modern boats, signs, text or UI. Quiet foreground room for standing characters, no bright saturated colors, full edge-to-edge scene.",
+    "usage": "장소연 운송업 투자·짐칸 사건",
+    "provider": "Higgsfield",
+    "model": "gpt_image_2_5",
+    "width": 1344,
+    "height": 752
+  }
+]

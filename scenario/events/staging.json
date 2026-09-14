@@ -1,5 +1,39 @@
 {
-  "cast": {},
+  "cast": {
+    "ma_yeongran": {
+      "speaker": "마영란",
+      "sprite": "ma_yeongran_neutral",
+      "role": "greenwood_scout",
+      "expressions": {
+        "neutral": "ma_yeongran_neutral",
+        "smile": "ma_yeongran_smile",
+        "surprised": "ma_yeongran_surprised",
+        "angry": "ma_yeongran_angry",
+        "worried": "ma_yeongran_worried",
+        "shy": "ma_yeongran_shy"
+      }
+    },
+    "jang_soyeon": {
+      "speaker": "장소연",
+      "sprite": "jang_soyeon_neutral",
+      "role": "greenwood_trader",
+      "expressions": {
+        "neutral": "jang_soyeon_neutral",
+        "smile": "jang_soyeon_smile",
+        "serious": "jang_soyeon_serious"
+      }
+    },
+    "ha_ryeonghwa": {
+      "speaker": "하령화",
+      "sprite": "ha_ryeonghwa_neutral",
+      "role": "greenwood_healer",
+      "expressions": {
+        "neutral": "ha_ryeonghwa_neutral",
+        "smile": "ha_ryeonghwa_smile",
+        "worried": "ha_ryeonghwa_worried"
+      }
+    }
+  },
   "slots": {
     "left_back": {
       "x": 5,
@@ -35,184 +69,9879 @@
       "stage": []
     },
     "MY-AG-01-TAIL-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-01-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-01-BRANCH2-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-01-BRANCH3-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-02-COMMON-001": {
       "stage": []
     },
     "MY-AG-02-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-02-BRANCH2-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-02-BRANCH3-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-AG-03-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-BU-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-BU-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-BU-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-BU-04-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CM-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-CM-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CM-02-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CM-02-BRANCH2-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CM-02-BRANCH3-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CM-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-SJ-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-SJ-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
     },
     "MY-SJ-02-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-SJ-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-SJ-04-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
     },
     "MY-SB-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
     },
     "MY-SB-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
     },
     "MY-SB-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-SB-04-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-SB-05-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
     },
     "MY-SB-06-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-SB-07-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-JS-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-JS-03-COMMON-001": {
       "stage": []
     },
     "MY-DG-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-DN-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
     },
     "MY-DN-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-HD-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-HD-01-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-HD-01-BRANCH3-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-CH-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-CH-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-CH-02-BRANCH1-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-YG-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-GM-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-GM-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-TB-01-COMMON-001": {
       "stage": []
     },
     "MY-TB-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-01-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-02-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-03-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-04-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-R-05-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-06-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
     },
     "MY-R-07-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
     },
     "MY-R-08-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
     },
     "MY-R-09-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
     },
     "MY-R-10-COMMON-001": {
-      "stage": []
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
     },
     "MY-FAIL-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-01-COMMON-002": {
       "stage": []
+    },
+    "MY-AG-01-COMMON-003": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-004": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-005": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-006": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-007": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-008": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-009": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-010": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-011": {
+      "stage": []
+    },
+    "MY-AG-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-TAIL-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-TAIL-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-TAIL-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-TAIL-005": {
+      "stage": []
+    },
+    "MY-AG-01-TAIL-006": {
+      "stage": []
+    },
+    "MY-AG-01-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-BRANCH1-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-BRANCH1-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-BRANCH2-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-AG-01-BRANCH2-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-AG-01-BRANCH2-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-BRANCH2-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-01-BRANCH2-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-01-BRANCH3-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-01-BRANCH3-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-01-BRANCH3-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-01-BRANCH3-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-01-BRANCH3-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-COMMON-002": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-003": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-004": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-005": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-006": {
+      "stage": []
+    },
+    "MY-AG-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-AG-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-AG-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH2-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH2-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-02-BRANCH3-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-02-BRANCH3-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-AG-02-BRANCH3-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-02-BRANCH3-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "jump"
+        }
+      ]
+    },
+    "MY-AG-03-BRANCH1-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-AG-03-BRANCH1-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-AG-03-BRANCH1-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-AG-03-BRANCH1-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-01-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-02-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-02-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-02-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-BU-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "approach"
+        }
+      ]
+    },
+    "MY-BU-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-BU-03-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "shake"
+        }
+      ]
+    },
+    "MY-BU-03-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-03-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-03-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-BU-03-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-BU-03-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-BU-03-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-BU-03-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-03-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-03-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-03-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-03-COMMON-025": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-03-COMMON-026": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-027": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-028": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-029": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-030": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-031": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-032": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-033": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-034": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-035": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-036": {
+      "stage": []
+    },
+    "MY-BU-03-COMMON-037": {
+      "stage": []
+    },
+    "MY-BU-04-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-04-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-BU-04-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-BU-04-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-BU-04-COMMON-025": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-BU-04-COMMON-026": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-01-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CM-01-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CM-01-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "shake"
+        }
+      ]
+    },
+    "MY-CM-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-02-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-02-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-02-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-02-BRANCH2-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH2-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH2-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH2-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH2-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-02-BRANCH3-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CM-02-BRANCH3-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CM-02-BRANCH3-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH3-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-02-BRANCH3-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-02-BRANCH3-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-02-BRANCH3-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CM-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CM-03-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CM-03-COMMON-025": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-03-COMMON-026": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-CM-03-COMMON-027": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CM-03-COMMON-028": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CM-03-COMMON-029": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-030": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CM-03-COMMON-031": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-01-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-01-COMMON-024": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SJ-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SJ-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SJ-02-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-02-BRANCH1-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-03-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-03-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-04-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-04-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-04-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-04-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SJ-04-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SJ-04-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SJ-04-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SJ-04-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SJ-04-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-04-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-04-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SJ-04-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-01-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-01-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-02-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-02-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-02-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-02-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-03-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-03-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-03-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-03-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-04-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SB-04-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SB-04-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SB-04-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-SB-04-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-SB-04-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-04-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-04-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "jump"
+        }
+      ]
+    },
+    "MY-SB-05-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-05-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-SB-06-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-SB-06-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-06-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-07-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-SB-07-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-SB-07-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-JS-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      },
+      "motions": [
+        {
+          "actor": "ma_yeongran",
+          "motion": "approach"
+        }
+      ]
+    },
+    "MY-JS-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-JS-01-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-JS-01-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-01-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-002": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-003": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-004": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-005": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-JS-03-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-JS-03-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-JS-03-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-03-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-JS-03-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-JS-03-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-JS-03-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-JS-03-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-JS-03-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-023": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-JS-03-COMMON-024": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-025": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-026": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-027": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-028": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-029": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-030": {
+      "stage": []
+    },
+    "MY-JS-03-COMMON-031": {
+      "stage": []
+    },
+    "MY-DG-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DG-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DN-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-DN-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-DN-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-DN-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-DN-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-DN-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DN-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-DN-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DN-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DN-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-DN-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-HD-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-HD-01-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-HD-01-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-HD-01-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-HD-01-BRANCH1-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-HD-01-BRANCH1-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-HD-01-BRANCH1-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-HD-01-BRANCH1-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-HD-01-BRANCH1-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-HD-01-BRANCH1-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-HD-01-BRANCH1-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-HD-01-BRANCH1-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-HD-01-BRANCH3-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-HD-01-BRANCH3-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-HD-01-BRANCH3-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-HD-01-BRANCH3-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CH-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-CH-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-CH-02-BRANCH1-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CH-02-BRANCH1-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CH-02-BRANCH1-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CH-02-BRANCH1-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-CH-02-BRANCH1-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-BRANCH1-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-CH-02-BRANCH1-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-02-BRANCH1-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-02-BRANCH1-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-CH-02-BRANCH1-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-YG-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-YG-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-YG-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-YG-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-YG-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-YG-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-YG-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-GM-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-GM-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-GM-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-GM-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-GM-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-GM-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-GM-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-TB-01-COMMON-002": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-003": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-004": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-005": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-006": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-007": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-008": {
+      "stage": []
+    },
+    "MY-TB-01-COMMON-009": {
+      "stage": []
+    },
+    "MY-TB-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-TB-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-TB-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-TB-02-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-TB-02-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-TB-02-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-TB-02-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-TB-02-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-TB-02-COMMON-020": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-TB-02-COMMON-021": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-TB-02-COMMON-022": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-01-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-02-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-02-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-02-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-02-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-02-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-02-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-02-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-03-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-03-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-03-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-03-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-04-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-04-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-04-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-04-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-05-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-05-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-05-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-05-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-05-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-05-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-06-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-06-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-06-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-06-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-06-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "smile"
+      }
+    },
+    "MY-R-07-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-R-07-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-R-07-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-R-07-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-R-07-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-R-07-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "surprised"
+      }
+    },
+    "MY-R-07-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-08-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-09-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-09-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-R-09-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-09-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-09-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-10-COMMON-002": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-10-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-10-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-R-10-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "center_right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "shy"
+      }
+    },
+    "MY-FAIL-01-COMMON-003": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-FAIL-01-COMMON-004": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-FAIL-01-COMMON-005": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-006": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-007": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-008": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-009": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-FAIL-01-COMMON-010": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-FAIL-01-COMMON-011": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-FAIL-01-COMMON-012": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-FAIL-01-COMMON-013": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "worried"
+      }
+    },
+    "MY-FAIL-01-COMMON-014": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-015": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-016": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "MY-FAIL-01-COMMON-017": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-018": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "angry"
+      }
+    },
+    "MY-FAIL-01-COMMON-019": {
+      "stage": [
+        {
+          "actor": "ma_yeongran",
+          "slot": "right"
+        }
+      ],
+      "expressions": {
+        "ma_yeongran": "neutral"
+      }
+    },
+    "SY-SJ-01-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SJ-01-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-01-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-01-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-01-COMMON-007": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-01-COMMON-008": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-COMMON-009": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-COMMON-010": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-AGREE-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SJ-01-AGREE-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-01-AGREE-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-01-AGREE-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-02-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SJ-02-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SJ-02-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SJ-02-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SJ-02-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SJ-02-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-02-COMMON-007": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-02-COMMON-008": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-02-TRUTH-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SJ-02-TRUTH-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-02-TRUTH-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SJ-02-TRUTH-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-02-TRUTH-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SJ-02-TRUTH-006": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-01-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-01-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-01-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-01-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-01-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-01-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-01-COMMON-007": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SB-01-AGREE-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-01-AGREE-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-01-AGREE-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-01-AGREE-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SJ-C04-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SJ-C04-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SJ-C04-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SJ-C04-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SJ-C04-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SJ-C04-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SJ-C04-OPEN-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SJ-C04-OPEN-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SJ-C04-OPEN-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SJ-C04-OPEN-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "DN-C02-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "DN-C02-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "DN-C02-OPEN-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "DN-C02-OPEN-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-OPEN-003": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "DN-C02-OPEN-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-DN-01-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-DN-01-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-DN-01-KEEP-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-DN-01-KEEP-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-DN-01-KEEP-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-DN-01-KEEP-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-DN-01-WORK-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-DN-01-WORK-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-DN-01-WORK-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-DN-01-WORK-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-DN-01-BREAK-001": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-DN-01-BREAK-002": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-BREAK-003": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-DN-01-BREAK-004": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SB-02-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-02-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SB-02-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "serious"
+      }
+    },
+    "SY-SB-02-COMMON-007": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-COMMON-008": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-COMMON-009": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-02-STAY-001": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-02-STAY-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-02-STAY-003": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-02-STAY-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-03-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-ROMANCE-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-03-ROMANCE-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-ROMANCE-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-ROMANCE-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-ROMANCE-005": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-FRIEND-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-SB-03-FRIEND-002": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-SB-03-FRIEND-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-FRIEND-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-SB-03-FRIEND-005": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-R-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-END-R-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-R-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-R-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-R-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-R-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-END-F-COMMON-001": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "jang_soyeon",
+          "slot": "right"
+        }
+      ]
+    },
+    "SY-END-F-COMMON-002": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-F-COMMON-003": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "SY-END-F-COMMON-004": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-END-F-COMMON-005": {
+      "expressions": {
+        "jang_soyeon": "neutral"
+      }
+    },
+    "SY-END-F-COMMON-006": {
+      "expressions": {
+        "jang_soyeon": "smile"
+      }
+    },
+    "HR-CH-01-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-01-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-01-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-CH-01-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-CH-01-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-01-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-01-COMMON-007": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-01-COMMON-008": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-01-LEARN-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-01-LEARN-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-01-LEARN-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-01-LEARN-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-01-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-01-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-COMMON-007": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-01-CARE-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-01-CARE-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-CARE-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-CARE-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-01-BREAK-001": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-01-BREAK-002": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-SB-01-BREAK-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-01-BREAK-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-02-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-02-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-02-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-02-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-02-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-02-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-02-CARRY-001": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-02-CARRY-002": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-02-CARRY-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-02-CARRY-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "CH-C02-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "CH-C02-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "CH-C02-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "CH-C02-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "CH-C02-GATHER-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "CH-C02-GATHER-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "CH-C02-GATHER-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-JS-01-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-JS-01-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-JS-01-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-JS-01-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-JS-01-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-JS-01-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-JS-01-TREAT-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-JS-01-TREAT-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-JS-01-TREAT-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-JS-01-TREAT-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-JS-01-TREAT-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-JS-01-BREAK-001": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-JS-01-BREAK-002": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-JS-01-BREAK-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-JS-01-BREAK-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-02-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "worried"
+      }
+    },
+    "HR-SB-02-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-REPAIR-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-02-REPAIR-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-REPAIR-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-02-REPAIR-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-03-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-03-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-03-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-03-COMMON-007": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-REST-001": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-SB-03-REST-002": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-03-REST-003": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-REST-004": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-SB-03-REST-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-SB-03-REST-006": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-03-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-COMMON-007": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-ROMANCE-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-03-ROMANCE-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-ROMANCE-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-ROMANCE-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-ROMANCE-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-FRIEND-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-CH-03-FRIEND-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-CH-03-FRIEND-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-FRIEND-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-CH-03-FRIEND-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-R-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-END-R-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-R-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-R-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-R-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-R-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-END-F-COMMON-001": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      },
+      "stage": [
+        {
+          "actor": "ha_ryeonghwa",
+          "slot": "right"
+        }
+      ]
+    },
+    "HR-END-F-COMMON-002": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-END-F-COMMON-003": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-F-COMMON-004": {
+      "expressions": {
+        "ha_ryeonghwa": "smile"
+      }
+    },
+    "HR-END-F-COMMON-005": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
+    },
+    "HR-END-F-COMMON-006": {
+      "expressions": {
+        "ha_ryeonghwa": "neutral"
+      }
     }
   },
-  "sprite_roles": {},
-  "exclusive_sprites": {},
-  "retired_at": {}
+  "sprite_roles": {
+    "ma_yeongran_neutral": "greenwood_scout",
+    "ma_yeongran_smile": "greenwood_scout",
+    "ma_yeongran_surprised": "greenwood_scout",
+    "ma_yeongran_angry": "greenwood_scout",
+    "ma_yeongran_worried": "greenwood_scout",
+    "ma_yeongran_shy": "greenwood_scout",
+    "jang_soyeon_neutral": "greenwood_trader",
+    "jang_soyeon_smile": "greenwood_trader",
+    "jang_soyeon_serious": "greenwood_trader",
+    "ha_ryeonghwa_neutral": "greenwood_healer",
+    "ha_ryeonghwa_smile": "greenwood_healer",
+    "ha_ryeonghwa_worried": "greenwood_healer"
+  },
+  "exclusive_sprites": {
+    "ma_yeongran_neutral": "ma_yeongran",
+    "ma_yeongran_smile": "ma_yeongran",
+    "ma_yeongran_surprised": "ma_yeongran",
+    "ma_yeongran_angry": "ma_yeongran",
+    "ma_yeongran_worried": "ma_yeongran",
+    "ma_yeongran_shy": "ma_yeongran",
+    "jang_soyeon_neutral": "jang_soyeon",
+    "jang_soyeon_smile": "jang_soyeon",
+    "jang_soyeon_serious": "jang_soyeon",
+    "ha_ryeonghwa_neutral": "ha_ryeonghwa",
+    "ha_ryeonghwa_smile": "ha_ryeonghwa",
+    "ha_ryeonghwa_worried": "ha_ryeonghwa"
+  },
+  "retired_at": {},
+  "note": "표정은 expressions의 인물 ID: 표정 키. 일반 이동은 슬롯 X만 변경. 흰 배경 원본 유지, 제거는 사용자가 직접 수행. 장소연·하령화는 자산 등록이며 전용 루트 구현을 뜻하지 않음."
 }

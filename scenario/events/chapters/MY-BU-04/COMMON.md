@@ -2,11 +2,11 @@
 
 ### MY-BU-04-COMMON-001
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -15,11 +15,11 @@
 
 ### MY-BU-04-COMMON-002
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -28,11 +28,11 @@
 
 ### MY-BU-04-COMMON-003
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -41,11 +41,11 @@
 
 ### MY-BU-04-COMMON-004
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -54,11 +54,11 @@
 
 ### MY-BU-04-COMMON-005
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -67,11 +67,11 @@
 
 ### MY-BU-04-COMMON-006
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -80,11 +80,11 @@
 
 ### MY-BU-04-COMMON-007
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -93,11 +93,11 @@
 
 ### MY-BU-04-COMMON-008
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -106,11 +106,11 @@
 
 ### MY-BU-04-COMMON-009
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -119,11 +119,11 @@
 
 ### MY-BU-04-COMMON-010
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -132,11 +132,11 @@
 
 ### MY-BU-04-COMMON-011
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -145,11 +145,11 @@
 
 ### MY-BU-04-COMMON-012
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -158,11 +158,11 @@
 
 ### MY-BU-04-COMMON-013
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -171,11 +171,11 @@
 
 ### MY-BU-04-COMMON-014
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -184,11 +184,11 @@
 
 ### MY-BU-04-COMMON-015
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -197,11 +197,11 @@
 
 ### MY-BU-04-COMMON-016
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -210,11 +210,11 @@
 
 ### MY-BU-04-COMMON-017
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -223,11 +223,11 @@
 
 ### MY-BU-04-COMMON-018
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -236,11 +236,11 @@
 
 ### MY-BU-04-COMMON-019
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -249,11 +249,11 @@
 
 ### MY-BU-04-COMMON-020
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -262,11 +262,11 @@
 
 ### MY-BU-04-COMMON-021
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -275,11 +275,11 @@
 
 ### MY-BU-04-COMMON-022
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -288,11 +288,11 @@
 
 ### MY-BU-04-COMMON-023
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -301,11 +301,11 @@
 
 ### MY-BU-04-COMMON-024
 화자: 강산
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -314,11 +314,11 @@
 
 ### MY-BU-04-COMMON-025
 화자: 마영란
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 
@@ -327,11 +327,11 @@
 
 ### MY-BU-04-COMMON-026
 화자: 독백
-배경: forest_path
+배경: bg_rock_overhang
 인물:
 위치: right
 음악: bgm/bgm_murim_survival.mp3
-환경음: sfx/amb_mountain_morning_loop_01.mp3
+환경음: sfx/amb_rain_mountain_loop_01.mp3
 효과음:
 연출:
 

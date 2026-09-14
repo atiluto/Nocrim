@@ -359,6 +359,272 @@
       "location": "*",
       "period": "현재",
       "live": true
+    },
+    "SY-SJ-01-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SJ-01-AGREE-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SJ-02-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SJ-02-TRUTH-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-01-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-01-AGREE-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SJ-C04-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SJ-C04-OPEN-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "DN-C02-COMMON-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "DN-C02-OPEN-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "SY-DN-01-COMMON-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "SY-DN-01-KEEP-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "SY-DN-01-WORK-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "SY-DN-01-BREAK-001": {
+      "date": "현재",
+      "location": "ferry",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-02-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-02-STAY-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-03-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-03-ROMANCE-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-SB-03-FRIEND-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "SY-END-R-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "SY-END-F-COMMON-001": {
+      "date": "현재",
+      "location": "market",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-01-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-01-LEARN-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-01-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-01-CARE-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-01-BREAK-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-02-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-02-CARRY-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "CH-C02-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "CH-C02-GATHER-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-JS-01-COMMON-001": {
+      "date": "현재",
+      "location": "red",
+      "period": "현재",
+      "live": true
+    },
+    "HR-JS-01-TREAT-001": {
+      "date": "현재",
+      "location": "red",
+      "period": "현재",
+      "live": true
+    },
+    "HR-JS-01-BREAK-001": {
+      "date": "현재",
+      "location": "red",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-02-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-02-REPAIR-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-03-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-SB-03-REST-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-03-COMMON-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-03-ROMANCE-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-CH-03-FRIEND-001": {
+      "date": "현재",
+      "location": "crane",
+      "period": "현재",
+      "live": true
+    },
+    "HR-END-R-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
+    },
+    "HR-END-F-COMMON-001": {
+      "date": "현재",
+      "location": "sol",
+      "period": "현재",
+      "live": true
     }
+  },
+  "backgrounds": [
+    "bg_solbaram_noodles",
+    "bg_mountain_shelter",
+    "bg_cheonghak_clearing",
+    "cg_ma_bandage",
+    "bg_rock_overhang",
+    "bg_herbal_room",
+    "bg_ferry_landing"
+  ],
+  "weather": {
+    "MY-BU-04-COMMON-001": "rain",
+    "MY-SB-03-COMMON-001": "snow",
+    "MY-R-08-COMMON-001": "rain"
   }
 }
